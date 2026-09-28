@@ -1,0 +1,185 @@
+{
+ "id": "crystal-charizard-psa-9",
+ "name": "Crystal Charizard",
+ "set": "Skyridge",
+ "number": "146/144",
+ "year": 2003,
+ "tier": "PSA 9",
+ "event": null,
+ "window": {
+  "start": "2026-05-01",
+  "end": "2026-09-30"
+ },
+ "monthly_clean": {
+  "2026-05": 25620.0,
+  "2026-06": 28108.0,
+  "2026-07": 36000.0,
+  "2026-09": 38500.0
+ },
+ "change_label": "June to September, clean median",
+ "change_pct": 37.0,
+ "last": {
+  "date": "2026-09-27",
+  "price": 45000.0
+ },
+ "summary": "Never reprinted, and up about 37% since June anyway. Its only August record is a $46 sale, so an average of every sold listing would show this card down 99.9% in August.",
+ "naive": {
+  "label": "The only August record",
+  "value": 46.3,
+  "clean_value": null,
+  "drag": null
+ },
+ "sales": [
+  {
+   "date": "2026-05-10",
+   "price": 25620.0,
+   "format": "auction",
+   "bids": "27 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-05-22",
+   "price": 35000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 49500.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-05-31",
+   "price": 25449.74,
+   "format": "auction",
+   "bids": "16 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-16",
+   "price": 37500.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 39995.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-18",
+   "price": 27600.0,
+   "format": "auction",
+   "bids": "70 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-21",
+   "price": 28108.0,
+   "format": "auction",
+   "bids": "87 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-21",
+   "price": 25620.0,
+   "format": "auction",
+   "bids": "56 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-30",
+   "price": 31750.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-07-08",
+   "price": 36000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 39999.99,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-19",
+   "price": 46.3,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 47.36,
+   "label": "DATA_ERROR",
+   "why": "$46 for a PSA 9 Crystal Charizard. Whatever sold, it wasn't this card.",
+   "weight": 0.0
+  },
+  {
+   "date": "2026-09-05",
+   "price": 35800.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 39999.0,
+   "label": "ORGANIC",
+   "why": "Listed at $39,999. The accepted offer was $35,800. Trackers that show the ask get this wrong.",
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-20",
+   "price": 37212.44,
+   "format": "auction",
+   "bids": "63 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-21",
+   "price": 38500.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-25",
+   "price": 40000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 44950.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-27",
+   "price": 45000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 65000.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  }
+ ],
+ "source": "130point (eBay and Goldin sold listings, best offers shown at the accepted price), pulled Sep 28, 2026"
+}

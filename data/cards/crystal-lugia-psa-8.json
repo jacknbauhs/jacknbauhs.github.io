@@ -1,0 +1,278 @@
+{
+ "id": "crystal-lugia-psa-8",
+ "name": "Crystal Lugia",
+ "set": "Aquapolis",
+ "number": "149/147",
+ "year": 2003,
+ "tier": "PSA 8",
+ "event": {
+  "date": "2026-09-16",
+  "label": "30th Celebration launches with the Lugia reprint"
+ },
+ "window": {
+  "start": "2026-06-01",
+  "end": "2026-09-30"
+ },
+ "monthly_clean": {
+  "2026-06": 9900.0,
+  "2026-07": 12053.4,
+  "2026-08": 14489.29,
+  "2026-09": 15999.0
+ },
+ "change_label": "June to September, clean median",
+ "change_pct": 61.6,
+ "last": {
+  "date": "2026-09-27",
+  "price": 19500.0
+ },
+ "summary": "Up about 62% since June on real volume: 18 clean sales, including five auctions with 31 to 54 bidders. The climb started months before the reprint hit shelves on Sep 16.",
+ "naive": {
+  "label": "A plain September average with the $1,900 print in it",
+  "value": 15262.81,
+  "clean_value": 17171.78,
+  "drag": 1908.97
+ },
+ "sales": [
+  {
+   "date": "2026-06-10",
+   "price": 10800.0,
+   "format": "auction",
+   "bids": "40 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-12",
+   "price": 9000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 11000.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-18",
+   "price": 9000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 10000.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-06-22",
+   "price": 5735.5,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "DATA_ERROR",
+   "why": "Raw card, titled \"PSA gradable 7-8\". Not a PSA 8.",
+   "weight": 0.0
+  },
+  {
+   "date": "2026-06-26",
+   "price": 11000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 12500.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-07-16",
+   "price": 10600.0,
+   "format": "auction",
+   "bids": "3 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-07-18",
+   "price": 12106.8,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-07-19",
+   "price": 12000.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 16000.0,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-07-21",
+   "price": 8600.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 9300.0,
+   "label": "DATA_ERROR",
+   "why": "Two grades in one title (CGC 8.5 and PSA 8).",
+   "weight": 0.0
+  },
+  {
+   "date": "2026-07-27",
+   "price": 12847.41,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 13324.99,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-09",
+   "price": 12397.82,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 12590.21,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-23",
+   "price": 16775.0,
+   "format": "auction",
+   "bids": "52 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-26",
+   "price": 14489.29,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-30",
+   "price": 15000.0,
+   "format": "auction",
+   "bids": "54 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-30",
+   "price": 13800.0,
+   "format": "auction",
+   "bids": "31 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-08-31",
+   "price": 13800.0,
+   "format": "auction",
+   "bids": "31 bids",
+   "ask": null,
+   "label": "DUPLICATE",
+   "why": "Same title, same price, same 31 bids, a day apart. Counted once.",
+   "weight": 0.0
+  },
+  {
+   "date": "2026-09-06",
+   "price": 17750.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 19995.0,
+   "label": "RELIST",
+   "why": "The same listing sold again on Sep 15. The first sale may not have gone through. Counts half.",
+   "weight": 0.5
+  },
+  {
+   "date": "2026-09-06",
+   "price": 15800.0,
+   "format": "auction",
+   "bids": "40 bids",
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-12",
+   "price": 15999.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-15",
+   "price": 18500.0,
+   "format": "best_offer",
+   "bids": null,
+   "ask": 19999.99,
+   "label": "RELIST",
+   "why": "Second sale of the Sep 6 listing, higher this time. Counts half.",
+   "weight": 0.5
+  },
+  {
+   "date": "2026-09-24",
+   "price": 17995.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-25",
+   "price": 1900.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "DATA_ERROR",
+   "why": "87% under the next-lowest September sale. Not a real PSA 8 price.",
+   "weight": 0.0
+  },
+  {
+   "date": "2026-09-25",
+   "price": 14658.46,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  },
+  {
+   "date": "2026-09-27",
+   "price": 19500.0,
+   "format": "fixed",
+   "bids": null,
+   "ask": null,
+   "label": "ORGANIC",
+   "why": null,
+   "weight": 1.0
+  }
+ ],
+ "source": "130point (eBay sold listings, best offers shown at the accepted price), pulled Sep 28, 2026"
+}

@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mission Control · Jack Bauhs</title>
+<meta name="description" content="Astronaut Time's market board: Pokémon and TCG sales with the fake and broken ones flagged, dated calls, and release dates.">
+<meta property="og:title" content="Mission Control · Astronaut Time">
+<meta property="og:description" content="The card market, with the fake sales taken out.">
+<meta property="og:url" content="https://board.jacknbauhs.com/">
+<meta name="theme-color" content="#0B0A14">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/board.css">
+</head>
+<body data-page="index">
+<div class="sky" aria-hidden="true">
+<svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMin slice"><ellipse cx="1060" cy="420" rx="560" ry="170" fill="none" stroke="rgba(139,92,246,0.16)" transform="rotate(-8 1060 420)"/><circle cx="552" cy="470" r="3" fill="#8B5CF6" opacity="0.8"/><circle cx="466" cy="109" r="1.6" fill="#ECEAF6" opacity="0.25"/><circle cx="527" cy="42" r="1.2" fill="#ECEAF6" opacity="0.35"/><circle cx="101" cy="65" r="1" fill="#ECEAF6" opacity="0.25"/><circle cx="1191" cy="89" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="1365" cy="416" r="1" fill="#ECEAF6" opacity="0.25"/><circle cx="1406" cy="34" r="0.8" fill="#ECEAF6" opacity="0.45"/><circle cx="604" cy="389" r="1.2" fill="#ECEAF6" opacity="0.45"/><circle cx="807" cy="491" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="823" cy="135" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="1025" cy="406" r="1.2" fill="#ECEAF6" opacity="0.35"/><circle cx="1144" cy="503" r="0.8" fill="#ECEAF6" opacity="0.25"/><circle cx="415" cy="706" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="602" cy="545" r="0.8" fill="#ECEAF6" opacity="0.6"/><circle cx="1004" cy="47" r="1.6" fill="#ECEAF6" opacity="0.45"/><circle cx="1355" cy="256" r="1.2" fill="#ECEAF6" opacity="0.25"/><circle cx="711" cy="157" r="1" fill="#ECEAF6" opacity="0.35"/><circle cx="400" cy="99" r="1" fill="#ECEAF6" opacity="0.8"/><circle cx="6" cy="302" r="1" fill="#ECEAF6" opacity="0.8"/><circle cx="1368" cy="472" r="1.6" fill="#ECEAF6" opacity="0.25"/><circle cx="658" cy="627" r="1.6" fill="#ECEAF6" opacity="0.8"/><circle cx="90" cy="48" r="0.8" fill="#ECEAF6" opacity="0.6"/></svg>
+</div>
+
+<header class="site-header">
+  <a class="wordmark" href="https://www.jacknbauhs.com/">JACK BAUHS</a>
+  <nav class="site-nav" id="site-nav" aria-label="Site">
+    <a href="https://www.jacknbauhs.com/">About</a>
+    <a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a>
+    <a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a>
+    <a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a>
+    <a href="./" aria-current="page">Mission Control</a>
+    <a href="https://www.jacknbauhs.com/contact">Contact</a>
+  </nav>
+  <button class="menu-button" id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+  </button>
+</header>
+
+<div class="mc-bar">
+  <div class="mc-brand">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8" fill="none" stroke="#C4B5FD" stroke-width="2"/><ellipse cx="16" cy="16" rx="14.5" ry="5" fill="none" stroke="#8B5CF6" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+    <strong>MISSION CONTROL</strong><span class="muted" style="font-size:13px">by Astronaut Time</span>
+  </div>
+  <nav class="mc-nav" aria-label="Mission Control">
+    <a href="#moving" class="is-active">Market</a><a href="#flags">Flags</a><a href="#rip-ev">Rip EV</a><a href="#calls">Calls</a><a href="#drops">Drops</a>
+  </nav>
+  <span class="status" id="status">Updated Mon Sep 28, 2026</span>
+</div>
+
+<main id="main">
+  <section class="hero" aria-labelledby="hero-h">
+    <div>
+      <div class="kicker">Pokémon · One Piece · Yu-Gi-Oh · Sports</div>
+      <h1 id="hero-h">The card market, with the fake sales taken out.</h1>
+      <p class="lede">Every sale checked, every flag explained, every call dated. Mission Control is the market board behind Astronaut Time.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#moving">See what's moving</a>
+        <a class="btn btn-ghost" href="#flags">How the flags work</a>
+      </div>
+    </div>
+    <figure class="card chart-card" style="margin:0">
+      <div class="chart-head">
+        <div>
+          <div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">This week's file</div>
+          <div class="chart-title">Crystal Lugia PSA 8</div>
+          <div class="muted" style="font-size:14px">Every sold record since June. The purple line is the clean monthly median.</div>
+        </div>
+        <div class="big-stat"><span class="num up" id="hero-change">+62%</span><div class="muted" style="font-size:12px">since June, clean</div></div>
+      </div>
+      <div id="hero-chart"></div>
+      <div class="legend">
+        <span><i class="swatch" style="border:2px solid #ECEAF6"></i>Clean sale</span>
+        <span><i class="swatch" style="background:#FBBF24"></i>Relist, counts half</span>
+        <span><i class="swatch" style="background:#9A96B8"></i>Duplicate</span>
+        <span><i class="swatch" style="background:#F472B6"></i>Doesn't belong</span>
+        <span><i class="swatch line" style="background:#A78BFA"></i>Clean median</span>
+      </div>
+      <figcaption class="source">130point: eBay sold listings, best offers at the accepted price. Pulled Sep 28, 2026. <a href="card.html?id=crystal-lugia-psa-8">See every sale →</a></figcaption>
+    </figure>
+  </section>
+
+  <div class="stats" id="stats"></div>
+  <p id="load-error" class="muted" hidden>The board couldn't load its data. Refresh to try again.</p>
+
+  <section id="moving" class="block" aria-labelledby="moving-h">
+    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p id="movers-note"></p></div></div>
+    <div class="card table-card">
+      <table class="data">
+        <thead><tr><th scope="col">Card</th><th scope="col">Tier</th><th scope="col">Last sale</th><th scope="col">Clean median</th><th scope="col">Change</th><th scope="col">Flagged</th></tr></thead>
+        <tbody id="movers-body"></tbody>
+      </table>
+      <div class="table-foot">Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.</div>
+    </div>
+  </section>
+
+  <section id="flags" class="block" aria-labelledby="flags-h">
+    <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p>Sold lists are full of junk that bends every average. Here's what this week's file threw out, and why.</p></div></div>
+    <div class="card flags">
+      <div class="flag-head">
+        <span class="num" id="flag-count" style="font-size:44px;font-weight:500;color:var(--flag);letter-spacing:-.02em;white-space:nowrap">7/39</span>
+        <p id="flag-text"></p>
+      </div>
+      <ul class="flag-list" id="flag-list"></ul>
+    </div>
+    <div class="labels" id="labels"></div>
+  </section>
+
+  <section id="rip-ev" class="block" aria-labelledby="rip-h">
+    <div class="block-head">
+      <div><div class="kicker">03 · Rip EV</div><h2 id="rip-h">Rip or hold</h2><p>What a box is worth opened versus sealed, from published pull rates and real card prices, net of fees.</p></div>
+      <div class="seg" id="rip-games" role="group" aria-label="Game">
+        <button type="button" data-game="Pokémon" aria-pressed="true">Pokémon</button>
+        <button type="button" data-game="One Piece" aria-pressed="false">One Piece</button>
+        <button type="button" data-game="Yu-Gi-Oh" aria-pressed="false">Yu-Gi-Oh</button>
+        <button type="button" data-game="Sports" aria-pressed="false">Sports</button>
+      </div>
+    </div>
+    <div class="grid-12">
+      <div class="card table-card span-7">
+        <table class="data">
+          <thead><tr><th scope="col">Product</th><th scope="col">EV per box</th><th scope="col">Ratio</th><th scope="col">Hit over $50</th><th scope="col">Pull rates</th></tr></thead>
+          <tbody id="rip-body"></tbody>
+        </table>
+        <div class="table-foot" id="rip-note"></div>
+      </div>
+      <figure class="card chart-card span-5" style="margin:0">
+        <div class="chart-head"><div><div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">How it reads</div><div class="chart-title">Box value opened vs sealed</div></div><span class="chip chip-neutral">ILLUSTRATIVE</span></div>
+        <svg class="chart" viewBox="0 0 520 222" role="img" aria-label="Illustrative chart: sealed price and expected value per box over time, with the stretches where opening beats holding shaded">
+          <line x1="16" y1="200" x2="504" y2="200" stroke="rgba(236,234,246,0.10)"/>
+          <path d="M16 115.5 L32.5 104.7 L49.1 97.7 L65.6 94.8 L82.2 95.9 L98.7 100.9 L107 104.5 L107 105.2 L90.4 108 L73.9 111.9 L57.4 116.8 L40.8 122.4 L24.3 128.5 L16 131.6 Z" fill="#34D399" fill-opacity="0.14"/>
+          <path d="M313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9 L504 151.7 L479.2 160.7 L446.1 170.7 L413 176.5 L379.9 177.1 L346.8 172 L313.8 162 Z" fill="#34D399" fill-opacity="0.14"/>
+          <path d="M16 131.6 L49.1 119.6 L82.2 109.8 L115.3 104.3 L148.3 104.2 L181.4 109.7 L214.5 120.1 L247.6 133.7 L280.7 148.5 L313.8 162 L346.8 172 L379.9 177.1 L413 176.5 L446.1 170.7 L479.2 160.7 L504 151.7" fill="none" stroke="#ECEAF6" stroke-width="2" stroke-opacity="0.85"/>
+          <path d="M16 115.5 L49.1 97.7 L82.2 95.9 L115.3 108.9 L148.3 131 L181.4 154.3 L214.5 171.2 L247.6 177.1 L280.7 170.8 L313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9" fill="none" stroke="#A78BFA" stroke-width="2.5"/>
+        </svg>
+        <div class="legend"><span><i class="swatch line" style="background:#ECEAF6"></i>Sealed price</span><span><i class="swatch line" style="background:#A78BFA"></i>EV per box</span><span><i class="swatch" style="background:rgba(52,211,153,.35);border-radius:3px"></i>Opening beats holding</span></div>
+      </figure>
+    </div>
+  </section>
+
+  <section id="calls" class="block" aria-labelledby="calls-h">
+    <div class="block-head"><div><div class="kicker">04 · Calls</div><h2 id="calls-h">Calls on the record</h2><p>Dated before the fact, checked on the date. Misses stay up.</p></div></div>
+    <div id="calls-wrap"></div>
+  </section>
+
+  <section id="drops" class="block" aria-labelledby="drops-h">
+    <div class="block-head"><div><div class="kicker">05 · Drops</div><h2 id="drops-h">Drops</h2><p>Release dates across the games.</p></div></div>
+    <div class="grid-12">
+      <div class="span-8"><div class="drops" id="drops-grid"></div></div>
+      <div class="card locator span-4">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9A96B8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+        <h3>In stock near you</h3>
+        <p>Store-level stock for your zip code. Coming later, through a partner that already tracks it.</p>
+        <span class="btn" aria-disabled="true">Coming later</span>
+      </div>
+    </div>
+    <p class="source" id="drops-source" style="border:0"></p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>
+    <a class="wordmark" href="https://www.jacknbauhs.com/">JACK BAUHS</a>
+    <p>Mission Control is Astronaut Time's market board. The numbers here feed the videos, and the videos point back here.</p>
+  </div>
+  <div><h2>SITE</h2><ul><li><a href="https://www.jacknbauhs.com/">About</a></li><li><a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a></li><li><a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a></li><li><a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a></li><li><a href="https://www.jacknbauhs.com/contact">Contact</a></li></ul></div>
+  <div><h2>FOLLOW</h2><ul><li><a href="https://www.instagram.com/astronaut_time_tcg/" rel="me">Instagram</a></li><li><a href="https://www.tiktok.com/@astronauttime" rel="me">TikTok</a></li><li><a href="https://www.whatnot.com/s/NP78DwK8">Whatnot</a></li><li><a href="https://vimeo.com/jacknbauhs" rel="me">Vimeo</a></li><li><a href="https://www.ebay.com/usr/astronaut_time">eBay</a></li></ul></div>
+  <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>Release calendars</li><li>Published pull-rate studies</li></ul></div>
+  <div class="fineprint"><span>Launch edition, updated by hand until the data feed lands. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
+</footer>
+<script src="assets/board.js"></script>
+</body>
+</html>

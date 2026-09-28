@@ -1,0 +1,10 @@
+{
+  "as_of": "2026-09-28",
+  "items": [
+    {"date": "2026-09-30", "date_precision": "day", "game": "Pokémon", "name": "Mega Forces Tins", "detail": "Three tin designs, retail wave."},
+    {"date": "2026-10-02", "date_precision": "day", "game": "Pokémon", "name": "30th Celebration Booster Bundle", "detail": "Ships after the Sep 16 set launch."},
+    {"date": "2026-10-01", "date_precision": "month", "game": "One Piece", "name": "EB-05 Heroines Edition vol. 2", "detail": "Extra booster, English and Japanese. Day not announced."},
+    {"date": "2026-11-06", "date_precision": "day", "game": "Pokémon", "name": "Delta Reign", "detail": "Sixth Mega Evolution set, led by Mega Rayquaza ex. Preorders are up."}
+  ],
+  "source": "PokeGuardian and PokéCottage (Delta Reign), opboxindex (EB-05), retailer calendars (Mega Forces Tins), checked Sep 28, 2026"
+}

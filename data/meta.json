@@ -1,0 +1,16 @@
+{
+ "generated_at": "2026-09-28T17:00:00Z",
+ "updated_label": "Mon Sep 28, 2026",
+ "edition": "launch",
+ "note": "Launch edition, updated by hand. Nightly updates start when the free market data feed lands.",
+ "sources": [
+  {
+   "name": "130point: eBay and Goldin sold listings, best offers at the accepted price",
+   "as_of": "2026-09-28"
+  },
+  {
+   "name": "Release dates: PokeGuardian, Pok\u00e9Cottage, opboxindex, retailer calendars",
+   "as_of": "2026-09-28"
+  }
+ ]
+}

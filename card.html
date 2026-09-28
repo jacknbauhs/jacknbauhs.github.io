@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card · Mission Control · Jack Bauhs</title>
+<meta name="description" content="Astronaut Time's market board: Pokémon and TCG sales with the fake and broken ones flagged, dated calls, and release dates.">
+<meta property="og:title" content="Mission Control · Astronaut Time">
+<meta property="og:description" content="The card market, with the fake sales taken out.">
+<meta property="og:url" content="https://board.jacknbauhs.com/">
+<meta name="theme-color" content="#0B0A14">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Unbounded:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/board.css">
+</head>
+<body data-page="card">
+<div class="sky" aria-hidden="true">
+<svg viewBox="0 0 1440 760" preserveAspectRatio="xMidYMin slice"><ellipse cx="1060" cy="420" rx="560" ry="170" fill="none" stroke="rgba(139,92,246,0.16)" transform="rotate(-8 1060 420)"/><circle cx="552" cy="470" r="3" fill="#8B5CF6" opacity="0.8"/><circle cx="466" cy="109" r="1.6" fill="#ECEAF6" opacity="0.25"/><circle cx="527" cy="42" r="1.2" fill="#ECEAF6" opacity="0.35"/><circle cx="101" cy="65" r="1" fill="#ECEAF6" opacity="0.25"/><circle cx="1191" cy="89" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="1365" cy="416" r="1" fill="#ECEAF6" opacity="0.25"/><circle cx="1406" cy="34" r="0.8" fill="#ECEAF6" opacity="0.45"/><circle cx="604" cy="389" r="1.2" fill="#ECEAF6" opacity="0.45"/><circle cx="807" cy="491" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="823" cy="135" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="1025" cy="406" r="1.2" fill="#ECEAF6" opacity="0.35"/><circle cx="1144" cy="503" r="0.8" fill="#ECEAF6" opacity="0.25"/><circle cx="415" cy="706" r="0.8" fill="#ECEAF6" opacity="0.8"/><circle cx="602" cy="545" r="0.8" fill="#ECEAF6" opacity="0.6"/><circle cx="1004" cy="47" r="1.6" fill="#ECEAF6" opacity="0.45"/><circle cx="1355" cy="256" r="1.2" fill="#ECEAF6" opacity="0.25"/><circle cx="711" cy="157" r="1" fill="#ECEAF6" opacity="0.35"/><circle cx="400" cy="99" r="1" fill="#ECEAF6" opacity="0.8"/><circle cx="6" cy="302" r="1" fill="#ECEAF6" opacity="0.8"/><circle cx="1368" cy="472" r="1.6" fill="#ECEAF6" opacity="0.25"/><circle cx="658" cy="627" r="1.6" fill="#ECEAF6" opacity="0.8"/><circle cx="90" cy="48" r="0.8" fill="#ECEAF6" opacity="0.6"/></svg>
+</div>
+
+<header class="site-header">
+  <a class="wordmark" href="https://www.jacknbauhs.com/">JACK BAUHS</a>
+  <nav class="site-nav" id="site-nav" aria-label="Site">
+    <a href="https://www.jacknbauhs.com/">About</a>
+    <a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a>
+    <a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a>
+    <a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a>
+    <a href="./" aria-current="page">Mission Control</a>
+    <a href="https://www.jacknbauhs.com/contact">Contact</a>
+  </nav>
+  <button class="menu-button" id="menu-button" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg>
+  </button>
+</header>
+
+<div class="mc-bar">
+  <div class="mc-brand">
+    <svg width="26" height="26" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8" fill="none" stroke="#C4B5FD" stroke-width="2"/><ellipse cx="16" cy="16" rx="14.5" ry="5" fill="none" stroke="#8B5CF6" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+    <strong>MISSION CONTROL</strong><span class="muted" style="font-size:13px">by Astronaut Time</span>
+  </div>
+  <nav class="mc-nav" aria-label="Mission Control">
+    <a href="./#moving" class="is-active">Market</a><a href="./#flags">Flags</a><a href="./#rip-ev">Rip EV</a><a href="./#calls">Calls</a><a href="./#drops">Drops</a>
+  </nav>
+  <span class="status" id="status">Updated Mon Sep 28, 2026</span>
+</div>
+
+<main id="main">
+  <div class="crumbs"><a href="./">&larr; Mission Control</a><span class="muted" id="crumb"></span></div>
+  <div class="card-title"><div><h1 id="card-name">Card</h1><div class="card-meta" id="card-meta"></div></div></div>
+  <div class="kpis" id="kpis"></div>
+  <p id="load-error" class="muted" hidden>This card couldn't load. <a href="./">Back to Mission Control</a>.</p>
+  <figure class="card chart-card" style="margin:24px 0 0">
+    <div id="card-chart"></div>
+    <div class="legend">
+      <span><i class="swatch" style="border:2px solid #ECEAF6"></i>Clean sale</span>
+      <span><i class="swatch" style="background:#FBBF24"></i>Relist, counts half</span>
+      <span><i class="swatch" style="background:#9A96B8"></i>Duplicate</span>
+      <span><i class="swatch" style="background:#F472B6"></i>Doesn't belong</span>
+      <span><i class="swatch line" style="background:#A78BFA"></i>Clean monthly median</span>
+    </div>
+  </figure>
+  <p class="card summary" id="card-summary"></p>
+  <section class="block" style="margin-top:56px" aria-labelledby="sales-h">
+    <div class="block-head"><div><div class="kicker">Every sale</div><h2 id="sales-h">The file</h2><p>Newest first. Every record in the sold list, with what counted and why.</p></div></div>
+    <div class="card table-card">
+      <table class="data">
+        <thead><tr><th scope="col">Date</th><th scope="col">Price</th><th scope="col">Format</th><th scope="col">Label</th><th scope="col">Why</th></tr></thead>
+        <tbody id="sales-body"></tbody>
+      </table>
+      <div class="table-foot" id="card-source"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div>
+    <a class="wordmark" href="https://www.jacknbauhs.com/">JACK BAUHS</a>
+    <p>Mission Control is Astronaut Time's market board. The numbers here feed the videos, and the videos point back here.</p>
+  </div>
+  <div><h2>SITE</h2><ul><li><a href="https://www.jacknbauhs.com/">About</a></li><li><a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a></li><li><a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a></li><li><a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a></li><li><a href="https://www.jacknbauhs.com/contact">Contact</a></li></ul></div>
+  <div><h2>FOLLOW</h2><ul><li><a href="https://www.instagram.com/astronaut_time_tcg/" rel="me">Instagram</a></li><li><a href="https://www.tiktok.com/@astronauttime" rel="me">TikTok</a></li><li><a href="https://www.whatnot.com/s/NP78DwK8">Whatnot</a></li><li><a href="https://vimeo.com/jacknbauhs" rel="me">Vimeo</a></li><li><a href="https://www.ebay.com/usr/astronaut_time">eBay</a></li></ul></div>
+  <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>Release calendars</li><li>Published pull-rate studies</li></ul></div>
+  <div class="fineprint"><span>Launch edition, updated by hand until the data feed lands. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
+</footer>
+<script src="assets/board.js"></script>
+</body>
+</html>

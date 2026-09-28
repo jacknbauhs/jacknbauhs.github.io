@@ -1,0 +1,13 @@
+{
+  "live": false,
+  "live_note": "EV per box fills in with the Rip EV build: published pull rates times real card prices, net of fees.",
+  "games": ["Pokémon", "One Piece", "Yu-Gi-Oh", "Sports"],
+  "items": [
+    {"game": "Pokémon", "product": "Destined Rivals Booster Box"},
+    {"game": "Pokémon", "product": "Phantasmal Flames Booster Box"},
+    {"game": "Pokémon", "product": "Mega Evolution Booster Box"},
+    {"game": "Pokémon", "product": "Pitch Black Booster Box"},
+    {"game": "Pokémon", "product": "Chaos Rising Booster Box"},
+    {"game": "Pokémon", "product": "Prismatic Evolutions ETB"}
+  ]
+}

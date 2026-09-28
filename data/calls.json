@@ -1,45 +1,38 @@
 {
-  "note": "Append-only. A call goes public when on_record is true. Misses stay up.",
-  "items": [
-    {
-      "id": "004",
-      "dated": "2026-09-27",
-      "text": "Crystal Lugia PSA 9's next confirmed sale lands at or above $18,250, while the un-reprinted Crystal Charizard PSA 9 holds $34,000 to $40,000.",
-      "check_date": "2026-10-27",
-      "status": "open",
-      "on_record": false,
-      "latest": "Crystal Lugia PSA 8 sold for $22,499.95 on Sep 24, one sale, eight days after the reprint.",
-      "link": "cards/crystal-lugia-psa-8.html"
-    },
-    {
-      "id": "003",
-      "dated": "2026-09-15",
-      "text": "Raw Base Set Charizard is down 10% or more from its Sep 15 price. The reprint lands on the raw copies.",
-      "check_date": "2026-10-16",
-      "status": "open",
-      "on_record": false,
-      "latest": null,
-      "link": null
-    },
-    {
-      "id": "002",
-      "dated": "2026-09-15",
-      "text": "Base Set Charizard PSA 10 is at or above its Sep 15 price. The graded population is closed, so the reprint can't enter it.",
-      "check_date": "2026-10-16",
-      "status": "open",
-      "on_record": false,
-      "latest": null,
-      "link": null
-    },
-    {
-      "id": "001",
-      "dated": "2026-09-10",
-      "text": "The 30th Celebration booster bundle's premium collapses once it ships Oct 2. The ETB holds its premium better.",
-      "check_date": "2026-10-16",
-      "status": "open",
-      "on_record": false,
-      "latest": "The bundle ships Oct 2.",
-      "link": null
-    }
-  ]
+ "note": "Append-only. A call goes up with the date it went public and gets checked on its check date. Misses stay up.",
+ "items": [
+  {
+   "id": "003",
+   "dated": "2026-09-15",
+   "text": "Raw Base Set Charizard is down 10% or more from its Sep 15 price. The reprint lands on the raw copies.",
+   "check_date": "2026-10-16",
+   "status": "open",
+   "on_record": true,
+   "method": "Checked Oct 16 against the TCGplayer market price for a raw Base Set Charizard, Sep 15 vs Oct 16.",
+   "latest": "The 30th Celebration reprint hit shelves Sep 16.",
+   "link": null
+  },
+  {
+   "id": "002",
+   "dated": "2026-09-15",
+   "text": "Base Set Charizard PSA 10 is at or above its Sep 15 price. The graded population is closed, so the reprint can't enter it.",
+   "check_date": "2026-10-16",
+   "status": "open",
+   "on_record": true,
+   "method": "Checked Oct 16 against PSA 10 sold prices on 130point, Sep 15 vs Oct 16.",
+   "latest": "The 30th Celebration reprint hit shelves Sep 16.",
+   "link": null
+  },
+  {
+   "id": "001",
+   "dated": "2026-09-10",
+   "text": "The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better.",
+   "check_date": "2026-10-16",
+   "status": "open",
+   "on_record": true,
+   "method": "Checked Oct 16: TCGplayer market price over retail for the Booster Bundle and the ETB, Sep 10 vs Oct 16.",
+   "latest": "The Booster Bundle ships Oct 2.",
+   "link": null
+  }
+ ]
 }

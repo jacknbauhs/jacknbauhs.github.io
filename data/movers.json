@@ -1,42 +1,5 @@
 {
- "as_of": "2026-09-27",
- "title": "This week's file",
- "live": false,
- "live_note": "Live movers turn on when the free market data feed lands. Until then, this is the file: every sale checked by hand.",
- "items": [
-  {
-   "id": "crystal-lugia-psa-8",
-   "name": "Crystal Lugia",
-   "set": "Aquapolis 149/147",
-   "tier": "PSA 8",
-   "last": {
-    "price": 19500.0,
-    "date": "2026-09-27"
-   },
-   "clean_median": 15999.0,
-   "change_pct": 61.6,
-   "window_label": "clean median, June to Sept",
-   "flagged": 6,
-   "sales": 24,
-   "note": "Reprinted in 30th Celebration",
-   "link": "card.html?id=crystal-lugia-psa-8"
-  },
-  {
-   "id": "crystal-charizard-psa-9",
-   "name": "Crystal Charizard",
-   "set": "Skyridge 146/144",
-   "tier": "PSA 9",
-   "last": {
-    "price": 45000.0,
-    "date": "2026-09-27"
-   },
-   "clean_median": 38500.0,
-   "change_pct": 37.0,
-   "window_label": "clean median, June to Sept",
-   "flagged": 1,
-   "sales": 15,
-   "note": "Never reprinted",
-   "link": "card.html?id=crystal-charizard-psa-9"
-  }
- ]
+ "as_of": "2026-09-28",
+ "items": [],
+ "pending": true
 }

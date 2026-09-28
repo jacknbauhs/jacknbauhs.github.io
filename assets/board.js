@@ -1,5 +1,8 @@
 /* Mission Control board · jacknbauhs.com
-   Every section reads a JSON file in /data, so the nightly feed only replaces data files. */
+   Every section reads a JSON file in /data.
+   Kept by hand: file.json (this week's file) and cards/*.json, calls.json, drops.json.
+   Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json.
+   A missing or broken file only blanks its own section. */
 (function () {
   "use strict";
 
@@ -7,14 +10,30 @@
   var SVGNS = "http://www.w3.org/2000/svg";
   var COLORS = {
     text: "#ECEAF6", muted: "#9A96B8", grid: "rgba(236,234,246,0.08)", accent: "#A78BFA",
-    accentText: "#C4B5FD", flag: "#F472B6", flagText: "#F9A8D4", warn: "#FBBF24", neutral: "#9A96B8"
+    accentText: "#C4B5FD", flag: "#F472B6", flagText: "#F9A8D4", warn: "#FBBF24", neutral: "#9A96B8",
+    sealed: "#C98500", ev: "#8B5CF6", rip: "#34D399", surface: "#14122A"
   };
+  // Sale Integrity labels, in the order the legend shows them.
   var LABELS = {
-    ORGANIC: { text: "Clean", chip: "chip-ok" },
-    RELIST: { text: "Relist", chip: "chip-warn" },
-    DUPLICATE: { text: "Duplicate", chip: "chip-neutral" },
-    DATA_ERROR: { text: "Doesn't belong", chip: "chip-flag" },
-    BEST_OFFER: { text: "Best offer", chip: "chip-info" }
+    ORGANIC: { text: "Clean", chip: "chip-ok", meaning: "A real sale of the right card. Counts in full." },
+    BEST_OFFER: { text: "Best offer", chip: "chip-info", meaning: "Shown at the accepted price, not the asking price." },
+    RELIST: { text: "Relist", chip: "chip-warn", meaning: "The same listing sold more than once. The first sale may not have gone through. Counts half." },
+    DUPLICATE: { text: "Duplicate", chip: "chip-neutral", meaning: "One sale recorded twice. Counted once." },
+    DATA_ERROR: { text: "Doesn't belong", chip: "chip-flag", meaning: "Wrong card, wrong grade, or a price no real copy sells for. Left out." },
+    EVENT_DRIVEN: { text: "Event", chip: "chip-info", meaning: "A jump tied to news, like a reprint or a viral pull. Counts half until it holds." },
+    SUPPLY_SHOCK: { text: "Supply shock", chip: "chip-warn", meaning: "More copies selling while the price sits flat or falls." },
+    THIN_SPIKE: { text: "Thin spike", chip: "chip-warn", meaning: "Up on a handful of sales, with no volume behind it." },
+    SUSPECT_PUMP: { text: "Suspect pump", chip: "chip-flag", meaning: "A spike with warning signs, like one seller doing most of the selling. Left out." },
+    SUSPECT_WASH: { text: "Suspect wash", chip: "chip-flag", meaning: "The same slab selling in a loop, or bidding that looks staged. Left out." },
+    UNCONFIRMED: { text: "Unconfirmed", chip: "chip-neutral", meaning: "No checked sales behind the move yet." }
+  };
+  var GAMES = [
+    { id: "pokemon", name: "Pokémon" }, { id: "one_piece", name: "One Piece" },
+    { id: "yugioh", name: "Yu-Gi-Oh" }, { id: "sports", name: "Sports" }
+  ];
+  var TYPES = {
+    booster_box: "Booster box", etb: "Elite Trainer Box", booster_bundle: "Booster bundle", bundle: "Bundle",
+    case: "Case", pack: "Pack", blaster: "Blaster", hobby_box: "Hobby box", display: "Display", tin: "Tin"
   };
 
   /* ---------- helpers ---------- */
@@ -22,6 +41,7 @@
   function el(tag, attrs, children) {
     var node = document.createElement(tag);
     if (attrs) Object.keys(attrs).forEach(function (k) {
+      if (attrs[k] == null) return;
       if (k === "text") node.textContent = attrs[k];
       else if (k === "class") node.className = attrs[k];
       else node.setAttribute(k, attrs[k]);
@@ -34,32 +54,73 @@
     Object.keys(attrs || {}).forEach(function (k) { node.setAttribute(k, attrs[k]); });
     return node;
   }
-  function parseDate(s) { var p = s.split("-"); return new Date(Date.UTC(+p[0], +p[1] - 1, +(p[2] || 1))); }
+  function svgText(attrs, text) { var t = svg("text", attrs); t.textContent = text; return t; }
+  function parseDate(s) { var p = String(s).slice(0, 10).split("-"); return new Date(Date.UTC(+p[0], +p[1] - 1, +(p[2] || 1))); }
   function fmtDate(s) { var d = parseDate(s); return MONTHS[d.getUTCMonth()] + " " + d.getUTCDate(); }
+  function fmtDateYear(s) { var d = parseDate(s); return fmtDate(s) + ", " + d.getUTCFullYear(); }
+  function isNum(n) { return typeof n === "number" && isFinite(n); }
   function money(n) {
+    if (!isNum(n)) return "—";
     var whole = Math.abs(n - Math.round(n)) < 0.005;
     return "$" + n.toLocaleString("en-US", { minimumFractionDigits: whole ? 0 : 2, maximumFractionDigits: whole ? 0 : 2 });
   }
+  function moneyC(c) { return isNum(c) ? money(c / 100) : "—"; }
   function moneyShort(n) { return n >= 1000 ? "$" + (Math.round(n / 100) / 10).toLocaleString("en-US") + "k" : money(n); }
   function pct(n, digits) {
+    if (!isNum(n)) return "—";
     var v = Math.abs(n).toFixed(digits == null ? 0 : digits);
     return (n > 0 ? "+" : n < 0 ? "−" : "") + v + "%";
   }
-  function chip(label) {
-    var info = LABELS[label] || { text: label, chip: "chip-neutral" };
-    return el("span", { class: "chip " + info.chip, text: info.text.toUpperCase() });
+  function share(f) { return isNum(f) ? Math.round(f * 100) + "%" : "—"; }
+  function sentence(t, period) {
+    t = String(t || "").trim();
+    if (!t) return "";
+    t = t.charAt(0).toUpperCase() + t.slice(1);
+    return period && !/[.!?]$/.test(t) ? t + "." : t;
   }
+  function labelInfo(label) {
+    return LABELS[label] || { text: String(label || "").toLowerCase().replace(/_/g, " ").replace(/^\w/, function (c) { return c.toUpperCase(); }), chip: "chip-neutral" };
+  }
+  function chip(label) { var info = labelInfo(label); return el("span", { class: "chip " + info.chip, text: info.text.toUpperCase() }); }
   function getJSON(path) {
     return fetch(path, { cache: "no-cache" }).then(function (r) {
       if (!r.ok) throw new Error(path + " " + r.status);
       return r.json();
     });
   }
+  // A file that fails to load comes back as null, so only its own section goes quiet.
+  function load(path) { return getJSON(path).catch(function (e) { if (window.console) console.warn(e); return null; }); }
+  function safe(fn) { try { fn(); } catch (e) { if (window.console) console.error(e); } }
   function daysFromToday(iso) {
     var now = new Date();
     var today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
     return Math.round((parseDate(iso).getTime() - today) / 86400000);
   }
+  function updatedLabel(meta) {
+    if (!meta) return "";
+    if (meta.generated_at) {
+      var d = new Date(meta.generated_at);
+      if (!isNaN(d.getTime())) {
+        try {
+          return "Updated " + new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", weekday: "short", month: "short", day: "numeric", year: "numeric" })
+            .format(d).replace(",", "");
+        } catch (e) { return "Updated " + fmtDateYear(meta.generated_at); }
+      }
+    }
+    return meta.updated_label ? "Updated " + meta.updated_label : "";
+  }
+  function emptyCard(title, text) {
+    return el("div", { class: "card empty-state" }, [el("h3", { text: title }), text ? el("p", { text: text }) : null]);
+  }
+  function stack(main, sub, cls) {
+    return el("span", { class: "stack" }, [el("span", { class: cls || "", text: main }), sub ? el("span", { class: "sub", text: sub }) : null]);
+  }
+  function niceStep(raw) {
+    if (!(raw > 0)) return 1;
+    var p = Math.pow(10, Math.floor(Math.log(raw) / Math.LN10)), f = raw / p;
+    return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p;
+  }
+  function axisMoney(v) { return v >= 1000 ? "$" + (v / 1000).toLocaleString("en-US", { maximumFractionDigits: 1 }) + "k" : "$" + Math.round(v); }
 
   /* ---------- sales chart: every sale as a dot, the clean monthly median as a step line ---------- */
   function salesChart(card, opts) {
@@ -81,16 +142,14 @@
 
     for (var v = yMin; v <= yMax; v += step) {
       root.appendChild(svg("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: COLORS.grid }));
-      var t = svg("text", { x: L - 10, y: y(v) + 4, "text-anchor": "end", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace" });
-      t.textContent = "$" + (v / 1000) + "k"; root.appendChild(t);
+      root.appendChild(svgText({ x: L - 10, y: y(v) + 4, "text-anchor": "end", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace" }, "$" + (v / 1000) + "k"));
     }
     // month labels
     var d = parseDate(card.window.start);
     while (d.getTime() <= end) {
       var iso = d.toISOString().slice(0, 10);
       var mid = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth(), 15)).toISOString().slice(0, 10);
-      var ml = svg("text", { x: x(mid), y: H - 14, "text-anchor": "middle", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace", "letter-spacing": 1 });
-      ml.textContent = MONTHS[d.getUTCMonth()].toUpperCase(); root.appendChild(ml);
+      root.appendChild(svgText({ x: x(mid), y: H - 14, "text-anchor": "middle", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace", "letter-spacing": 1 }, MONTHS[d.getUTCMonth()].toUpperCase()));
       if (iso !== card.window.start) root.appendChild(svg("line", { x1: x(iso), x2: x(iso), y1: T, y2: H - B, stroke: COLORS.grid, "stroke-dasharray": "2 6" }));
       d = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() + 1, 1));
     }
@@ -98,8 +157,7 @@
     if (card.event) {
       var ex = x(card.event.date);
       root.appendChild(svg("line", { x1: ex, x2: ex, y1: T - 8, y2: H - B, stroke: COLORS.accentText, "stroke-dasharray": "3 4" }));
-      var et = svg("text", { x: ex - 8, y: T + 6, "text-anchor": "end", "font-size": 11, fill: COLORS.accentText, "font-family": "Geist Mono, monospace" });
-      et.textContent = fmtDate(card.event.date).toUpperCase() + " · REPRINT ON SHELVES"; root.appendChild(et);
+      root.appendChild(svgText({ x: ex - 8, y: T + 6, "text-anchor": "end", "font-size": 11, fill: COLORS.accentText, "font-family": "Geist Mono, monospace" }, fmtDate(card.event.date).toUpperCase() + " · REPRINT ON SHELVES"));
     }
     // clean monthly median steps
     Object.keys(card.monthly_clean).forEach(function (m) {
@@ -108,8 +166,7 @@
       var xe = L + (Math.min(e, end) - start) * (W - L - R) / (end - start);
       var yy = y(card.monthly_clean[m]);
       root.appendChild(svg("line", { x1: xs + 4, x2: xe - 4, y1: yy, y2: yy, stroke: COLORS.accent, "stroke-width": 4, "stroke-linecap": "round" }));
-      var lab = svg("text", { x: (xs + xe) / 2, y: yy - 10, "text-anchor": "middle", "font-size": 12, fill: COLORS.accentText, "font-family": "Geist Mono, monospace" });
-      lab.textContent = moneyShort(card.monthly_clean[m]); root.appendChild(lab);
+      root.appendChild(svgText({ x: (xs + xe) / 2, y: yy - 10, "text-anchor": "middle", "font-size": 12, fill: COLORS.accentText, "font-family": "Geist Mono, monospace" }, moneyShort(card.monthly_clean[m])));
     });
     // sales
     var floorY = H - B - 6;
@@ -121,170 +178,436 @@
       dot.appendChild(title); root.appendChild(dot);
       if (off) {
         var nearRight = cx > W - R - 110;
-        var ot = svg("text", { x: nearRight ? cx - 10 : cx + 9, y: cy + 4, "text-anchor": nearRight ? "end" : "start", "font-size": 11, fill: COLORS.flagText, "font-family": "Geist Mono, monospace" });
-        ot.textContent = "↓ " + money(s.price); root.appendChild(ot);
+        root.appendChild(svgText({ x: nearRight ? cx - 10 : cx + 9, y: cy + 4, "text-anchor": nearRight ? "end" : "start", "font-size": 11, fill: COLORS.flagText, "font-family": "Geist Mono, monospace" }, "↓ " + money(s.price)));
       }
     });
     return root;
   }
 
+  /* ---------- rip or hold chart: sealed price vs EV per box, the rip zone shaded ---------- */
+  function ripChart(box, points, product) {
+    box.innerHTML = "";
+    var size = fitChart(box, 0.52);
+    var W = size.width, H = Math.max(240, Math.min(size.height, 340));
+    var L = 58, R = 18, T = 20, B = 34;
+    var pts = (points || []).filter(function (p) { return isNum(p.sealed_market_cents) && isNum(p.ev_box_cents); })
+      .map(function (p) { return { day: p.day, s: p.sealed_market_cents / 100, e: p.ev_box_cents / 100 }; })
+      .sort(function (a, b) { return a.day < b.day ? -1 : 1; });
+    if (!pts.length) { box.appendChild(el("p", { class: "muted", text: "No price history for this product yet." })); return; }
+    var vals = [];
+    pts.forEach(function (p) { vals.push(p.s, p.e); });
+    var lo = Math.min.apply(null, vals), hi = Math.max.apply(null, vals);
+    var step = niceStep(Math.max(hi - lo, hi * 0.2) / 4);
+    var yMin = Math.max(0, Math.floor((lo - step * 0.5) / step) * step), yMax = Math.ceil((hi + step * 0.5) / step) * step;
+    var t0 = parseDate(pts[0].day).getTime(), t1 = parseDate(pts[pts.length - 1].day).getTime();
+    var x = function (p) { return pts.length === 1 || t1 === t0 ? (L + W - R) / 2 : L + (parseDate(p.day).getTime() - t0) * (W - L - R) / (t1 - t0); };
+    var y = function (v) { return T + (yMax - v) * (H - T - B) / (yMax - yMin); };
+    var name = product.product + (product.set ? ", " + product.set : "");
+    var last = pts[pts.length - 1];
+    var root = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "chart", role: "img",
+      "aria-label": name + ": sealed price and expected value per box from " + fmtDate(pts[0].day) + " to " + fmtDate(last.day) +
+        ". Latest: sealed " + money(last.s) + ", EV per box " + money(last.e) + "." });
+
+    for (var v = yMin; v <= yMax + 0.001; v += step) {
+      root.appendChild(svg("line", { x1: L, x2: W - R, y1: y(v), y2: y(v), stroke: COLORS.grid }));
+      root.appendChild(svgText({ x: L - 10, y: y(v) + 4, "text-anchor": "end", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace" }, axisMoney(v)));
+    }
+    var xl = [pts[0]];
+    if (pts.length > 2) xl.push(pts[Math.floor((pts.length - 1) / 2)]);
+    if (pts.length > 1) xl.push(last);
+    xl.forEach(function (p, i) {
+      var anchor = xl.length === 1 ? "middle" : i === 0 ? "start" : i === xl.length - 1 ? "end" : "middle";
+      root.appendChild(svgText({ x: x(p), y: H - 10, "text-anchor": anchor, "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace", "letter-spacing": 1 }, fmtDate(p.day).toUpperCase()));
+    });
+
+    // rip zone: wherever EV per box sits above the sealed price, split at crossings
+    for (var i = 0; i < pts.length - 1; i++) {
+      var a = pts[i], b = pts[i + 1], da = a.e - a.s, db = b.e - b.s;
+      var ax = x(a), bx = x(b);
+      if (da >= 0 && db >= 0) {
+        root.appendChild(svg("path", { d: "M" + ax + " " + y(a.e) + " L" + bx + " " + y(b.e) + " L" + bx + " " + y(b.s) + " L" + ax + " " + y(a.s) + " Z", fill: COLORS.rip, "fill-opacity": 0.16 }));
+      } else if (da > 0 || db > 0) {
+        var t = da / (da - db), cx = ax + (bx - ax) * t, cv = a.s + (b.s - a.s) * t;
+        var d = da > 0
+          ? "M" + ax + " " + y(a.e) + " L" + cx + " " + y(cv) + " L" + ax + " " + y(a.s) + " Z"
+          : "M" + cx + " " + y(cv) + " L" + bx + " " + y(b.e) + " L" + bx + " " + y(b.s) + " Z";
+        root.appendChild(svg("path", { d: d, fill: COLORS.rip, "fill-opacity": 0.16 }));
+      }
+    }
+    // lines, or dots when there is a single day
+    [["s", COLORS.sealed, 2], ["e", COLORS.ev, 2.5]].forEach(function (spec) {
+      if (pts.length === 1) {
+        root.appendChild(svg("circle", { cx: x(pts[0]), cy: y(pts[0][spec[0]]), r: 5, fill: spec[1], stroke: COLORS.surface, "stroke-width": 2 }));
+      } else {
+        root.appendChild(svg("path", { d: pts.map(function (p, n) { return (n ? "L" : "M") + x(p) + " " + y(p[spec[0]]); }).join(" "), fill: "none", stroke: spec[1], "stroke-width": spec[2], "stroke-linejoin": "round", "stroke-linecap": "round" }));
+      }
+    });
+    // direct labels at the latest point, kept apart
+    var ly = { s: y(last.s), e: y(last.e) };
+    if (Math.abs(ly.s - ly.e) < 16) { if (ly.e <= ly.s) { ly.e -= 8; ly.s += 8; } else { ly.s -= 8; ly.e += 8; } }
+    var lx = x(last) - 8;
+    var halo = { stroke: COLORS.surface, "stroke-width": 4, "paint-order": "stroke", "stroke-linejoin": "round" };
+    root.appendChild(svgText(Object.assign({ x: lx, y: ly.e - 8, "text-anchor": "end", "font-size": 12, fill: COLORS.text, "font-family": "Geist Mono, monospace" }, halo), "EV " + money(Math.round(last.e))));
+    root.appendChild(svgText(Object.assign({ x: lx, y: ly.s + 18, "text-anchor": "end", "font-size": 12, fill: COLORS.muted, "font-family": "Geist Mono, monospace" }, halo), "Sealed " + money(Math.round(last.s))));
+
+    // hover: crosshair plus a tooltip for the nearest day
+    var cross = svg("line", { x1: 0, x2: 0, y1: T, y2: H - B, stroke: COLORS.muted, "stroke-dasharray": "3 4", visibility: "hidden" });
+    root.appendChild(cross);
+    var hit = svg("rect", { x: L, y: T, width: W - L - R, height: H - T - B, fill: "transparent" });
+    root.appendChild(hit);
+    var tip = el("div", { class: "chart-tip", hidden: "hidden" });
+    function hide() { cross.setAttribute("visibility", "hidden"); tip.hidden = true; }
+    hit.addEventListener("mousemove", function (ev) {
+      var rect = root.getBoundingClientRect(), sx = rect.width / W;
+      var mx = (ev.clientX - rect.left) / sx, best = pts[0], bd = Infinity;
+      pts.forEach(function (p) { var dd = Math.abs(x(p) - mx); if (dd < bd) { bd = dd; best = p; } });
+      var px = x(best);
+      cross.setAttribute("x1", px); cross.setAttribute("x2", px); cross.setAttribute("visibility", "visible");
+      tip.textContent = "";
+      tip.appendChild(el("strong", { text: fmtDate(best.day) }));
+      tip.appendChild(el("span", { text: "EV per box " + money(best.e) }));
+      tip.appendChild(el("span", { text: "Sealed " + money(best.s) }));
+      tip.appendChild(el("span", { text: (best.e >= best.s ? "Opening beats holding" : "Holding beats opening") }));
+      tip.hidden = false;
+      tip.style.left = Math.min(Math.max(px * sx, 90), rect.width - 90) + "px";
+      tip.style.top = (Math.min(y(best.e), y(best.s)) * sx) + "px";
+    });
+    hit.addEventListener("mouseleave", hide);
+    box.appendChild(root);
+    box.appendChild(tip);
+  }
+
   /* ---------- index page ---------- */
   function renderIndex() {
     Promise.all([
-      getJSON("data/meta.json"), getJSON("data/movers.json"), getJSON("data/flags.json"), getJSON("data/calls.json"),
-      getJSON("data/drops.json"), getJSON("data/rip_ev.json"), getJSON("data/cards/crystal-lugia-psa-8.json"),
-      getJSON("data/cards/crystal-charizard-psa-9.json")
+      load("data/meta.json"), load("data/file.json"), load("data/movers.json"), load("data/flags.json"),
+      load("data/rip_ev.json"), load("data/calls.json"), load("data/drops.json")
     ]).then(function (r) {
-      var meta = r[0], movers = r[1], flags = r[2], calls = r[3], drops = r[4], rip = r[5], lugia = r[6], zard = r[7];
-      $("#status").textContent = "Updated " + meta.updated_label;
-
-      // hero chart
-      var hero = $("#hero-chart");
-      hero.appendChild(salesChart(lugia, fitChart(hero, 0.52)));
-      $("#hero-change").textContent = pct(lugia.change_pct);
-
-      // stats
-      var stats = [
-        { v: pct(lugia.change_pct), c: "up", t: "Crystal Lugia PSA 8, clean median June to September. Reprinted." },
-        { v: pct(zard.change_pct), c: "up", t: "Crystal Charizard PSA 9, same months. Never reprinted." },
-        { v: flags.headline.value + " of " + flags.headline.of, c: "flag", t: "Sold records on those two cards that don't belong in the math." },
-        { v: fmtDate(nextDrop(drops).date), c: "", t: "Next release: " + nextDrop(drops).name + "." }
-      ];
-      var sEl = $("#stats");
-      stats.forEach(function (s) {
-        sEl.appendChild(el("div", { class: "card stat" }, [
-          el("span", { class: "num " + (s.c === "up" ? "up" : ""), style: s.c === "flag" ? "color: var(--flag)" : "", text: s.v }),
-          el("p", { text: s.t })
-        ]));
+      var meta = r[0], file = r[1], movers = r[2], flags = r[3], rip = r[4], calls = r[5], drops = r[6];
+      $("#status").textContent = updatedLabel(meta) || $("#status").textContent;
+      var ids = file && file.cards ? file.cards : [];
+      return Promise.all(ids.map(function (id) { return load("data/cards/" + id + ".json"); })).then(function (cards) {
+        var byId = {};
+        ids.forEach(function (id, n) { byId[id] = cards[n]; });
+        if (!file) { var m = $("#load-error"); if (m) m.hidden = false; }
+        safe(function () { renderFile(file, byId, drops); });
+        safe(function () { renderMovers(movers); });
+        safe(function () { renderMarketFlags(flags); });
+        safe(renderLegend);
+        safe(function () { renderRip(rip); });
+        safe(function () { renderCalls(calls); });
+        safe(function () { renderDrops(drops); });
       });
-
-      // movers
-      $("#movers-note").textContent = movers.live_note;
-      var body = $("#movers-body");
-      movers.items.forEach(function (m) {
-        var nameCell = el("td", { class: "first" }, [
-          m.link ? el("a", { href: m.link, class: "name", text: m.name }) : el("span", { class: "name", text: m.name }),
-          el("span", { class: "sub", text: m.set + " · " + m.note })
-        ]);
-        body.appendChild(el("tr", {}, [
-          nameCell,
-          el("td", { "data-label": "Tier", class: "num", text: m.tier }),
-          el("td", { "data-label": "Last sale", class: "num", text: money(m.last.price) + " · " + fmtDate(m.last.date) }),
-          el("td", { "data-label": "Clean median", class: "num", text: money(m.clean_median) }),
-          el("td", { "data-label": "Change", class: "num " + (m.change_pct >= 0 ? "up" : "down"), text: (m.change_pct >= 0 ? "▲ " : "▼ ") + pct(m.change_pct) }),
-          el("td", { "data-label": "Flagged", class: "num", text: m.flagged + " of " + m.sales })
-        ]));
-      });
-
-      // flags
-      $("#flag-count").textContent = flags.headline.value + "/" + flags.headline.of;
-      $("#flag-text").textContent = flags.text;
-      var fl = $("#flag-list");
-      flags.items.forEach(function (f) {
-        fl.appendChild(el("li", {}, [
-          el("span", {}, [el("strong", { text: f.card }), el("span", { class: "sub", text: fmtDate(f.date) + " · " + money(f.price) })]),
-          chip(f.label),
-          el("span", { class: "why", text: f.why })
-        ]));
-      });
-      var lg = $("#labels");
-      flags.labels.forEach(function (l) {
-        lg.appendChild(el("div", { class: "card" }, [chip(l.id), el("p", { text: l.meaning })]));
-      });
-
-      // rip ev
-      $("#rip-note").textContent = rip.live_note;
-      var rb = $("#rip-body");
-      function drawRip(game) {
-        rb.innerHTML = "";
-        var rows = rip.items.filter(function (i) { return i.game === game; });
-        if (!rows.length) {
-          rb.appendChild(el("tr", {}, [el("td", { colspan: "5", class: "first muted", text: game + " arrives with the Rip EV build, with a confidence tag on every row." })]));
-          return;
-        }
-        rows.forEach(function (i, n) {
-          rb.appendChild(el("tr", {}, [
-            el("td", { class: "first" }, [el("span", { class: "name", text: i.product })]),
-            el("td", { "data-label": "EV per box" }, [el("span", { class: "skeleton", style: "width:" + (56 + (n * 7) % 24) + "px" })]),
-            el("td", { "data-label": "Ratio" }, [el("span", { class: "skeleton", style: "width:" + (36 + (n * 5) % 14) + "px" })]),
-            el("td", { "data-label": "Hit over $50" }, [el("span", { class: "skeleton", style: "width:" + (34 + (n * 3) % 12) + "px" })]),
-            el("td", { "data-label": "Pull rates" }, [el("span", { class: "skeleton", style: "width:64px;height:20px;border-radius:10px" })])
-          ]));
-        });
-      }
-      drawRip("Pokémon");
-      Array.prototype.forEach.call(document.querySelectorAll("#rip-games button"), function (b) {
-        b.addEventListener("click", function () {
-          Array.prototype.forEach.call(document.querySelectorAll("#rip-games button"), function (o) { o.setAttribute("aria-pressed", "false"); });
-          b.setAttribute("aria-pressed", "true");
-          drawRip(b.getAttribute("data-game"));
-        });
-      });
-
-      // calls
-      var on = calls.items.filter(function (c) { return c.on_record; });
-      var cWrap = $("#calls-wrap");
-      if (!on.length) {
-        cWrap.appendChild(el("div", { class: "card empty" }, [
-          el("h3", { text: "The first calls go on the record soon." }),
-          el("p", { text: "Each one gets a date, a check date and a verdict. Hits and misses both stay up." })
-        ]));
-      } else {
-        var tb = el("tbody");
-        on.forEach(function (c) {
-          tb.appendChild(el("tr", {}, [
-            el("td", { class: "first" }, [el("span", { class: "name num", text: "#" + c.id }), el("span", { class: "sub", text: c.text })]),
-            el("td", { "data-label": "Dated", class: "num", text: fmtDate(c.dated) }),
-            el("td", { "data-label": "Check", class: "num", text: fmtDate(c.check_date) }),
-            el("td", { "data-label": "Status" }, [el("span", { class: "chip chip-accent", text: c.status.toUpperCase() })])
-          ]));
-        });
-        cWrap.appendChild(el("div", { class: "card table-card" }, [el("table", { class: "data" }, [
-          el("thead", {}, [el("tr", {}, [el("th", { text: "Call" }), el("th", { text: "Dated" }), el("th", { text: "Check" }), el("th", { text: "Status" })])]), tb
-        ])]));
-      }
-
-      // drops
-      var dw = $("#drops-grid");
-      var nd = nextDrop(drops);
-      drops.items.slice().sort(function (a, b) { return sortKey(a) < sortKey(b) ? -1 : 1; }).forEach(function (dItem) {
-        var days = daysFromToday(dItem.date);
-        var when = dItem.date_precision === "month" ? "Date TBA" : days > 1 ? "In " + days + " days" : days === 1 ? "Tomorrow" : days === 0 ? "Today" : "Out now";
-        var dateText = dItem.date_precision === "month" ? MONTHS[parseDate(dItem.date).getUTCMonth()].toUpperCase() : fmtDate(dItem.date).toUpperCase();
-        dw.appendChild(el("article", { class: "card drop" + (dItem === nd ? " is-next" : "") }, [
-          el("span", { class: "date", text: dateText }),
-          el("span", {}, [el("span", { class: "chip " + (dItem === nd ? "chip-accent" : "chip-neutral"), text: (dItem.game + " · " + when).toUpperCase() })]),
-          el("h3", { text: dItem.name }),
-          el("p", { text: dItem.detail })
-        ]));
-      });
-      $("#drops-source").textContent = "Dates checked Sep 28, 2026: " + drops.source.replace(/, checked Sep 28, 2026$/, "") + ".";
     }).catch(function (e) {
       var m = $("#load-error"); if (m) { m.hidden = false; }
       if (window.console) console.error(e);
     });
   }
 
+  function renderFile(file, byId, drops) {
+    if (!file) return;
+    var featured = byId[file.featured];
+    if (featured) {
+      var hero = $("#hero-chart");
+      hero.innerHTML = "";
+      hero.appendChild(salesChart(featured, fitChart(hero, 0.52)));
+      $("#hero-title").textContent = featured.name + " " + featured.tier;
+      $("#hero-change").textContent = pct(featured.change_pct);
+      var cap = $("#hero-caption");
+      cap.textContent = file.source + ". Pulled " + fmtDateYear(file.pulled) + ". ";
+      cap.appendChild(el("a", { href: "card.html?id=" + featured.id, text: "See every sale →" }));
+    }
+
+    // stats: the file's cards, its flag count, the next release
+    var sEl = $("#stats");
+    sEl.innerHTML = "";
+    var stats = (file.rows || []).slice(0, 2).map(function (row) {
+      return { v: pct(row.change_pct), c: row.change_pct >= 0 ? "up" : "down", t: row.stat || row.name };
+    });
+    if (file.flags && file.flags.headline) stats.push({ v: file.flags.headline.value + " of " + file.flags.headline.of, c: "flag", t: file.flags.stat || file.flags.headline.label });
+    var nd = drops ? nextDrop(drops) : null;
+    if (nd) stats.push({ v: fmtDate(nd.date), c: "", t: "Next release: " + nd.name + "." });
+    stats.forEach(function (s) {
+      sEl.appendChild(el("div", { class: "card stat" }, [
+        el("span", { class: "num " + (s.c === "up" ? "up" : s.c === "down" ? "down" : ""), style: s.c === "flag" ? "color: var(--flag)" : null, text: s.v }),
+        el("p", { text: s.t })
+      ]));
+    });
+
+    // the file's cards
+    var body = $("#file-body");
+    body.innerHTML = "";
+    (file.rows || []).forEach(function (m) {
+      body.appendChild(el("tr", {}, [
+        el("td", { class: "first" }, [
+          m.link ? el("a", { href: m.link, class: "name", text: m.name }) : el("span", { class: "name", text: m.name }),
+          el("span", { class: "sub", text: m.set + " · " + m.note })
+        ]),
+        el("td", { "data-label": "Tier", class: "num", text: m.tier }),
+        el("td", { "data-label": "Last sale", class: "num", text: money(m.last.price) + " · " + fmtDate(m.last.date) }),
+        el("td", { "data-label": "Clean median", class: "num", text: money(m.clean_median) }),
+        el("td", { "data-label": "Change", class: "num " + (m.change_pct >= 0 ? "up" : "down"), text: (m.change_pct >= 0 ? "▲ " : "▼ ") + pct(m.change_pct) }),
+        el("td", { "data-label": "Flagged", class: "num", text: m.flagged + " of " + m.sales })
+      ]));
+    });
+    $("#file-foot").textContent = file.foot || "";
+
+    // what the file threw out
+    var f = file.flags;
+    if (f) {
+      $("#flag-count").textContent = f.headline.value + "/" + f.headline.of;
+      $("#flag-text").textContent = f.text;
+      var fl = $("#flag-list");
+      fl.innerHTML = "";
+      (f.items || []).forEach(function (it) {
+        fl.appendChild(el("li", {}, [
+          el("span", {}, [el("strong", { text: it.card }), el("span", { class: "sub", text: fmtDate(it.date) + " · " + money(it.price) })]),
+          chip(it.label),
+          el("span", { class: "why", text: it.why })
+        ]));
+      });
+    }
+  }
+
+  function renderMovers(movers) {
+    var wrap = $("#market-movers");
+    wrap.innerHTML = "";
+    var items = movers && movers.items ? movers.items : [];
+    if (!items.length) {
+      wrap.appendChild(movers && movers.pending
+        ? emptyCard("Market movers start with the nightly feed.",
+            "Every Pokémon card worth $20 or more that moved 5% or more in a week on TCGplayer, each one checked against real sales. The list needs a full week of prices before it fills in.")
+        : emptyCard("Nothing to show this week.",
+            "The list covers Pokémon cards worth $20 or more that moved 5% or more in a week on TCGplayer. It needs a full week of prices, so it fills in about a week after the feed starts."));
+      return;
+    }
+    var win = items[0].window_label || "7d";
+    $("#movers-sub").textContent = "TCGplayer · last " + win.replace(/d$/, " days");
+    var tb = el("tbody");
+    items.forEach(function (m) {
+      var bits = [m.set, m.number, m.tier].filter(Boolean).join(" · ");
+      tb.appendChild(el("tr", {}, [
+        el("td", { class: "first" }, [el("span", { class: "name", text: m.name }), el("span", { class: "sub", text: bits })]),
+        el("td", { "data-label": "Market price", class: "num" }, [stack(money(m.last && m.last.price), m.last && m.last.date ? fmtDate(m.last.date) : "")]),
+        el("td", { "data-label": "Change", class: "num " + (m.change_pct >= 0 ? "up" : "down"), text: (m.change_pct >= 0 ? "▲ " : "▼ ") + pct(m.change_pct, 1) }),
+        el("td", { "data-label": "Clean change", class: "num", text: isNum(m.clean_change_pct) ? pct(m.clean_change_pct, 1) : "—" }),
+        el("td", { "data-label": "Label" }, [el("span", { class: "stack" }, [chip(m.label), m.label_note ? el("span", { class: "sub", text: sentence(m.label_note) }) : null])])
+      ]));
+    });
+    wrap.appendChild(el("div", { class: "card table-card" }, [
+      el("table", { class: "data" }, [
+        el("thead", {}, [el("tr", {}, ["Card", "Market price", "Change · " + win, "Clean change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); }))]),
+        tb
+      ]),
+      el("div", { class: "table-foot", text: (items[0].source || "TCGplayer market prices") + ", as of " + fmtDateYear(movers.as_of || items[0].observed) +
+        ". Top 10 cards worth $20 or more. Clean change: the same move with flagged sales taken out. A dash means no sales were checked yet." })
+    ]));
+  }
+
+  function renderMarketFlags(flags) {
+    var wrap = $("#market-flags");
+    wrap.innerHTML = "";
+    var items = flags && flags.items ? flags.items : [];
+    var head = flags && flags.headline && isNum(flags.headline.value) ? flags.headline : null;
+    if (!items.length && (!head || head.value === 0)) {
+      wrap.appendChild(flags && flags.pending
+        ? emptyCard("The weekly junk rate starts with the nightly feed.",
+            "Every week: the share of sold dollar volume across tracked cards that got flagged, and the cards behind it, each with a reason in plain words.")
+        : emptyCard("No flagged sales this week.",
+            "The junk rate fills in as sales get checked: the share of sold dollar volume across tracked cards that got flagged, and the cards behind it."));
+      return;
+    }
+    var card = el("div", { class: "card flags" });
+    if (head) {
+      card.appendChild(el("div", { class: "flag-head" }, [
+        el("span", { class: "num big-flag", text: (Math.round(head.value * 10) / 10) + "%" }),
+        el("p", { text: head.label + (flags.as_of ? ". Through " + fmtDate(flags.as_of) + "." : ".") })
+      ]));
+    }
+    if (items.length) {
+      var ul = el("ul", { class: "flag-list" });
+      items.forEach(function (it) {
+        var claimed = isNum(it.claimed_change_pct) ? "Claimed " + pct(it.claimed_change_pct) : "";
+        ul.appendChild(el("li", {}, [
+          el("span", {}, [el("strong", { text: it.name }), el("span", { class: "sub", text: [it.set, claimed].filter(Boolean).join(" · ") })]),
+          chip(it.label),
+          el("span", { class: "why", text: sentence(it.why, true) })
+        ]));
+      });
+      card.appendChild(ul);
+    } else {
+      card.appendChild(el("p", { class: "muted", text: "No cards flagged this week." }));
+    }
+    wrap.appendChild(card);
+  }
+
+  function renderLegend() {
+    var lg = $("#labels");
+    lg.innerHTML = "";
+    Object.keys(LABELS).forEach(function (id) {
+      lg.appendChild(el("div", { class: "card" }, [chip(id), el("p", { text: LABELS[id].meaning })]));
+    });
+  }
+
+  function renderRip(rip) {
+    var products = rip && rip.products ? rip.products : [];
+    var seg = $("#rip-games"), rb = $("#rip-body");
+    var shareEl = $("#rip-share");
+    if (rip && isNum(rip.share_above_1) && products.length) {
+      shareEl.textContent = " Today, " + share(rip.share_above_1) + " of tracked products are worth more opened than sealed.";
+    }
+    var noteBits = [];
+    if (rip && rip.note) noteBits.push(rip.note);
+    if (rip && rip.data_date && products.length) noteBits.push("Data " + fmtDateYear(rip.data_date) + ".");
+    $("#rip-note").textContent = noteBits.join(" ");
+
+    var byGame = {};
+    products.forEach(function (p) { (byGame[p.game] = byGame[p.game] || []).push(p); });
+    var current = (GAMES.filter(function (g) { return byGame[g.id]; })[0] || GAMES[0]).id;
+    seg.innerHTML = "";
+    GAMES.forEach(function (g) {
+      var b = el("button", { type: "button", "aria-pressed": g.id === current ? "true" : "false", text: g.name });
+      b.addEventListener("click", function () {
+        Array.prototype.forEach.call(seg.querySelectorAll("button"), function (o) { o.setAttribute("aria-pressed", "false"); });
+        b.setAttribute("aria-pressed", "true");
+        draw(g.id);
+      });
+      seg.appendChild(b);
+    });
+
+    function select(p, tr) {
+      Array.prototype.forEach.call(rb.querySelectorAll("tr"), function (o) { o.classList.remove("is-selected"); o.setAttribute("aria-selected", "false"); });
+      if (tr) { tr.classList.add("is-selected"); tr.setAttribute("aria-selected", "true"); }
+      $("#rip-chart-title").textContent = p.product + (p.set ? " · " + p.set : "");
+      var c = $("#rip-chart-chip");
+      c.textContent = "DATA " + fmtDate(p.data_date || rip.data_date).toUpperCase();
+      c.className = "chip chip-accent";
+      ripChart($("#rip-chart"), rip.series ? rip.series[String(p.id)] : null, p);
+      var src = $("#rip-sources");
+      src.textContent = "";
+      var list = p.rates_sources || [];
+      if (list.length) {
+        src.appendChild(document.createTextNode("Pull rates: "));
+        list.forEach(function (s, n) {
+          if (n) src.appendChild(document.createTextNode(", "));
+          src.appendChild(s.url ? el("a", { href: s.url, rel: "noopener", target: "_blank", text: s.name }) : document.createTextNode(s.name));
+        });
+        src.appendChild(document.createTextNode(". Card prices: TCGplayer via tcgcsv."));
+      }
+    }
+
+    function draw(game) {
+      rb.innerHTML = "";
+      var rows = (byGame[game] || []).slice().sort(function (a, b) { return (b.ratio_market || 0) - (a.ratio_market || 0); });
+      if (!products.length) $("#rip-sources").textContent = "Illustrative. Real price history shows here once the nightly feed is on.";
+      if (!rows.length) {
+        var gname = GAMES.filter(function (g) { return g.id === game; })[0].name;
+        rb.appendChild(el("tr", {}, [el("td", { colspan: "6", class: "first muted", text: products.length
+          ? gname + " shows up here once its pull rates are in, with the source on every row."
+          : rip && rip.pending
+            ? "Rip EV goes live with the nightly feed: every box priced sealed and opened, with the pull-rate source on every row."
+            : "No products priced yet. Rows show up as pull rates and prices come in." })]));
+        return;
+      }
+      rows.forEach(function (p, n) {
+        var conf = p.confidence ? p.confidence.charAt(0).toUpperCase() + p.confidence.slice(1) + " confidence" : "";
+        var type = TYPES[p.product_type] || null;
+        if (type && String(p.product).toLowerCase().indexOf(type.toLowerCase()) !== -1) type = null;
+        var sub = [p.set, type, conf].filter(Boolean).join(" · ") + (p.confidence === "low" ? ". Rates are estimates." : "");
+        var ratio = isNum(p.ratio_market) ? p.ratio_market.toFixed(2) + "×" : "—";
+        var tr = el("tr", { class: "is-selectable", tabindex: "0", "aria-selected": "false" }, [
+          el("td", { class: "first" }, [el("span", { class: "name", text: p.product }), el("span", { class: "sub", text: sub })]),
+          el("td", { "data-label": "Sealed", class: "num" }, [stack(moneyC(p.sealed_market_cents), isNum(p.msrp_cents) ? "MSRP " + moneyC(p.msrp_cents) : "")]),
+          el("td", { "data-label": "EV per box", class: "num" }, [stack(moneyC(p.ev_box_cents), "Net " + moneyC(p.ev_net_cents))]),
+          el("td", { "data-label": "Ratio", class: "num " + (p.ratio_market >= 1 ? "up" : ""), text: ratio }),
+          el("td", { "data-label": "Hit $50+", class: "num" }, [stack(share(p.p_hit_50), "$200+ " + share(p.p_hit_200))]),
+          el("td", { "data-label": "Range", class: "num" }, [stack(moneyC(p.floor_p5_cents) + "–" + moneyC(p.ceiling_p95_cents), "Median " + moneyC(p.median_p50_cents))])
+        ]);
+        tr.addEventListener("click", function () { select(p, tr); });
+        tr.addEventListener("keydown", function (ev) { if (ev.key === "Enter" || ev.key === " ") { ev.preventDefault(); select(p, tr); } });
+        rb.appendChild(tr);
+        if (n === 0) select(p, tr);
+      });
+    }
+    draw(current);
+  }
+
+  function renderCalls(calls) {
+    var cWrap = $("#calls-wrap");
+    cWrap.innerHTML = "";
+    var on = calls && calls.items ? calls.items.filter(function (c) { return c.on_record; }) : [];
+    if (!on.length) {
+      cWrap.appendChild(el("div", { class: "card empty" }, [
+        el("h3", { text: "The first calls go on the record soon." }),
+        el("p", { text: "Each one gets a date, a check date and a verdict. Hits and misses both stay up." })
+      ]));
+      return;
+    }
+    var statusChip = { open: "chip-accent", hit: "chip-ok", miss: "chip-flag" };
+    var tb = el("tbody");
+    on.slice().sort(function (a, b) { return a.dated < b.dated ? 1 : a.dated > b.dated ? -1 : (a.id < b.id ? 1 : -1); }).forEach(function (c) {
+      var days = daysFromToday(c.check_date);
+      var status = c.status === "open" && days >= 0 ? (days === 0 ? "Check today" : "Open · " + days + (days === 1 ? " day" : " days")) : c.status;
+      tb.appendChild(el("tr", {}, [
+        el("td", { class: "first" }, [
+          el("span", { class: "name num", text: "#" + c.id }),
+          el("span", { class: "call-text", text: c.text }),
+          c.latest ? el("span", { class: "sub", text: "Latest: " + c.latest }) : null,
+          c.method ? el("span", { class: "sub", text: c.method }) : null,
+          c.verdict_note ? el("span", { class: "sub", text: "Verdict: " + c.verdict_note }) : null,
+          c.link ? el("a", { class: "sub", href: c.link, text: "The original post →" }) : null
+        ]),
+        el("td", { "data-label": "Dated", class: "num", text: fmtDate(c.dated) }),
+        el("td", { "data-label": "Check", class: "num", text: fmtDate(c.check_date) }),
+        el("td", { "data-label": "Status" }, [el("span", { class: "chip " + (statusChip[c.status] || "chip-neutral"), text: String(status).toUpperCase() })])
+      ]));
+    });
+    cWrap.appendChild(el("div", { class: "card table-card" }, [el("table", { class: "data calls" }, [
+      el("thead", {}, [el("tr", {}, [el("th", { scope: "col", text: "Call" }), el("th", { scope: "col", text: "Dated" }), el("th", { scope: "col", text: "Check" }), el("th", { scope: "col", text: "Status" })])]), tb
+    ]), el("div", { class: "table-foot", text: calls.note || "" })]));
+  }
+
+  function renderDrops(drops) {
+    if (!drops) return;
+    var dw = $("#drops-grid");
+    dw.innerHTML = "";
+    var nd = nextDrop(drops);
+    drops.items.slice().sort(function (a, b) { return sortKey(a) < sortKey(b) ? -1 : 1; }).forEach(function (dItem) {
+      var days = daysFromToday(dItem.date);
+      var when = dItem.date_precision === "month" ? "Date TBA" : days > 1 ? "In " + days + " days" : days === 1 ? "Tomorrow" : days === 0 ? "Today" : "Out now";
+      var dateText = dItem.date_precision === "month" ? MONTHS[parseDate(dItem.date).getUTCMonth()].toUpperCase() : fmtDate(dItem.date).toUpperCase();
+      dw.appendChild(el("article", { class: "card drop" + (dItem === nd ? " is-next" : "") }, [
+        el("span", { class: "date", text: dateText }),
+        el("span", {}, [el("span", { class: "chip " + (dItem === nd ? "chip-accent" : "chip-neutral"), text: (dItem.game + " · " + when).toUpperCase() })]),
+        el("h3", { text: dItem.name }),
+        el("p", { text: dItem.detail })
+      ]));
+    });
+    var checked = drops.as_of ? "Dates checked " + fmtDateYear(drops.as_of) + ": " : "";
+    $("#drops-source").textContent = checked + String(drops.source || "").replace(/, checked [A-Z][a-z]{2} \d{1,2}, \d{4}$/, "") + ".";
+  }
+
   // Draw at the container's real width so chart text stays readable on phones.
   function fitChart(box, ratio) {
-    var w = Math.round(Math.max(340, Math.min(1100, box.clientWidth || 700)));
+    var w = Math.round(Math.max(320, Math.min(1100, box.clientWidth || 700)));
     return { width: w, height: Math.round(Math.max(260, w * ratio)) };
   }
 
   function sortKey(d) { return d.date_precision === "month" ? d.date.slice(0, 8) + "31" : d.date; }
 
   function nextDrop(drops) {
+    if (!drops || !drops.items || !drops.items.length) return null;
     var up = drops.items.filter(function (d) { return d.date_precision === "day" && daysFromToday(d.date) >= 0; })
       .sort(function (a, b) { return a.date < b.date ? -1 : 1; });
-    return up[0] || drops.items[0];
+    return up[0] || null;
   }
 
   /* ---------- card page ---------- */
   function renderCard() {
     var id = (new URLSearchParams(location.search).get("id") || "crystal-lugia-psa-8").replace(/[^a-z0-9-]/g, "");
-    Promise.all([getJSON("data/meta.json"), getJSON("data/cards/" + id + ".json")]).then(function (r) {
+    Promise.all([load("data/meta.json"), getJSON("data/cards/" + id + ".json")]).then(function (r) {
       var meta = r[0], c = r[1];
-      $("#status").textContent = "Updated " + meta.updated_label;
+      $("#status").textContent = updatedLabel(meta) || $("#status").textContent;
       document.title = c.name + " " + c.tier + " · Mission Control · Jack Bauhs";
       $("#crumb").textContent = c.set + " / " + c.name + " " + c.number;
       $("#card-name").textContent = c.name + " " + c.tier;
@@ -302,7 +625,7 @@
       kpis.forEach(function (q) {
         k.appendChild(el("div", { class: "card kpi" }, [
           el("span", { class: "label", text: q.l }),
-          el("span", { class: "num " + (q.cls === "up" ? "up" : ""), style: q.cls === "flag" ? "color: var(--flag)" : "", text: q.v }),
+          el("span", { class: "num " + (q.cls === "up" ? "up" : ""), style: q.cls === "flag" ? "color: var(--flag)" : null, text: q.v }),
           q.p ? el("p", { text: q.p }) : null
         ]));
       });

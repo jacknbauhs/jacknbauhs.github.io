@@ -61,7 +61,7 @@
       <div class="chart-head">
         <div>
           <div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">This week's file</div>
-          <div class="chart-title">Crystal Lugia PSA 8</div>
+          <div class="chart-title" id="hero-title">Crystal Lugia PSA 8</div>
           <div class="muted" style="font-size:14px">Every sold record since June. The purple line is the clean monthly median.</div>
         </div>
         <div class="big-stat"><span class="num up" id="hero-change">+62%</span><div class="muted" style="font-size:12px">since June, clean</div></div>
@@ -74,7 +74,7 @@
         <span><i class="swatch" style="background:#F472B6"></i>Doesn't belong</span>
         <span><i class="swatch line" style="background:#A78BFA"></i>Clean median</span>
       </div>
-      <figcaption class="source">130point: eBay sold listings, best offers at the accepted price. Pulled Sep 28, 2026. <a href="card.html?id=crystal-lugia-psa-8">See every sale →</a></figcaption>
+      <figcaption class="source" id="hero-caption">130point: eBay and Goldin sold listings, best offers at the accepted price. Pulled Sep 28, 2026. <a href="card.html?id=crystal-lugia-psa-8">See every sale →</a></figcaption>
     </figure>
   </section>
 
@@ -82,56 +82,61 @@
   <p id="load-error" class="muted" hidden>The board couldn't load its data. Refresh to try again.</p>
 
   <section id="moving" class="block" aria-labelledby="moving-h">
-    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p id="movers-note"></p></div></div>
+    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p>This week's file, checked sale by sale, then the whole market from TCGplayer, each move checked against real sales.</p></div></div>
+    <h3 class="sub-h">This week's file <span>Checked by hand on 130point</span></h3>
     <div class="card table-card">
       <table class="data">
         <thead><tr><th scope="col">Card</th><th scope="col">Tier</th><th scope="col">Last sale</th><th scope="col">Clean median</th><th scope="col">Change</th><th scope="col">Flagged</th></tr></thead>
-        <tbody id="movers-body"></tbody>
+        <tbody id="file-body"></tbody>
       </table>
-      <div class="table-foot">Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.</div>
+      <div class="table-foot" id="file-foot">Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.</div>
     </div>
+    <h3 class="sub-h">Across the market <span id="movers-sub">TCGplayer · last 7 days</span></h3>
+    <div id="market-movers"></div>
   </section>
 
   <section id="flags" class="block" aria-labelledby="flags-h">
-    <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p>Sold lists are full of junk that bends every average. Here's what this week's file threw out, and why.</p></div></div>
+    <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p>Sold lists are full of junk that bends every average. Here's what got thrown out, and why.</p></div></div>
+    <h3 class="sub-h">In this week's file</h3>
     <div class="card flags">
       <div class="flag-head">
-        <span class="num" id="flag-count" style="font-size:44px;font-weight:500;color:var(--flag);letter-spacing:-.02em;white-space:nowrap">7/39</span>
+        <span class="num big-flag" id="flag-count">7/39</span>
         <p id="flag-text"></p>
       </div>
       <ul class="flag-list" id="flag-list"></ul>
     </div>
+    <h3 class="sub-h">Across the market <span>This week</span></h3>
+    <div id="market-flags"></div>
+    <h3 class="sub-h">How sales get labeled</h3>
     <div class="labels" id="labels"></div>
   </section>
 
   <section id="rip-ev" class="block" aria-labelledby="rip-h">
     <div class="block-head">
-      <div><div class="kicker">03 · Rip EV</div><h2 id="rip-h">Rip or hold</h2><p>What a box is worth opened versus sealed, from published pull rates and real card prices, net of fees.</p></div>
-      <div class="seg" id="rip-games" role="group" aria-label="Game">
-        <button type="button" data-game="Pokémon" aria-pressed="true">Pokémon</button>
-        <button type="button" data-game="One Piece" aria-pressed="false">One Piece</button>
-        <button type="button" data-game="Yu-Gi-Oh" aria-pressed="false">Yu-Gi-Oh</button>
-        <button type="button" data-game="Sports" aria-pressed="false">Sports</button>
-      </div>
+      <div><div class="kicker">03 · Rip EV</div><h2 id="rip-h">Rip or hold</h2><p>What a box is worth opened versus sealed, from published pull rates and TCGplayer card prices, net of fees.<span id="rip-share"></span></p></div>
+      <div class="seg" id="rip-games" role="group" aria-label="Game"></div>
     </div>
     <div class="grid-12">
       <div class="card table-card span-7">
-        <table class="data">
-          <thead><tr><th scope="col">Product</th><th scope="col">EV per box</th><th scope="col">Ratio</th><th scope="col">Hit over $50</th><th scope="col">Pull rates</th></tr></thead>
+        <table class="data rip">
+          <thead><tr><th scope="col">Product</th><th scope="col">Sealed</th><th scope="col">EV per box</th><th scope="col">Ratio</th><th scope="col">Hit $50+</th><th scope="col">Range</th></tr></thead>
           <tbody id="rip-body"></tbody>
         </table>
         <div class="table-foot" id="rip-note"></div>
       </div>
       <figure class="card chart-card span-5" style="margin:0">
-        <div class="chart-head"><div><div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">How it reads</div><div class="chart-title">Box value opened vs sealed</div></div><span class="chip chip-neutral">ILLUSTRATIVE</span></div>
-        <svg class="chart" viewBox="0 0 520 222" role="img" aria-label="Illustrative chart: sealed price and expected value per box over time, with the stretches where opening beats holding shaded">
-          <line x1="16" y1="200" x2="504" y2="200" stroke="rgba(236,234,246,0.10)"/>
-          <path d="M16 115.5 L32.5 104.7 L49.1 97.7 L65.6 94.8 L82.2 95.9 L98.7 100.9 L107 104.5 L107 105.2 L90.4 108 L73.9 111.9 L57.4 116.8 L40.8 122.4 L24.3 128.5 L16 131.6 Z" fill="#34D399" fill-opacity="0.14"/>
-          <path d="M313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9 L504 151.7 L479.2 160.7 L446.1 170.7 L413 176.5 L379.9 177.1 L346.8 172 L313.8 162 Z" fill="#34D399" fill-opacity="0.14"/>
-          <path d="M16 131.6 L49.1 119.6 L82.2 109.8 L115.3 104.3 L148.3 104.2 L181.4 109.7 L214.5 120.1 L247.6 133.7 L280.7 148.5 L313.8 162 L346.8 172 L379.9 177.1 L413 176.5 L446.1 170.7 L479.2 160.7 L504 151.7" fill="none" stroke="#ECEAF6" stroke-width="2" stroke-opacity="0.85"/>
-          <path d="M16 115.5 L49.1 97.7 L82.2 95.9 L115.3 108.9 L148.3 131 L181.4 154.3 L214.5 171.2 L247.6 177.1 L280.7 170.8 L313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9" fill="none" stroke="#A78BFA" stroke-width="2.5"/>
-        </svg>
-        <div class="legend"><span><i class="swatch line" style="background:#ECEAF6"></i>Sealed price</span><span><i class="swatch line" style="background:#A78BFA"></i>EV per box</span><span><i class="swatch" style="background:rgba(52,211,153,.35);border-radius:3px"></i>Opening beats holding</span></div>
+        <div class="chart-head"><div><div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">Rip or hold</div><div class="chart-title" id="rip-chart-title">Box value opened vs sealed</div></div><span class="chip chip-neutral" id="rip-chart-chip">ILLUSTRATIVE</span></div>
+        <div id="rip-chart" class="rip-chart">
+          <svg class="chart" viewBox="0 0 520 222" role="img" aria-label="Illustrative chart: sealed price and expected value per box over time, with the stretches where opening beats holding shaded">
+            <line x1="16" y1="200" x2="504" y2="200" stroke="rgba(236,234,246,0.10)"/>
+            <path d="M16 115.5 L32.5 104.7 L49.1 97.7 L65.6 94.8 L82.2 95.9 L98.7 100.9 L107 104.5 L107 105.2 L90.4 108 L73.9 111.9 L57.4 116.8 L40.8 122.4 L24.3 128.5 L16 131.6 Z" fill="#34D399" fill-opacity="0.16"/>
+            <path d="M313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9 L504 151.7 L479.2 160.7 L446.1 170.7 L413 176.5 L379.9 177.1 L346.8 172 L313.8 162 Z" fill="#34D399" fill-opacity="0.16"/>
+            <path d="M16 131.6 L49.1 119.6 L82.2 109.8 L115.3 104.3 L148.3 104.2 L181.4 109.7 L214.5 120.1 L247.6 133.7 L280.7 148.5 L313.8 162 L346.8 172 L379.9 177.1 L413 176.5 L446.1 170.7 L479.2 160.7 L504 151.7" fill="none" stroke="#C98500" stroke-width="2"/>
+            <path d="M16 115.5 L49.1 97.7 L82.2 95.9 L115.3 108.9 L148.3 131 L181.4 154.3 L214.5 171.2 L247.6 177.1 L280.7 170.8 L313.8 155.1 L346.8 135.4 L379.9 117.8 L413 107.1 L446.1 105.8 L479.2 112.9 L504 121.9" fill="none" stroke="#8B5CF6" stroke-width="2.5"/>
+          </svg>
+        </div>
+        <div class="legend"><span><i class="swatch line" style="background:#C98500"></i>Sealed price</span><span><i class="swatch line" style="background:#8B5CF6"></i>EV per box</span><span><i class="swatch" style="background:rgba(52,211,153,.35);border-radius:3px"></i>Opening beats holding</span></div>
+        <p class="source" id="rip-sources">Pick a row to see its history. Every row cites its pull-rate source.</p>
       </figure>
     </div>
   </section>
@@ -161,10 +166,10 @@
     <a class="wordmark" href="https://www.jacknbauhs.com/">JACK BAUHS</a>
     <p>Mission Control is Astronaut Time's market board. The numbers here feed the videos, and the videos point back here.</p>
   </div>
-  <div><h2>SITE</h2><ul><li><a href="https://www.jacknbauhs.com/">About</a></li><li><a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a></li><li><a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a></li><li><a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a></li><li><a href="https://www.jacknbauhs.com/contact">Contact</a></li></ul></div>
+  <div><h2>SITE</h2><ul><li><a href="https://www.jacknbauhs.com/">About</a></li><li><a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a></li><li><a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a></li><li><a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a></li><li><a href="https://www.jacknbauhs.com/contact">Contact</a></li></ul></div>
   <div><h2>FOLLOW</h2><ul><li><a href="https://www.instagram.com/astronaut_time_tcg/" rel="me">Instagram</a></li><li><a href="https://www.tiktok.com/@astronauttime" rel="me">TikTok</a></li><li><a href="https://www.whatnot.com/s/NP78DwK8">Whatnot</a></li><li><a href="https://vimeo.com/jacknbauhs" rel="me">Vimeo</a></li><li><a href="https://www.ebay.com/usr/astronaut_time">eBay</a></li></ul></div>
-  <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>Release calendars</li><li>Published pull-rate studies</li></ul></div>
-  <div class="fineprint"><span>Launch edition, updated by hand until the data feed lands. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
+  <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>TCGplayer prices via tcgcsv</li><li>Published pull-rate studies</li><li>Release calendars</li></ul></div>
+  <div class="fineprint"><span>This week's file, the calls and the drops are checked by hand. Market movers, flags and Rip EV update nightly from Mission Control. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
 </footer>
 <script src="assets/board.js"></script>
 </body>

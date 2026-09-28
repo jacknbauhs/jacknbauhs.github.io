@@ -1,0 +1,110 @@
+{
+ "as_of": "2026-09-28",
+ "pulled": "2026-09-28",
+ "title": "Crystal Lugia and Crystal Charizard",
+ "featured": "crystal-lugia-psa-8",
+ "cards": [
+  "crystal-lugia-psa-8",
+  "crystal-charizard-psa-9"
+ ],
+ "source": "130point: eBay and Goldin sold listings, best offers at the accepted price",
+ "rows": [
+  {
+   "id": "crystal-lugia-psa-8",
+   "name": "Crystal Lugia",
+   "set": "Aquapolis 149/147",
+   "tier": "PSA 8",
+   "last": {
+    "price": 19500.0,
+    "date": "2026-09-27"
+   },
+   "clean_median": 15999.0,
+   "change_pct": 61.6,
+   "window_label": "clean median, June to Sept",
+   "flagged": 6,
+   "sales": 24,
+   "note": "Reprinted in 30th Celebration",
+   "link": "card.html?id=crystal-lugia-psa-8",
+   "stat": "Crystal Lugia PSA 8, clean median June to September. Reprinted."
+  },
+  {
+   "id": "crystal-charizard-psa-9",
+   "name": "Crystal Charizard",
+   "set": "Skyridge 146/144",
+   "tier": "PSA 9",
+   "last": {
+    "price": 45000.0,
+    "date": "2026-09-27"
+   },
+   "clean_median": 38500.0,
+   "change_pct": 37.0,
+   "window_label": "clean median, June to Sept",
+   "flagged": 1,
+   "sales": 15,
+   "note": "Never reprinted",
+   "link": "card.html?id=crystal-charizard-psa-9",
+   "stat": "Crystal Charizard PSA 9, same months. Never reprinted."
+  }
+ ],
+ "foot": "Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.",
+ "flags": {
+  "headline": {
+   "value": 7,
+   "of": 39,
+   "label": "sold records that don't belong in the math"
+  },
+  "text": "Two cards, 39 sold records since May. Seven of them would bend a plain average: a $46 \"PSA 9 Crystal Charizard,\" a $1,900 \"PSA 8 Crystal Lugia,\" a raw card and a two-grade slab in a PSA 8 search, a double-counted auction, and one listing that sold twice.",
+  "stat": "Sold records on those two cards that don't belong in the math.",
+  "items": [
+   {
+    "card": "Crystal Charizard PSA 9",
+    "date": "2026-08-19",
+    "price": 46.3,
+    "label": "DATA_ERROR",
+    "why": "$46 for a PSA 9 Crystal Charizard. Whatever sold, it wasn't this card."
+   },
+   {
+    "card": "Crystal Lugia PSA 8",
+    "date": "2026-09-25",
+    "price": 1900.0,
+    "label": "DATA_ERROR",
+    "why": "87% under the next-lowest September sale."
+   },
+   {
+    "card": "Crystal Charizard PSA 9",
+    "date": "2026-09-05",
+    "price": 35800.0,
+    "label": "BEST_OFFER",
+    "why": "Listed at $39,999, sold for $35,800. Trackers that show the ask get this one wrong."
+   },
+   {
+    "card": "Crystal Lugia PSA 8",
+    "date": "2026-09-15",
+    "price": 18500.0,
+    "label": "RELIST",
+    "why": "The same listing sold on Sep 6 for $17,750, then again on Sep 15. Both count half."
+   },
+   {
+    "card": "Crystal Lugia PSA 8",
+    "date": "2026-08-31",
+    "price": 13800.0,
+    "label": "DUPLICATE",
+    "why": "Same title, same price, same 31 bids, a day apart. Counted once."
+   },
+   {
+    "card": "Crystal Lugia PSA 8",
+    "date": "2026-07-21",
+    "price": 8600.0,
+    "label": "DATA_ERROR",
+    "why": "Two grades in one title (CGC 8.5 and PSA 8)."
+   },
+   {
+    "card": "Crystal Lugia PSA 8",
+    "date": "2026-06-22",
+    "price": 5735.5,
+    "label": "DATA_ERROR",
+    "why": "A raw card titled \"PSA gradable 7-8.\""
+   }
+  ]
+ }
+}

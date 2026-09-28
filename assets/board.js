@@ -552,8 +552,9 @@
         el("td", { class: "first" }, [
           el("span", { class: "name num", text: "#" + c.id }),
           el("span", { class: "call-text", text: c.text }),
-          c.latest ? el("span", { class: "sub", text: "Latest: " + c.latest }) : null,
+          c.start ? el("span", { class: "sub", text: c.start }) : null,
           c.method ? el("span", { class: "sub", text: c.method }) : null,
+          c.latest ? el("span", { class: "sub", text: "Latest: " + c.latest }) : null,
           c.verdict_note ? el("span", { class: "sub", text: "Verdict: " + c.verdict_note }) : null,
           c.link ? el("a", { class: "sub", href: c.link, text: "The original post →" }) : null
         ]),

@@ -1,36 +1,39 @@
 {
- "note": "Append-only. A call goes up with the date it went public and gets checked on its check date. Misses stay up.",
+ "note": "Append-only. A call goes up the day it goes public and gets checked on its check date. Misses stay up. Prices: 130point sold listings and TCGplayer market prices; retail prices as announced.",
  "items": [
   {
    "id": "003",
-   "dated": "2026-09-15",
-   "text": "Raw Base Set Charizard is down 10% or more from its Sep 15 price. The reprint lands on the raw copies.",
-   "check_date": "2026-10-16",
+   "dated": "2026-09-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "on_record": true,
-   "method": "Checked Oct 16 against the TCGplayer market price for a raw Base Set Charizard, Sep 15 vs Oct 16.",
+   "text": "Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.",
+   "start": "Sep 28: $944.53, TCGplayer market price for Base Set Charizard 4/102 (unlimited, raw).",
+   "method": "Hit if the TCGplayer market price is $850.08 or lower on Oct 30.",
    "latest": "The 30th Celebration reprint hit shelves Sep 16.",
    "link": null
   },
   {
    "id": "002",
-   "dated": "2026-09-15",
-   "text": "Base Set Charizard PSA 10 is at or above its Sep 15 price. The graded population is closed, so the reprint can't enter it.",
-   "check_date": "2026-10-16",
+   "dated": "2026-09-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "on_record": true,
-   "method": "Checked Oct 16 against PSA 10 sold prices on 130point, Sep 15 vs Oct 16.",
+   "text": "Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it.",
+   "start": "Sep 28: $33,000, the median of four September sales on 130point ($28,750 to $37,500).",
+   "method": "Hit if October's median sale on 130point is $33,000 or higher. Needs at least two October sales.",
    "latest": "The 30th Celebration reprint hit shelves Sep 16.",
    "link": null
   },
   {
    "id": "001",
-   "dated": "2026-09-10",
-   "text": "The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better.",
-   "check_date": "2026-10-16",
+   "dated": "2026-09-28",
+   "check_date": "2026-10-30",
    "status": "open",
    "on_record": true,
-   "method": "Checked Oct 16: TCGplayer market price over retail for the Booster Bundle and the ETB, Sep 10 vs Oct 16.",
+   "text": "The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better.",
+   "start": "Sep 28 on TCGplayer: Booster Bundle $109.06 (presale), 4.4x its $24.99 retail. Elite Trainer Box $160.14, 3.2x its $49.99 retail.",
+   "method": "Hit if the bundle's multiple over retail is cut at least in half by Oct 30 and falls further than the ETB's.",
    "latest": "The Booster Bundle ships Oct 2.",
    "link": null
   }

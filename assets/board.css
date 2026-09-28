@@ -75,11 +75,11 @@ button { font-family: inherit; }
   border-bottom: 1px solid var(--line-soft); background: rgba(20, 18, 42, 0.7);
 }
 .mc-brand { display: flex; align-items: center; gap: 12px; }
-.mc-brand strong { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.16em; }
+.mc-brand strong { font-family: var(--display); font-weight: 600; font-size: 13px; letter-spacing: 0.16em; white-space: nowrap; }
 .mc-nav { display: flex; gap: 24px; font-size: 14px; }
-.mc-nav a { color: var(--muted); }
+.mc-nav a { color: var(--muted); white-space: nowrap; }
 .mc-nav a:hover, .mc-nav a.is-active { color: var(--text); }
-.status { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.status { display: flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 12px; color: var(--muted); white-space: nowrap; }
 .status::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--up); flex-shrink: 0; }
 
 main { position: relative; z-index: 1; padding: 0 var(--gutter) 40px; max-width: 1440px; margin: 0 auto; }
@@ -201,6 +201,12 @@ table.data tr:last-child td { border-bottom: 0; }
   .labels { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .drops { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .site-nav { gap: 18px; font-size: 14px; }
+}
+
+/* Small laptop and tablet landscape: keep the Mission Control bar on one row */
+@media (min-width: 821px) and (max-width: 1100px) {
+  .mc-brand .muted { display: none; }
+  .mc-nav { gap: 18px; }
 }
 
 /* Phone */

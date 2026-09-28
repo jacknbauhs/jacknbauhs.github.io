@@ -1,15 +1,20 @@
 {
- "generated_at": "2026-09-28T19:00:00+00:00",
- "sources": [
-  {
-   "id": "sales",
-   "name": "130point: eBay and Goldin sold listings, best offers at the accepted price",
-   "as_of": "2026-09-28"
-  },
-  {
-   "id": "calendar",
-   "name": "Release dates: PokeGuardian, PokéCottage, opboxindex, retailer calendars",
-   "as_of": "2026-09-28"
-  }
- ]
+  "generated_at": "2026-09-28T22:25:59+00:00",
+  "sources": [
+    {
+      "id": "tcgcsv",
+      "name": "TCGplayer market prices via tcgcsv.com",
+      "as_of": null
+    },
+    {
+      "id": "sales",
+      "name": "eBay sold listings and logged sales, checked by the Sale Integrity Layer",
+      "as_of": null
+    },
+    {
+      "id": "pull_rates",
+      "name": "Published pull-rate studies, cited on each row",
+      "as_of": null
+    }
+  ]
 }

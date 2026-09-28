@@ -1,15 +1,9 @@
 {
- "data_date": "2026-09-28",
- "games": [
-  "pokemon",
-  "one_piece",
-  "yugioh",
-  "sports"
- ],
- "share_above_1": null,
- "products": [],
- "series": {},
- "left_out": 0,
- "note": "EV = published pull rates x TCGplayer market prices (tcgcsv), net = 85% of gross for fees and shipping. Rates are estimates; low-confidence rows doubly so. Content, not advice.",
- "pending": true
+  "data_date": null,
+  "games": [],
+  "share_above_1": null,
+  "products": [],
+  "series": {},
+  "left_out": 0,
+  "note": "EV = published pull rates x TCGplayer market prices (tcgcsv), net = 85% of gross for fees and shipping. Rates are estimates; low-confidence rows doubly so. Content, not advice."
 }

@@ -1,9 +1,8 @@
 {
- "as_of": "2026-09-28",
- "headline": {
-  "value": null,
-  "label": "of sold dollar volume flagged, weekly"
- },
- "items": [],
- "pending": true
+  "as_of": null,
+  "headline": {
+    "value": null,
+    "label": "no sales checked last week"
+  },
+  "items": []
 }

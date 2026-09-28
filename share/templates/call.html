@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="watermark" aria-hidden="true">#{{ id }}</div>
+    <div class="chip-row">
+      <span class="chip {{ status_chip }}">{{ status_text }}</span>
+      <p>On the record {{ dated_long }}</p>
+    </div>
+    <p class="callout" style="margin-top: 36px; font-size: 60px">{{ text }}</p>
+    <div class="blocks">
+      <div class="block">
+        <div class="eyebrow">Start</div>
+        <p>{{ start }}</p>
+      </div>
+      <div class="block">
+        <div class="eyebrow">Rule</div>
+        <p>{{ method }}</p>
+      </div>
+      {% if verdict %}
+      <div class="block verdict {{ 'miss' if status == 'miss' else '' }}">
+        <div class="eyebrow">Verdict, {{ checked_long }}</div>
+        <p>{{ verdict }}</p>
+      </div>
+      {% elif latest %}
+      <div class="block">
+        <div class="eyebrow">Latest</div>
+        <p>{{ latest }}</p>
+      </div>
+      {% endif %}
+    </div>
+    {% if note %}<p class="mono mutedc" style="font-size: 18px; line-height: 1.5; margin: 32px 0 0">{{ note }}</p>{% endif %}
+{% endblock %}

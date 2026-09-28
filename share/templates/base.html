@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>{{ title }}</title>
+<style>
+@font-face { font-family: "Geist"; font-weight: 400; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-sans-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-weight: 500; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-sans-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-weight: 600; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-sans-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist"; font-weight: 700; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-sans-latin-700-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-weight: 400; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-mono-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-weight: 500; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-mono-latin-500-normal.woff2") format("woff2"); }
+@font-face { font-family: "Geist Mono"; font-weight: 600; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-mono-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Unbounded"; font-weight: 600; font-style: normal; font-display: block; src: url("{{ fonts }}/unbounded-latin-600-normal.woff2") format("woff2"); }
+@font-face { font-family: "Unbounded"; font-weight: 700; font-style: normal; font-display: block; src: url("{{ fonts }}/unbounded-latin-700-normal.woff2") format("woff2"); }
+{% include "share.css" %}
+</style>
+</head>
+<body>
+<div class="frame {{ frame_class|default('') }}">
+  {{ sky|safe }}
+  <div class="top">
+    <div class="brand">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="8" fill="none" stroke="#C4B5FD" stroke-width="2"/><ellipse cx="16" cy="16" rx="14.5" ry="5" fill="none" stroke="#8B5CF6" stroke-width="1.6" transform="rotate(-20 16 16)"/></svg>
+      <span class="wordmark">ASTRONAUT TIME</span>
+    </div>
+    <span class="kicker">{{ kicker }}</span>
+  </div>
+  <div class="body">
+{% block body %}{% endblock %}
+  </div>
+  <div class="bottom">
+    <span class="url">board.jacknbauhs.com</span>
+    <span class="tag {{ tag_class|default('') }}">{{ tag }}</span>
+  </div>
+</div>
+</body>
+</html>

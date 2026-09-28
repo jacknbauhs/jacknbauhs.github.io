@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1 class="title">{{ name }} {{ tier }}</h1>
+    <p class="sub">{{ set }}{% if note %} · {{ note }}{% endif %}</p>
+    <div class="hero">
+      <span class="big {{ big_class }}">{{ big }}</span>
+      <span class="beside">{{ beside_1 }}<br>{{ beside_2 }}</span>
+    </div>
+    {{ chart|safe }}
+    <div class="legend">
+      <span><i class="swatch hollow"></i>clean sale</span>
+      <span><i class="swatch line" style="background: var(--accent-line)"></i>clean monthly median</span>
+      {% for item in legend %}<span><i class="swatch" style="background: {{ item.color }}"></i>{{ item.text }}</span>{% endfor %}
+    </div>
+    <p class="take">{{ take }}</p>
+{% endblock %}

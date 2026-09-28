@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block body %}
+    <span class="eyebrow">{{ eyebrow }}</span>
+    <div class="hero" style="margin-top: 6px">
+      <span class="big md flagc">{{ value }}</span>
+      <span class="beside">of {{ of }}<br>{{ headline }}</span>
+    </div>
+    <p class="sub" style="margin-top: 16px; font-size: 24px; color: var(--text-3)">{{ text }}</p>
+    <div class="rows" style="margin-top: 26px">
+      {% for f in items %}
+      <div class="row compact" style="padding: 13px 0; grid-template-columns: 92px minmax(0, 1fr) auto">
+        <span class="idx" style="font-size: 19px">{{ f.date }}</span>
+        <span class="name" style="font-size: 24px">{{ f.name }} <span class="chip sm {{ f.chip }}" style="margin-left: 8px; vertical-align: 3px; min-height: 26px; font-size: 13px">{{ f.label_text }}</span></span>
+        <span class="price {{ f.color }}" style="font-size: 26px">{{ f.price }}</span>
+        <span class="why" style="font-size: 18px; line-height: 1.35">{{ f.why }}</span>
+      </div>
+      {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block body %}
+    <h1 class="title">{{ name }}</h1>
+    <p class="sub">{{ sub }}</p>
+    <div class="hero">
+      <span class="big {{ big_size }} {{ big_class }}">{{ big }}</span>
+      <span class="beside">{{ beside_1 }}<br>{{ beside_2 }}</span>
+    </div>
+    <div class="chip-row" style="margin-top: 24px">
+      <span class="chip {{ chip }}">{{ label_text }}</span>
+      <p>{{ meaning }}</p>
+    </div>
+    <p class="take lg" style="margin-top: 28px">{{ why }}</p>
+    {% if chart %}
+    {{ chart|safe }}
+    <div class="legend">
+      <span><i class="swatch hollow"></i>clean sale</span>
+      <span><i class="swatch line" style="background: var(--accent-line)"></i>clean monthly median</span>
+      {% for item in legend %}<span><i class="swatch" style="background: {{ item.color }}"></i>{{ item.text }}</span>{% endfor %}
+    </div>
+    {% elif compare %}
+    <div class="compare">
+      <div>
+        <span class="eyebrow">{{ compare.left_label }}</span>
+        <span class="num {{ big_class }}">{{ compare.left }}</span>
+        <p>{{ compare.left_note }}</p>
+      </div>
+      <div>
+        <span class="eyebrow">{{ compare.right_label }}</span>
+        <span class="num">{{ compare.right }}</span>
+        <p>{{ compare.right_note }}</p>
+      </div>
+    </div>
+    {% endif %}
+{% endblock %}

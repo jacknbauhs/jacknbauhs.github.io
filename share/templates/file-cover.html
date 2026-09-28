@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body %}
+    <span class="eyebrow">This week's file</span>
+    <h1 class="title xl" style="margin-top: 12px">{{ file_title }}</h1>
+    <p class="sub">{{ lede }}</p>
+    <div class="rows">
+      {% for r in rows %}
+      <div class="row">
+        <div>
+          <div class="name">{{ r.name }} {{ r.tier }}</div>
+          <div class="line2">{{ r.line2 }}</div>
+        </div>
+        <div class="pct {{ r.pct_class }}">{{ r.pct }}</div>
+        <div class="why">{{ r.line3 }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if flags %}
+    <div class="strip">
+      <div class="big flagc">{{ flags.value }}<small>of {{ flags.of }}</small></div>
+      <p>{{ flags.text }}</p>
+    </div>
+    {% endif %}
+    {% if foot %}<p class="mono mutedc" style="font-size: 18px; line-height: 1.5; margin: 36px 0 0">{{ foot }}</p>{% endif %}
+{% endblock %}

@@ -14,19 +14,28 @@ What it makes (share/out):
   calls-<date>-cover.png           every call on the record, on one image
   call-<id>-<dated>.png            one per call (open, hit or miss)
   og-board.png                     1200x630 link preview, also copied to assets/og.png
+  site/tile-*.png                  four 1080x1080 tiles at stable names (file, flags, calls, next drop)
+  site/latest-*.png                the newest file, flags and calls covers at stable names
+  site/squarespace.md              ready-to-paste Markdown for jacknbauhs.com image blocks
   captions.md                      a caption and alt text for every image
   html/*.html                      the filled templates, open in a browser to tweak the look
 
+The site/ files never change name, so an image block on jacknbauhs.com that points at
+https://board.jacknbauhs.com/share/out/site/<name>.png shows the newest render without
+anyone touching the site. .github/workflows/render.yml runs this after every data push.
+
 Setup (once):  pip install jinja2 playwright  &&  playwright install chromium
 Run:           python share/render.py                 (everything)
-               python share/render.py --only calls    (file, flags, calls or og)
+               python share/render.py --only calls    (file, flags, calls, og or site)
                python share/render.py --html-only     (no screenshots, just the HTML)
                python share/render.py --scale 2       (2160x2700 images)
+               python share/render.py --changed-only  (skip images whose filled HTML didn't change)
 """
 from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import math
 import random
@@ -64,6 +73,8 @@ LABELS = {
 }
 POST_W, POST_H = 1080, 1350
 OG_W, OG_H = 1200, 630
+TILE = 1080
+SITE_URL = f"https://{SITE}/share/out/site"
 
 
 # ---------- helpers ----------
@@ -277,9 +288,136 @@ class Kit:
         ctx["sky"] = sky(w, h)
         html = self.env.get_template(template).render(**ctx)
         html_path = self.html_dir / f"{name}.html"
+        html_path.parent.mkdir(parents=True, exist_ok=True)
         html_path.write_text(html, encoding="utf-8")
+        # The hash ignores the fonts path, so the same data renders to the same hash on any machine.
+        digest = hashlib.sha256(html.replace(self.fonts_url, "FONTS").encode("utf-8")).hexdigest()
         self.pages.append({"name": name, "html": html_path, "png": self.out / f"{name}.png",
-                           "w": w, "h": h, "caption": caption, "alt": alt})
+                           "w": w, "h": h, "caption": caption, "alt": alt, "hash": digest})
+
+    # --- site tiles: four square images at stable names, for image blocks on jacknbauhs.com ---
+    def build_site(self):
+        (self.out / "site").mkdir(parents=True, exist_ok=True)
+        f = load("file.json") or {}
+        as_of = f.get("as_of") or f.get("pulled")
+        self.site_alts: dict[str, str] = {}
+
+        def tile(name, kicker, tag, tag_class, ctx, alt):
+            ctx = dict(ctx, frame_class="tile", kicker=kicker, tag=tag, tag_class=tag_class)
+            self.page("tile.html", f"site/{name}", ctx, caption="", alt=alt, w=TILE, h=TILE)
+            self.site_alts[name] = alt
+
+        # 1. This week's file: the featured card's clean move.
+        featured = f.get("featured")
+        row = next((r for r in f.get("rows", []) if r.get("id") == featured), None) or (f.get("rows") or [None])[0]
+        if row and as_of:
+            up = (row.get("change_pct") or 0) >= 0
+            tile("tile-file", "This week's file", f"130point · {fmt_date(as_of)}", "",
+                 {"eyebrow": f"{row['name']} {row['tier']}", "big": pct(row.get("change_pct")),
+                  "big_class": "up" if up else "down",
+                  "l1": sentence(row.get("window_label", "")),
+                  "l2": f"{row.get('sales')} sold records, {row.get('flagged')} kept out. "
+                        + (f"{row['note']}." if row.get("note") else "")},
+                 alt=f"This week's file: {row['name']} {row['tier']}, {pct(row.get('change_pct'))} on the clean median "
+                     f"({row.get('window_label', '')}). {row.get('sales')} sold records, {row.get('flagged')} kept out.")
+        else:
+            tile("tile-file", "This week's file", "Mission Control", "",
+                 {"eyebrow": "Every sale checked before it counts", "big": "—", "big_size": "md",
+                  "l1": "The file starts with the first hand-checked card.", "l2": ""},
+                 alt="This week's file on the Astronaut Time board starts with the first hand-checked card.")
+
+        # 2. What got caught: the hand-checked file first, the nightly feed once it has a week.
+        head = (f.get("flags") or {}).get("headline") or {}
+        feed = load("flags.json") or {}
+        feed_head = feed.get("headline") or {}
+        if head.get("value") is not None and as_of:
+            tile("tile-flags", "What got caught", f"130point · {fmt_date(as_of)}", "flag",
+                 {"eyebrow": f.get("title", "This week's file"), "big": str(head["value"]), "small": f"of {head.get('of')}",
+                  "big_class": "flagc", "l1": sentence(head.get("label", "")),
+                  "l2": "Each one is labeled on the board with the reason."},
+                 alt=f"What got caught: {head['value']} of {head.get('of')} {head.get('label', '')}, each labeled with the reason.")
+        elif feed_head.get("value") is not None and not feed.get("pending"):
+            tile("tile-flags", "What got caught", f"Mission Control · {fmt_date(feed.get('as_of'))}", "flag",
+                 {"eyebrow": "Last complete week", "big": pct(feed_head["value"]).lstrip("+"), "big_class": "flagc",
+                  "l1": sentence(feed_head.get("label", "of sold dollar volume flagged")),
+                  "l2": "Suspect pumps, washes and data errors, taken out before the math."},
+                 alt=f"What got caught last week: {pct(feed_head['value'])} {feed_head.get('label', '')}.")
+        else:
+            tile("tile-flags", "What got caught", "Mission Control", "flag",
+                 {"eyebrow": "Sale Integrity Layer", "big": "—", "big_size": "md", "big_class": "flagc",
+                  "l1": "Flags start with the first checked sales.", "l2": ""},
+                 alt="Flags on the Astronaut Time board start with the first checked sales.")
+
+        # 3. Calls on the record.
+        c = load("calls.json") or {}
+        calls = [i for i in c.get("items", []) if i.get("on_record", True) and i.get("status") != "withdrawn"]
+        if calls:
+            n = len(calls)
+            open_ = [i for i in calls if i.get("status", "open") == "open"]
+            hits = sum(1 for i in calls if i.get("status") == "hit")
+            misses = sum(1 for i in calls if i.get("status") == "miss")
+            dated = max(i["dated"] for i in calls)
+            if open_:
+                nxt = min(i["check_date"] for i in open_)
+                l1 = f"Check me {fmt_date(nxt)}." if len(open_) == n else f"{len(open_)} open, check {fmt_date(nxt)}."
+            else:
+                l1 = "All checked."
+            record = f"{hits} hit, {misses} missed so far. " if (hits or misses) else ""
+            tile("tile-calls", "Calls on the record", f"Dated {fmt_date(dated)}", "warn",
+                 {"eyebrow": "Dated the day they went public", "big": str(n),
+                  "small": "call" if n == 1 else "calls", "l1": l1, "l2": record + "Misses stay up."},
+                 alt=f"{n} call{'s' if n != 1 else ''} on the record, dated the day they went public. {l1} Misses stay up.")
+        else:
+            tile("tile-calls", "Calls on the record", "Mission Control", "warn",
+                 {"eyebrow": "Dated, then checked in public", "big": "0", "small": "calls",
+                  "l1": "The first call goes up the day it goes public.", "l2": "Misses stay up."},
+                 alt="No calls on the record yet. The first goes up the day it goes public; misses stay up.")
+
+        # 4. Next drop: the first release on or after the data's as_of date.
+        d = load("drops.json") or {}
+        d_as_of = d.get("as_of") or dt.date.today().isoformat()
+        upcoming = sorted((i for i in d.get("items", []) if str(i.get("date", ""))[:10] >= d_as_of[:10]), key=lambda i: i["date"])
+        if upcoming:
+            nd = upcoming[0]
+            month_only = nd.get("date_precision") == "month"
+            when = MONTHS_LONG[parse_date(nd["date"]).month - 1] if month_only else fmt_date(nd["date"])
+            tile("tile-drop", "Next drop", f"Checked {fmt_date(d_as_of)}", "",
+                 {"eyebrow": nd.get("game", ""), "big": when, "big_size": "sm", "big_class": "accentc",
+                  "l1": nd["name"], "l2": nd.get("detail", "")},
+                 alt=f"Next drop: {nd['name']} ({nd.get('game', '')}), {when}. {nd.get('detail', '')}")
+        else:
+            tile("tile-drop", "Next drop", "Mission Control", "",
+                 {"eyebrow": "Release calendar", "big": "—", "big_size": "md", "big_class": "accentc",
+                  "l1": "Nothing dated on the calendar right now.", "l2": ""},
+                 alt="Nothing dated on the release calendar right now.")
+
+    def place_site(self):
+        """Copy the newest covers to stable names and write the Markdown that jacknbauhs.com pastes in."""
+        site = self.out / "site"
+        site.mkdir(parents=True, exist_ok=True)
+        stable = {}
+        for kind, pattern in (("file", "file-*-cover.png"), ("flags", "flags-*-cover.png"), ("calls", "calls-*-cover.png")):
+            found = sorted(self.out.glob(pattern))
+            dest = site / f"latest-{kind}.png"
+            if found:
+                shutil.copyfile(found[-1], dest)
+                stable[kind] = dest
+                print(f"copied {found[-1].name} -> {dest.relative_to(ROOT)}")
+            elif dest.exists():
+                dest.unlink()
+        alts = getattr(self, "site_alts", {})
+        lines = ["<!-- Paste into a Markdown block on jacknbauhs.com. Written by share/render.py; the images refresh with the board. -->", ""]
+        lines += ["## Four tiles (one Markdown block per column, or all four in one block)", ""]
+        for name in ("tile-file", "tile-flags", "tile-calls", "tile-drop"):
+            if (site / f"{name}.png").exists():
+                lines.append(f"[![{alts.get(name, name)}]({SITE_URL}/{name}.png)](https://{SITE})")
+                lines.append("")
+        lines += ["## The newest covers (4:5)", ""]
+        for kind, dest in stable.items():
+            lines.append(f"[![The newest {kind} cover from the Astronaut Time board]({SITE_URL}/{dest.name})](https://{SITE})")
+            lines.append("")
+        (site / "squarespace.md").write_text("\n".join(lines), encoding="utf-8")
+        print(f"wrote {(site / 'squarespace.md').relative_to(ROOT)}")
 
     # --- this week's file ---
     def build_file(self):
@@ -495,14 +633,27 @@ class Kit:
         }, caption="", alt="Mission Control by Astronaut Time: the card market, with the fake sales taken out.", w=OG_W, h=OG_H)
 
     # --- render ---
-    def screenshot(self):
+    def screenshot(self, changed_only: bool = False):
         from playwright.sync_api import sync_playwright
         problems = []
+        hashes_path = self.out / ".hashes.json"
+        old_hashes = {}
+        if hashes_path.exists():
+            try:
+                old_hashes = json.loads(hashes_path.read_text(encoding="utf-8"))
+            except ValueError:
+                old_hashes = {}
+        todo = [pg for pg in self.pages
+                if not (changed_only and pg["png"].exists() and old_hashes.get(pg["name"]) == pg["hash"])]
+        skipped = len(self.pages) - len(todo)
+        if skipped:
+            print(f"{skipped} unchanged image{'s' if skipped != 1 else ''} kept as is")
         with sync_playwright() as p:
             browser = p.chromium.launch()
             ctx = browser.new_context(viewport={"width": POST_W, "height": POST_H}, device_scale_factor=self.scale)
             page = ctx.new_page()
-            for pg in self.pages:
+            for pg in todo:
+                pg["png"].parent.mkdir(parents=True, exist_ok=True)
                 page.set_viewport_size({"width": pg["w"], "height": pg["h"]})
                 page.goto(pg["html"].as_uri())
                 page.evaluate("document.fonts.ready")
@@ -529,10 +680,16 @@ class Kit:
                 page.screenshot(path=str(pg["png"]), clip={"x": 0, "y": 0, "width": pg["w"], "height": pg["h"]})
                 print(f"wrote {pg['png'].relative_to(ROOT)}")
             browser.close()
+        # Remember every rendered page's hash (unchanged pages keep theirs), so --changed-only can skip them next time.
+        new_hashes = {k: v for k, v in old_hashes.items() if (self.out / f"{k}.png").exists()}
+        new_hashes.update({pg["name"]: pg["hash"] for pg in self.pages})
+        hashes_path.write_text(json.dumps(dict(sorted(new_hashes.items())), indent=1) + "\n", encoding="utf-8")
         return problems
 
     def write_captions(self):
-        lines = [f"# Captions, {dt.date.today().isoformat()}", "",
+        # Dated by the data, not the clock, so a re-render of the same data writes the same file.
+        stamp = str((load("meta.json") or {}).get("generated_at") or (load("file.json") or {}).get("as_of") or dt.date.today())[:10]
+        lines = [f"# Captions, board data of {stamp}", "",
                  "One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.", ""]
         for pg in self.pages:
             if not pg["caption"]:
@@ -562,20 +719,16 @@ class Kit:
 
 def main():
     ap = argparse.ArgumentParser(description="Render the share kit from the board's JSON.")
-    ap.add_argument("--only", default="file,flags,calls,og", help="comma list of file,flags,calls,og")
+    ap.add_argument("--only", default="file,flags,calls,og,site", help="comma list of file,flags,calls,og,site")
     ap.add_argument("--out", default=str(SHARE / "out"))
     ap.add_argument("--scale", type=int, default=1, help="device scale factor: 2 gives 2160x2700")
     ap.add_argument("--html-only", action="store_true", help="write the HTML, skip the screenshots")
+    ap.add_argument("--changed-only", action="store_true",
+                    help="skip the screenshot of any image whose filled HTML is the same as last time (what the nightly workflow uses)")
     args = ap.parse_args()
 
     kit = Kit(Path(args.out), args.scale)
     wanted = {w.strip() for w in args.only.split(",")}
-    # Only the current set lives in out/: old renders of the kinds being rendered go first (git history keeps them).
-    prefixes = {"file": ("file-",), "flags": ("flags-", "flag-"), "calls": ("calls-", "call-"), "og": ("og-",)}
-    for kind in wanted:
-        for pre in prefixes.get(kind, ()):
-            for old in list(kit.out.glob(f"{pre}*.png")) + list(kit.html_dir.glob(f"{pre}*.html")):
-                old.unlink()
     if "file" in wanted:
         kit.build_file()
     if "flags" in wanted:
@@ -584,13 +737,27 @@ def main():
         kit.build_calls()
     if "og" in wanted:
         kit.build_og()
+    if "site" in wanted:
+        kit.build_site()
     kit.write_captions()
     print(f"{len(kit.pages)} pages filled in {kit.html_dir.relative_to(ROOT)}")
+    # Only the current set lives in out/: renders of the kinds being rendered whose name isn't in this set go
+    # (a call that was withdrawn, last week's file). Git history keeps them.
+    prefixes = {"file": ("file-",), "flags": ("flags-", "flag-"), "calls": ("calls-", "call-"), "og": ("og-",), "site": ("site/tile-",)}
+    keep = {pg["png"].resolve() for pg in kit.pages} | {pg["html"].resolve() for pg in kit.pages}
+    for kind in wanted:
+        for pre in prefixes.get(kind, ()):
+            for old in list(kit.out.glob(f"{pre}*.png")) + list(kit.html_dir.glob(f"{pre}*.html")):
+                if old.resolve() not in keep:
+                    old.unlink()
+                    print(f"removed {old.relative_to(ROOT)} (no longer in the set)")
     if args.html_only:
         return
-    problems = kit.screenshot()
+    problems = kit.screenshot(changed_only=args.changed_only)
     if "og" in wanted:
         kit.place_og()
+    if "site" in wanted:
+        kit.place_site()
     if problems:
         print("\nLook at these before posting:")
         for pr in problems:

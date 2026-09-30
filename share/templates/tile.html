@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block body %}
+    <span class="eyebrow">{{ eyebrow }}</span>
+    <div class="big {{ big_size|default('') }} {{ big_class|default('') }}">{{ big }}{% if small %}<small>{{ small }}</small>{% endif %}</div>
+    <div class="l1">{{ l1 }}</div>
+    {% if l2 %}<div class="l2">{{ l2 }}</div>{% endif %}
+{% endblock %}

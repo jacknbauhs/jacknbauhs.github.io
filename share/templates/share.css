@@ -130,6 +130,18 @@ body { color: var(--text); font-family: var(--font); -webkit-font-smoothing: ant
 .compare .num { display: block; font-size: 44px; font-weight: 500; letter-spacing: -0.02em; margin-top: 8px; line-height: 1.1; }
 .compare p { margin: 6px 0 0; font-size: 19px; color: var(--muted); line-height: 1.35; }
 
+/* Site tiles (1080x1080): one number each, for jacknbauhs.com image blocks. They stack on phones, so nothing is small. */
+.tile { width: 1080px; height: 1080px; padding: 64px 72px; }
+.tile .body { margin-top: 40px; justify-content: center; }
+.tile .eyebrow { font-size: 24px; color: var(--text-2); }
+.tile .big { font-family: var(--mono); font-size: 230px; font-weight: 500; line-height: 1; letter-spacing: -0.04em; white-space: nowrap; margin-top: 22px; }
+.tile .big.md { font-size: 170px; }
+.tile .big.sm { font-size: 124px; }
+.tile .big small { font-size: 64px; color: var(--muted); letter-spacing: -0.01em; margin-left: 18px; }
+.tile .l1 { font-size: 42px; font-weight: 600; letter-spacing: -0.015em; line-height: 1.2; margin-top: 30px; }
+.tile .l2 { font-size: 28px; color: var(--muted); line-height: 1.4; margin-top: 14px; max-width: 30em; }
+.tile .bottom { padding-top: 24px; }
+
 /* OG (1200x630) */
 .og .body { margin-top: 36px; flex-direction: row; align-items: center; gap: 48px; }
 .og .lead { flex: 1 1 auto; min-width: 0; }

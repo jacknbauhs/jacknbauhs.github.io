@@ -13,25 +13,36 @@ Turns the board's JSON into ready-to-post images. Same data the board reads, sam
 | `calls-<date>-cover.png` | Every call on the record, on one image. The "check me Oct 30" post. |
 | `call-<id>-<dated>.png` | One per call: the call, start, rule, and latest, or the verdict once it's hit or miss. |
 | `og-board.png` | The 1200x630 link preview. Copied to `assets/og.png`; the pages point at it, so links to the board unfurl on X, Facebook and Discord. |
+| `site/tile-file.png`, `site/tile-flags.png`, `site/tile-calls.png`, `site/tile-drop.png` | Four 1080x1080 tiles, one number each, at names that never change. Image blocks on jacknbauhs.com point at them and show the newest render. |
+| `site/latest-file.png`, `site/latest-flags.png`, `site/latest-calls.png` | The newest cover of each kind, at a stable name, for the same reason. |
+| `site/squarespace.md` | Ready-to-paste Markdown (image, alt text, link to the board) for a Markdown block on jacknbauhs.com. |
+| `.hashes.json` | A hash of each image's filled HTML, so `--changed-only` can skip images that would come out the same. Committed. |
 | `captions.md` | A caption and alt text for every image. Plain facts, the source, the board link. |
 | `html/` | The filled templates. Open one in a browser to tweak the look, then re-render. Not committed. |
 
 All posts are 1080x1350 (IG 4:5, also fine on X, Facebook and Threads). `--scale 2` gives 2160x2700.
 
-## Run it
+## It runs itself
+
+`.github/workflows/render.yml` runs `render.py --changed-only` on GitHub after every push that touches `data/`, `share/templates/` or `render.py` (the nightly `board_publish` commit from Mission Control counts), and commits what changed: the images, `captions.md`, `.hashes.json`, `assets/og.png` and the `?v=` stamp in the three HTML pages. Unchanged images are left alone, so the repo only grows when the data moves. The Actions tab shows each run; "Run workflow" renders on demand. Pull before you commit anything: the nightly job and this workflow both push to `main`.
+
+This is how jacknbauhs.com stays current without code: Squarespace can't run scripts on the Basic plan, but a Markdown block can show an image by URL, and `share/out/site/*.png` always hold the newest render. Paste `share/out/site/squarespace.md` into a Markdown block once; after that, the site follows the board.
+
+## Run it by hand
 
 Once: `pip install jinja2 playwright` then `playwright install chromium`.
 
 ```
 python share/render.py                # everything
-python share/render.py --only calls   # file, flags, calls or og
+python share/render.py --only calls   # file, flags, calls, og or site
 python share/render.py --html-only    # fill the templates, skip the screenshots
+python share/render.py --changed-only # only images whose filled HTML changed
 python share/render.py --scale 2
 ```
 
-Each run replaces the previous set of the kinds it renders (git history keeps the old ones). It ends with a check: anything that overlaps the footer or runs off an edge is listed, and the exit code is 2. Look at those before posting.
+Each run drops renders of the kinds it makes that are no longer in the set (a withdrawn call, last week's file; git history keeps the old ones). It ends with a check: anything that overlaps the footer or runs off an edge is listed, and the exit code is 2. Look at those before posting.
 
-After a run, commit `share/out`, `assets/og.png` and the three HTML files (the run stamps `assets/og.png?v=<date>` into them so X, Facebook and Discord fetch the new preview instead of a cached one). Pull first: the nightly job also pushes to this repo.
+After a hand run, commit `share/out`, `assets/og.png` and the three HTML files (the run stamps `assets/og.png?v=<date>` into them so X, Facebook and Discord fetch the new preview instead of a cached one). Pull first: the nightly job and the workflow also push to this repo.
 
 ## The look
 

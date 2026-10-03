@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-02
+# Captions, board data of 2026-10-03
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 

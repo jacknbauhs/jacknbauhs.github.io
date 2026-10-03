@@ -78,6 +78,10 @@ SLOTS = ("Tue story", "Thu market", "Sat build")
 # What Mission Control's movers lists cover: window label -> (lowest price in $, smallest move in %). Keep in step with
 # its config/board.py (MOVER_MIN_CENTS and MOVER_MIN_PCT for 7d; the one_day list for 1d).
 MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
+# The one-day list also leaves out big unbacked jumps: a move with checked sales always shows, an Unconfirmed one only up
+# to this size and only when TCGplayer's lowest listing moved the same way. Keep in step with config/board.py and ONE_DAY
+# in assets/board.js.
+DAY_UNCONFIRMED_MAX_PCT = 40
 MOVING_ROWS = 8
 # On a mover, a label speaks to the move, so two read differently than on a single sale.
 MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
@@ -705,12 +709,20 @@ class Kit:
                          "price": money((m.get("last") or {}).get("price")), "pct": pct(chg, 1),
                          "pct_class": "" if chg is None else ("up" if chg >= 0 else "down"),
                          "chip": chip, "label_text": text, "has_label": bool(m.get("label"))})
+        # Since yesterday leaves out big unbacked jumps, so its rule is said, and it says what Unconfirmed means in one
+        # sentence (two would push the foot into the footer on a full image).
+        day_rule = ""
+        if window == "1d":
+            day_rule = (f"Unconfirmed: no checked sales yet, so it shows only if it's {DAY_UNCONFIRMED_MAX_PCT}% or less "
+                        "and the lowest listing moved the same way.")
         meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
-        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k])
+        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k] and not (day_rule and k == "UNCONFIRMED"))
         # The image says what Unconfirmed means; the caption carries every label's meaning, the board explains them all.
         source = items[0].get("source") or "TCGplayer market prices via tcgcsv.com"
         foot = f"{source}, as of {fmt_date_year(as_of)}."
-        if "UNCONFIRMED" in present:
+        if day_rule:
+            foot += f" {day_rule}"
+        elif "UNCONFIRMED" in present:
             foot += f" Unconfirmed: {MOVER_MEANINGS['UNCONFIRMED']}"
         self.page("moving.html", f"moving-{year}-W{week:02d}", {
             "kicker": f"What's moving · {fmt_date(as_of)}", "tag": f"TCGplayer · {fmt_date(as_of)}",
@@ -719,7 +731,8 @@ class Kit:
         }, caption=(f"What's moving on TCGplayer, as of {fmt_date_year(as_of)}. {headline} " +
                     " ".join(f"{r['name']}" + (f" ({r['line2']})" if r["line2"] else "") + f": {r['price']}, {r['pct']}" +
                              (f", {r['label_text'].lower()}." if r["has_label"] else ".") for r in rows) +
-                    (f" {legend}" if legend else "") + f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
+                    (f" {legend}" if legend else "") + (f" {day_rule}" if day_rule else "") +
+                    f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
             alt=f"What's moving: the {len(rows)} biggest TCGplayer moves {when}, each with its market price, its change and the label for what checked sales show.")
 
     # --- link preview ---

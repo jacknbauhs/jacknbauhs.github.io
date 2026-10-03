@@ -300,6 +300,7 @@ table.data.rip th { white-space: nowrap; }
 .today-card .flag-head { gap: 14px; margin-top: 6px; }
 .today-card .big-flag { font-size: 34px; }
 .today-quiet { margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: var(--text-3); }
+.today-note { margin: 4px 0 0; font-size: 13px; line-height: 1.5; color: var(--text-3); }
 .today-foot { margin: 8px 0 0; padding-top: 10px; border-top: 1px solid var(--line-soft); font-family: var(--mono); font-size: 11px; line-height: 1.6; color: var(--muted); }
 .today-more { display: inline-block; margin-top: 10px; font-size: 13px; }
 

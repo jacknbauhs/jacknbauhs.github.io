@@ -41,8 +41,9 @@
   var SLOTS = ["Tue story", "Thu market", "Sat build"];
   var FILE_DAYS = [2, 4, 6]; // The File runs Tue, Thu and Sat, Central time (0 is Sunday)
   var WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  // What Mission Control's since-yesterday list covers (movers.json one_day). Keep in step with its config/board.py.
-  var ONE_DAY = { minPrice: 20, minPct: 3 };
+  // What Mission Control's since-yesterday list covers (movers.json one_day). Keep in step with its config/board.py:
+  // a move with checked sales always shows; an Unconfirmed one only up to maxUnconfirmedPct, with the lowest listing moving the same way.
+  var ONE_DAY = { minPrice: 20, minPct: 3, maxUnconfirmedPct: 40 };
   var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
 
   /* ---------- helpers ---------- */
@@ -394,7 +395,8 @@
     rows = rows.filter(function (m) { return m && str(m.name); });
     var body;
     if (!rows.length) {
-      body = el("p", { class: "today-quiet", text: "Quiet since yesterday: no card worth $" + ONE_DAY.minPrice + " or more moved " + ONE_DAY.minPct + "% or more on TCGplayer." });
+      body = el("p", { class: "today-quiet", text: "Quiet since yesterday: no card worth $" + ONE_DAY.minPrice + " or more made a move of " +
+        ONE_DAY.minPct + "% or more that checked sales or listings back up." });
     } else {
       body = el("ul", { class: "today-list" });
       rows.slice(0, 5).forEach(function (m) {
@@ -412,7 +414,10 @@
     }
     var asOf = movers && isDate(movers.as_of) ? movers.as_of : rows[0] && isDate(rows[0].observed) ? rows[0].observed : null;
     var source = (rows[0] && str(rows[0].source)) || "TCGplayer market prices via tcgcsv.com";
-    return todayCard("Since yesterday", "TCGplayer", [body, el("p", { class: "today-foot", text: source + (asOf ? ", as of " + fmtDateYear(asOf) : "") + "." })]);
+    // The quiet line already says what the list covers; a list gets the rule as a note under it.
+    var note = rows.length ? el("p", { class: "today-note", text: "Cards worth $" + ONE_DAY.minPrice + " or more that moved " + ONE_DAY.minPct +
+      "% or more; with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way." }) : null;
+    return todayCard("Since yesterday", "TCGplayer", [body, note, el("p", { class: "today-foot", text: source + (asOf ? ", as of " + fmtDateYear(asOf) : "") + "." })]);
   }
 
   // Calls whose check date has come, and the flagged-sales headline, from digest.json.

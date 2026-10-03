@@ -4,9 +4,9 @@ One block per image. Caption first, alt text second. Plain facts, the source and
 
 ## file-2026-09-28-cover.png
 
-This week's file: Crystal Lugia and Crystal Charizard. Crystal Lugia PSA 8 +62%: clean median $15,999 in September, from $9,900 in June. Crystal Charizard PSA 9 +37%: clean median $38,500 in September, from $28,108 in June. 7 of 39 sold records don't belong in the math. Source: 130point, pulled Sep 28. board.jacknbauhs.com
+The File, Sep 28: Crystal Lugia and Crystal Charizard. Crystal Lugia PSA 8 +62%: clean median $15,999 in September, from $9,900 in June. Crystal Charizard PSA 9 +37%: clean median $38,500 in September, from $28,108 in June. 7 of 39 sold records don't belong in the math. Source: 130point, pulled Sep 28. board.jacknbauhs.com
 
-Alt: This week's file on the Astronaut Time board: Crystal Lugia and Crystal Charizard, with each card's clean move and how many records were kept out.
+Alt: The File on the Astronaut Time board: Crystal Lugia and Crystal Charizard, with each card's clean move and how many records were kept out.
 
 ## file-2026-09-28-crystal-lugia-psa-8.png
 
@@ -91,3 +91,9 @@ Alt: Call #003, open · check oct 30: Raw Base Set Charizard is down 10% or more
 Three calls on the record. #001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. #002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. #003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies. Check me Oct 30. Misses stay up. board.jacknbauhs.com
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
+
+## moving-2026-W40.png
+
+What's moving on TCGplayer, as of Oct 2, 2026. Ten cards moved 3% or more since yesterday. Raikou (Shiny) (Call of Legends · SL9): $698.99, +210.7%, unconfirmed. Garchomp - 5/147 (Cracked Ice Holo) (Deck Exclusives · 005/147): $118.18, +137.8%, unconfirmed. Garchomp (Supreme Victors · 5): $102.42, +77.7%, unconfirmed. Regice Star (EX Legend Maker · 90/92): $649.98, −48.0%, unconfirmed. Mamoswine (Japanese 11th Movie Commemoration Set) (Miscellaneous Cards & Products · 006/009): $35, +46.0%, unconfirmed. Glaceon - BW90 (Black and White Promos · BW90): $91.64, +29.4%, unconfirmed. Houndoom (4) (Neo Discovery · 04/75): $242.50, +27.6%, unconfirmed. Rocket's Mewtwo ex (EX Team Rocket Returns · 99/109): $399.97, −27.3%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 2, 2026. board.jacknbauhs.com
+
+Alt: What's moving: the 8 biggest TCGplayer moves since yesterday, each with its market price, its change and the label for what checked sales show.

@@ -1,7 +1,8 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
-   Kept by hand: file.json (this week's file) and cards/*.json, calls.json, drops.json.
-   Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json.
+   Kept by hand: file.json (The File, Tue / Thu / Sat) and cards/*.json, calls.json, drops.json.
+   Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json,
+   digest.json and watching.json (the Today strip; both may be missing until Mission Control publishes them).
    A missing or broken file only blanks its own section. */
 (function () {
   "use strict";
@@ -35,6 +36,14 @@
     booster_box: "Booster box", etb: "Elite Trainer Box", booster_bundle: "Booster bundle", bundle: "Bundle",
     case: "Case", pack: "Pack", blaster: "Blaster", hobby_box: "Hobby box", display: "Display", tin: "Tin"
   };
+  // The File's stance: a closed set, same as share/render.py. Any other value is not shown. A stance is a read, not advice.
+  var STANCES = { "STRONG WATCH": "chip-accent", WATCH: "chip-info", NEUTRAL: "chip-neutral", CAUTION: "chip-warn", PASS: "chip-down" };
+  var SLOTS = ["Tue story", "Thu market", "Sat build"];
+  var FILE_DAYS = [2, 4, 6]; // The File runs Tue, Thu and Sat, Central time (0 is Sunday)
+  var WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  // What Mission Control's since-yesterday list covers (movers.json one_day). Keep in step with its config/board.py.
+  var ONE_DAY = { minPrice: 20, minPct: 3 };
+  var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
 
   /* ---------- helpers ---------- */
   function $(sel, root) { return (root || document).querySelector(sel); }
@@ -79,17 +88,21 @@
     return period && !/[.!?]$/.test(t) ? t + "." : t;
   }
   function labelInfo(label) {
-    return LABELS[label] || { text: String(label || "").toLowerCase().replace(/_/g, " ").replace(/^\w/, function (c) { return c.toUpperCase(); }), chip: "chip-neutral" };
+    if (Object.prototype.hasOwnProperty.call(LABELS, label)) return LABELS[label];
+    return { text: String(label || "").toLowerCase().replace(/_/g, " ").replace(/^\w/, function (c) { return c.toUpperCase(); }), chip: "chip-neutral" };
   }
   function chip(label) { var info = labelInfo(label); return el("span", { class: "chip " + info.chip, text: info.text.toUpperCase() }); }
   function getJSON(path) {
     return fetch(path, { cache: "no-cache" }).then(function (r) {
-      if (!r.ok) throw new Error(path + " " + r.status);
+      if (!r.ok) { var err = new Error(path + " " + r.status); err.status = r.status; throw err; }
       return r.json();
     });
   }
   // A file that fails to load comes back as null, so only its own section goes quiet.
-  function load(path) { return getJSON(path).catch(function (e) { if (window.console) console.warn(e); return null; }); }
+  // optional: a file that may not be published yet; its 404 is expected, so it isn't logged.
+  function load(path, optional) {
+    return getJSON(path).catch(function (e) { if (window.console && !(optional && e.status === 404)) console.warn(e); return null; });
+  }
   function safe(fn) { try { fn(); } catch (e) { if (window.console) console.error(e); } }
   function daysFromToday(iso) {
     var now = new Date();
@@ -121,6 +134,44 @@
     return (f <= 1 ? 1 : f <= 2 ? 2 : f <= 2.5 ? 2.5 : f <= 5 ? 5 : 10) * p;
   }
   function axisMoney(v) { return v >= 1000 ? "$" + (v / 1000).toLocaleString("en-US", { maximumFractionDigits: 1 }) + "k" : "$" + Math.round(v); }
+  function isDate(s) { return typeof s === "string" && /^\d{4}-\d{2}-\d{2}/.test(s); }
+  function str(s) { return typeof s === "string" ? s.trim() : ""; }
+  // Today's date in Central time, YYYY-MM-DD. The File's days and "since yesterday" are Central.
+  function centralToday() {
+    var now = new Date();
+    try {
+      var parts = {};
+      new Intl.DateTimeFormat("en-US", { timeZone: "America/Chicago", year: "numeric", month: "2-digit", day: "2-digit" })
+        .formatToParts(now).forEach(function (p) { parts[p.type] = p.value; });
+      if (parts.year && parts.month && parts.day) return parts.year + "-" + parts.month + "-" + parts.day;
+    } catch (e) { /* no Intl time zones: fall back to the browser's own day */ }
+    return now.getFullYear() + "-" + ("0" + (now.getMonth() + 1)).slice(-2) + "-" + ("0" + now.getDate()).slice(-2);
+  }
+  // "today" on a File day whose File isn't up yet, else the next Tue, Thu or Sat ("Tuesday, Oct 6").
+  function nextFile(file) {
+    var today = centralToday(), t0 = parseDate(today).getTime();
+    for (var i = 0; i < 8; i++) {
+      var day = new Date(t0 + i * 86400000), iso = day.toISOString().slice(0, 10);
+      if (FILE_DAYS.indexOf(day.getUTCDay()) === -1) continue;
+      if (i === 0) { if (file && file.date === iso) continue; return "today"; }
+      return WEEKDAYS[day.getUTCDay()] + ", " + fmtDate(iso);
+    }
+    return "";
+  }
+  function stanceChip(stance) {
+    var key = str(stance).toUpperCase().replace(/\s+/g, " ");
+    if (!Object.prototype.hasOwnProperty.call(STANCES, key)) return null;
+    return el("span", { class: "chip " + STANCES[key], title: "A stance is a read on the numbers, not advice", text: "STANCE · " + key });
+  }
+  // Why now, what could break it, what we're watching: the File's (or a card's) short labeled lines. Null when it has none.
+  function storyLines(src) {
+    var rows = [["Why now", src.why_now], ["What could break it", src.risk], ["What we're watching", src.what_to_watch]]
+      .filter(function (r) { return str(r[1]); });
+    if (!rows.length) return null;
+    return el("dl", { class: "story-lines" }, rows.map(function (r) {
+      return el("div", {}, [el("dt", { text: r[0] }), el("dd", { text: sentence(str(r[1]), true) })]);
+    }));
+  }
 
   /* ---------- sales chart: every sale as a dot, the clean monthly median as a step line ---------- */
   function salesChart(card, opts) {
@@ -281,15 +332,18 @@
   function renderIndex() {
     Promise.all([
       load("data/meta.json"), load("data/file.json"), load("data/movers.json"), load("data/flags.json"),
-      load("data/rip_ev.json"), load("data/calls.json"), load("data/drops.json")
+      load("data/rip_ev.json"), load("data/calls.json"), load("data/drops.json"),
+      load("data/digest.json", true), load("data/watching.json", true)
     ]).then(function (r) {
       var meta = r[0], file = r[1], movers = r[2], flags = r[3], rip = r[4], calls = r[5], drops = r[6];
+      var digest = r[7], watching = r[8];
       $("#status").textContent = updatedLabel(meta) || $("#status").textContent;
       var ids = file && file.cards ? file.cards : [];
       return Promise.all(ids.map(function (id) { return load("data/cards/" + id + ".json"); })).then(function (cards) {
         var byId = {};
         ids.forEach(function (id, n) { byId[id] = cards[n]; });
         if (!file) { var m = $("#load-error"); if (m) m.hidden = false; }
+        safe(function () { renderToday(meta, file, movers, digest, watching, calls); });
         safe(function () { renderFile(file, byId, drops); });
         safe(function () { renderMovers(movers); });
         safe(function () { renderMarketFlags(flags); });
@@ -304,8 +358,138 @@
     });
   }
 
+  /* ---------- Today: what changed since yesterday. Each piece hides itself when its file or key is missing. ---------- */
+  function renderToday(meta, file, movers, digest, watching, calls) {
+    var today = centralToday();
+    $("#today-date").textContent = WEEKDAYS[parseDate(today).getUTCDay()].slice(0, 3) + " " + fmtDate(today);
+    var line = [];
+    var tcg = meta && Array.isArray(meta.sources) ? meta.sources.filter(function (s) { return s && s.id === "tcgcsv"; })[0] : null;
+    if (tcg && isDate(tcg.as_of)) line.push("Prices as of " + fmtDateYear(tcg.as_of));
+    var nf = nextFile(file);
+    if (nf) line.push("Next File: " + nf);
+    $("#today-line").textContent = line.join(" · ");
+
+    var daily = digest && digest.daily && typeof digest.daily === "object" ? digest.daily : {};
+    var grid = $("#today-grid");
+    grid.innerHTML = "";
+    var parts = [];
+    [function () { return sinceYesterday(movers, daily); }, function () { return dueAndFlagged(daily, calls); },
+      function () { return watchingList(watching); }].forEach(function (build) {
+      safe(function () { var p = build(); if (p) parts.push(p); });
+    });
+    parts.forEach(function (p) { grid.appendChild(p); });
+    grid.hidden = !parts.length;
+  }
+
+  function todayCard(title, note, children) {
+    return el("div", { class: "card today-card" }, [el("h3", {}, [title, note ? el("span", { text: note }) : null])].concat(children));
+  }
+
+  // movers.json one_day first. The digest's copy only stands in when it has rows: an empty copy can't tell a quiet day
+  // from a switched-off file. The digest's 7-day movers are the market table further down, so they don't show here.
+  function sinceYesterday(movers, daily) {
+    var rows = movers && Array.isArray(movers.one_day) ? movers.one_day
+      : Array.isArray(daily.one_day_movers) && daily.one_day_movers.length ? daily.one_day_movers : null;
+    if (!rows) return null;
+    rows = rows.filter(function (m) { return m && str(m.name); });
+    var body;
+    if (!rows.length) {
+      body = el("p", { class: "today-quiet", text: "Quiet since yesterday: no card worth $" + ONE_DAY.minPrice + " or more moved " + ONE_DAY.minPct + "% or more on TCGplayer." });
+    } else {
+      body = el("ul", { class: "today-list" });
+      rows.slice(0, 5).forEach(function (m) {
+        var price = m.last && isNum(m.last.price) ? m.last.price : m.price;
+        var has = isNum(m.change_pct), up = m.change_pct >= 0;
+        body.appendChild(el("li", { class: "today-mover" }, [
+          el("span", { class: "t-main" }, [el("span", { class: "name", text: m.name }), el("span", { class: "sub", text: [m.set, m.number].filter(Boolean).join(" · ") })]),
+          el("span", { class: "t-fig" }, [
+            el("span", { class: "num " + (has ? (up ? "up" : "down") : ""), text: has ? (up ? "▲ " : "▼ ") + pct(m.change_pct, 1) : "—" }),
+            el("span", { class: "sub num", text: money(price) })
+          ]),
+          m.label ? el("span", { class: "t-label" }, [chip(m.label), m.label_note ? el("span", { class: "sub", text: sentence(m.label_note, true) }) : null]) : null
+        ]));
+      });
+    }
+    var asOf = movers && isDate(movers.as_of) ? movers.as_of : rows[0] && isDate(rows[0].observed) ? rows[0].observed : null;
+    var source = (rows[0] && str(rows[0].source)) || "TCGplayer market prices via tcgcsv.com";
+    return todayCard("Since yesterday", "TCGplayer", [body, el("p", { class: "today-foot", text: source + (asOf ? ", as of " + fmtDateYear(asOf) : "") + "." })]);
+  }
+
+  // Calls whose check date has come, and the flagged-sales headline, from digest.json.
+  function dueAndFlagged(daily, calls) {
+    // A call checked by hand since the digest was built isn't due anymore.
+    var status = {};
+    (calls && Array.isArray(calls.items) ? calls.items : []).forEach(function (c) { if (c && c.id != null) status[String(c.id)] = c.status; });
+    var due = (Array.isArray(daily.calls_due) ? daily.calls_due : []).filter(function (c) {
+      return c && str(c.text) && (!Object.prototype.hasOwnProperty.call(status, String(c.id)) || status[String(c.id)] === "open");
+    });
+    var head = daily.flags_headline && isNum(daily.flags_headline.value) ? daily.flags_headline : null;
+    if (!due.length && !head) return null;
+    var col = el("div", { class: "today-col" });
+    if (due.length) {
+      var ul = el("ul", { class: "today-list" });
+      due.forEach(function (c) {
+        ul.appendChild(el("li", {}, [el("span", { class: "t-main" }, [
+          el("span", { class: "call-text" }, [c.id != null ? el("span", { class: "num t-id", text: "#" + c.id }) : null, c.id != null ? " " : null, str(c.text)]),
+          isDate(c.check_date) ? el("span", { class: "sub", text: "Check date " + fmtDate(c.check_date) }) : null
+        ])]));
+      });
+      col.appendChild(todayCard("Calls due", "Checked in public", [ul, el("a", { class: "today-more", href: "#calls", text: "Every call on the record →" })]));
+    }
+    if (head) {
+      var label = str(head.label).replace(/\.$/, "");
+      col.appendChild(todayCard("Flagged sales", "Across the market", [
+        el("div", { class: "flag-head" }, [el("span", { class: "num big-flag", text: (Math.round(head.value * 10) / 10) + "%" }), label ? el("p", { text: label + "." }) : null]),
+        el("a", { class: "today-more", href: "#flags", text: "What got caught →" })
+      ]));
+    }
+    return col;
+  }
+
+  // "What people are watching": titles and links from watching.json, newest first. Only http(s) links leave the page.
+  function watchingList(watching) {
+    var items = (watching && Array.isArray(watching.items) ? watching.items : []).filter(function (w) {
+      return w && str(w.title) && /^https?:\/\/[^\s]+$/i.test(str(w.url));
+    });
+    if (!items.length) return null;
+    items = items.map(function (w, n) { return { w: w, n: n, d: isDate(w.published) ? w.published : "" }; })
+      .sort(function (a, b) { return a.d < b.d ? 1 : a.d > b.d ? -1 : a.n - b.n; })
+      .slice(0, 6).map(function (x) { return x.w; });
+    var ul = el("ul", { class: "today-list" });
+    items.forEach(function (w) {
+      var src = Object.prototype.hasOwnProperty.call(SOURCES, w.source) ? SOURCES[w.source] : "";
+      var bits = [src, str(w.feed), isDate(w.published) ? fmtDate(w.published) : ""].filter(Boolean);
+      ul.appendChild(el("li", {}, [el("span", { class: "t-main" }, [
+        el("a", { class: "t-link", href: str(w.url), target: "_blank", rel: "noopener noreferrer", text: str(w.title) }),
+        bits.length ? el("span", { class: "sub", text: bits.join(" · ") }) : null
+      ])]));
+    });
+    return todayCard("What people are watching", "Links open elsewhere", [ul]);
+  }
+
   function renderFile(file, byId, drops) {
     if (!file) return;
+    // The File's date and slot head the hero card, its stance beside them; the story fields sit above its table.
+    var day = isDate(file.date) ? file.date : isDate(file.as_of) ? file.as_of : null;
+    var slot = SLOTS.indexOf(str(file.slot)) !== -1 ? str(file.slot) : "";
+    $("#hero-kicker").textContent = ["The File", day ? fmtDate(day) : "", slot].filter(Boolean).join(" · ");
+    var hs = $("#hero-stance"), sc = stanceChip(file.stance);
+    hs.innerHTML = "";
+    if (sc) hs.appendChild(sc);
+    var story = $("#file-story"), headline = str(file.headline), dek = str(file.dek), lines = storyLines(file);
+    story.innerHTML = "";
+    if (sc || headline || dek || lines) {
+      story.appendChild(el("div", { class: "story-top" }, [
+        stanceChip(file.stance),
+        el("span", { class: "story-meta", text: ["The File", day ? WEEKDAYS[parseDate(day).getUTCDay()].slice(0, 3) + " " + fmtDate(day) : "", slot].filter(Boolean).join(" · ") })
+      ]));
+      if (headline) story.appendChild(el("h4", { class: "story-h", text: headline }));
+      if (dek) story.appendChild(el("p", { class: "story-dek", text: dek }));
+      if (lines) story.appendChild(lines);
+      if (sc) story.appendChild(el("p", { class: "story-note", text: "A stance is a read on the numbers, not advice." }));
+    }
+    story.hidden = !story.childNodes.length;
+
     var featured = byId[file.featured];
     if (featured) {
       var hero = $("#hero-chart");
@@ -632,6 +816,16 @@
       });
       $("#card-chart").appendChild(salesChart(c, fitChart($("#card-chart"), 0.42)));
       $("#card-summary").textContent = c.summary;
+      // The File's read on this card, when its file has one: the stance beside the meta, the labeled lines under the summary.
+      safe(function () {
+        var sc = stanceChip(c.stance), lines = storyLines(c), story = $("#card-story");
+        if (sc) $("#card-meta").appendChild(sc);
+        if (!story || !(sc || lines)) return;
+        story.appendChild(el("div", { class: "kicker", text: "The File's read" }));
+        if (lines) story.appendChild(lines);
+        if (sc) story.appendChild(el("p", { class: "story-note", text: "A stance is a read on the numbers, not advice." }));
+        story.hidden = false;
+      });
       $("#card-source").textContent = "Source: " + c.source + ". Clean median = median of confirmed sales in the month; relists count half, errors and duplicates are left out.";
       var tb = $("#sales-body");
       c.sales.slice().reverse().forEach(function (s) {

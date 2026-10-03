@@ -152,3 +152,39 @@ body { color: var(--text); font-family: var(--font); -webkit-font-smoothing: ant
 .og .stat .pct { font-family: var(--mono); font-size: 112px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; margin-top: 6px; }
 .og .stat .line2 { font-size: 19px; color: var(--muted); margin-top: 10px; line-height: 1.35; }
 .og .bottom { padding-top: 22px; }
+
+/* The File's story fields (optional): Why now, What could break it, What we're watching. .storied tightens the frame to fit them. */
+.story { display: flex; flex-direction: column; gap: 14px; margin-top: 30px; }
+.story div { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 20px; align-items: baseline; }
+.story .eyebrow { font-size: 15px; color: var(--accent-text); }
+.story p { margin: 0; font-size: 22px; line-height: 1.35; color: var(--text-2); }
+.storied .title.xl { font-size: 48px; }
+.storied .sub { font-size: 22px; }
+.storied .rows { margin-top: 26px; }
+.storied .row { padding: 16px 0; }
+.storied .row .name { font-size: 30px; }
+.storied .row .pct { font-size: 60px; }
+.storied .row .why { font-size: 19px; }
+.storied .strip { margin-top: 28px; padding: 20px 28px; }
+.storied .strip .big { font-size: 72px; }
+.storied .strip p { font-size: 22px; }
+.storied .hero .big { font-size: 130px; }
+.storied .hero .beside { font-size: 28px; }
+.storied .chart { margin-top: 20px; }
+.storied .take { font-size: 26px; margin-top: 22px; }
+
+/* What's moving: up to eight movers, name and set on the left, price, change and label on the right */
+.rows.movers { margin-top: 30px; }
+.row.mover { grid-template-columns: minmax(0, 1fr) auto 150px; gap: 4px 28px; padding: 16px 0; align-items: baseline; }
+.row.mover .name { font-size: 28px; line-height: 1.2; }
+.row.mover .price { font-family: var(--mono); font-size: 26px; color: var(--text-2); text-align: right; white-space: nowrap; }
+.row.mover .pct { font-size: 34px; grid-row: auto; letter-spacing: -0.02em; white-space: nowrap; }
+.row.mover .line2 { margin-top: 0; }
+.row.mover .label { grid-column: 2 / -1; text-align: right; }
+/* Six to eight rows: one line per name (the caption keeps the full name) so all of them fit */
+.rows.movers.dense { margin-top: 26px; }
+.rows.movers.dense .row.mover { padding: 11px 0; }
+.rows.movers.dense .row.mover .name { font-size: 25px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rows.movers.dense .row.mover .line2 { font-size: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rows.movers.dense .row.mover .price { font-size: 24px; }
+.rows.movers.dense .row.mover .pct { font-size: 30px; }

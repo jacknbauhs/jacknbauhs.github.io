@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block body %}
-    <span class="eyebrow">This week's file</span>
+    <div class="chip-row"><span class="eyebrow">The File{% if slot %} · {{ slot }}{% endif %}</span>{% if stance %}<span class="chip sm {{ stance.chip }}">Stance · {{ stance.text }}</span>{% endif %}</div>
     <h1 class="title xl" style="margin-top: 12px">{{ file_title }}</h1>
     <p class="sub">{{ lede }}</p>
     <div class="rows">
@@ -15,11 +15,16 @@
       </div>
       {% endfor %}
     </div>
+    {% if story %}
+    <div class="story">
+      {% for s in story %}<div><span class="eyebrow">{{ s.label }}</span><p>{{ s.text }}</p></div>{% endfor %}
+    </div>
+    {% endif %}
     {% if flags %}
     <div class="strip">
       <div class="big flagc">{{ flags.value }}<small>of {{ flags.of }}</small></div>
       <p>{{ flags.text }}</p>
     </div>
     {% endif %}
-    {% if foot %}<p class="mono mutedc" style="font-size: 18px; line-height: 1.5; margin: 36px 0 0">{{ foot }}</p>{% endif %}
+    {% if foot and not story %}<p class="mono mutedc" style="font-size: 18px; line-height: 1.5; margin: 36px 0 0">{{ foot }}</p>{% endif %}
 {% endblock %}

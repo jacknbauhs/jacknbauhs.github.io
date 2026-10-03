@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block body %}
+    <span class="eyebrow">{{ eyebrow }}</span>
+    <h1 class="title" style="margin-top: 12px">{{ headline }}</h1>
+    <p class="sub">{{ lede }}</p>
+    <div class="rows movers{% if dense %} dense{% endif %}">
+      {% for r in rows %}
+      <div class="row mover">
+        <div class="name">{{ r.name }}</div>
+        <div class="price">{{ r.price }}</div>
+        <div class="pct {{ r.pct_class }}">{{ r.pct }}</div>
+        <div class="line2">{{ r.line2 }}</div>
+        <div class="label">{% if r.has_label %}<span class="chip sm {{ r.chip }}">{{ r.label_text }}</span>{% endif %}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if foot %}<p class="mono mutedc" style="font-size: 17px; line-height: 1.5; margin: 26px 0 0">{{ foot }}</p>{% endif %}
+{% endblock %}

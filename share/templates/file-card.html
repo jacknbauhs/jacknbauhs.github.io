@@ -2,6 +2,7 @@
 {% block body %}
     <h1 class="title">{{ name }} {{ tier }}</h1>
     <p class="sub">{{ set }}{% if note %} · {{ note }}{% endif %}</p>
+    {% if stance %}<div class="chip-row" style="margin-top: 14px"><span class="chip sm {{ stance.chip }}">Stance · {{ stance.text }}</span></div>{% endif %}
     <div class="hero">
       <span class="big {{ big_class }}">{{ big }}</span>
       <span class="beside">{{ beside_1 }}<br>{{ beside_2 }}</span>
@@ -13,4 +14,9 @@
       {% for item in legend %}<span><i class="swatch" style="background: {{ item.color }}"></i>{{ item.text }}</span>{% endfor %}
     </div>
     <p class="take">{{ take }}</p>
+    {% if story %}
+    <div class="story">
+      {% for s in story %}<div><span class="eyebrow">{{ s.label }}</span><p>{{ s.text }}</p></div>{% endfor %}
+    </div>
+    {% endif %}
 {% endblock %}

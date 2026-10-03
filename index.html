@@ -51,7 +51,7 @@
     <strong>MISSION CONTROL</strong><span class="muted" style="font-size:13px">by Astronaut Time</span>
   </div>
   <nav class="mc-nav" aria-label="Mission Control">
-    <a href="#moving" class="is-active">Market</a><a href="#flags">Flags</a><a href="#rip-ev">Rip EV</a><a href="#calls">Calls</a><a href="#drops">Drops</a>
+    <a href="#today">Today</a><a href="#moving" class="is-active">Market</a><a href="#flags">Flags</a><a href="#rip-ev">Rip EV</a><a href="#calls">Calls</a><a href="#drops">Drops</a>
   </nav>
   <span class="status" id="status">Updated Mon Sep 28, 2026</span>
 </div>
@@ -70,7 +70,7 @@
     <figure class="card chart-card" style="margin:0">
       <div class="chart-head">
         <div>
-          <div class="kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">This week's file</div>
+          <div class="file-kicker"><span class="kicker" id="hero-kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">The File</span><span id="hero-stance"></span></div>
           <div class="chart-title" id="hero-title">Crystal Lugia PSA 8</div>
           <div class="muted" style="font-size:14px">Every sold record since June. The purple line is the clean monthly median.</div>
         </div>
@@ -88,12 +88,21 @@
     </figure>
   </section>
 
+  <section id="today" class="today" aria-labelledby="today-h">
+    <div class="today-head">
+      <h2 class="sub-h" id="today-h">Today <span id="today-date"></span></h2>
+      <p class="today-line" id="today-line"></p>
+    </div>
+    <div class="today-grid" id="today-grid" hidden></div>
+  </section>
+
   <div class="stats" id="stats"></div>
   <p id="load-error" class="muted" hidden>The board couldn't load its data. Refresh to try again.</p>
 
   <section id="moving" class="block" aria-labelledby="moving-h">
-    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p>This week's file, checked sale by sale, then the whole market from TCGplayer, each move checked against real sales.</p></div></div>
-    <h3 class="sub-h">This week's file <span>Checked by hand on 130point</span></h3>
+    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p>The File, checked sale by sale, then the whole market from TCGplayer, each move checked against real sales.</p></div></div>
+    <h3 class="sub-h">The File <span>Tue · Thu · Sat · Checked by hand on 130point</span></h3>
+    <div class="card file-story" id="file-story" hidden></div>
     <div class="card table-card">
       <table class="data">
         <thead><tr><th scope="col">Card</th><th scope="col">Tier</th><th scope="col">Last sale</th><th scope="col">Clean median</th><th scope="col">Change</th><th scope="col">Flagged</th></tr></thead>
@@ -107,7 +116,7 @@
 
   <section id="flags" class="block" aria-labelledby="flags-h">
     <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p>Sold lists are full of junk that bends every average. Here's what got thrown out, and why.</p></div></div>
-    <h3 class="sub-h">In this week's file</h3>
+    <h3 class="sub-h">In The File</h3>
     <div class="card flags">
       <div class="flag-head">
         <span class="num big-flag" id="flag-count">7/39</span>
@@ -179,7 +188,7 @@
   <div><h2>SITE</h2><ul><li><a href="https://www.jacknbauhs.com/">About</a></li><li><a href="https://www.jacknbauhs.com/astronauttime">Astronaut Time</a></li><li><a href="https://www.jacknbauhs.com/filmanddirecting">Film &amp; Directing</a></li><li><a href="https://www.jacknbauhs.com/salesandstrategy">Sales &amp; Strategy</a></li><li><a href="https://www.jacknbauhs.com/contact">Contact</a></li></ul></div>
   <div><h2>FOLLOW</h2><ul><li><a href="https://www.instagram.com/astronaut_time_tcg/" rel="me">Instagram</a></li><li><a href="https://www.tiktok.com/@astronauttime" rel="me">TikTok</a></li><li><a href="https://www.whatnot.com/s/NP78DwK8">Whatnot</a></li><li><a href="https://vimeo.com/jacknbauhs" rel="me">Vimeo</a></li><li><a href="https://www.ebay.com/usr/astronaut_time">eBay</a></li></ul></div>
   <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>TCGplayer prices via tcgcsv</li><li>Published pull-rate studies</li><li>Release calendars</li></ul></div>
-  <div class="fineprint"><span>This week's file, the calls and the drops are checked by hand. Market movers, flags and Rip EV update nightly from Mission Control. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
+  <div class="fineprint"><span>The File (Tue, Thu, Sat), the calls and the drops are checked by hand. Market movers, flags and Rip EV update nightly from Mission Control. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
 </footer>
 <script src="assets/board.js"></script>
 </body>

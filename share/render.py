@@ -2,20 +2,21 @@
 """Share kit: turns the board's JSON into ready-to-post images.
 
 Reads the same files the board reads (data/file.json, data/cards/*.json, data/flags.json,
-data/calls.json, data/meta.json), fills the templates in share/templates, and screenshots
+data/calls.json, data/movers.json, data/meta.json), fills the templates in share/templates, and screenshots
 each one with headless Chromium. Nothing on an image is typed in by hand: change the JSON,
 run this again.
 
 What it makes (share/out):
-  file-<date>-cover.png            this week's file: every card in it and the flags headline
+  file-<date>-cover.png            The File (Tue / Thu / Sat): every card in it and the flags headline
   file-<date>-<card>.png           one per card: the sales chart and the clean move
   flags-<date>-cover.png           "what got caught": every flagged record on one image
   flag-<sale date>-<card>-<label>.png   one per flagged record (hand-checked file and nightly feed)
   calls-<date>-cover.png           every call on the record, on one image
   call-<id>-<dated>.png            one per call (open, hit or miss)
+  moving-<YYYY>-W<ww>.png          what's moving: the TCGplayer movers, named by ISO week (the Thursday market post)
   og-board.png                     1200x630 link preview, also copied to assets/og.png
   site/tile-*.png                  four 1080x1080 tiles at stable names (file, flags, calls, next drop)
-  site/latest-*.png                the newest file, flags and calls covers at stable names
+  site/latest-*.png                the newest file, flags, calls and moving images at stable names
   site/squarespace.md              ready-to-paste Markdown for jacknbauhs.com image blocks
   captions.md                      a caption and alt text for every image
   html/*.html                      the filled templates, open in a browser to tweak the look
@@ -26,7 +27,7 @@ anyone touching the site. .github/workflows/render.yml runs this after every dat
 
 Setup (once):  pip install jinja2 playwright  &&  playwright install chromium
 Run:           python share/render.py                 (everything)
-               python share/render.py --only calls    (file, flags, calls, og or site)
+               python share/render.py --only calls    (file, flags, calls, moving, og or site)
                python share/render.py --html-only     (no screenshots, just the HTML)
                python share/render.py --scale 2       (2160x2700 images)
                python share/render.py --changed-only  (skip images whose filled HTML didn't change)
@@ -71,10 +72,22 @@ LABELS = {
     "SUSPECT_WASH": ("Suspect wash", "chip-flag", "flagc", "#F472B6", "The same slab selling in a loop, or bidding that looks staged. Left out."),
     "UNCONFIRMED": ("Unconfirmed", "chip-neutral", "neutralc", "#9A96B8", "No checked sales behind the move yet."),
 }
+# The File's stance: a closed set, same as assets/board.js. Any other value is not shown. A stance is a read, not advice.
+STANCES = {"STRONG WATCH": "chip-accent", "WATCH": "chip-info", "NEUTRAL": "chip-neutral", "CAUTION": "chip-warn", "PASS": "chip-down"}
+SLOTS = ("Tue story", "Thu market", "Sat build")
+# What Mission Control's movers lists cover: window label -> (lowest price in $, smallest move in %). Keep in step with
+# its config/board.py (MOVER_MIN_CENTS and MOVER_MIN_PCT for 7d; the one_day list for 1d).
+MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
+MOVING_ROWS = 8
+# On a mover, a label speaks to the move, so two read differently than on a single sale.
+MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
 POST_W, POST_H = 1080, 1350
 OG_W, OG_H = 1200, 630
 TILE = 1080
 SITE_URL = f"https://{SITE}/share/out/site"
+# The newest render of each kind is copied to share/out/site/latest-<kind>.png, a name that never changes.
+LATEST = (("file", "file-*-cover.png", "file cover"), ("flags", "flags-*-cover.png", "flags cover"),
+          ("calls", "calls-*-cover.png", "calls cover"), ("moving", "moving-*.png", "What's moving image"))
 
 
 # ---------- helpers ----------
@@ -174,6 +187,22 @@ def sky(w: int, h: int, seed: int = 7) -> str:
         parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="#ECEAF6" opacity="{o}"/>')
     parts.append("</svg>")
     return "".join(parts)
+
+
+def count_word(n: int) -> str:
+    return {1: "One", 2: "Two", 3: "Three", 4: "Four", 5: "Five", 6: "Six", 7: "Seven", 8: "Eight", 9: "Nine", 10: "Ten"}.get(n, str(n))
+
+
+def stance_of(src: dict):
+    """The stance chip for a file or card, or None when it has none or one outside the closed set."""
+    key = re.sub(r"\s+", " ", str(src.get("stance") or "")).strip().upper()
+    return {"text": key, "chip": STANCES[key]} if key in STANCES else None
+
+
+def story_of(src: dict) -> list:
+    """Why now, what could break it, what we're watching: the labeled lines a file or card has, in that order."""
+    rows = [("Why now", src.get("why_now")), ("What could break it", src.get("risk")), ("What we're watching", src.get("what_to_watch"))]
+    return [{"label": label, "text": sentence(t)} for label, t in rows if isinstance(t, str) and t.strip()]
 
 
 def esc(s) -> str:
@@ -307,24 +336,24 @@ class Kit:
             self.page("tile.html", f"site/{name}", ctx, caption="", alt=alt, w=TILE, h=TILE)
             self.site_alts[name] = alt
 
-        # 1. This week's file: the featured card's clean move.
+        # 1. The File: the featured card's clean move.
         featured = f.get("featured")
         row = next((r for r in f.get("rows", []) if r.get("id") == featured), None) or (f.get("rows") or [None])[0]
         if row and as_of:
             up = (row.get("change_pct") or 0) >= 0
-            tile("tile-file", "This week's file", f"130point · {fmt_date(as_of)}", "",
+            tile("tile-file", "The File", f"130point · {fmt_date(as_of)}", "",
                  {"eyebrow": f"{row['name']} {row['tier']}", "big": pct(row.get("change_pct")),
                   "big_class": "up" if up else "down",
                   "l1": sentence(row.get("window_label", "")),
                   "l2": f"{row.get('sales')} sold records, {row.get('flagged')} kept out. "
                         + (f"{row['note']}." if row.get("note") else "")},
-                 alt=f"This week's file: {row['name']} {row['tier']}, {pct(row.get('change_pct'))} on the clean median "
+                 alt=f"The File: {row['name']} {row['tier']}, {pct(row.get('change_pct'))} on the clean median "
                      f"({row.get('window_label', '')}). {row.get('sales')} sold records, {row.get('flagged')} kept out.")
         else:
-            tile("tile-file", "This week's file", "Mission Control", "",
+            tile("tile-file", "The File", "Mission Control", "",
                  {"eyebrow": "Every sale checked before it counts", "big": "—", "big_size": "md",
                   "l1": "The file starts with the first hand-checked card.", "l2": ""},
-                 alt="This week's file on the Astronaut Time board starts with the first hand-checked card.")
+                 alt="The File on the Astronaut Time board starts with the first hand-checked card.")
 
         # 2. What got caught: the hand-checked file first, the nightly feed once it has a week.
         head = (f.get("flags") or {}).get("headline") or {}
@@ -332,7 +361,7 @@ class Kit:
         feed_head = feed.get("headline") or {}
         if head.get("value") is not None and as_of:
             tile("tile-flags", "What got caught", f"130point · {fmt_date(as_of)}", "flag",
-                 {"eyebrow": f.get("title", "This week's file"), "big": str(head["value"]), "small": f"of {head.get('of')}",
+                 {"eyebrow": f.get("title", "The File"), "big": str(head["value"]), "small": f"of {head.get('of')}",
                   "big_class": "flagc", "l1": sentence(head.get("label", "")),
                   "l2": "Each one is labeled on the board with the reason."},
                  alt=f"What got caught: {head['value']} of {head.get('of')} {head.get('label', '')}, each labeled with the reason.")
@@ -391,12 +420,14 @@ class Kit:
                   "l1": "Nothing dated on the calendar right now.", "l2": ""},
                  alt="Nothing dated on the release calendar right now.")
 
-    def place_site(self):
-        """Copy the newest covers to stable names and write the Markdown that jacknbauhs.com pastes in."""
+    def place_latest(self, kinds) -> dict:
+        """Copy the newest render of each of these kinds to site/latest-<kind>.png, or drop that copy when the kind has none."""
         site = self.out / "site"
         site.mkdir(parents=True, exist_ok=True)
         stable = {}
-        for kind, pattern in (("file", "file-*-cover.png"), ("flags", "flags-*-cover.png"), ("calls", "calls-*-cover.png")):
+        for kind, pattern, _ in LATEST:
+            if kind not in kinds:
+                continue
             found = sorted(self.out.glob(pattern))
             dest = site / f"latest-{kind}.png"
             if found:
@@ -405,6 +436,12 @@ class Kit:
                 print(f"copied {found[-1].name} -> {dest.relative_to(ROOT)}")
             elif dest.exists():
                 dest.unlink()
+        return stable
+
+    def place_site(self):
+        """Copy the newest covers to stable names and write the Markdown that jacknbauhs.com pastes in."""
+        site = self.out / "site"
+        stable = self.place_latest({kind for kind, _, _ in LATEST})
         alts = getattr(self, "site_alts", {})
         lines = ["<!-- Paste into a Markdown block on jacknbauhs.com. Written by share/render.py; the images refresh with the board. -->", ""]
         lines += ["## Four tiles (one Markdown block per column, or all four in one block)", ""]
@@ -413,21 +450,28 @@ class Kit:
                 lines.append(f"[![{alts.get(name, name)}]({SITE_URL}/{name}.png)](https://{SITE})")
                 lines.append("")
         lines += ["## The newest covers (4:5)", ""]
+        names = {kind: name for kind, _, name in LATEST}
         for kind, dest in stable.items():
-            lines.append(f"[![The newest {kind} cover from the Astronaut Time board]({SITE_URL}/{dest.name})](https://{SITE})")
+            lines.append(f"[![The newest {names[kind]} from the Astronaut Time board]({SITE_URL}/{dest.name})](https://{SITE})")
             lines.append("")
         (site / "squarespace.md").write_text("\n".join(lines), encoding="utf-8")
         print(f"wrote {(site / 'squarespace.md').relative_to(ROOT)}")
 
-    # --- this week's file ---
+    # --- The File (Tue / Thu / Sat): the cover and one image per card ---
     def build_file(self):
         f = load("file.json")
         if not f or not f.get("rows"):
             print("file.json: nothing to render")
             return
         as_of = f.get("as_of") or f.get("pulled")
-        kicker = f"The file · {fmt_date(as_of)}"
+        # The day it is The File for, when Jack dates it (YYYY-MM-DD; anything else falls back to as_of).
+        day = f["date"] if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(f.get("date") or "")) else as_of
+        kicker = f"The File · {fmt_date(day)}"
         tag = f"130point · pulled {fmt_date(f.get('pulled') or as_of)}"
+        # The optional story fields (share/README.md): none of them is needed, and an unknown stance or slot isn't shown.
+        stance, story = stance_of(f), story_of(f)
+        slot = f.get("slot") if f.get("slot") in SLOTS else None
+        headline, dek = str(f.get("headline") or "").strip(), str(f.get("dek") or "").strip()
         rows = []
         for r in f["rows"]:
             up = (r.get("change_pct") or 0) >= 0
@@ -453,14 +497,18 @@ class Kit:
             flags_ctx = {"value": head["value"], "of": head.get("of"), "text": sentence(fl.get("stat") or head.get("label"))}
         n = len(f["rows"])
         lede = f"{n} card{'s' if n != 1 else ''}, every sold record since {month_name(min(load('cards/' + c + '.json')['window']['start'] for c in f['cards']) ) if f.get('cards') else 'the start of the window'}, each one checked before it counts."
-        self.page("file-cover.html", f"file-{as_of}-cover", {
-            "kicker": kicker, "tag": tag, "file_title": f["title"], "lede": lede, "rows": rows, "flags": flags_ctx,
-            "foot": f.get("foot", ""),
-        }, caption=(f"This week's file: {f['title']}. " +
+        self.page("file-cover.html", f"file-{day}-cover", {
+            "kicker": kicker, "tag": tag, "file_title": headline or f["title"], "lede": dek or lede, "rows": rows, "flags": flags_ctx,
+            "foot": f.get("foot", ""), "slot": slot, "stance": stance, "story": story,
+            "frame_class": "storied" if story else "",
+        }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(headline) if headline else f['title'] + '.'} " +
+                    (f"{dek} " if dek else "") +
                     " ".join(f"{r['name']} {r['tier']} {r['pct']}: {r['line3'].split('. ')[0][:1].lower()}{r['line3'].split('. ')[0][1:]}." for r in rows) +
                     (f" {head['value']} of {head.get('of')} sold records don't belong in the math." if flags_ctx else "") +
+                    "".join(f" {s_['label']}: {s_['text']}" for s_ in story) +
+                    (f" Stance: {stance['text'].capitalize()}, a read on the numbers, not advice." if stance else "") +
                     f" Source: 130point, pulled {fmt_date(f.get('pulled') or as_of)}. {SITE}"),
-            alt=f"This week's file on the Astronaut Time board: {f['title']}, with each card's clean move and how many records were kept out.")
+            alt=f"The File on the Astronaut Time board: {headline or f['title']}, with each card's clean move and how many records were kept out.")
 
         for cid in f.get("cards", []):
             card = load(f"cards/{cid}.json")
@@ -474,15 +522,20 @@ class Kit:
             legend = [{"text": label_info(k)[0].lower(), "color": label_info(k)[3]}
                       for k in ["DATA_ERROR", "RELIST", "DUPLICATE"] if k in present]
             set_line = f"{card['set']} {card.get('number', '')}".strip()
-            self.page("file-card.html", f"file-{as_of}-{cid}", {
+            c_stance, c_story = stance_of(card), story_of(card)
+            self.page("file-card.html", f"file-{day}-{cid}", {
                 "kicker": kicker, "tag": tag, "name": card["name"], "tier": card["tier"], "set": set_line,
                 "note": (row or {}).get("note"), "big": pct(card.get("change_pct")), "big_class": "up" if up else "down",
                 "beside_1": f"{month_name(k0)} to {month_name(k1)},",
                 "beside_2": "clean median.",
-                "chart": sales_chart(card), "legend": legend, "take": card.get("summary", ""),
+                # With a stance or story lines the chart gives up some height so they fit above the footer.
+                "chart": sales_chart(card, H=330 if c_story else 390 if c_stance else 430), "legend": legend, "take": card.get("summary", ""),
+                "stance": c_stance, "story": c_story, "frame_class": "storied" if c_story else "",
             }, caption=(f"{card['name']} {card['tier']}: {pct(card.get('change_pct'))} on the clean median, "
                         f"{month_name(k0)} to {month_name(k1)} ({money(card['monthly_clean'][k0])} to "
-                        f"{money(card['monthly_clean'][k1])}). {card.get('summary', '')} "
+                        f"{money(card['monthly_clean'][k1])}). {card.get('summary', '')} " +
+                        "".join(f"{s_['label']}: {s_['text']} " for s_ in c_story) +
+                        (f"Stance: {c_stance['text'].capitalize()}, a read on the numbers, not advice. " if c_stance else "") +
                         f"Every dot is a sold record; the flagged ones are marked. Source: 130point, pulled {fmt_date(f.get('pulled') or as_of)}. {SITE}"),
                 alt=f"{card['name']} {card['tier']}, {pct(card.get('change_pct'))} on the clean monthly median from {month_name(k0)} to {month_name(k1)}, with every sold record plotted and the flagged ones marked.")
 
@@ -509,7 +562,7 @@ class Kit:
                                     "price": money(it["price"]), "color": color, "why": it["why"]})
             self.page("flags-cover.html", f"flags-{as_of}-cover", {
                 "kicker": f"What got caught · {fmt_date(as_of)}", "tag": f"130point · pulled {pulled}",
-                "eyebrow": f.get("title", "This week's file"),
+                "eyebrow": f.get("title", "The File"),
                 "value": head["value"], "of": head.get("of"), "headline": head.get("label", ""),
                 "text": fl.get("text", ""), "items": cover_items,
             }, caption=(f"{head['value']} of {head.get('of')} {head.get('label', '')}. {fl.get('text', '')} "
@@ -612,6 +665,62 @@ class Kit:
         }, caption=(f"{headline} " + " ".join(f"#{i['id']}: {i['text']}" for i in items) +
                     (f" Check me {fmt_date(checks[0])}." if checks else "") + f" Misses stay up. {SITE}"),
             alt=f"{headline} " + " ".join(f"Number {i['id']}: {i['text']}" for i in items))
+
+    # --- what's moving: the TCGplayer movers, for the Thursday market post and the weekly video's raw material ---
+    def build_moving(self):
+        mv = load("movers.json") or {}
+        items = [m for m in (mv.get("items") or []) if m and m.get("name")]
+        window = (items[0].get("window_label") if items else None) or "7d"
+        if not items:  # no 7-day movers yet: since yesterday stands in, said as such
+            items = [m for m in (mv.get("one_day") or []) if m and m.get("name")]
+            window = "1d"
+        if not items:
+            why = "no 7-day movers and nothing since yesterday" if "one_day" in mv else "no 7-day movers, and no one_day list in the file yet"
+            print(f"movers.json: {why}, so no What's moving image")
+            return
+        as_of = mv.get("as_of") or items[0].get("observed")
+        if not as_of:
+            print("movers.json: no as_of date, so no What's moving image")
+            return
+        year, week, _ = parse_date(as_of).isocalendar()
+        days = re.fullmatch(r"(\d+)d", str(window))
+        when = "since yesterday" if window == "1d" else f"in the last {days.group(1)} days" if days else "lately"
+        n, shown = len(items), items[:MOVING_ROWS]
+        rule = MOVER_RULES.get(window)
+        if rule:
+            headline = f"{count_word(n)} card{'s' if n != 1 else ''} moved {rule[1]}% or more {when}."
+            lede = f"Pokémon cards worth ${rule[0]} or more on TCGplayer. Each label says what the checked sales show."
+        else:
+            headline = f"The biggest TCGplayer moves {when}."
+            lede = "Pokémon cards on TCGplayer. Each label says what the checked sales show."
+        if n > len(shown):
+            lede += f" The {len(shown)} biggest are here; all {n} are on the board."
+        rows, present = [], []
+        for m in shown:
+            text, chip, _, _, _ = label_info(m.get("label"))
+            if m.get("label") and m["label"] not in present:
+                present.append(m["label"])
+            chg = m.get("change_pct")
+            rows.append({"name": m["name"], "line2": " · ".join(str(x) for x in (m.get("set"), m.get("number")) if x),
+                         "price": money((m.get("last") or {}).get("price")), "pct": pct(chg, 1),
+                         "pct_class": "" if chg is None else ("up" if chg >= 0 else "down"),
+                         "chip": chip, "label_text": text, "has_label": bool(m.get("label"))})
+        meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
+        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k])
+        # The image says what Unconfirmed means; the caption carries every label's meaning, the board explains them all.
+        source = items[0].get("source") or "TCGplayer market prices via tcgcsv.com"
+        foot = f"{source}, as of {fmt_date_year(as_of)}."
+        if "UNCONFIRMED" in present:
+            foot += f" Unconfirmed: {MOVER_MEANINGS['UNCONFIRMED']}"
+        self.page("moving.html", f"moving-{year}-W{week:02d}", {
+            "kicker": f"What's moving · {fmt_date(as_of)}", "tag": f"TCGplayer · {fmt_date(as_of)}",
+            "eyebrow": f"TCGplayer · {'since yesterday' if window == '1d' else 'last ' + (days.group(1) + ' days' if days else str(window))}",
+            "headline": headline, "lede": lede, "rows": rows, "dense": len(rows) > 5, "foot": foot,
+        }, caption=(f"What's moving on TCGplayer, as of {fmt_date_year(as_of)}. {headline} " +
+                    " ".join(f"{r['name']}" + (f" ({r['line2']})" if r["line2"] else "") + f": {r['price']}, {r['pct']}" +
+                             (f", {r['label_text'].lower()}." if r["has_label"] else ".") for r in rows) +
+                    (f" {legend}" if legend else "") + f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
+            alt=f"What's moving: the {len(rows)} biggest TCGplayer moves {when}, each with its market price, its change and the label for what checked sales show.")
 
     # --- link preview ---
     def build_og(self):
@@ -719,7 +828,7 @@ class Kit:
 
 def main():
     ap = argparse.ArgumentParser(description="Render the share kit from the board's JSON.")
-    ap.add_argument("--only", default="file,flags,calls,og,site", help="comma list of file,flags,calls,og,site")
+    ap.add_argument("--only", default="file,flags,calls,moving,og,site", help="comma list of file,flags,calls,moving,og,site")
     ap.add_argument("--out", default=str(SHARE / "out"))
     ap.add_argument("--scale", type=int, default=1, help="device scale factor: 2 gives 2160x2700")
     ap.add_argument("--html-only", action="store_true", help="write the HTML, skip the screenshots")
@@ -735,6 +844,8 @@ def main():
         kit.build_flags()
     if "calls" in wanted:
         kit.build_calls()
+    if "moving" in wanted:
+        kit.build_moving()
     if "og" in wanted:
         kit.build_og()
     if "site" in wanted:
@@ -742,8 +853,9 @@ def main():
     kit.write_captions()
     print(f"{len(kit.pages)} pages filled in {kit.html_dir.relative_to(ROOT)}")
     # Only the current set lives in out/: renders of the kinds being rendered whose name isn't in this set go
-    # (a call that was withdrawn, last week's file). Git history keeps them.
-    prefixes = {"file": ("file-",), "flags": ("flags-", "flag-"), "calls": ("calls-", "call-"), "og": ("og-",), "site": ("site/tile-",)}
+    # (a call that was withdrawn, the last File). Git history keeps them.
+    prefixes = {"file": ("file-",), "flags": ("flags-", "flag-"), "calls": ("calls-", "call-"), "moving": ("moving-",),
+                "og": ("og-",), "site": ("site/tile-",)}
     keep = {pg["png"].resolve() for pg in kit.pages} | {pg["html"].resolve() for pg in kit.pages}
     for kind in wanted:
         for pre in prefixes.get(kind, ()):
@@ -758,6 +870,8 @@ def main():
         kit.place_og()
     if "site" in wanted:
         kit.place_site()
+    else:  # a single kind still refreshes its own stable copy
+        kit.place_latest(wanted)
     if problems:
         print("\nLook at these before posting:")
         for pr in problems:

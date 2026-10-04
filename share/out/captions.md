@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-03
+# Captions, board data of 2026-10-04
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
@@ -94,6 +94,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W40.png
 
-What's moving on TCGplayer, as of Oct 2, 2026. Ten cards moved 3% or more since yesterday. Raikou (Shiny) (Call of Legends · SL9): $698.99, +210.7%, unconfirmed. Garchomp - 5/147 (Cracked Ice Holo) (Deck Exclusives · 005/147): $118.18, +137.8%, unconfirmed. Garchomp (Supreme Victors · 5): $102.42, +77.7%, unconfirmed. Regice Star (EX Legend Maker · 90/92): $649.98, −48.0%, unconfirmed. Mamoswine (Japanese 11th Movie Commemoration Set) (Miscellaneous Cards & Products · 006/009): $35, +46.0%, unconfirmed. Glaceon - BW90 (Black and White Promos · BW90): $91.64, +29.4%, unconfirmed. Houndoom (4) (Neo Discovery · 04/75): $242.50, +27.6%, unconfirmed. Rocket's Mewtwo ex (EX Team Rocket Returns · 99/109): $399.97, −27.3%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 2, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 3, 2026. Ten cards moved 3% or more since yesterday. Manectric ex (EX Deoxys · 101/107): $250, +235.6%, unconfirmed. Altaria (Boundaries Crossed · 152/149): $299.95, +92.5%, unconfirmed. Rocket's Articuno ex (EX Team Rocket Returns · 96/109): $184.99, −51.3%, unconfirmed. Gyarados - 33/147 (Cosmos Holo) (Blister Exclusives · 033/147): $29.27, −36.2%, unconfirmed. Togepi (WoTC Promo · 30/53): $30.34, +33.4%, unconfirmed. Piplup - DP03 (Diamond and Pearl Promos · DP03): $52.21, +27.5%, unconfirmed. Rayquaza & Deoxys Legend (Bottom) (Undaunted · 90/90): $599.99, +26.0%, unconfirmed. Luxray - 7/130 (National Championships) [Staff] (League & Championship Cards · 007/130): $285, +25.6%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 3, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest TCGplayer moves since yesterday, each with its market price, its change and the label for what checked sales show.

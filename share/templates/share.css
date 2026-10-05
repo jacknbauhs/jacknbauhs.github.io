@@ -188,3 +188,24 @@ body { color: var(--text); font-family: var(--font); -webkit-font-smoothing: ant
 .rows.movers.dense .row.mover .line2 { font-size: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .rows.movers.dense .row.mover .price { font-size: 24px; }
 .rows.movers.dense .row.mover .pct { font-size: 30px; }
+
+/* A market File's cover (.market): each move a bar from zero on one scale, name and set above it, change, price and label beside */
+.market .title.xl { font-size: 52px; }
+.market .sub { font-size: 23px; }
+.rows.bars { margin-top: 28px; }
+/* The right column has a set width, so every track is the same length and the bars share one scale */
+.row.bar-row { grid-template-columns: minmax(0, 1fr) 300px; gap: 8px 28px; padding: 13px 0; align-items: center; }
+.row.bar-row .pct { text-align: right; }
+/* One line per name: the set gives way first, then the name, each cut with an ellipsis (the caption has both whole) */
+.row.bar-row .name { display: flex; align-items: baseline; min-width: 0; font-size: 27px; line-height: 1.2; white-space: nowrap; }
+.row.bar-row .name span { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+.row.bar-row .name .n { flex: 0 1 auto; }
+.row.bar-row .name .set { flex: 0 1000 auto; font-size: 21px; font-weight: 400; color: var(--muted); }
+.row.bar-row .pct { font-size: 34px; grid-row: auto; letter-spacing: -0.02em; white-space: nowrap; }
+.row.bar-row .track { position: relative; height: 18px; border-radius: 5px; background: rgba(236, 234, 246, 0.05); }
+.row.bar-row .track i { position: absolute; top: 0; bottom: 0; border-radius: 5px; background: currentColor; opacity: 0.85; }
+.row.bar-row .fig { display: flex; align-items: center; justify-content: flex-end; gap: 16px; white-space: nowrap; }
+.row.bar-row .price { font-family: var(--mono); font-size: 24px; color: var(--text-2); }
+.market .strip { margin-top: 26px; padding: 20px 28px; }
+.market .strip .big { font-size: 72px; }
+.market .strip p { font-size: 22px; }

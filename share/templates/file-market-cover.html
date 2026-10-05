@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body %}
+    <div class="chip-row"><span class="eyebrow">The File{% if slot %} · {{ slot }}{% endif %}</span>{% if stance %}<span class="chip sm {{ stance.chip }}">Stance · {{ stance.text }}</span>{% endif %}</div>
+    <h1 class="title xl" style="margin-top: 12px">{{ file_title }}</h1>
+    {% if lede %}<p class="sub">{{ lede }}</p>{% endif %}
+    <div class="rows bars">
+      {% for r in rows %}
+      <div class="row bar-row">
+        <div class="name"><span class="n">{{ r.name }}</span>{% if r.set %}<span class="set">&nbsp;· {{ r.set }}</span>{% endif %}</div>
+        <div class="pct {{ r.pct_class }}">{{ r.pct }}</div>
+        <div class="track {{ r.pct_class }}"><i style="left: {{ r.left }}%; width: {{ r.width }}%"></i></div>
+        <div class="fig"><span class="price">{{ r.price }}</span>{% if r.label_text %}<span class="chip sm {{ r.chip }}">{{ r.label_text }}</span>{% endif %}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if more %}<p class="mono mutedc" style="font-size: 17px; line-height: 1.5; margin: 14px 0 0">{{ more }}</p>{% endif %}
+    {% if flags %}
+    <div class="strip">
+      <div class="big flagc">{{ flags.value }}<small>of {{ flags.of }}</small></div>
+      <p>{{ flags.text }}</p>
+    </div>
+    {% endif %}
+{% endblock %}

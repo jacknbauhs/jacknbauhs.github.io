@@ -8,7 +8,8 @@ run this again.
 
 What it makes (share/out):
   file-<date>-cover.png            The File (Tue / Thu / Sat): every card in it and the flags headline
-  file-<date>-<card>.png           one per card: the sales chart and the clean move
+                                   (a market File: its TCGplayer moves as bars and the flags tally)
+  file-<date>-<card>.png           one per card: the sales chart and the clean move (a card File only)
   flags-<date>-cover.png           "what got caught": every flagged record on one image
   flag-<sale date>-<card>-<label>.png   one per flagged record (hand-checked file and nightly feed)
   calls-<date>-cover.png           every call on the record, on one image
@@ -81,6 +82,10 @@ MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
 MOVING_ROWS = 8
 # On a mover, a label speaks to the move, so two read differently than on a single sale.
 MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
+# A market File ("kind": "market" in file.json): TCGplayer price moves instead of a graded card's sales. Its cover shows
+# this many rows and its flags cover this many moves; the board shows them all.
+MARKET_ROWS = 6
+MARKET_FLAG_ROWS = 7
 POST_W, POST_H = 1080, 1350
 OG_W, OG_H = 1200, 630
 TILE = 1080
@@ -203,6 +208,60 @@ def story_of(src: dict) -> list:
     """Why now, what could break it, what we're watching: the labeled lines a file or card has, in that order."""
     rows = [("Why now", src.get("why_now")), ("What could break it", src.get("risk")), ("What we're watching", src.get("what_to_watch"))]
     return [{"label": label, "text": sentence(t)} for label, t in rows if isinstance(t, str) and t.strip()]
+
+
+def is_market(f) -> bool:
+    """A market File is about TCGplayer price moves: no featured card, no card files, no 130point sales.
+    A file.json without "kind" is a card File and renders as it always has."""
+    return str((f or {}).get("kind") or "").strip().lower() == "market"
+
+
+def market_rows(f: dict) -> list:
+    return [r for r in f.get("rows") or [] if isinstance(r, dict) and str(r.get("name") or "").strip()
+            and isinstance(r.get("change_pct"), (int, float))]
+
+
+def date_span(dates, year: bool = True) -> str:
+    """"Oct 2 to Oct 4, 2026" (or the one date) for a list of YYYY-MM-DD dates; year=False leaves the year off."""
+    ds = sorted({str(d)[:10] for d in dates if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(d or "")[:10])})
+    if not ds:
+        return ""
+    a, b = ds[0], ds[-1]
+    end = fmt_date_year(b) if year else fmt_date(b)
+    if a == b:
+        return end
+    return f"{fmt_date(a) if a[:4] == b[:4] or not year else fmt_date_year(a)} to {end}"
+
+
+def tally_of(f) -> str:
+    """The File's flags tally as it shows it ("15 of 30"), or "" when it has none."""
+    head = ((f or {}).get("flags") or {}).get("headline") or {}
+    return f"{head['value']} of {head['of']}" if head.get("value") is not None and head.get("of") is not None else ""
+
+
+def tone(v, f) -> str:
+    """How a figure reads, the same rule as tone() in assets/board.js: a signed percentage is up or down,
+    the File's flags tally is a flag, anything else is plain."""
+    v = str(v or "").strip()
+    if re.match(r"\+\d", v):
+        return "up"
+    if re.match(r"[\u2212-]\d", v):
+        return "down"
+    return "flagc" if v and v == tally_of(f) else ""
+
+
+def split_figure(v):
+    """"15 of 30" -> ("15", "of 30"), so the number and its "of" can sit at two sizes; anything else stays whole."""
+    m = re.fullmatch(r"(\S+)\s+(of\s+.+)", str(v or "").strip())
+    return (m.group(1), m.group(2)) if m else (str(v or "").strip(), "")
+
+
+def market_hero(f: dict, rows: list):
+    """A market File's hero title and figure: file.json "hero", else the headline and the first row's change."""
+    hero = f.get("hero") if isinstance(f.get("hero"), dict) else {}
+    title = str(hero.get("title") or "").strip() or str(f.get("headline") or "").strip() or str(f.get("title") or "")
+    value = str(hero.get("value") or "").strip() or (pct(rows[0]["change_pct"], 1) if rows else "")
+    return title, value
 
 
 def esc(s) -> str:
@@ -472,6 +531,9 @@ class Kit:
         stance, story = stance_of(f), story_of(f)
         slot = f.get("slot") if f.get("slot") in SLOTS else None
         headline, dek = str(f.get("headline") or "").strip(), str(f.get("dek") or "").strip()
+        if is_market(f):
+            self.build_file_market(f, day, kicker, stance, slot, headline, dek)
+            return
         rows = []
         for r in f["rows"]:
             up = (r.get("change_pct") or 0) >= 0
@@ -538,6 +600,54 @@ class Kit:
                         (f"Stance: {c_stance['text'].capitalize()}, a read on the numbers, not advice. " if c_stance else "") +
                         f"Every dot is a sold record; the flagged ones are marked. Source: 130point, pulled {fmt_date(f.get('pulled') or as_of)}. {SITE}"),
                 alt=f"{card['name']} {card['tier']}, {pct(card.get('change_pct'))} on the clean monthly median from {month_name(k0)} to {month_name(k1)}, with every sold record plotted and the flagged ones marked.")
+
+    # --- a market File: the cover only. Its rows are TCGplayer moves, so there are no card files and no per-card images. ---
+    def build_file_market(self, f, day, kicker, stance, slot, headline, dek):
+        rows = market_rows(f)
+        if not rows:
+            print("file.json: a market File with no rows, nothing to render")
+            return
+        span = date_span([(r.get("last") or {}).get("date") for r in rows], year=False)
+        source = str(f.get("source") or "TCGplayer market prices via tcgcsv.com").strip()
+        shown = rows[:MARKET_ROWS]
+        # Bars from zero on one scale: the biggest move fills the track, a drop runs left of zero.
+        lo = min(0.0, min(r["change_pct"] for r in shown))
+        span_pct = (max(0.0, max(r["change_pct"] for r in shown)) - lo) or 1.0
+        bars, present = [], []
+        for r in shown:
+            v = r["change_pct"]
+            text, chip = label_info(r["label"])[:2] if r.get("label") else ("", "")
+            if r.get("label") and r["label"] not in present:
+                present.append(r["label"])
+            bars.append({"name": r["name"], "set": r.get("set", ""), "pct": pct(v, 1), "pct_class": "up" if v >= 0 else "down",
+                         "price": money((r.get("last") or {}).get("price")), "chip": chip, "label_text": text,
+                         "left": f"{(min(v, 0.0) - lo) / span_pct * 100:.2f}", "width": f"{max(abs(v) / span_pct * 100, 0.6):.2f}"})
+        fl = f.get("flags") or {}
+        head = fl.get("headline") or {}
+        flags_ctx = None
+        if head.get("value") is not None:
+            flags_ctx = {"value": head["value"], "of": head.get("of"), "text": sentence(fl.get("stat") or head.get("label"))}
+        hero_title, hero_value = market_hero(f, rows)
+        more = f"The first {len(shown)} are here; all {len(rows)} are on the board." if len(rows) > len(shown) else ""
+        meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
+        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k])
+        title = headline or str(f.get("title") or "")
+        self.page("file-market-cover.html", f"file-{day}-cover", {
+            "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
+            "rows": bars, "more": more, "flags": flags_ctx, "slot": slot, "stance": stance, "frame_class": "market",
+        }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(title)} " +
+                    (f"{dek} " if dek else "") +
+                    " ".join(f"{r['name']}" + (f" ({r['set']})" if r.get("set") else "") + ": " +
+                             (f"{money(r['prev']['price'])} on {fmt_date(r['prev']['date'])} to " if (r.get("prev") or {}).get("price") is not None and (r.get("prev") or {}).get("date") else "") +
+                             f"{money((r.get('last') or {}).get('price'))}" + (f" on {fmt_date(r['last']['date'])}" if (r.get("last") or {}).get("date") else "") +
+                             f", {pct(r['change_pct'], 1)}" + (f", {label_info(r['label'])[0].lower()}." if r.get("label") else ".") for r in rows) +
+                    (f" {head['value']} of {head.get('of')} {head.get('label', '')}." if flags_ctx else "") +
+                    (f" {legend}" if legend else "") +
+                    (f" Stance: {stance['text'].capitalize()}, a read on the numbers, not advice." if stance else "") +
+                    f" Source: {source}. {SITE}"),
+            alt=(f"The File on the Astronaut Time board: {sentence(title)} {hero_title}: {hero_value}. "
+                 f"{count_word(len(shown))} one-day TCGplayer moves as bars, each with its change, price and label" +
+                 (f", and the flags tally, {head['value']} of {head.get('of')}." if flags_ctx else ".")))
 
     # --- flags: the hand-checked file plus the nightly feed ---
     def build_flags(self):

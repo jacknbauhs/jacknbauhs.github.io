@@ -1,6 +1,8 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
    Kept by hand: file.json (The File, Tue / Thu / Sat) and cards/*.json, calls.json, drops.json.
+   The File comes in two kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind")
+   and a market File ("kind": "market": TCGplayer price moves, the day before against the next day, no card files).
    Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json,
    digest.json and watching.json (the Today strip; both may be missing until Mission Control publishes them).
    A missing or broken file only blanks its own section. */
@@ -12,7 +14,7 @@
   var COLORS = {
     text: "#ECEAF6", muted: "#9A96B8", grid: "rgba(236,234,246,0.08)", accent: "#A78BFA",
     accentText: "#C4B5FD", flag: "#F472B6", flagText: "#F9A8D4", warn: "#FBBF24", neutral: "#9A96B8",
-    sealed: "#C98500", ev: "#8B5CF6", rip: "#34D399", surface: "#14122A"
+    sealed: "#C98500", ev: "#8B5CF6", rip: "#34D399", surface: "#14122A", up: "#34D399", down: "#F87171"
   };
   // Sale Integrity labels, in the order the legend shows them.
   var LABELS = {
@@ -173,6 +175,47 @@
     }));
   }
 
+  // A market File is about TCGplayer price moves: no featured card, no card files, no 130point sales.
+  function isMarket(file) { return str(file && file.kind).toLowerCase() === "market"; }
+  // The flags tally as the File shows it ("15 of 30"), or "" when it has none.
+  function tally(file) {
+    var h = file && file.flags && file.flags.headline;
+    return h && h.value != null && h.of != null ? h.value + " of " + h.of : "";
+  }
+  // How a figure reads: a signed percentage is up or down, the File's flags tally is a flag, anything else is plain.
+  function tone(v, file) {
+    v = str(v);
+    if (/^\+\d/.test(v)) return "up";
+    if (/^[\u2212-]\d/.test(v)) return "down";
+    return v && v === tally(file) ? "flag" : "";
+  }
+  // file.json "stats": the File's own tiles, [{value, label}]. Null when it has none, and the rows make the tiles.
+  function fileStats(file) {
+    var list = (Array.isArray(file.stats) ? file.stats : []).map(function (s) {
+      return s ? { v: isNum(s.value) ? String(s.value) : str(s.value), t: str(s.label) } : null;
+    }).filter(function (s) { return s && s.v && s.t; });
+    return list.length ? list : null;
+  }
+  // A row's link: http(s) opens in a new tab, a page on the board (card.html?id=…) opens here, anything else is dropped.
+  function linkOf(u) {
+    u = str(u);
+    if (/^https?:\/\/[^\s"<>]+$/i.test(u)) return { href: u, ext: true };
+    if (u && !/^[a-z][a-z0-9+.-]*:/i.test(u) && !/^\/\//.test(u) && !/\s/.test(u)) return { href: u, ext: false };
+    return null;
+  }
+  // "Oct 2 to Oct 4, 2026" (or the one date) for a list of YYYY-MM-DD dates.
+  function dateSpan(dates) {
+    dates = dates.filter(isDate).map(function (d) { return d.slice(0, 10); }).sort();
+    if (!dates.length) return "";
+    var a = dates[0], b = dates[dates.length - 1];
+    if (a === b) return fmtDateYear(a);
+    return (a.slice(0, 4) === b.slice(0, 4) ? fmtDate(a) : fmtDateYear(a)) + " to " + fmtDateYear(b);
+  }
+  // "$224.97 · Oct 1": a price and the day it is from.
+  function pricePoint(p) {
+    return p && isNum(p.price) ? money(p.price) + (isDate(p.date) ? " · " + fmtDate(p.date) : "") : "—";
+  }
+
   /* ---------- sales chart: every sale as a dot, the clean monthly median as a step line ---------- */
   function salesChart(card, opts) {
     opts = opts || {};
@@ -233,6 +276,58 @@
       }
     });
     return root;
+  }
+
+  /* ---------- move chart: a market File's rows, each change a bar from zero, labeled with name, change and price ---------- */
+  function moveChart(rows, W) {
+    var L = 2, R = 4, T = 4, B = 30, band = 52; // each row: the name line, then its bar
+    var H = T + rows.length * band + B;
+    var vals = rows.map(function (r) { return r.change_pct; });
+    var lo = Math.min(0, Math.min.apply(null, vals)), hi = Math.max(0, Math.max.apply(null, vals));
+    var step = niceStep((hi - lo) / 4);
+    var xMin = Math.floor(lo / step) * step, xMax = Math.ceil(hi / step) * step;
+    if (xMax === xMin) xMax = xMin + step;
+    var x = function (v) { return L + (v - xMin) * (W - L - R) / (xMax - xMin); };
+    var mono = "Geist Mono, monospace";
+    var root = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "chart", role: "img",
+      "aria-label": "Change in TCGplayer's market price from the day before: " + rows.map(function (r) {
+        return str(r.name) + " " + pct(r.change_pct, 1) + (r.last && isNum(r.last.price) ? " to " + money(r.last.price) : "");
+      }).join("; ") + "." });
+
+    // percent steps along the bottom; the zero line a shade stronger
+    for (var v = xMin; v <= xMax + step / 1000; v += step) {
+      var gx = x(v), zero = Math.abs(v) < step / 1000;
+      root.appendChild(svg("line", { x1: gx, x2: gx, y1: T, y2: H - B + 4, stroke: zero ? "rgba(236,234,246,0.28)" : COLORS.grid }));
+      var anchor = v === xMin ? "start" : v + step > xMax + step / 1000 ? "end" : "middle";
+      root.appendChild(svgText({ x: gx, y: H - 10, "text-anchor": anchor, "font-size": 12, fill: COLORS.muted, "font-family": mono }, pct(zero ? 0 : v)));
+    }
+    rows.forEach(function (r, i) {
+      var top = T + i * band, up = r.change_pct >= 0, color = up ? COLORS.up : COLORS.down;
+      var price = r.last && isNum(r.last.price) ? money(r.last.price) : "";
+      var value = pct(r.change_pct, 1) + (price ? " · " + price : "");
+      // The change and price sit right; the name gets the room that's left, cut short with an ellipsis (the table has it whole).
+      var name = str(r.name), max = Math.max(8, Math.floor((W - L - R - value.length * 7.3 - 18) / 7.6));
+      if (name.length > max) name = name.slice(0, max - 1).trim() + "…";
+      var g = svg("g", {});
+      var title = svg("title", {});
+      title.textContent = [str(r.name), str(r.set)].filter(Boolean).join(", ") + ": " + pricePoint(r.prev) + " → " + pricePoint(r.last) + ", " + pct(r.change_pct, 1);
+      g.appendChild(title);
+      g.appendChild(svgText({ x: L, y: top + 17, "font-size": 14, "font-weight": 500, fill: COLORS.text, "data-name": str(r.name) }, name));
+      g.appendChild(svgText({ x: W - R, y: top + 17, "text-anchor": "end", "font-size": 12, fill: color, "font-family": mono }, value));
+      var x0 = x(0), x1 = x(r.change_pct);
+      g.appendChild(svg("rect", { x: Math.min(x0, x1), y: top + 26, width: Math.max(2, Math.abs(x1 - x0)), height: 14, rx: 3, fill: color, "fill-opacity": 0.85 }));
+      root.appendChild(g);
+    });
+    return root;
+  }
+  // Once the chart is on the page, cut any name that still runs into its figures: the cut above only counts characters.
+  function fitNames(root) {
+    Array.prototype.forEach.call(root.querySelectorAll("text[data-name]"), function (t) {
+      var fig = t.nextSibling, full = t.getAttribute("data-name");
+      if (!fig || !t.getComputedTextLength) return;
+      var room = fig.getBBox().x - t.getBBox().x - 12;
+      while (t.getComputedTextLength() > room && t.textContent.length > 4) t.textContent = full.slice(0, t.textContent.length - 2).trim() + "…";
+    });
   }
 
   /* ---------- rip or hold chart: sealed price vs EV per box, the rip zone shaded ---------- */
@@ -491,6 +586,8 @@
     story.hidden = !story.childNodes.length;
 
     var featured = byId[file.featured];
+    var market = isMarket(file);
+    var mrows = market ? (Array.isArray(file.rows) ? file.rows : []).filter(function (r) { return r && str(r.name) && isNum(r.change_pct); }) : [];
     if (featured) {
       var hero = $("#hero-chart");
       hero.innerHTML = "";
@@ -500,15 +597,21 @@
       var cap = $("#hero-caption");
       cap.textContent = file.source + ". Pulled " + fmtDateYear(file.pulled) + ". ";
       cap.appendChild(el("a", { href: "card.html?id=" + featured.id, text: "See every sale →" }));
+    } else if (market) {
+      marketHero(file, mrows);
     }
 
-    // stats: the file's cards, its flag count, the next release
+    // stats: the file's cards (or the tiles it sets itself), its flag count, the next release
     var sEl = $("#stats");
     sEl.innerHTML = "";
-    var stats = (file.rows || []).slice(0, 2).map(function (row) {
+    var given = fileStats(file);
+    var stats = given ? given.map(function (s) { return { v: s.v, c: tone(s.v, file), t: s.t }; }) : (file.rows || []).slice(0, 2).map(function (row) {
       return { v: pct(row.change_pct), c: row.change_pct >= 0 ? "up" : "down", t: row.stat || row.name };
     });
-    if (file.flags && file.flags.headline) stats.push({ v: file.flags.headline.value + " of " + file.flags.headline.of, c: "flag", t: file.flags.stat || file.flags.headline.label });
+    // The flags tile, unless one of the File's own tiles already shows the same tally.
+    if (file.flags && file.flags.headline && !(given && given.some(function (s) { return s.v === tally(file); }))) {
+      stats.push({ v: file.flags.headline.value + " of " + file.flags.headline.of, c: "flag", t: file.flags.stat || file.flags.headline.label });
+    }
     var nd = drops ? nextDrop(drops) : null;
     if (nd) stats.push({ v: fmtDate(nd.date), c: "", t: "Next release: " + nd.name + "." });
     stats.forEach(function (s) {
@@ -517,23 +620,28 @@
         el("p", { text: s.t })
       ]));
     });
+    if (given) sEl.classList.toggle("n3", stats.length === 3);
 
-    // the file's cards
+    // the file's cards, or a market File's moves
     var body = $("#file-body");
     body.innerHTML = "";
-    (file.rows || []).forEach(function (m) {
-      body.appendChild(el("tr", {}, [
-        el("td", { class: "first" }, [
-          m.link ? el("a", { href: m.link, class: "name", text: m.name }) : el("span", { class: "name", text: m.name }),
-          el("span", { class: "sub", text: m.set + " · " + m.note })
-        ]),
-        el("td", { "data-label": "Tier", class: "num", text: m.tier }),
-        el("td", { "data-label": "Last sale", class: "num", text: money(m.last.price) + " · " + fmtDate(m.last.date) }),
-        el("td", { "data-label": "Clean median", class: "num", text: money(m.clean_median) }),
-        el("td", { "data-label": "Change", class: "num " + (m.change_pct >= 0 ? "up" : "down"), text: (m.change_pct >= 0 ? "▲ " : "▼ ") + pct(m.change_pct) }),
-        el("td", { "data-label": "Flagged", class: "num", text: m.flagged + " of " + m.sales })
-      ]));
-    });
+    if (market) {
+      marketTable(file, mrows, body);
+    } else {
+      (file.rows || []).forEach(function (m) {
+        body.appendChild(el("tr", {}, [
+          el("td", { class: "first" }, [
+            m.link ? el("a", { href: m.link, class: "name", text: m.name }) : el("span", { class: "name", text: m.name }),
+            el("span", { class: "sub", text: m.set + " · " + m.note })
+          ]),
+          el("td", { "data-label": "Tier", class: "num", text: m.tier }),
+          el("td", { "data-label": "Last sale", class: "num", text: money(m.last.price) + " · " + fmtDate(m.last.date) }),
+          el("td", { "data-label": "Clean median", class: "num", text: money(m.clean_median) }),
+          el("td", { "data-label": "Change", class: "num " + (m.change_pct >= 0 ? "up" : "down"), text: (m.change_pct >= 0 ? "▲ " : "▼ ") + pct(m.change_pct) }),
+          el("td", { "data-label": "Flagged", class: "num", text: m.flagged + " of " + m.sales })
+        ]));
+      });
+    }
     $("#file-foot").textContent = file.foot || "";
 
     // what the file threw out
@@ -551,6 +659,54 @@
         ]));
       });
     }
+  }
+
+  // A market File's hero: its rows' changes as bars, where a card File shows its featured card's sales.
+  // The static lines under the title and the number, and the legend, describe a sales chart, so they change too.
+  function marketHero(file, rows) {
+    var hero = file.hero && typeof file.hero === "object" ? file.hero : {};
+    var value = str(hero.value) || (rows[0] ? pct(rows[0].change_pct, 1) : "");
+    var t = tone(value, file), big = $("#hero-change");
+    $("#hero-title").textContent = str(hero.title) || str(file.headline) || str(file.title);
+    $("#hero-note").textContent = "The change in each card's TCGplayer market price from the day before.";
+    big.textContent = value;
+    big.className = "num" + (t === "up" || t === "down" ? " " + t : "");
+    big.style.color = t === "flag" ? "var(--flag)" : "";
+    $("#hero-change-note").textContent = str(hero.value) || !rows[0] ? "" : "in a day · " + str(rows[0].name);
+    var box = $("#hero-chart");
+    box.innerHTML = "";
+    if (rows.length) { var chart = moveChart(rows, fitChart(box, 0).width); box.appendChild(chart); safe(function () { fitNames(chart); }); }
+    var lg = $("#hero-legend");
+    lg.innerHTML = "";
+    [["up", "Up from the day before"], ["down", "Down from the day before"]].forEach(function (k) {
+      if (!rows.some(function (r) { return (r.change_pct >= 0) === (k[0] === "up"); })) return;
+      lg.appendChild(el("span", {}, [el("i", { class: "swatch", style: "background:" + COLORS[k[0]] + ";border-radius:3px" }), k[1]]));
+    });
+    var span = dateSpan(rows.map(function (r) { return r.last && r.last.date; }));
+    $("#hero-caption").textContent = [str(file.source), span ? "Prices as of " + span : "", isDate(file.pulled) ? "Pulled " + fmtDateYear(file.pulled) : ""]
+      .filter(Boolean).join(". ") + ".";
+  }
+
+  // A market File's table: the day before against the next day, the change, the label. Its links go to TCGplayer.
+  function marketTable(file, rows, body) {
+    var head = $("#file-head");
+    head.innerHTML = "";
+    head.appendChild(el("tr", {}, ["Card", "Day before", "Next day", "Change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); })));
+    $("#file-sub").textContent = "Tue · Thu · Sat · TCGplayer market prices";
+    $("#moving-lede").textContent = "The File, then the whole market from TCGplayer, each move checked against real sales.";
+    rows.forEach(function (m) {
+      var link = linkOf(m.link), up = m.change_pct >= 0;
+      var name = link
+        ? el("a", link.ext ? { href: link.href, class: "name", target: "_blank", rel: "noopener noreferrer", text: str(m.name) } : { href: link.href, class: "name", text: str(m.name) })
+        : el("span", { class: "name", text: str(m.name) });
+      body.appendChild(el("tr", {}, [
+        el("td", { class: "first" }, [name, el("span", { class: "sub", text: [str(m.set), str(m.note)].filter(Boolean).join(" · ") })]),
+        el("td", { "data-label": "Day before", class: "num", text: pricePoint(m.prev) }),
+        el("td", { "data-label": "Next day", class: "num", text: pricePoint(m.last) }),
+        el("td", { "data-label": "Change", class: "num " + (up ? "up" : "down"), text: (up ? "▲ " : "▼ ") + pct(m.change_pct, 1) }),
+        el("td", { "data-label": "Label" }, [m.label ? chip(m.label) : null])
+      ]));
+    });
   }
 
   function renderMovers(movers) {

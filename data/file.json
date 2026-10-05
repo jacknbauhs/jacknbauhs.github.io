@@ -1,109 +1,257 @@
 {
- "as_of": "2026-09-28",
- "pulled": "2026-09-28",
- "title": "Crystal Lugia and Crystal Charizard",
- "featured": "crystal-lugia-psa-8",
- "cards": [
-  "crystal-lugia-psa-8",
-  "crystal-charizard-psa-9"
- ],
- "source": "130point: eBay and Goldin sold listings, best offers at the accepted price",
- "rows": [
+ "kind": "market",
+ "date": "2026-10-06",
+ "slot": "Tue story",
+ "stance": "CAUTION",
+ "as_of": "2026-10-04",
+ "pulled": "2026-10-05",
+ "title": "The +211% that wasn't",
+ "headline": "The +211% that wasn't.",
+ "dek": "On Oct 2, TCGplayer's market price for Raikou (Shiny) from Call of Legends jumped 210.7% in a day, to $698.99. Not one checked sale stood behind it. In our first three days of daily movers, half the moves looked like that.",
+ "why_now": "The board started showing what moved since yesterday on Oct 3. Its first three lists (prices from Oct 2 to Oct 4) held 30 moves. None had a checked sale behind it, and 15 were bigger than 40%.",
+ "risk": "Some of these may be real: a card that rarely trades can reprice on one honest sale. Unconfirmed means nobody has checked yet, not that the sale was fake.",
+ "what_to_watch": "From this week, a one-day move with no checked sale shows on the board only if it is 40% or less and the lowest listing moved the same way. Watch how many make the cut.",
+ "featured": null,
+ "cards": [],
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's daily movers (Oct 3 to 5, 2026)",
+ "hero": {
+  "title": "One-day moves with nothing behind them",
+  "value": "15 of 30"
+ },
+ "stats": [
   {
-   "id": "crystal-lugia-psa-8",
-   "name": "Crystal Lugia",
-   "set": "Aquapolis 149/147",
-   "tier": "PSA 8",
-   "last": {
-    "price": 19500.0,
-    "date": "2026-09-27"
-   },
-   "clean_median": 15999.0,
-   "change_pct": 61.6,
-   "window_label": "clean median, June to Sept",
-   "flagged": 6,
-   "sales": 24,
-   "note": "Reprinted in 30th Celebration",
-   "link": "card.html?id=crystal-lugia-psa-8",
-   "stat": "Crystal Lugia PSA 8, clean median June to September. Reprinted."
+   "value": "15 of 30",
+   "label": "one-day moves bigger than 40%, none with a checked sale"
   },
   {
-   "id": "crystal-charizard-psa-9",
-   "name": "Crystal Charizard",
-   "set": "Skyridge 146/144",
-   "tier": "PSA 9",
-   "last": {
-    "price": 45000.0,
-    "date": "2026-09-27"
-   },
-   "clean_median": 38500.0,
-   "change_pct": 37.0,
-   "window_label": "clean median, June to Sept",
-   "flagged": 1,
-   "sales": 15,
-   "note": "Never reprinted",
-   "link": "card.html?id=crystal-charizard-psa-9",
-   "stat": "Crystal Charizard PSA 9, same months. Never reprinted."
+   "value": "+235.6%",
+   "label": "the biggest: Manectric ex, EX Deoxys"
   }
  ],
- "foot": "Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.",
+ "rows": [
+  {
+   "id": 87167,
+   "name": "Manectric ex",
+   "set": "EX Deoxys 101/107",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 74.49,
+    "date": "2026-10-02"
+   },
+   "last": {
+    "price": 250.0,
+    "date": "2026-10-03"
+   },
+   "change_pct": 235.6,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/87167"
+  },
+  {
+   "id": 88536,
+   "name": "Raikou (Shiny)",
+   "set": "Call of Legends SL9",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 224.97,
+    "date": "2026-10-01"
+   },
+   "last": {
+    "price": 698.99,
+    "date": "2026-10-02"
+   },
+   "change_pct": 210.7,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/88536"
+  },
+  {
+   "id": 117601,
+   "name": "Garchomp - 5/147 (Cracked Ice Holo)",
+   "set": "Deck Exclusives 005/147",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 49.7,
+    "date": "2026-10-01"
+   },
+   "last": {
+    "price": 118.18,
+    "date": "2026-10-02"
+   },
+   "change_pct": 137.8,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/117601"
+  },
+  {
+   "id": 480500,
+   "name": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon)",
+   "set": "World Championship Decks 95/95",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 29.38,
+    "date": "2026-10-03"
+   },
+   "last": {
+    "price": 59.99,
+    "date": "2026-10-04"
+   },
+   "change_pct": 104.2,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/480500"
+  },
+  {
+   "id": 88089,
+   "name": "Pikachu - DP16",
+   "set": "Diamond and Pearl Promos DP16",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 119.97,
+    "date": "2026-10-03"
+   },
+   "last": {
+    "price": 243.3,
+    "date": "2026-10-04"
+   },
+   "change_pct": 102.8,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/88089"
+  },
+  {
+   "id": 83521,
+   "name": "Altaria",
+   "set": "Boundaries Crossed 152/149",
+   "tier": "Raw · TCGplayer market price",
+   "prev": {
+    "price": 155.82,
+    "date": "2026-10-02"
+   },
+   "last": {
+    "price": 299.95,
+    "date": "2026-10-03"
+   },
+   "change_pct": 92.5,
+   "label": "UNCONFIRMED",
+   "note": "one day, no checked sale",
+   "link": "https://www.tcgplayer.com/product/83521"
+  }
+ ],
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Moves: the board's one-day lists, prices as of Oct 2, 3 and 4, 2026. Day before: worked back from the listed price and its rounded change, so within a few cents. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 7,
-   "of": 39,
-   "label": "sold records that don't belong in the math"
+   "value": 15,
+   "of": 30,
+   "label": "one-day moves over 40% with no checked sale"
   },
-  "text": "Two cards, 39 sold records since May. Seven of them would bend a plain average: a $46 \"PSA 9 Crystal Charizard,\" a $1,900 \"PSA 8 Crystal Lugia,\" a raw card and a two-grade slab in a PSA 8 search, a double-counted auction, and one listing that sold twice.",
-  "stat": "Sold records on those two cards that don't belong in the math.",
+  "text": "TCGplayer's market price averages recent sales, so on a card that rarely sells, one sale can swing it by half or more overnight. None of these 15 moves had a sale checked by Mission Control behind it, so each one stays unconfirmed until a checked sale speaks to it.",
+  "stat": "Of the board's first 30 one-day moves, 15 were bigger than 40% and none had a checked sale.",
   "items": [
    {
-    "card": "Crystal Charizard PSA 9",
-    "date": "2026-08-19",
-    "price": 46.3,
-    "label": "DATA_ERROR",
-    "why": "$46 for a PSA 9 Crystal Charizard. Whatever sold, it wasn't this card."
+    "card": "Manectric ex · EX Deoxys",
+    "date": "2026-10-03",
+    "price": 250.0,
+    "label": "UNCONFIRMED",
+    "why": "+235.6% in a day; no checked sale"
    },
    {
-    "card": "Crystal Lugia PSA 8",
-    "date": "2026-09-25",
-    "price": 1900.0,
-    "label": "DATA_ERROR",
-    "why": "87% under the next-lowest September sale."
+    "card": "Raikou (Shiny) · Call of Legends",
+    "date": "2026-10-02",
+    "price": 698.99,
+    "label": "UNCONFIRMED",
+    "why": "+210.7% in a day; no checked sale"
    },
    {
-    "card": "Crystal Charizard PSA 9",
-    "date": "2026-09-05",
-    "price": 35800.0,
-    "label": "BEST_OFFER",
-    "why": "Listed at $39,999, sold for $35,800. Trackers that show the ask get this one wrong."
+    "card": "Garchomp - 5/147 (Cracked Ice Holo) · Deck Exclusives",
+    "date": "2026-10-02",
+    "price": 118.18,
+    "label": "UNCONFIRMED",
+    "why": "+137.8% in a day; no checked sale"
    },
    {
-    "card": "Crystal Lugia PSA 8",
-    "date": "2026-09-15",
-    "price": 18500.0,
-    "label": "RELIST",
-    "why": "The same listing sold on Sep 6 for $17,750, then again on Sep 15. Both count half."
+    "card": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon) · World Championship Decks",
+    "date": "2026-10-04",
+    "price": 59.99,
+    "label": "UNCONFIRMED",
+    "why": "+104.2% in a day; no checked sale"
    },
    {
-    "card": "Crystal Lugia PSA 8",
-    "date": "2026-08-31",
-    "price": 13800.0,
-    "label": "DUPLICATE",
-    "why": "Same title, same price, same 31 bids, a day apart. Counted once."
+    "card": "Pikachu - DP16 · Diamond and Pearl Promos",
+    "date": "2026-10-04",
+    "price": 243.3,
+    "label": "UNCONFIRMED",
+    "why": "+102.8% in a day; no checked sale"
    },
    {
-    "card": "Crystal Lugia PSA 8",
-    "date": "2026-07-21",
-    "price": 8600.0,
-    "label": "DATA_ERROR",
-    "why": "Two grades in one title (CGC 8.5 and PSA 8)."
+    "card": "Altaria · Boundaries Crossed",
+    "date": "2026-10-03",
+    "price": 299.95,
+    "label": "UNCONFIRMED",
+    "why": "+92.5% in a day; no checked sale"
    },
    {
-    "card": "Crystal Lugia PSA 8",
-    "date": "2026-06-22",
-    "price": 5735.5,
-    "label": "DATA_ERROR",
-    "why": "A raw card titled \"PSA gradable 7-8.\""
+    "card": "Gyarados · Base Set (Shadowless)",
+    "date": "2026-10-04",
+    "price": 111.61,
+    "label": "UNCONFIRMED",
+    "why": "−82.4% in a day; no checked sale"
+   },
+   {
+    "card": "Garchomp · Supreme Victors",
+    "date": "2026-10-02",
+    "price": 102.42,
+    "label": "UNCONFIRMED",
+    "why": "+77.7% in a day; no checked sale"
+   },
+   {
+    "card": "Lugia EX (Team Plasma) (134 Full Art) · Plasma Storm",
+    "date": "2026-10-04",
+    "price": 1344.25,
+    "label": "UNCONFIRMED",
+    "why": "+69.7% in a day; no checked sale"
+   },
+   {
+    "card": "Gardevoir · EX Emerald",
+    "date": "2026-10-04",
+    "price": 199.99,
+    "label": "UNCONFIRMED",
+    "why": "+58.9% in a day; no checked sale"
+   },
+   {
+    "card": "Rocket's Articuno ex · EX Team Rocket Returns",
+    "date": "2026-10-03",
+    "price": 184.99,
+    "label": "UNCONFIRMED",
+    "why": "−51.3% in a day; no checked sale"
+   },
+   {
+    "card": "Regice Star · EX Legend Maker",
+    "date": "2026-10-02",
+    "price": 649.98,
+    "label": "UNCONFIRMED",
+    "why": "−48.0% in a day; no checked sale"
+   },
+   {
+    "card": "Mamoswine (Japanese 11th Movie Commemoration Set) · Miscellaneous Cards & Products",
+    "date": "2026-10-02",
+    "price": 35.0,
+    "label": "UNCONFIRMED",
+    "why": "+46.0% in a day; no checked sale"
+   },
+   {
+    "card": "Heatran LV.X - DP31 · Diamond and Pearl Promos",
+    "date": "2026-10-04",
+    "price": 78.32,
+    "label": "UNCONFIRMED",
+    "why": "+45.1% in a day; no checked sale"
+   },
+   {
+    "card": "Porygon-Z LV.X · Majestic Dawn",
+    "date": "2026-10-04",
+    "price": 122.28,
+    "label": "UNCONFIRMED",
+    "why": "+43.3% in a day; no checked sale"
    }
   ]
  }

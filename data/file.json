@@ -9,13 +9,13 @@
  "headline": "The +211% that wasn't.",
  "dek": "On Oct 2, TCGplayer's market price for Raikou (Shiny) from Call of Legends jumped 210.7% in a day, to $698.99. Not one checked sale stood behind it. In our first three days of daily movers, half the moves looked like that.",
  "why_now": "The board started showing what moved since yesterday on Oct 3. Its first three lists (prices from Oct 2 to Oct 4) held 30 moves. None had a checked sale behind it, and 15 were bigger than 40%.",
- "risk": "Some of these may be real: a card that rarely trades can reprice on one honest sale. Unconfirmed means nobody has checked yet, not that the sale was fake.",
+ "risk": "Some of these may be real: a card that rarely trades can reprice on one honest sale. Unconfirmed means nobody has checked the sales yet, not that anything is wrong with them.",
  "what_to_watch": "From this week, a one-day move with no checked sale shows on the board only if it is 40% or less and the lowest listing moved the same way. Watch how many make the cut.",
  "featured": null,
  "cards": [],
  "source": "TCGplayer market prices via tcgcsv.com, from the board's daily movers (Oct 3 to 5, 2026)",
  "hero": {
-  "title": "One-day moves with nothing behind them",
+  "title": "One-day moves with no checked sale behind them",
   "value": "15 of 30",
   "note": "over 40% in a day"
  },

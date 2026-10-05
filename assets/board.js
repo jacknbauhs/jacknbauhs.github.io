@@ -41,9 +41,11 @@
   var SLOTS = ["Tue story", "Thu market", "Sat build"];
   var FILE_DAYS = [2, 4, 6]; // The File runs Tue, Thu and Sat, Central time (0 is Sunday)
   var WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-  // What Mission Control's since-yesterday list covers (movers.json one_day). Keep in step with its config/board.py:
-  // a move with checked sales always shows; an Unconfirmed one only up to maxUnconfirmedPct, with the lowest listing moving the same way.
+  // What Mission Control's since-yesterday list (movers.json one_day) and 7-day list (movers.json items) cover. Keep in step
+  // with its config/board.py: a move with checked sales always shows; an Unconfirmed one only up to maxUnconfirmedPct, with
+  // the lowest listing moving the same way.
   var ONE_DAY = { minPrice: 20, minPct: 3, maxUnconfirmedPct: 40 };
+  var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60 };
   var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
 
   /* ---------- helpers ---------- */
@@ -562,12 +564,15 @@
     var wrap = $("#market-movers");
     wrap.innerHTML = "";
     var items = movers && movers.items ? movers.items : [];
+    // The rule, said the same way in every state: the empty card's text, and a note under a list.
+    var covers = "Pokémon cards worth $" + WEEK.minPrice + " or more that moved " + WEEK.minPct + "% or more in a week on TCGplayer";
+    var unbacked = "with no checked sales, a move shows only if it's " + WEEK.maxUnconfirmedPct + "% or less and the lowest listing moved the same way.";
     if (!items.length) {
       wrap.appendChild(movers && movers.pending
         ? emptyCard("Market movers start with the nightly feed.",
-            "Every Pokémon card worth $20 or more that moved 5% or more in a week on TCGplayer, each one checked against real sales. The list needs a full week of prices before it fills in.")
+            covers + "; " + unbacked + " The list needs a full week of prices before it fills in.")
         : emptyCard("Nothing to show this week.",
-            "The list covers Pokémon cards worth $20 or more that moved 5% or more in a week on TCGplayer. It needs a full week of prices, so it fills in about a week after the feed starts."));
+            "The list covers " + covers + "; " + unbacked + " It needs a full week of prices, so it fills in about a week after the feed starts."));
       return;
     }
     var win = items[0].window_label || "7d";
@@ -591,6 +596,7 @@
       el("div", { class: "table-foot", text: (items[0].source || "TCGplayer market prices") + ", as of " + fmtDateYear(movers.as_of || items[0].observed) +
         ". Top 10 cards worth $20 or more. Clean change: the same move with flagged sales taken out. A dash means no sales were checked yet." })
     ]));
+    wrap.appendChild(el("p", { class: "movers-note", text: "Cards worth $" + WEEK.minPrice + " or more that moved " + WEEK.minPct + "% or more in a week; " + unbacked }));
   }
 
   function renderMarketFlags(flags) {

@@ -83,9 +83,9 @@ MOVING_ROWS = 8
 # On a mover, a label speaks to the move, so two read differently than on a single sale.
 MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
 # A market File ("kind": "market" in file.json): TCGplayer price moves instead of a graded card's sales. Its cover shows
-# this many rows and its flags cover this many moves; the board shows them all.
+# this many rows as bars and its flags cover lists this many moves, one line each; the board shows them all.
 MARKET_ROWS = 6
-MARKET_FLAG_ROWS = 7
+MARKET_FLAG_ROWS = 15
 POST_W, POST_H = 1080, 1350
 OG_W, OG_H = 1200, 630
 TILE = 1080
@@ -257,11 +257,18 @@ def split_figure(v):
 
 
 def market_hero(f: dict, rows: list):
-    """A market File's hero title and figure: file.json "hero", else the headline and the first row's change."""
+    """A market File's hero title, figure and note: file.json "hero", else the headline and the first row's change."""
     hero = f.get("hero") if isinstance(f.get("hero"), dict) else {}
     title = str(hero.get("title") or "").strip() or str(f.get("headline") or "").strip() or str(f.get("title") or "")
     value = str(hero.get("value") or "").strip() or (pct(rows[0]["change_pct"], 1) if rows else "")
-    return title, value
+    note = str(hero.get("note") or "").strip() or ("" if hero.get("value") or not rows else f"in a day, {rows[0]['name']}")
+    return title, value, note
+
+
+def big_size(v) -> str:
+    """The tile's big figure steps down a size as it gets longer, so "+235.6%" fits the frame like "+62%" does."""
+    n = len(str(v))
+    return "" if n <= 5 else "md" if n <= 7 else "sm"
 
 
 def esc(s) -> str:
@@ -395,10 +402,13 @@ class Kit:
             self.page("tile.html", f"site/{name}", ctx, caption="", alt=alt, w=TILE, h=TILE)
             self.site_alts[name] = alt
 
-        # 1. The File: the featured card's clean move.
+        # 1. The File: the featured card's clean move (a market File: its own figure, see market_tile).
         featured = f.get("featured")
         row = next((r for r in f.get("rows", []) if r.get("id") == featured), None) or (f.get("rows") or [None])[0]
-        if row and as_of:
+        mtile = self.market_tile(f) if is_market(f) and as_of else None
+        if mtile:
+            tile("tile-file", "The File", f"TCGplayer · {fmt_date(as_of)}", "", mtile[0], alt=mtile[1])
+        elif row and as_of and not is_market(f):
             up = (row.get("change_pct") or 0) >= 0
             tile("tile-file", "The File", f"130point · {fmt_date(as_of)}", "",
                  {"eyebrow": f"{row['name']} {row['tier']}", "big": pct(row.get("change_pct")),
@@ -419,7 +429,7 @@ class Kit:
         feed = load("flags.json") or {}
         feed_head = feed.get("headline") or {}
         if head.get("value") is not None and as_of:
-            tile("tile-flags", "What got caught", f"130point · {fmt_date(as_of)}", "flag",
+            tile("tile-flags", "What got caught", f"{'TCGplayer' if is_market(f) else '130point'} · {fmt_date(as_of)}", "flag",
                  {"eyebrow": f.get("title", "The File"), "big": str(head["value"]), "small": f"of {head.get('of')}",
                   "big_class": "flagc", "l1": sentence(head.get("label", "")),
                   "l2": "Each one is labeled on the board with the reason."},
@@ -478,6 +488,27 @@ class Kit:
                  {"eyebrow": "Release calendar", "big": "—", "big_size": "md", "big_class": "accentc",
                   "l1": "Nothing dated on the calendar right now.", "l2": ""},
                  alt="Nothing dated on the release calendar right now.")
+
+    def market_tile(self, f):
+        """A market File's tile: its hero figure, unless that is the flags tally the flags tile already shows; then the
+        File's next own figure ("stats"), then its first row's change. (ctx, alt), or None when it has no rows."""
+        rows = market_rows(f)
+        if not rows:
+            return None
+        title, value, note = market_hero(f, rows)
+        picks = [(value, f"{title}, {note}" if note else title)]
+        picks += [(str(s["value"]).strip(), str(s.get("label") or "").strip()) for s in f.get("stats") or []
+                  if isinstance(s, dict) and s.get("value") is not None and str(s.get("label") or "").strip()]
+        r0 = rows[0]
+        picks.append((pct(r0["change_pct"], 1), r0["name"] + (", " + r0["set"] if r0.get("set") else "") + ", in a day"))
+        tally = tally_of(f)
+        big, label = next(((v, t) for v, t in picks if v and v != tally), picks[0])
+        num, small = split_figure(big)
+        headline = str(f.get("headline") or f.get("title") or "").strip()
+        l2 = sentence((f.get("flags") or {}).get("stat")) or str(f.get("dek") or "").strip()
+        return ({"eyebrow": headline, "big": num, "small": small, "big_class": tone(big, f), "big_size": big_size(num),
+                 "l1": sentence(label), "l2": l2},
+                f"The File: {sentence(headline)} {big}: {sentence(label)} {l2}".strip())
 
     def place_latest(self, kinds) -> dict:
         """Copy the newest render of each of these kinds to site/latest-<kind>.png, or drop that copy when the kind has none."""
@@ -627,25 +658,33 @@ class Kit:
         flags_ctx = None
         if head.get("value") is not None:
             flags_ctx = {"value": head["value"], "of": head.get("of"), "text": sentence(fl.get("stat") or head.get("label"))}
-        hero_title, hero_value = market_hero(f, rows)
+        hero_title, hero_value, hero_note = market_hero(f, rows)
         more = f"The first {len(shown)} are here; all {len(rows)} are on the board." if len(rows) > len(shown) else ""
         meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
         legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k])
         title = headline or str(f.get("title") or "")
+
+        def move(r):
+            # "Manectric ex (EX Deoxys 101/107): $74.49 the day before to $250 on Oct 3, +235.6%, unconfirmed."
+            # "The day before", not a date: the feed compares against the newest stored price on or before that day.
+            prev, last = r.get("prev") or {}, r.get("last") or {}
+            return (r["name"] + (f" ({r['set']})" if r.get("set") else "") + ": " +
+                    (f"{money(prev['price'])} the day before to " if prev.get("price") is not None else "") +
+                    money(last.get("price")) + (f" on {fmt_date(last['date'])}" if last.get("date") else "") +
+                    f", {pct(r['change_pct'], 1)}" + (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
+
         self.page("file-market-cover.html", f"file-{day}-cover", {
             "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
             "rows": bars, "more": more, "flags": flags_ctx, "slot": slot, "stance": stance, "frame_class": "market",
         }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(title)} " +
-                    (f"{dek} " if dek else "") +
-                    " ".join(f"{r['name']}" + (f" ({r['set']})" if r.get("set") else "") + ": " +
-                             (f"{money(r['prev']['price'])} on {fmt_date(r['prev']['date'])} to " if (r.get("prev") or {}).get("price") is not None and (r.get("prev") or {}).get("date") else "") +
-                             f"{money((r.get('last') or {}).get('price'))}" + (f" on {fmt_date(r['last']['date'])}" if (r.get("last") or {}).get("date") else "") +
-                             f", {pct(r['change_pct'], 1)}" + (f", {label_info(r['label'])[0].lower()}." if r.get("label") else ".") for r in rows) +
+                    (f"{dek} " if dek else "") + " ".join(move(r) for r in rows) +
                     (f" {head['value']} of {head.get('of')} {head.get('label', '')}." if flags_ctx else "") +
+                    "".join(f" {s_['label']}: {s_['text']}" for s_ in story_of(f)) +
                     (f" {legend}" if legend else "") +
                     (f" Stance: {stance['text'].capitalize()}, a read on the numbers, not advice." if stance else "") +
                     f" Source: {source}. {SITE}"),
-            alt=(f"The File on the Astronaut Time board: {sentence(title)} {hero_title}: {hero_value}. "
+            alt=(f"The File on the Astronaut Time board: {sentence(title)} {hero_title}: {hero_value}"
+                 f"{f', {hero_note}' if hero_note else ''}. "
                  f"{count_word(len(shown))} one-day TCGplayer moves as bars, each with its change, price and label" +
                  (f", and the flags tally, {head['value']} of {head.get('of')}." if flags_ctx else ".")))
 
@@ -663,8 +702,12 @@ class Kit:
         items = fl.get("items") or []
         head = fl.get("headline") or {}
         pulled = fmt_date(f.get("pulled") or as_of) if as_of else ""
+        # A market File's flags are TCGplayer moves, not sold records: a cover in the File's order, and no per-record images.
+        market = is_market(f)
+        if market and items and head.get("value") is not None:
+            self.build_flags_market(f, fl, items, head, as_of)
 
-        if items and head.get("value") is not None:
+        if items and head.get("value") is not None and not market:
             cover_items = []
             for it in sorted(items, key=lambda i: i["date"], reverse=True):
                 text, chip, color, _, _ = label_info(it["label"])
@@ -679,7 +722,7 @@ class Kit:
                         f"Every one is labeled on the board with the reason. Source: 130point, pulled {pulled}. {SITE}"),
                 alt=f"What got caught: {head['value']} of {head.get('of')} sold records that don't belong in the math, listed with dates, prices and labels.")
 
-        for it in items:
+        for it in ([] if market else items):
             text, chip, color, _, meaning = label_info(it["label"])
             row = rows_by_card.get(it["card"])
             big = money(it["price"])
@@ -723,6 +766,40 @@ class Kit:
                 }, caption=(f"{it['name']} ({it.get('set', '')}): the chart says {big}. {sentence(it.get('why'))} "
                             f"Label: {text.lower()}. {meaning} {SITE}"),
                     alt=f"Flagged move: {it['name']}, a claimed {big}, labeled {text.lower()}. {sentence(it.get('why'))}")
+
+    def build_flags_market(self, f, fl, items, head, as_of):
+        """A market File's flags cover: the tally, then its moves one line each, in the File's order (biggest first).
+        Each item's price is the market price after the move, not a sale, so it gets no per-record image and nothing
+        on it says "sold". One label for all of them is said once under the list instead of on every line."""
+        source = str(f.get("source") or "TCGplayer market prices via tcgcsv.com").strip()
+        span = date_span([it.get("date") for it in items], year=False)
+        shown = items[:MARKET_FLAG_ROWS]
+        labels = {it.get("label") for it in shown}
+        one = labels.pop() if len(labels) == 1 else None
+        cover_items = []
+        for it in shown:
+            text, chip = label_info(it["label"])[:2]
+            cover_items.append({"date": fmt_date(it["date"]), "name": it["card"], "chip": chip,
+                                "label_text": "" if one else text, "price": money(it["price"]), "why": it["why"]})
+        legend = []
+        if one:
+            meaning = MOVER_MEANINGS.get(one) or (label_info(one)[4][:1].lower() + label_info(one)[4][1:])
+            legend.append(f"All {len(shown)} labeled {label_info(one)[0]}: {meaning}" if len(shown) > 1 else f"{label_info(one)[0]}: {meaning}")
+        legend.append("Price: TCGplayer's market price after the move.")
+        if len(items) > len(shown):
+            legend.append(f"The first {len(shown)} are here; all {len(items)} are on the board.")
+        label = str(head.get("label") or "").strip()
+        self.page("flags-market-cover.html", f"flags-{as_of}-cover", {
+            "kicker": f"What got caught · {fmt_date(as_of)}", "tag": f"TCGplayer · {span}" if span else "TCGplayer", "tag_class": "flag",
+            "eyebrow": f.get("title", "The File"), "frame_class": "market-flags",
+            "value": head["value"], "of": head.get("of"), "headline": label,
+            "text": fl.get("text", ""), "items": cover_items, "legend": " ".join(legend),
+        }, caption=(f"{head['value']} of {head.get('of')} {label}. {fl.get('text', '')} " +
+                    " ".join(f"{it['card']}, {fmt_date(it['date'])}: {money(it['price'])}, {sentence(it['why'])}" for it in items) +
+                    f" Every one is on the board with its label. Prices are TCGplayer's market price after the move. Source: {source}. {SITE}"),
+            alt=(f"What got caught: {head['value']} of {head.get('of')} {label}, "
+                 f"{'all ' + str(len(shown)) if len(shown) == len(items) else 'the first ' + str(len(shown))} listed one per line "
+                 f"with the day, the card, the change and the TCGplayer market price after it."))
 
     # --- calls ---
     def build_calls(self):
@@ -840,7 +917,16 @@ class Kit:
         stat = None
         featured = f.get("featured")
         row = next((r for r in f.get("rows", []) if r.get("id") == featured), None) or (f.get("rows") or [None])[0]
-        if row:
+        if is_market(f):
+            # A market File's hero figure, its "of" smaller ("15 of 30"), with what it counts beside it.
+            rows = market_rows(f)
+            if rows:
+                title, value, note = market_hero(f, rows)
+                num, small = split_figure(value)
+                label = (((f.get("flags") or {}).get("headline") or {}).get("label") if value == tally_of(f) else None) or title
+                stat = {"name": str(f.get("headline") or f.get("title") or "").strip(), "pct": num, "small": small,
+                        "pct_class": tone(value, f), "line2": sentence(label)}
+        elif row:
             stat = {"name": f"{row['name']} {row['tier']}", "pct": pct(row.get("change_pct")),
                     "pct_class": "up" if (row.get("change_pct") or 0) >= 0 else "down",
                     "line2": f"{row.get('window_label', '')}. {row.get('sales')} sold records, {row.get('flagged')} kept out."}

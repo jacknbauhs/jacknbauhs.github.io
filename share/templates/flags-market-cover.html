@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block body %}
+    <span class="eyebrow">{{ eyebrow }}</span>
+    <div class="hero" style="margin-top: 6px">
+      <span class="big md flagc">{{ value }}</span>
+      <span class="beside">of {{ of }}<br>{{ headline }}</span>
+    </div>
+    <p class="sub">{{ text }}</p>
+    <div class="rows flaglines">
+      {% for f in items %}
+      <div class="row flagline">
+        <span class="idx">{{ f.date }}</span>
+        <span class="name">{{ f.name }}</span>
+        {% if f.label_text %}<span class="chip sm {{ f.chip }}">{{ f.label_text }}</span>{% endif %}
+        <span class="why">{{ f.why }}</span>
+        <span class="price">{{ f.price }}</span>
+      </div>
+      {% endfor %}
+    </div>
+    {% if legend %}<p class="mono mutedc legend-line">{{ legend }}</p>{% endif %}
+{% endblock %}

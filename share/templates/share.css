@@ -151,6 +151,7 @@ body { color: var(--text); font-family: var(--font); -webkit-font-smoothing: ant
 .og .stat .name { font-size: 26px; font-weight: 600; }
 .og .stat .pct { font-family: var(--mono); font-size: 112px; font-weight: 500; letter-spacing: -0.04em; line-height: 1; margin-top: 6px; }
 .og .stat .line2 { font-size: 19px; color: var(--muted); margin-top: 10px; line-height: 1.35; }
+.og .stat .pct small { font-size: 44px; color: var(--muted); letter-spacing: 0; margin-left: 12px; }
 .og .bottom { padding-top: 22px; }
 
 /* The File's story fields (optional): Why now, What could break it, What we're watching. .storied tightens the frame to fit them. */
@@ -209,3 +210,17 @@ body { color: var(--text); font-family: var(--font); -webkit-font-smoothing: ant
 .market .strip { margin-top: 26px; padding: 20px 28px; }
 .market .strip .big { font-size: 72px; }
 .market .strip p { font-size: 22px; }
+
+/* A market File's flags cover (.market-flags): the tally, then every move on one line (day, card, the change, the market price after it).
+   The chip shows on each line only when the labels differ; when they're all the same, one line under the list says it. */
+.market-flags .hero .big.md { font-size: 120px; }
+.market-flags .hero .beside { font-size: 30px; }
+.market-flags .sub { font-size: 21px; color: var(--text-3); margin-top: 14px; }
+.rows.flaglines { margin-top: 22px; }
+.row.flagline { display: flex; align-items: baseline; gap: 18px; padding: 7px 0; }
+.row.flagline .idx { flex: 0 0 72px; font-family: var(--mono); font-size: 18px; color: var(--accent-text); }
+.row.flagline .name { flex: 1 1 auto; min-width: 0; font-size: 22px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+/* The change keeps its whole line; the card's name gives way first (the caption has every name whole) */
+.row.flagline .why { flex: 0 0 auto; max-width: 45%; font-size: 18px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row.flagline .price { flex: 0 0 128px; font-family: var(--mono); font-size: 22px; color: var(--text-2); text-align: right; white-space: nowrap; }
+.legend-line { font-size: 16px; line-height: 1.5; margin: 14px 0 0; }

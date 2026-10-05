@@ -330,3 +330,14 @@ table.data.rip th { white-space: nowrap; }
   .stats.n3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .stats.n3 > :first-child { grid-column: 1 / -1; }
 }
+
+/* A market File ("kind": "market"): its hero figure ("15 of 30") is wider than a card's change, so on phones it sits under
+   the title instead of squeezing it; its flag names run to two or three lines, so each chip keeps to the first */
+.market-hero .big-stat .muted { max-width: 14em; margin-left: auto; }
+.flag-list.market .chip { align-self: start; }
+.flag-list.market strong { overflow-wrap: anywhere; }
+@media (max-width: 820px) {
+  .market-hero .chart-head { flex-direction: column; gap: 8px; }
+  .market-hero .big-stat { text-align: left; }
+  .market-hero .big-stat .muted { margin-left: 0; }
+}

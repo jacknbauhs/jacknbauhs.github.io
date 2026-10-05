@@ -16,7 +16,8 @@
  "source": "TCGplayer market prices via tcgcsv.com, from the board's daily movers (Oct 3 to 5, 2026)",
  "hero": {
   "title": "One-day moves with nothing behind them",
-  "value": "15 of 30"
+  "value": "15 of 30",
+  "note": "over 40% in a day"
  },
  "stats": [
   {
@@ -104,7 +105,7 @@
   {
    "id": 88089,
    "name": "Pikachu - DP16",
-   "set": "Diamond and Pearl Promos DP16",
+   "set": "Diamond and Pearl Promos",
    "tier": "Raw · TCGplayer market price",
    "prev": {
     "price": 119.97,

@@ -651,6 +651,7 @@
       $("#flag-text").textContent = f.text;
       var fl = $("#flag-list");
       fl.innerHTML = "";
+      fl.classList.toggle("market", market); // a market File's names run long: its chips keep to the first line
       (f.items || []).forEach(function (it) {
         fl.appendChild(el("li", {}, [
           el("span", {}, [el("strong", { text: it.card }), el("span", { class: "sub", text: fmtDate(it.date) + " · " + money(it.price) })]),
@@ -663,16 +664,18 @@
 
   // A market File's hero: its rows' changes as bars, where a card File shows its featured card's sales.
   // The static lines under the title and the number, and the legend, describe a sales chart, so they change too.
+  // file.json "hero": {title, value, note}, all optional; without them, the headline and the first row's change.
   function marketHero(file, rows) {
     var hero = file.hero && typeof file.hero === "object" ? file.hero : {};
     var value = str(hero.value) || (rows[0] ? pct(rows[0].change_pct, 1) : "");
     var t = tone(value, file), big = $("#hero-change");
+    $("#hero-chart").parentNode.classList.add("market-hero");
     $("#hero-title").textContent = str(hero.title) || str(file.headline) || str(file.title);
     $("#hero-note").textContent = "The change in each card's TCGplayer market price from the day before.";
     big.textContent = value;
     big.className = "num" + (t === "up" || t === "down" ? " " + t : "");
     big.style.color = t === "flag" ? "var(--flag)" : "";
-    $("#hero-change-note").textContent = str(hero.value) || !rows[0] ? "" : "in a day · " + str(rows[0].name);
+    $("#hero-change-note").textContent = str(hero.note) || (str(hero.value) || !rows[0] ? "" : "in a day · " + str(rows[0].name));
     var box = $("#hero-chart");
     box.innerHTML = "";
     if (rows.length) { var chart = moveChart(rows, fitChart(box, 0).width); box.appendChild(chart); safe(function () { fitNames(chart); }); }

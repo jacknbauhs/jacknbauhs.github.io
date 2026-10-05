@@ -8,7 +8,7 @@
     <div class="stat">
       <span class="eyebrow" style="font-size: 14px">The File</span>
       <div class="name" style="margin-top: 8px">{{ stat.name }}</div>
-      <div class="pct {{ stat.pct_class }}">{{ stat.pct }}</div>
+      <div class="pct {{ stat.pct_class }}">{{ stat.pct }}{% if stat.small %}<small>{{ stat.small }}</small>{% endif %}</div>
       <div class="line2">{{ stat.line2 }}</div>
     </div>
     {% endif %}

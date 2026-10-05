@@ -395,10 +395,12 @@
       : Array.isArray(daily.one_day_movers) && daily.one_day_movers.length ? daily.one_day_movers : null;
     if (!rows) return null;
     rows = rows.filter(function (m) { return m && str(m.name); });
+    // The rule, said the same way in both states: in the quiet line, and in a note under a list.
+    var covers = "cards worth $" + ONE_DAY.minPrice + " or more that moved " + ONE_DAY.minPct + "% or more";
+    var unbacked = "with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way.";
     var body;
     if (!rows.length) {
-      body = el("p", { class: "today-quiet", text: "Quiet since yesterday: no card worth $" + ONE_DAY.minPrice + " or more made a move of " +
-        ONE_DAY.minPct + "% or more that checked sales or listings back up." });
+      body = el("p", { class: "today-quiet", text: "Quiet since yesterday: nothing made the list. It takes " + covers + "; " + unbacked });
     } else {
       body = el("ul", { class: "today-list" });
       rows.slice(0, 5).forEach(function (m) {
@@ -416,9 +418,7 @@
     }
     var asOf = movers && isDate(movers.as_of) ? movers.as_of : rows[0] && isDate(rows[0].observed) ? rows[0].observed : null;
     var source = (rows[0] && str(rows[0].source)) || "TCGplayer market prices via tcgcsv.com";
-    // The quiet line already says what the list covers; a list gets the rule as a note under it.
-    var note = rows.length ? el("p", { class: "today-note", text: "Cards worth $" + ONE_DAY.minPrice + " or more that moved " + ONE_DAY.minPct +
-      "% or more; with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way." }) : null;
+    var note = rows.length ? el("p", { class: "today-note", text: sentence(covers + "; " + unbacked) }) : null;
     return todayCard("Since yesterday", "TCGplayer", [body, note, el("p", { class: "today-foot", text: source + (asOf ? ", as of " + fmtDateYear(asOf) : "") + "." })]);
   }
 
@@ -572,7 +572,8 @@
         ? emptyCard("Market movers start with the nightly feed.",
             covers + "; " + unbacked + " The list needs a full week of prices before it fills in.")
         : emptyCard("Nothing to show this week.",
-            "The list covers " + covers + "; " + unbacked + " It needs a full week of prices, so it fills in about a week after the feed starts."));
+            "The list covers " + covers + "; " + unbacked + " Either no move passed that this week, or the feed doesn't have a full week " +
+            "of prices yet: the list fills in about a week after the feed starts."));
       return;
     }
     var win = items[0].window_label || "7d";
@@ -594,7 +595,7 @@
         tb
       ]),
       el("div", { class: "table-foot", text: (items[0].source || "TCGplayer market prices") + ", as of " + fmtDateYear(movers.as_of || items[0].observed) +
-        ". Top 10 cards worth $20 or more. Clean change: the same move with flagged sales taken out. A dash means no sales were checked yet." })
+        ". Up to 10 cards, biggest move first. Clean change: the same move with flagged sales taken out. A dash means no sales were checked yet." })
     ]));
     wrap.appendChild(el("p", { class: "movers-note", text: "Cards worth $" + WEEK.minPrice + " or more that moved " + WEEK.minPct + "% or more in a week; " + unbacked }));
   }

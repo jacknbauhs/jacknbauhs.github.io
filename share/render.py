@@ -693,14 +693,18 @@ class Kit:
         when = "since yesterday" if window == "1d" else f"in the last {days.group(1)} days" if days else "lately"
         n, shown = len(items), items[:MOVING_ROWS]
         rule = MOVER_RULES.get(window)
+        # The headline and the alt text count the list, never the market: Mission Control caps each list and leaves out
+        # the big unbacked jumps, so more cards can clear the floor than make the list.
         if rule:
-            headline = f"{count_word(n)} card{'s' if n != 1 else ''} moved {rule[1]}% or more {when}."
+            headline = f"{count_word(n)} move{'s' if n != 1 else ''} of {rule[1]}% or more made the list {when}."
             lede = f"Pokémon cards worth ${rule[0]} or more on TCGplayer. Each label says what the checked sales show."
         else:
-            headline = f"The biggest TCGplayer moves {when}."
+            headline = f"{count_word(n)} card{'s' if n != 1 else ''} made the list {when}."
             lede = "Pokémon cards on TCGplayer. Each label says what the checked sales show."
         if n > len(shown):
             lede += f" The {len(shown)} biggest are here; all {n} are on the board."
+        listed = (f"the {len(shown)} biggest of the {n} TCGplayer moves on the list {when}" if n > len(shown)
+                  else f"the {n} TCGplayer move{'s' if n != 1 else ''} on the list {when}")
         rows, present = [], []
         for m in shown:
             text, chip, _, _, _ = label_info(m.get("label"))
@@ -735,7 +739,8 @@ class Kit:
                              (f", {r['label_text'].lower()}." if r["has_label"] else ".") for r in rows) +
                     (f" {legend}" if legend else "") + (f" {list_rule}" if list_rule else "") +
                     f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
-            alt=f"What's moving: the {len(rows)} biggest TCGplayer moves {when}, each with its market price, its change and the label for what checked sales show.")
+            alt=f"What's moving: {listed}, {'each ' if len(shown) != 1 else ''}with its market price, its change and the label for what "
+                "checked sales show.")
 
     # --- link preview ---
     def build_og(self):

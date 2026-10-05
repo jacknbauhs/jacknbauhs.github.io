@@ -1,48 +1,48 @@
 {
-  "as_of": "2026-10-03",
+  "as_of": "2026-10-05",
   "daily": {
-    "date": "2026-10-03",
+    "date": "2026-10-05",
     "movers": [],
     "one_day_movers": [
       {
-        "name": "Raikou (Shiny)",
-        "set": "Call of Legends",
-        "change_pct": 210.7,
+        "name": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon)",
+        "set": "World Championship Decks",
+        "change_pct": 104.2,
         "label": "UNCONFIRMED",
-        "price": 698.99,
-        "observed": "2026-10-02"
+        "price": 59.99,
+        "observed": "2026-10-04"
       },
       {
-        "name": "Garchomp - 5/147 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 137.8,
+        "name": "Pikachu - DP16",
+        "set": "Diamond and Pearl Promos",
+        "change_pct": 102.8,
         "label": "UNCONFIRMED",
-        "price": 118.18,
-        "observed": "2026-10-02"
+        "price": 243.3,
+        "observed": "2026-10-04"
       },
       {
-        "name": "Garchomp",
-        "set": "Supreme Victors",
-        "change_pct": 77.7,
+        "name": "Gyarados",
+        "set": "Base Set (Shadowless)",
+        "change_pct": -82.4,
         "label": "UNCONFIRMED",
-        "price": 102.42,
-        "observed": "2026-10-02"
+        "price": 111.61,
+        "observed": "2026-10-04"
       },
       {
-        "name": "Regice Star",
-        "set": "EX Legend Maker",
-        "change_pct": -48.0,
+        "name": "Lugia EX (Team Plasma) (134 Full Art)",
+        "set": "Plasma Storm",
+        "change_pct": 69.7,
         "label": "UNCONFIRMED",
-        "price": 649.98,
-        "observed": "2026-10-02"
+        "price": 1344.25,
+        "observed": "2026-10-04"
       },
       {
-        "name": "Mamoswine (Japanese 11th Movie Commemoration Set)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 46.0,
+        "name": "Gardevoir",
+        "set": "EX Emerald",
+        "change_pct": 58.9,
         "label": "UNCONFIRMED",
-        "price": 35.0,
-        "observed": "2026-10-02"
+        "price": 199.99,
+        "observed": "2026-10-04"
       }
     ],
     "calls_due": [],
@@ -52,7 +52,7 @@
     }
   },
   "weekly": {
-    "week_of": "2026-09-21",
+    "week_of": "2026-09-28",
     "flags_headline": {
       "value": null,
       "label": "no sales checked last week"

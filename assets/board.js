@@ -197,8 +197,10 @@
     return list.length ? list : null;
   }
   // A row's link: http(s) opens in a new tab, a page on the board (card.html?id=…) opens here, anything else is dropped.
+  // A control character goes first: the browser strips a leading one, so "\u0001javascript:…" would run as javascript:.
   function linkOf(u) {
     u = str(u);
+    if (/[\u0000-\u001F\u007F-\u009F]/.test(u)) return null;
     if (/^https?:\/\/[^\s"<>]+$/i.test(u)) return { href: u, ext: true };
     if (u && !/^[a-z][a-z0-9+.-]*:/i.test(u) && !/^\/\//.test(u) && !/\s/.test(u)) return { href: u, ext: false };
     return null;
@@ -654,7 +656,7 @@
       fl.classList.toggle("market", market); // a market File's names run long: its chips keep to the first line
       (f.items || []).forEach(function (it) {
         fl.appendChild(el("li", {}, [
-          el("span", {}, [el("strong", { text: it.card }), el("span", { class: "sub", text: fmtDate(it.date) + " · " + money(it.price) })]),
+          el("span", {}, [el("strong", { text: it.card }), el("span", { class: "sub", text: fmtDate(it.date) + " · " + (market ? "market price " : "") + money(it.price) })]),
           chip(it.label),
           el("span", { class: "why", text: it.why })
         ]));
@@ -696,7 +698,11 @@
     head.innerHTML = "";
     head.appendChild(el("tr", {}, ["Card", "Day before", "Next day", "Change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); })));
     $("#file-sub").textContent = "Tue · Thu · Sat · TCGplayer market prices";
-    $("#moving-lede").textContent = "The File, then the whole market from TCGplayer, each move checked against real sales.";
+    // Nothing in a market File need have a checked sale behind it, so the lede says what the labels mean instead.
+    $("#moving-lede").textContent = "The File, then the whole market from TCGplayer, each move labeled by the sales Mission Control checked: Unconfirmed when there were none.";
+    // Its flags are moves no checked sale backs yet, not sold records thrown out; the nightly feed below still is.
+    var fLede = $("#flags-lede");
+    if (fLede) fLede.textContent = "Sold lists are full of junk that bends every average. First, The File's moves that no checked sale backs yet; then what got thrown out across the market, and why.";
     rows.forEach(function (m) {
       var link = linkOf(m.link), up = m.change_pct >= 0;
       var name = link

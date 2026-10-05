@@ -86,6 +86,8 @@ MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONF
 # this many rows as bars and its flags cover lists this many moves, one line each; the board shows them all.
 MARKET_ROWS = 6
 MARKET_FLAG_ROWS = 15
+# Its flags are moves no checked sale backs yet; some may be real, so nothing about them says "caught" or "fake".
+MARKET_FLAGS_TITLE = "What we couldn't confirm"
 POST_W, POST_H = 1080, 1350
 OG_W, OG_H = 1200, 630
 TILE = 1080
@@ -407,7 +409,9 @@ class Kit:
         row = next((r for r in f.get("rows", []) if r.get("id") == featured), None) or (f.get("rows") or [None])[0]
         mtile = self.market_tile(f) if is_market(f) and as_of else None
         if mtile:
-            tile("tile-file", "The File", f"TCGplayer · {fmt_date(as_of)}", "", mtile[0], alt=mtile[1])
+            # Dated by its moves, as the cover is: its figures come from more than one day, none of them as_of itself.
+            span = date_span([(r.get("last") or {}).get("date") for r in market_rows(f)], year=False)
+            tile("tile-file", "The File", f"TCGplayer · {span or fmt_date(as_of)}", "", mtile[0], alt=mtile[1])
         elif row and as_of and not is_market(f):
             up = (row.get("change_pct") or 0) >= 0
             tile("tile-file", "The File", f"130point · {fmt_date(as_of)}", "",
@@ -428,8 +432,17 @@ class Kit:
         head = (f.get("flags") or {}).get("headline") or {}
         feed = load("flags.json") or {}
         feed_head = feed.get("headline") or {}
-        if head.get("value") is not None and as_of:
-            tile("tile-flags", "What got caught", f"{'TCGplayer' if is_market(f) else '130point'} · {fmt_date(as_of)}", "flag",
+        if head.get("value") is not None and as_of and is_market(f):
+            # A market File's flags are moves no checked sale backs yet, not records thrown out: a neutral title, and the
+            # days the moves are from.
+            span = date_span([it.get("date") for it in (f.get("flags") or {}).get("items") or []], year=False)
+            tile("tile-flags", MARKET_FLAGS_TITLE, f"TCGplayer · {span or fmt_date(as_of)}", "flag",
+                 {"eyebrow": f.get("title", "The File"), "big": str(head["value"]), "small": f"of {head.get('of')}",
+                  "big_class": "flagc", "l1": sentence(head.get("label", "")),
+                  "l2": "Each one is labeled on the board with the reason."},
+                 alt=f"{MARKET_FLAGS_TITLE}: {head['value']} of {head.get('of')} {head.get('label', '')}, each labeled with the reason.")
+        elif head.get("value") is not None and as_of:
+            tile("tile-flags", "What got caught", f"130point · {fmt_date(as_of)}", "flag",
                  {"eyebrow": f.get("title", "The File"), "big": str(head["value"]), "small": f"of {head.get('of')}",
                   "big_class": "flagc", "l1": sentence(head.get("label", "")),
                   "l2": "Each one is labeled on the board with the reason."},
@@ -692,7 +705,8 @@ class Kit:
     def build_flags(self):
         f = load("file.json") or {}
         as_of = f.get("as_of") or f.get("pulled")
-        rows_by_card = {f"{r['name']} {r['tier']}": r for r in f.get("rows", [])}
+        # A market File's rows carry no tier the share kit uses (and a hand-written one may leave it out): no lookup.
+        rows_by_card = {} if is_market(f) else {f"{r['name']} {r['tier']}": r for r in f.get("rows", [])}
         cards_by_name = {}
         for cid in f.get("cards", []):
             c = load(f"cards/{cid}.json")
@@ -790,14 +804,14 @@ class Kit:
             legend.append(f"The first {len(shown)} are here; all {len(items)} are on the board.")
         label = str(head.get("label") or "").strip()
         self.page("flags-market-cover.html", f"flags-{as_of}-cover", {
-            "kicker": f"What got caught · {fmt_date(as_of)}", "tag": f"TCGplayer · {span}" if span else "TCGplayer", "tag_class": "flag",
+            "kicker": f"{MARKET_FLAGS_TITLE} · {fmt_date(as_of)}", "tag": f"TCGplayer · {span}" if span else "TCGplayer", "tag_class": "flag",
             "eyebrow": f.get("title", "The File"), "frame_class": "market-flags",
             "value": head["value"], "of": head.get("of"), "headline": label,
             "text": fl.get("text", ""), "items": cover_items, "legend": " ".join(legend),
         }, caption=(f"{head['value']} of {head.get('of')} {label}. {fl.get('text', '')} " +
                     " ".join(f"{it['card']}, {fmt_date(it['date'])}: {money(it['price'])}, {sentence(it['why'])}" for it in items) +
                     f" Every one is on the board with its label. Prices are TCGplayer's market price after the move. Source: {source}. {SITE}"),
-            alt=(f"What got caught: {head['value']} of {head.get('of')} {label}, "
+            alt=(f"{MARKET_FLAGS_TITLE}: {head['value']} of {head.get('of')} {label}, "
                  f"{'all ' + str(len(shown)) if len(shown) == len(items) else 'the first ' + str(len(shown))} listed one per line "
                  f"with the day, the card, the change and the TCGplayer market price after it."))
 
@@ -930,12 +944,18 @@ class Kit:
             stat = {"name": f"{row['name']} {row['tier']}", "pct": pct(row.get("change_pct")),
                     "pct_class": "up" if (row.get("change_pct") or 0) >= 0 else "down",
                     "line2": f"{row.get('window_label', '')}. {row.get('sales')} sold records, {row.get('flagged')} kept out."}
+        # Beside a market File's stat (moves with no checked sale, some of them maybe real), "fake sales taken out" would
+        # call those moves fake, so a market File gets a headline that only says what the labels do.
+        if is_market(f):
+            headline = "The card market, every move labeled by the sales behind it."
+            lede = "Market moves with their sale labels, dated calls, release dates. Every number carries its source and its date."
+        else:
+            headline = "The card market, with the fake sales taken out."
+            lede = "Sales checked one by one, dated calls, release dates. Every number carries its source and its date."
         self.page("og.html", "og-board", {
             "frame_class": "og", "kicker": "Mission Control", "tag": f"Updated {fmt_date(updated)}",
-            "headline": "The card market, with the fake sales taken out.",
-            "lede": "Sales checked one by one, dated calls, release dates. Every number carries its source and its date.",
-            "stat": stat,
-        }, caption="", alt="Mission Control by Astronaut Time: the card market, with the fake sales taken out.", w=OG_W, h=OG_H)
+            "headline": headline, "lede": lede, "stat": stat,
+        }, caption="", alt=f"Mission Control by Astronaut Time: {headline[:1].lower()}{headline[1:]}", w=OG_W, h=OG_H)
 
     # --- render ---
     def screenshot(self, changed_only: bool = False):

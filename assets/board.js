@@ -589,14 +589,16 @@
     var day = isDate(file.date) ? file.date : isDate(file.as_of) ? file.as_of : null;
     var slot = SLOTS.indexOf(str(file.slot)) !== -1 ? str(file.slot) : "";
     $("#hero-kicker").textContent = ["The File", day ? fmtDate(day) : "", slot].filter(Boolean).join(" · ");
-    var hs = $("#hero-stance"), sc = stanceChip(file.stance);
+    // A build File never shows a stance (a stance on named cards would be a read of them), as its share images don't.
+    var stance = isBuild(file) ? "" : file.stance;
+    var hs = $("#hero-stance"), sc = stanceChip(stance);
     hs.innerHTML = "";
     if (sc) hs.appendChild(sc);
     var story = $("#file-story"), headline = str(file.headline), dek = str(file.dek), lines = storyLines(file);
     story.innerHTML = "";
     if (sc || headline || dek || lines) {
       story.appendChild(el("div", { class: "story-top" }, [
-        stanceChip(file.stance),
+        stanceChip(stance),
         el("span", { class: "story-meta", text: ["The File", day ? WEEKDAYS[parseDate(day).getUTCDay()].slice(0, 3) + " " + fmtDate(day) : "", slot].filter(Boolean).join(" · ") })
       ]));
       if (headline) story.appendChild(el("h4", { class: "story-h", text: headline }));
@@ -785,7 +787,8 @@
         ": before (" + shortVersion(r.before.version) + ") " + readLine(r.before).toLowerCase() + "; after (" + shortVersion(r.after.version) + ") " + readLine(r.after).toLowerCase();
       g.appendChild(title);
       var sub = [str(r.set), str(r.number)].filter(Boolean).join(" ");
-      var head = svgText({ x: L, y: top + 16, "font-size": 14, "font-weight": 500, fill: COLORS.text }, str(r.name) + (str(r.tier) ? " " + str(r.tier) : ""));
+      // The halo, as the bar labels have, keeps the dashed minimum from showing between the heading's glyphs on a phone.
+      var head = svgText(Object.assign({ x: L, y: top + 16, "font-size": 14, "font-weight": 500, fill: COLORS.text }, halo), str(r.name) + (str(r.tier) ? " " + str(r.tier) : ""));
       if (sub) { var ts = svg("tspan", { fill: COLORS.muted, "font-weight": 400, "font-size": 12, dx: 8 }); ts.textContent = sub; head.appendChild(ts); }
       g.appendChild(head);
       [["before", COLORS.neutral, 0.55], ["after", COLORS.accent, 0.9]].forEach(function (k, n) {
@@ -824,17 +827,22 @@
     head.appendChild(el("tr", {}, cols.map(function (h) { return el("th", { scope: "col", text: h }); })));
     body.parentNode.classList.add("build");
     $("#file-sub").textContent = "Tue · Thu · Sat · " + (str(model.name) || "Mission Control's card model") + ", before and after";
-    $("#moving-lede").textContent = "The File: what Mission Control's card model could read, before and after. Then the whole market from TCGplayer, each move labeled by what its checked sales show.";
+    // The nightly moves below mostly have no checked sale, so the lede says what the labels mean (as a market File's does).
+    $("#moving-lede").textContent = "The File: what Mission Control's card model could read, before and after. Then the whole market from TCGplayer, each move labeled by the sales Mission Control checked: Unconfirmed when there were none.";
     function cell(label, main, subs) {
       return el("td", { "data-label": label }, [el("span", { class: "cell" }, [main ? el("span", { class: "main", text: main }) : null].concat(
         subs.filter(Boolean).map(function (t) { return el("span", { class: "sub", text: sentence(t, true) }); })))]);
     }
     rows.forEach(function (m) {
       var p = m.pop && typeof m.pop === "object" ? m.pop : null;
-      var popLine = p && isNum(p.at_grade) && isNum(p.total)
-        ? (str(m.tier) ? str(m.tier) + "s" : "At the grade") + ": " + p.at_grade.toLocaleString("en-US") + " of " + p.total.toLocaleString("en-US") + " graded" +
-          (str(p.source) || isDate(p.observed) ? " (" + [str(p.source), isDate(p.observed) ? fmtDate(p.observed) : ""].filter(Boolean).join(", ") + ")" : "")
-        : "";
+      // The population's source and the day it was read, in full ("read Oct 6, 2026"), so the date isn't taken for PSA's.
+      var popSrc = p ? [str(p.source), isDate(p.observed) ? "read " + fmtDateYear(p.observed) : ""].filter(Boolean).join(", ") : "";
+      var count = p && isNum(p.at_grade) && isNum(p.total) ? p.at_grade.toLocaleString("en-US") + " of " + p.total.toLocaleString("en-US") : "";
+      var reads = (Array.isArray(m.after.reads) ? m.after.reads : []).map(str);
+      // When the first After line already gives the count, the Card cell gives only where it came from.
+      var popLine = !count ? "" : reads.some(function (t) { return t.indexOf(count) !== -1; })
+        ? (popSrc ? "Population: " + popSrc : "")
+        : (str(m.tier) ? str(m.tier) + "s" : "At the grade") + ": " + count + " graded" + (popSrc ? " (" + popSrc + ")" : "");
       var notRead = (Array.isArray(m.after.not_read) ? m.after.not_read : []).map(str).filter(Boolean);
       body.appendChild(el("tr", {}, [
         el("td", { class: "first" }, [
@@ -843,7 +851,7 @@
           popLine ? el("span", { class: "sub", text: popLine }) : null
         ]),
         cell(cols[1], readLine(m.before), [str(m.before.why)]),
-        cell(cols[2], readLine(m.after), (Array.isArray(m.after.reads) ? m.after.reads : []).map(str)),
+        cell(cols[2], readLine(m.after), reads),
         cell(cols[3], notRead.length ? "" : "—", notRead.length ? [notRead.join(", ")] : [])
       ]));
     });

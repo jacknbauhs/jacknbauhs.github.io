@@ -6,19 +6,19 @@
  "pulled": "2026-10-06",
  "title": "Our AI couldn't see the Plasma era, so we fixed it",
  "headline": "Our AI couldn't see the Plasma era, so we fixed it.",
- "dek": "We asked Mission Control's card model about Team Plasma-era PSA 10s, and it gave no read on any of them: the Black & White era sat outside the sets it knew. So we added the era, taught it how often a card grades a 10, and ran it again. This is a check on the model, not a pick.",
+ "dek": "We asked Mission Control's card model about Team Plasma-era PSA 10s, and it gave no read on any of them: the Black & White era sat outside the sets it knew. Adding the era got it to a read; we also taught it what share of graded copies are 10s. A check on the model, not a pick.",
  "why_now": "The fix went in on Oct 5 as version m1.1; we ran both versions on PSA population counts read Oct 6.",
- "risk": "More than half of each read is judgment, and Plasma Storm's set value is a proposal, Jack to confirm: if it changes, so do the reads.",
- "what_to_watch": "Whether Plasma Storm's proposed value holds once Jack rules on it, and the 2007 to 2010 sets the model still can't read.",
+ "risk": "More than half of each read is judgment, and it reads only because Plasma Storm now has a set value, proposed, Jack to confirm.",
+ "what_to_watch": "The sets still outside the model, among them Diamond & Pearl, Platinum, HeartGold SoulSilver and everything after Black & White.",
  "featured": null,
  "cards": [],
- "source": "PSA population report via Pikawiz, read Oct 6, 2026; Mission Control's card model (moonshot-m1.0 and moonshot-m1.1), run Oct 6, 2026",
+ "source": "PSA population report via Pikawiz, read Oct 6, 2026; Mission Control's card model, versions m1.0 and m1.1, run Oct 6, 2026",
  "model": {
   "name": "Mission Control's card model",
   "min_coverage": 0.5,
   "before": {
    "version": "moonshot-m1.0",
-   "note": "re-run Oct 6, 2026 on the same inputs"
+   "note": "re-run Oct 6, 2026 on the same PSA 10 counts (it takes no total graded)"
   },
   "after": {
    "version": "moonshot-m1.1",
@@ -28,20 +28,20 @@
  "hero": {
   "title": "Plasma Storm PSA 10s the model could read",
   "value": "0 → 3",
-  "note": "of these three, before and after the fix"
+  "note": "of three we tried, before and after the fix"
  },
  "stats": [
   {
    "value": "39% → 54%",
-   "label": "of the model had inputs on each card; under 50% it gives no read"
+   "label": "of the model had inputs on each card, no sales or prices among them; under 50% it gives no read"
   },
   {
-   "value": "3 of 7",
-   "label": "parts of the model measured; only one, the PSA population, is market data"
+   "value": "2 → 3 of 7",
+   "label": "parts of the model had inputs, before and after; only one, the PSA population, is market data, the rest judgment"
   },
   {
    "value": "1.33–3.30%",
-   "label": "of graded copies are PSA 10, Lugia-EX to Blastoise (PSA pop via Pikawiz, Oct 6)"
+   "label": "of graded copies are PSA 10, Lugia-EX to Blastoise (PSA population report via Pikawiz, read Oct 6, 2026)"
   }
  ],
  "rows": [
@@ -63,7 +63,7 @@
     "version": "moonshot-m1.0",
     "read": false,
     "coverage": 0.39,
-    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%, so it gave no read rather than guess."
    },
    "after": {
     "version": "moonshot-m1.1",
@@ -76,10 +76,10 @@
      "character demand (Jack's judgment)"
     ],
     "not_read": [
-     "checked sales",
+     "checked PSA 10 sales",
      "population growth over a year",
      "comparable cards",
-     "price"
+     "a price (raw or PSA 10)"
     ]
    }
   },
@@ -101,7 +101,7 @@
     "version": "moonshot-m1.0",
     "read": false,
     "coverage": 0.39,
-    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%, so it gave no read rather than guess."
    },
    "after": {
     "version": "moonshot-m1.1",
@@ -114,10 +114,10 @@
      "character demand (Jack's judgment)"
     ],
     "not_read": [
-     "checked sales",
+     "checked PSA 10 sales",
      "population growth over a year",
      "comparable cards",
-     "price"
+     "a price (raw or PSA 10)"
     ]
    }
   },
@@ -139,7 +139,7 @@
     "version": "moonshot-m1.0",
     "read": false,
     "coverage": 0.39,
-    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%, so it gave no read rather than guess."
    },
    "after": {
     "version": "moonshot-m1.1",
@@ -152,13 +152,13 @@
      "character demand (Jack's judgment)"
     ],
     "not_read": [
-     "checked sales",
+     "checked PSA 10 sales",
      "population growth over a year",
      "comparable cards",
-     "price"
+     "a price (raw or PSA 10)"
     ]
    }
   }
  ],
- "foot": "Measured: the share of the model's weight that has inputs; under 50% it gives no read. Before: moonshot-m1.0, re-run Oct 6, 2026 on the same inputs. After: moonshot-m1.1, in use since Oct 5, 2026. Population: PSA population report via Pikawiz, read Oct 6, 2026; PSA 10 is the top grade, so none grade higher. Plasma Storm's set value is proposed, Jack to confirm; character demand is Jack's judgment. No checked sales or prices for these cards, so liquidity and price are not measured. No score is shown: each read is low confidence and more than half judgment. Not a pick, not a forecast, not advice."
+ "foot": "Measured: the share of the model's weight that has inputs; under 50% it gives no read. Before: version m1.0, re-run Oct 6, 2026 on the same PSA 10 counts (it takes no total graded). After: version m1.1, current since Oct 5, 2026. Population: PSA population report via Pikawiz, read Oct 6, 2026; PSA 10 is the top grade, so none grade higher. Plasma Storm's set value is proposed, Jack to confirm; character demand is Jack's judgment. No sales or prices were checked for these PSA 10s, so liquidity and price are not measured. Any TCGplayer move shown for these cards elsewhere on the board is not part of this File. No score is shown: each read is low confidence and more than half judgment. Not a pick, not a forecast, not advice."
 }

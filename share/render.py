@@ -246,9 +246,14 @@ def short_version(v) -> str:
     return re.sub(r"^moonshot-", "", str(v or "").strip(), flags=re.I)
 
 
+def texts(items) -> list:
+    """A hand-written list as clean strings: no None, no blanks, and anything that isn't a list reads as empty."""
+    return [str(x).strip() for x in (items if isinstance(items, list) else []) if x is not None and str(x).strip()]
+
+
 def common(lists) -> list:
     """The items every list has, in the first list's order."""
-    lists = [[str(x).strip() for x in (l or []) if str(x).strip()] for l in lists]
+    lists = [texts(l) for l in lists]
     return [x for x in lists[0] if all(x in l for l in lists[1:])] if lists else []
 
 
@@ -497,6 +502,13 @@ class Kit:
                   "l1": sentence(feed_head.get("label", "of sold dollar volume flagged")),
                   "l2": "Suspect pumps, washes and data errors, taken out before the math."},
                  alt=f"What got caught last week: {pct(feed_head['value'])} {feed_head.get('label', '')}.")
+        elif is_build(f):
+            # A build File has no sales, so no flags. The placeholder below would read as if flags had never started, while
+            # latest-flags.png on the same site still shows the last real flags cover.
+            tile("tile-flags", "What got caught", "Mission Control", "flag",
+                 {"eyebrow": "Sale Integrity Layer", "big": "—", "big_size": "md", "big_class": "flagc",
+                  "l1": "This File is about Mission Control's card model: no sales, so no flags.", "l2": ""},
+                 alt="This File on the Astronaut Time board is about Mission Control's card model, so it has no flags.")
         else:
             tile("tile-flags", "What got caught", "Mission Control", "flag",
                  {"eyebrow": "Sale Integrity Layer", "big": "—", "big_size": "md", "big_class": "flagc",
@@ -598,7 +610,8 @@ class Kit:
                 print(f"copied {found[-1].name} -> {dest.relative_to(ROOT)}")
             elif kind == "flags" and dest.exists() and is_build(load("file.json")):
                 # A build File has no flags cover. jacknbauhs.com embeds latest-flags.png, so the last one (dated on its face)
-                # stays rather than leave a broken image there.
+                # stays rather than leave a broken image there, and squarespace.md keeps listing it.
+                stable[kind] = dest
                 print(f"kept {dest.relative_to(ROOT)}: a build File has no flags cover")
             elif dest.exists():
                 dest.unlink()
@@ -793,11 +806,20 @@ class Kit:
             c = str(a.get("confidence") or "").strip()
             return f"{read_word(b).capitalize()} → {read_word(a)}" + (f", {c} confidence" if a.get("read") and c else "")
 
+        def sides(r):
+            """What a row's before and after said, for telling whether every row said the same."""
+            b, a = r["before"], r["after"]
+            return (bool(b.get("read")), b.get("coverage"), short_version(b.get("version")), bool(a.get("read")),
+                    a.get("coverage"), short_version(a.get("version")), str(a.get("confidence") or "").strip())
+
+        # When every card's before and after are the same, the caption (pasted into posts) says them once, not per card.
+        same = len(rows) > 1 and len({sides(r) for r in rows}) == 1
         cover_rows, sentences = [], []
         for r in rows:
             b, a = r["before"], r["after"]
-            own = [x for x in (a.get("reads") or []) if str(x).strip() and str(x).strip() not in shared_reads]
-            not_read = [x for x in (a.get("not_read") or []) if str(x).strip() and str(x).strip() not in shared_not]
+            tier = str(r.get("tier") or "").strip()
+            own = [x for x in texts(a.get("reads")) if x not in shared_reads]
+            not_read = [x for x in texts(a.get("not_read")) if x not in shared_not]
             line3 = "; ".join(own)
             if not_read:
                 line3 += (". " if line3 else "") + "Not read yet: " + ", ".join(not_read)
@@ -805,25 +827,48 @@ class Kit:
             width = {k: f"{max(0.0, min(1.0, r[k]['coverage'] if isinstance(r[k].get('coverage'), (int, float)) else 0.0)) * 100:.1f}"
                      for k in ("before", "after")}
             set_line = " ".join(x for x in (str(r.get("set") or "").strip(), str(r.get("number") or "").strip()) if x)
-            cover_rows.append({"name": r["name"], "tier": r.get("tier", ""),
+            cover_rows.append({"name": r["name"], "tier": tier,
                                "line2": " · ".join(x for x in (set_line, str(r.get("note") or "").strip()) if x),
                                "verdict": verdict(r), "before_w": width["before"], "after_w": width["after"],
-                               "pcts": f"{share_of(b.get('coverage'))} → {share_of(a.get('coverage'))}",
+                               # "inputs", so a bare "39% → 54%" beside a card name can't be taken for a price move
+                               "pcts": f"inputs {share_of(b.get('coverage'))} → {share_of(a.get('coverage'))}",
                                "line3": sentence(line3) if line3 else ""})
             c = str(a.get("confidence") or "").strip()
-            sentences.append(
-                f"{r['name']}{' ' + r['tier'] if r.get('tier') else ''}{f' ({set_line})' if set_line else ''}: "
-                f"before ({short_version(b.get('version'))}), {read_word(b)}: {share_of(b.get('coverage'))} of the model had inputs, it needs {share_of(min_cov)}; "
-                f"after ({short_version(a.get('version'))}), {read_word(a)}: {share_of(a.get('coverage'))} had inputs" + (f", {c} confidence" if a.get("read") and c else "") +
-                (f". {sentence('; '.join(own))}" if own else "."))
+            label = f"{r['name']}{' ' + tier if tier else ''}{f' ({set_line})' if set_line else ''}"
+            if same:
+                sentences.append(f"{label}: {sentence('; '.join(own))}" if own else f"{label}.")
+            else:
+                sentences.append(
+                    f"{label}: "
+                    f"before ({short_version(b.get('version'))}), {read_word(b)}: {share_of(b.get('coverage'))} of the model had inputs, it needs {share_of(min_cov)}; "
+                    f"after ({short_version(a.get('version'))}), {read_word(a)}: {share_of(a.get('coverage'))} had inputs" + (f", {c} confidence" if a.get("read") and c else "") +
+                    (f". {sentence('; '.join(own))}" if own else "."))
+        if same:
+            b, a = rows[0]["before"], rows[0]["after"]
+            c = str(a.get("confidence") or "").strip()
+            sentences.insert(0, f"All {count_word(len(rows)).lower()}, before ({short_version(b.get('version'))}): {read_word(b)}, "
+                                f"{share_of(b.get('coverage'))} of the model had inputs, it needs {share_of(min_cov)}. "
+                                f"After ({short_version(a.get('version'))}): {read_word(a)}, {share_of(a.get('coverage'))} had inputs" +
+                                (f", {c} confidence." if a.get("read") and c else "."))
         shared = []
         if shared_reads:
             shared.append(f"On each card it also read {', '.join(shared_reads[:-1]) + ' and ' if len(shared_reads) > 1 else ''}{shared_reads[-1]}.")
         if shared_not:
             shared.append(f"Not read yet: {', '.join(shared_not)}.")
         closing = "No score shown" + (f": each read is {conf} confidence." if conf else ".") + " Not a forecast, not advice."
+        # The footer tag is the image's source mark (the cover travels without its caption): the population's source and
+        # the day it was read, in full, when every row shares them; shortened only if the full line can't fit the footer.
         pop_sources = {str((r.get("pop") or {}).get("source") or "").strip() for r in rows} - {""}
-        tag_src = re.sub(r"population report", "pop", pop_sources.pop()) if len(pop_sources) == 1 else "Mission Control"
+        pop_seen = {str((r.get("pop") or {}).get("observed") or "").strip()[:10] for r in rows} - {""}
+        read_on = next(iter(pop_seen)) if len(pop_seen) == 1 and re.fullmatch(r"\d{4}-\d{2}-\d{2}", next(iter(pop_seen))) else None
+        if len(pop_sources) == 1:
+            src = next(iter(pop_sources))
+            when = f" · read {fmt_date_year(read_on)}" if read_on else (f" · {fmt_date_year(pulled)}" if pulled else "")
+            tag = f"{src}{when}"
+            if len(tag) > 52:  # about what the footer holds beside the URL at this size
+                tag = re.sub(r"population report", "pop", src) + when
+        else:
+            tag = f"Mission Control · {fmt_date(pulled)}" if pulled else "Mission Control"
         story = story_of(f)
         bv, av = short_version(rows[0]["before"].get("version")), short_version(rows[0]["after"].get("version"))
         legend = (f"Bar: how much of {name} had inputs on each card, grey before{f' ({bv})' if bv else ''}, "
@@ -831,7 +876,7 @@ class Kit:
         sets = {str(r.get("set") or "").strip() for r in rows}
         what = f"{count_word(len(rows))} {sets.pop() + ' ' if len(sets) == 1 and '' not in sets else ''}cards"
         self.page("file-build-cover.html", f"file-{day}-cover", {
-            "kicker": kicker, "tag": f"{tag_src} · {fmt_date(pulled)}" if pulled else tag_src, "file_title": title, "lede": dek,
+            "kicker": kicker, "tag": tag, "file_title": title, "lede": dek,
             "slot": slot, "legend": legend, "min": f"{min_cov * 100:.1f}", "rows": cover_rows, "shared": " ".join(shared),
             "closing": closing, "story": story, "frame_class": "build storied",
         }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(title)} " + (f"{dek} " if dek else "") +
@@ -1109,8 +1154,11 @@ class Kit:
                     "line2": f"{row.get('window_label', '')}. {row.get('sales')} sold records, {row.get('flagged')} kept out."}
         # Beside a market File's stat (moves with no checked sale, some of them maybe real), "fake sales taken out" would
         # call those moves fake, so a market File gets a headline that only says what the labels do. A build File's stat
-        # isn't about sales at all, so it gets the same neutral line.
-        if is_market(f) or is_build(f):
+        # isn't about sales at all (its model had none for these cards), so its headline doesn't mention sales either.
+        if is_build(f):
+            headline = "The card market, every number with its source and date."
+            lede = "Market moves with their sale labels, dated calls, release dates, and what our card model can and can't read."
+        elif is_market(f):
             headline = "The card market, every move labeled by the sales behind it."
             lede = "Market moves with their sale labels, dated calls, release dates. Every number carries its source and its date."
         else:
@@ -1179,7 +1227,7 @@ class Kit:
         # Dated by the data, not the clock, so a re-render of the same data writes the same file.
         stamp = str((load("meta.json") or {}).get("generated_at") or (load("file.json") or {}).get("as_of") or dt.date.today())[:10]
         lines = [f"# Captions, board data of {stamp}", "",
-                 "One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.", ""]
+                 "One block per image. Caption first, alt text second. Plain facts, the source and the board link; not advice.", ""]
         for pg in self.pages:
             if not pg["caption"]:
                 continue

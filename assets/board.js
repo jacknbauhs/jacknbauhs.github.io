@@ -216,9 +216,10 @@
     if (a === b) return fmtDateYear(a);
     return (a.slice(0, 4) === b.slice(0, 4) ? fmtDate(a) : fmtDateYear(a)) + " to " + fmtDateYear(b);
   }
-  // "$224.97 · Oct 1": a price and the day it is from.
+  // "$224.97 · Oct 1": a price and the day it is from. "approx": true marks a price worked back rather than published
+  // ("about $389 · Sep 28"), so a screenshot of the table without the foot still doesn't pass it off as a recorded price.
   function pricePoint(p) {
-    return p && isNum(p.price) ? money(p.price) + (isDate(p.date) ? " · " + fmtDate(p.date) : "") : "—";
+    return p && isNum(p.price) ? (p.approx === true ? "about " : "") + money(p.price) + (isDate(p.date) ? " · " + fmtDate(p.date) : "") : "—";
   }
 
   /* ---------- sales chart: every sale as a dot, the clean monthly median as a step line ---------- */
@@ -703,7 +704,10 @@
       if (!rows.some(function (r) { return (r.change_pct >= 0) === (k[0] === "up"); })) return;
       lg.appendChild(el("span", {}, [el("i", { class: "swatch", style: "background:" + COLORS[k[0]] + ";border-radius:3px" }), k[1]]));
     });
-    var span = dateSpan(rows.map(function (r) { return r.last && r.last.date; }));
+    // Dated as the share kit dates it (render.py market_span): the rows' last dates, and a 7-day File's week start too.
+    var dates = rows.map(function (r) { return r.last && r.last.date; });
+    if (words.since === "over 7 days") dates = dates.concat(rows.map(function (r) { return r.prev && r.prev.date; }));
+    var span = dateSpan(dates);
     $("#hero-caption").textContent = [str(file.source), span ? "Prices as of " + span : "", isDate(file.pulled) ? "Pulled " + fmtDateYear(file.pulled) : ""]
       .filter(Boolean).join(". ") + ".";
   }

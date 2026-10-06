@@ -707,11 +707,12 @@ class Kit:
         def move(r):
             # "Manectric ex (EX Deoxys 101/107): $74.49 the day before to $250 on Oct 3, +235.6%, unconfirmed."
             # "The day before", not a date: the feed compares against the newest stored price on or before that day.
-            # A 7-day move: "Lugia (...): $211.23 on Oct 5, −45.7% in 7 days, unconfirmed." movers.json publishes no start
-            # price, so a File's is worked back from the rounded change; the caption, pasted on its own, leaves it out.
+            # A 7-day move: "Lugia (...): TCGplayer market price $211.23 on Oct 5, −45.7% in 7 days, unconfirmed." The move is
+            # TCGplayer's figure, said so on every line, since a caption gets pasted on its own. movers.json publishes no
+            # start price, so a File's is worked back from the rounded change; the caption leaves it out.
             prev, last = r.get("prev") or {}, r.get("last") or {}
             week = window == "7d"
-            return (r["name"] + (f" ({r['set']})" if r.get("set") else "") + ": " +
+            return (r["name"] + (f" ({r['set']})" if r.get("set") else "") + ": " + ("TCGplayer market price " if week else "") +
                     (f"{money(prev['price'])} the day before to " if prev.get("price") is not None and not week else "") +
                     money(last.get("price")) + (f" on {fmt_date(last['date'])}" if last.get("date") else "") +
                     f", {pct(r['change_pct'], 1)}" + (" in 7 days" if week else "") +

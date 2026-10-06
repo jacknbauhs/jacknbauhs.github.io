@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-05
+# Captions, board data of 2026-10-06
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
@@ -92,8 +92,8 @@ Three calls on the record. #001: The 30th Celebration Booster Bundle's premium c
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
 
-## moving-2026-W40.png
+## moving-2026-W41.png
 
-What's moving on TCGplayer, as of Oct 4, 2026. Ten cards moved 3% or more since yesterday. Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon) (World Championship Decks · 95/95): $59.99, +104.2%, unconfirmed. Pikachu - DP16 (Diamond and Pearl Promos · DP16): $243.30, +102.8%, unconfirmed. Gyarados (Base Set (Shadowless) · 006/102): $111.61, −82.4%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +69.7%, unconfirmed. Gardevoir (EX Emerald · 4/106): $199.99, +58.9%, unconfirmed. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +45.1%, unconfirmed. Porygon-Z LV.X (Majestic Dawn · 100/100): $122.28, +43.3%, unconfirmed. Luxray GL - 2010 (Mychael Bryan) (World Championship Decks · 9/111): $64.46, −36.6%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 4, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 5, 2026. Ten cards moved 5% or more in the last 7 days. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +55.1%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128): $50.32, −48.1%, unconfirmed. Armarouge (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 012/084): $43.25, +48.0%, unconfirmed. Lugia (ME: 30th Celebration Classic Collection · 149/147): $211.23, −45.7%, unconfirmed. Gengar (5) (Fossil · 05/62): $663.25, +44.8%, unconfirmed. Aegislash - 86/146 (Prerelease) [Staff] (XY Promos · 86/146): $52.87, −44.3%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Gengar Lv.X (Arceus · 97/99): $680.45, +41.1%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 5, 2026. board.jacknbauhs.com
 
-Alt: What's moving: the 8 biggest TCGplayer moves since yesterday, each with its market price, its change and the label for what checked sales show.
+Alt: What's moving: the 8 biggest TCGplayer moves in the last 7 days, each with its market price, its change and the label for what checked sales show.

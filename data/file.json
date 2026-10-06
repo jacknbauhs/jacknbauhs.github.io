@@ -1,259 +1,164 @@
 {
- "kind": "market",
- "date": "2026-10-06",
- "slot": "Tue story",
- "stance": "CAUTION",
- "as_of": "2026-10-04",
- "pulled": "2026-10-05",
- "title": "The +211% that wasn't",
- "headline": "The +211% that wasn't.",
- "dek": "On Oct 2, TCGplayer's market price for Raikou (Shiny) from Call of Legends jumped 210.7% in a day, to $698.99. Not one checked sale stood behind it. In our first three days of daily movers, half the moves looked like that.",
- "why_now": "The board started showing what moved since yesterday on Oct 3. Its first three lists (prices from Oct 2 to Oct 4) held 30 moves. None had a checked sale behind it, and 15 were bigger than 40%.",
- "risk": "Some of these may be real: a card that rarely trades can reprice on one honest sale. Unconfirmed means nobody has checked the sales yet, not that anything is wrong with them.",
- "what_to_watch": "From this week, a one-day move with no checked sale shows on the board only if it is 40% or less and the lowest listing moved the same way. Watch how many make the cut.",
+ "kind": "build",
+ "date": "2026-10-10",
+ "slot": "Sat build",
+ "as_of": "2026-10-06",
+ "pulled": "2026-10-06",
+ "title": "Our AI couldn't see the Plasma era, so we fixed it",
+ "headline": "Our AI couldn't see the Plasma era, so we fixed it.",
+ "dek": "We asked Mission Control's card model about Team Plasma-era PSA 10s, and it gave no read on any of them: the Black & White era sat outside the sets it knew. So we added the era, taught it how often a card grades a 10, and ran it again. This is a check on the model, not a pick.",
+ "why_now": "The fix went in on Oct 5 as version m1.1; we ran both versions on PSA population counts read Oct 6.",
+ "risk": "More than half of each read is judgment, and Plasma Storm's set value is a proposal, Jack to confirm: if it changes, so do the reads.",
+ "what_to_watch": "Whether Plasma Storm's proposed value holds once Jack rules on it, and the 2007 to 2010 sets the model still can't read.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's daily movers (Oct 3 to 5, 2026)",
+ "source": "PSA population report via Pikawiz, read Oct 6, 2026; Mission Control's card model (moonshot-m1.0 and moonshot-m1.1), run Oct 6, 2026",
+ "model": {
+  "name": "Mission Control's card model",
+  "min_coverage": 0.5,
+  "before": {
+   "version": "moonshot-m1.0",
+   "note": "re-run Oct 6, 2026 on the same inputs"
+  },
+  "after": {
+   "version": "moonshot-m1.1",
+   "since": "2026-10-05"
+  }
+ },
  "hero": {
-  "title": "One-day moves with no checked sale behind them",
-  "value": "15 of 30",
-  "note": "over 40% in a day"
+  "title": "Plasma Storm PSA 10s the model could read",
+  "value": "0 → 3",
+  "note": "of these three, before and after the fix"
  },
  "stats": [
   {
-   "value": "15 of 30",
-   "label": "one-day moves bigger than 40%, none with a checked sale"
+   "value": "39% → 54%",
+   "label": "of the model had inputs on each card; under 50% it gives no read"
   },
   {
-   "value": "+235.6%",
-   "label": "the biggest: Manectric ex, EX Deoxys"
+   "value": "3 of 7",
+   "label": "parts of the model measured; only one, the PSA population, is market data"
+  },
+  {
+   "value": "1.33–3.30%",
+   "label": "of graded copies are PSA 10, Lugia-EX to Blastoise (PSA pop via Pikawiz, Oct 6)"
   }
  ],
  "rows": [
   {
-   "id": 87167,
-   "name": "Manectric ex",
-   "set": "EX Deoxys 101/107",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 74.49,
-    "date": "2026-10-02"
+   "id": "lugia-ex-plasma-storm-134-psa-10",
+   "name": "Lugia-EX",
+   "set": "Plasma Storm",
+   "number": "134/135",
+   "tier": "PSA 10",
+   "note": "Full Art",
+   "pop": {
+    "at_grade": 21,
+    "higher": 0,
+    "total": 1579,
+    "source": "PSA population report via Pikawiz",
+    "observed": "2026-10-06"
    },
-   "last": {
-    "price": 250.0,
-    "date": "2026-10-03"
+   "before": {
+    "version": "moonshot-m1.0",
+    "read": false,
+    "coverage": 0.39,
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
    },
-   "change_pct": 235.6,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/87167"
+   "after": {
+    "version": "moonshot-m1.1",
+    "read": true,
+    "coverage": 0.54,
+    "confidence": "low",
+    "reads": [
+     "21 of 1,579 graded copies are PSA 10 (1.33%)",
+     "Plasma Storm's place in the hobby's history (a proposed value, Jack to confirm)",
+     "character demand (Jack's judgment)"
+    ],
+    "not_read": [
+     "checked sales",
+     "population growth over a year",
+     "comparable cards",
+     "price"
+    ]
+   }
   },
   {
-   "id": 88536,
-   "name": "Raikou (Shiny)",
-   "set": "Call of Legends SL9",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 224.97,
-    "date": "2026-10-01"
+   "id": "charizard-plasma-storm-136-psa-10",
+   "name": "Charizard",
+   "set": "Plasma Storm",
+   "number": "136/135",
+   "tier": "PSA 10",
+   "note": "Secret rare",
+   "pop": {
+    "at_grade": 79,
+    "higher": 0,
+    "total": 2850,
+    "source": "PSA population report via Pikawiz",
+    "observed": "2026-10-06"
    },
-   "last": {
-    "price": 698.99,
-    "date": "2026-10-02"
+   "before": {
+    "version": "moonshot-m1.0",
+    "read": false,
+    "coverage": 0.39,
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
    },
-   "change_pct": 210.7,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/88536"
+   "after": {
+    "version": "moonshot-m1.1",
+    "read": true,
+    "coverage": 0.54,
+    "confidence": "low",
+    "reads": [
+     "79 of 2,850 graded copies are PSA 10 (2.77%)",
+     "Plasma Storm's place in the hobby's history (a proposed value, Jack to confirm)",
+     "character demand (Jack's judgment)"
+    ],
+    "not_read": [
+     "checked sales",
+     "population growth over a year",
+     "comparable cards",
+     "price"
+    ]
+   }
   },
   {
-   "id": 117601,
-   "name": "Garchomp - 5/147 (Cracked Ice Holo)",
-   "set": "Deck Exclusives 005/147",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 49.7,
-    "date": "2026-10-01"
+   "id": "blastoise-plasma-storm-137-psa-10",
+   "name": "Blastoise",
+   "set": "Plasma Storm",
+   "number": "137/135",
+   "tier": "PSA 10",
+   "note": "Secret rare",
+   "pop": {
+    "at_grade": 46,
+    "higher": 0,
+    "total": 1394,
+    "source": "PSA population report via Pikawiz",
+    "observed": "2026-10-06"
    },
-   "last": {
-    "price": 118.18,
-    "date": "2026-10-02"
+   "before": {
+    "version": "moonshot-m1.0",
+    "read": false,
+    "coverage": 0.39,
+    "why": "The Black & White era was outside the sets the model knew, so only 39% of it had inputs; it needs 50%."
    },
-   "change_pct": 137.8,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/117601"
-  },
-  {
-   "id": 480500,
-   "name": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon)",
-   "set": "World Championship Decks 95/95",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 29.38,
-    "date": "2026-10-03"
-   },
-   "last": {
-    "price": 59.99,
-    "date": "2026-10-04"
-   },
-   "change_pct": 104.2,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/480500"
-  },
-  {
-   "id": 88089,
-   "name": "Pikachu - DP16",
-   "set": "Diamond and Pearl Promos",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 119.97,
-    "date": "2026-10-03"
-   },
-   "last": {
-    "price": 243.3,
-    "date": "2026-10-04"
-   },
-   "change_pct": 102.8,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/88089"
-  },
-  {
-   "id": 83521,
-   "name": "Altaria",
-   "set": "Boundaries Crossed 152/149",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 155.82,
-    "date": "2026-10-02"
-   },
-   "last": {
-    "price": 299.95,
-    "date": "2026-10-03"
-   },
-   "change_pct": 92.5,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/83521"
+   "after": {
+    "version": "moonshot-m1.1",
+    "read": true,
+    "coverage": 0.54,
+    "confidence": "low",
+    "reads": [
+     "46 of 1,394 graded copies are PSA 10 (3.30%)",
+     "Plasma Storm's place in the hobby's history (a proposed value, Jack to confirm)",
+     "character demand (Jack's judgment)"
+    ],
+    "not_read": [
+     "checked sales",
+     "population growth over a year",
+     "comparable cards",
+     "price"
+    ]
+   }
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Moves: the board's one-day lists, prices as of Oct 2, 3 and 4, 2026. Day before: worked back from the listed price and its rounded change, so within a few cents. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
- "flags": {
-  "headline": {
-   "value": 15,
-   "of": 30,
-   "label": "one-day moves over 40% with no checked sale"
-  },
-  "text": "TCGplayer's market price averages recent sales, so on a card that rarely sells, one sale can swing it by half or more overnight. None of these 15 moves had a sale checked by Mission Control behind it, so each one stays unconfirmed until a checked sale speaks to it.",
-  "stat": "Of the board's first 30 one-day moves, 15 were bigger than 40% and none had a checked sale.",
-  "items": [
-   {
-    "card": "Manectric ex · EX Deoxys",
-    "date": "2026-10-03",
-    "price": 250.0,
-    "label": "UNCONFIRMED",
-    "why": "+235.6% in a day; no checked sale"
-   },
-   {
-    "card": "Raikou (Shiny) · Call of Legends",
-    "date": "2026-10-02",
-    "price": 698.99,
-    "label": "UNCONFIRMED",
-    "why": "+210.7% in a day; no checked sale"
-   },
-   {
-    "card": "Garchomp - 5/147 (Cracked Ice Holo) · Deck Exclusives",
-    "date": "2026-10-02",
-    "price": 118.18,
-    "label": "UNCONFIRMED",
-    "why": "+137.8% in a day; no checked sale"
-   },
-   {
-    "card": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon) · World Championship Decks",
-    "date": "2026-10-04",
-    "price": 59.99,
-    "label": "UNCONFIRMED",
-    "why": "+104.2% in a day; no checked sale"
-   },
-   {
-    "card": "Pikachu - DP16 · Diamond and Pearl Promos",
-    "date": "2026-10-04",
-    "price": 243.3,
-    "label": "UNCONFIRMED",
-    "why": "+102.8% in a day; no checked sale"
-   },
-   {
-    "card": "Altaria · Boundaries Crossed",
-    "date": "2026-10-03",
-    "price": 299.95,
-    "label": "UNCONFIRMED",
-    "why": "+92.5% in a day; no checked sale"
-   },
-   {
-    "card": "Gyarados · Base Set (Shadowless)",
-    "date": "2026-10-04",
-    "price": 111.61,
-    "label": "UNCONFIRMED",
-    "why": "−82.4% in a day; no checked sale"
-   },
-   {
-    "card": "Garchomp · Supreme Victors",
-    "date": "2026-10-02",
-    "price": 102.42,
-    "label": "UNCONFIRMED",
-    "why": "+77.7% in a day; no checked sale"
-   },
-   {
-    "card": "Lugia EX (Team Plasma) (134 Full Art) · Plasma Storm",
-    "date": "2026-10-04",
-    "price": 1344.25,
-    "label": "UNCONFIRMED",
-    "why": "+69.7% in a day; no checked sale"
-   },
-   {
-    "card": "Gardevoir · EX Emerald",
-    "date": "2026-10-04",
-    "price": 199.99,
-    "label": "UNCONFIRMED",
-    "why": "+58.9% in a day; no checked sale"
-   },
-   {
-    "card": "Rocket's Articuno ex · EX Team Rocket Returns",
-    "date": "2026-10-03",
-    "price": 184.99,
-    "label": "UNCONFIRMED",
-    "why": "−51.3% in a day; no checked sale"
-   },
-   {
-    "card": "Regice Star · EX Legend Maker",
-    "date": "2026-10-02",
-    "price": 649.98,
-    "label": "UNCONFIRMED",
-    "why": "−48.0% in a day; no checked sale"
-   },
-   {
-    "card": "Mamoswine (Japanese 11th Movie Commemoration Set) · Miscellaneous Cards & Products",
-    "date": "2026-10-02",
-    "price": 35.0,
-    "label": "UNCONFIRMED",
-    "why": "+46.0% in a day; no checked sale"
-   },
-   {
-    "card": "Heatran LV.X - DP31 · Diamond and Pearl Promos",
-    "date": "2026-10-04",
-    "price": 78.32,
-    "label": "UNCONFIRMED",
-    "why": "+45.1% in a day; no checked sale"
-   },
-   {
-    "card": "Porygon-Z LV.X · Majestic Dawn",
-    "date": "2026-10-04",
-    "price": 122.28,
-    "label": "UNCONFIRMED",
-    "why": "+43.3% in a day; no checked sale"
-   }
-  ]
- }
+ "foot": "Measured: the share of the model's weight that has inputs; under 50% it gives no read. Before: moonshot-m1.0, re-run Oct 6, 2026 on the same inputs. After: moonshot-m1.1, in use since Oct 5, 2026. Population: PSA population report via Pikawiz, read Oct 6, 2026; PSA 10 is the top grade, so none grade higher. Plasma Storm's set value is proposed, Jack to confirm; character demand is Jack's judgment. No checked sales or prices for these cards, so liquidity and price are not measured. No score is shown: each read is low confidence and more than half judgment. Not a pick, not a forecast, not advice."
 }

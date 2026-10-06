@@ -283,6 +283,15 @@
     return root;
   }
 
+  // A market File's window, said the way its rows are: every row a 7-day move (window_label "7d", as movers.json has it)
+  // reads over 7 days; anything else reads from the day before, as every market File did before the 7-day list.
+  function marketWords(rows) {
+    var week = rows.length > 0 && rows.every(function (r) { return str(r.window_label) === "7d"; });
+    return week
+      ? { since: "over 7 days", span: "in 7 days", head: ["Start of week", "End of week"] }
+      : { since: "from the day before", span: "in a day", head: ["Day before", "Next day"] };
+  }
+
   /* ---------- move chart: a market File's rows, each change a bar from zero, labeled with name, change and price ---------- */
   function moveChart(rows, W) {
     var L = 2, R = 4, T = 4, B = 30, band = 52; // each row: the name line, then its bar
@@ -295,7 +304,7 @@
     var x = function (v) { return L + (v - xMin) * (W - L - R) / (xMax - xMin); };
     var mono = "Geist Mono, monospace";
     var root = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "chart", role: "img",
-      "aria-label": "Change in TCGplayer's market price from the day before: " + rows.map(function (r) {
+      "aria-label": "Change in TCGplayer's market price " + marketWords(rows).since + ": " + rows.map(function (r) {
         return str(r.name) + " " + pct(r.change_pct, 1) + (r.last && isNum(r.last.price) ? " to " + money(r.last.price) : "");
       }).join("; ") + "." });
 
@@ -677,20 +686,20 @@
   function marketHero(file, rows) {
     var hero = file.hero && typeof file.hero === "object" ? file.hero : {};
     var value = str(hero.value) || (rows[0] ? pct(rows[0].change_pct, 1) : "");
-    var t = tone(value, file), big = $("#hero-change");
+    var t = tone(value, file), big = $("#hero-change"), words = marketWords(rows);
     $("#hero-chart").parentNode.classList.add("market-hero");
     $("#hero-title").textContent = str(hero.title) || str(file.headline) || str(file.title);
-    $("#hero-note").textContent = "The change in each card's TCGplayer market price from the day before.";
+    $("#hero-note").textContent = "The change in each card's TCGplayer market price " + words.since + ".";
     big.textContent = value;
     big.className = "num" + (t === "up" || t === "down" ? " " + t : "");
     big.style.color = t === "flag" ? "var(--flag)" : "";
-    $("#hero-change-note").textContent = str(hero.note) || (str(hero.value) || !rows[0] ? "" : "in a day · " + str(rows[0].name));
+    $("#hero-change-note").textContent = str(hero.note) || (str(hero.value) || !rows[0] ? "" : words.span + " · " + str(rows[0].name));
     var box = $("#hero-chart");
     box.innerHTML = "";
     if (rows.length) { var chart = moveChart(rows, fitChart(box, 0).width); box.appendChild(chart); safe(function () { fitNames(chart); }); }
     var lg = $("#hero-legend");
     lg.innerHTML = "";
-    [["up", "Up from the day before"], ["down", "Down from the day before"]].forEach(function (k) {
+    [["up", "Up " + words.since], ["down", "Down " + words.since]].forEach(function (k) {
       if (!rows.some(function (r) { return (r.change_pct >= 0) === (k[0] === "up"); })) return;
       lg.appendChild(el("span", {}, [el("i", { class: "swatch", style: "background:" + COLORS[k[0]] + ";border-radius:3px" }), k[1]]));
     });
@@ -701,9 +710,9 @@
 
   // A market File's table: the day before against the next day, the change, the label. Its links go to TCGplayer.
   function marketTable(file, rows, body) {
-    var head = $("#file-head");
+    var head = $("#file-head"), words = marketWords(rows); // a 7-day File: the start of the week against its end
     head.innerHTML = "";
-    head.appendChild(el("tr", {}, ["Card", "Day before", "Next day", "Change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); })));
+    head.appendChild(el("tr", {}, ["Card", words.head[0], words.head[1], "Change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); })));
     $("#file-sub").textContent = "Tue · Thu · Sat · TCGplayer market prices";
     // Nothing in a market File need have a checked sale behind it, so the lede says what the labels mean instead.
     $("#moving-lede").textContent = "The File, then the whole market from TCGplayer, each move labeled by the sales Mission Control checked: Unconfirmed when there were none.";
@@ -717,8 +726,8 @@
         : el("span", { class: "name", text: str(m.name) });
       body.appendChild(el("tr", {}, [
         el("td", { class: "first" }, [name, el("span", { class: "sub", text: [str(m.set), str(m.note)].filter(Boolean).join(" · ") })]),
-        el("td", { "data-label": "Day before", class: "num", text: pricePoint(m.prev) }),
-        el("td", { "data-label": "Next day", class: "num", text: pricePoint(m.last) }),
+        el("td", { "data-label": words.head[0], class: "num", text: pricePoint(m.prev) }),
+        el("td", { "data-label": words.head[1], class: "num", text: pricePoint(m.last) }),
         el("td", { "data-label": "Change", class: "num " + (up ? "up" : "down"), text: (up ? "▲ " : "▼ ") + pct(m.change_pct, 1) }),
         el("td", { "data-label": "Label" }, [m.label ? chip(m.label) : null])
       ]));

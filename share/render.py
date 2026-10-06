@@ -241,6 +241,25 @@ def date_span(dates, year: bool = True) -> str:
     return f"{fmt_date(a) if a[:4] == b[:4] or not year else fmt_date_year(a)} to {end}"
 
 
+def market_window(rows) -> str:
+    """A market File's window: "7d" when every row is a 7-day move (its window_label, as movers.json has it), else "1d",
+    which is how every market File read before the 7-day list (rows without window_label are one-day moves)."""
+    return "7d" if rows and all(str(r.get("window_label") or "").strip() == "7d" for r in rows) else "1d"
+
+
+# How a market File says its window: the adjective for its moves and the phrase after a change.
+MARKET_WINDOW_WORDS = {"1d": {"adj": "one-day", "span": "in a day"}, "7d": {"adj": "7-day", "span": "in 7 days"}}
+
+
+def market_span(rows, year: bool = False) -> str:
+    """The days a market File's moves cover: its rows' last dates ("Oct 2 to Oct 4"), and for 7-day moves the week's start
+    too ("Sep 28 to Oct 5"), since every row of a 7-day File compares against the same day a week back."""
+    dates = [(r.get("last") or {}).get("date") for r in rows]
+    if market_window(rows) == "7d":
+        dates += [(r.get("prev") or {}).get("date") for r in rows]
+    return date_span(dates, year=year)
+
+
 def tally_of(f) -> str:
     """The File's flags tally as it shows it ("15 of 30"), or "" when it has none."""
     head = ((f or {}).get("flags") or {}).get("headline") or {}
@@ -269,7 +288,8 @@ def market_hero(f: dict, rows: list):
     hero = f.get("hero") if isinstance(f.get("hero"), dict) else {}
     title = str(hero.get("title") or "").strip() or str(f.get("headline") or "").strip() or str(f.get("title") or "")
     value = str(hero.get("value") or "").strip() or (pct(rows[0]["change_pct"], 1) if rows else "")
-    note = str(hero.get("note") or "").strip() or ("" if hero.get("value") or not rows else f"in a day, {rows[0]['name']}")
+    span = MARKET_WINDOW_WORDS[market_window(rows)]["span"]
+    note = str(hero.get("note") or "").strip() or ("" if hero.get("value") or not rows else f"{span}, {rows[0]['name']}")
     return title, value, note
 
 
@@ -416,7 +436,7 @@ class Kit:
         mtile = self.market_tile(f) if is_market(f) and as_of else None
         if mtile:
             # Dated by its moves, as the cover is: its figures come from more than one day, none of them as_of itself.
-            span = date_span([(r.get("last") or {}).get("date") for r in market_rows(f)], year=False)
+            span = market_span(market_rows(f))
             tile("tile-file", "The File", f"TCGplayer · {span or fmt_date(as_of)}", "", mtile[0], alt=mtile[1])
         elif row and as_of and not is_market(f):
             up = (row.get("change_pct") or 0) >= 0
@@ -519,7 +539,8 @@ class Kit:
         picks += [(str(s["value"]).strip(), str(s.get("label") or "").strip()) for s in f.get("stats") or []
                   if isinstance(s, dict) and s.get("value") is not None and str(s.get("label") or "").strip()]
         r0 = rows[0]
-        picks.append((pct(r0["change_pct"], 1), r0["name"] + (", " + r0["set"] if r0.get("set") else "") + ", in a day"))
+        picks.append((pct(r0["change_pct"], 1), r0["name"] + (", " + r0["set"] if r0.get("set") else "") + ", "
+                      + MARKET_WINDOW_WORDS[market_window(rows)]["span"]))
         tally = tally_of(f)
         big, label = next(((v, t) for v, t in picks if v and v != tally), picks[0])
         num, small = split_figure(big)
@@ -657,7 +678,7 @@ class Kit:
         if not rows:
             print("file.json: a market File with no rows, nothing to render")
             return
-        span = date_span([(r.get("last") or {}).get("date") for r in rows], year=False)
+        span, window = market_span(rows), market_window(rows)
         source = str(f.get("source") or "TCGplayer market prices via tcgcsv.com").strip()
         shown = rows[:MARKET_ROWS]
         # Bars from zero on one scale: the biggest move fills the track, a drop runs left of zero.
@@ -686,11 +707,15 @@ class Kit:
         def move(r):
             # "Manectric ex (EX Deoxys 101/107): $74.49 the day before to $250 on Oct 3, +235.6%, unconfirmed."
             # "The day before", not a date: the feed compares against the newest stored price on or before that day.
+            # A 7-day move: "Lugia (...): $211.23 on Oct 5, −45.7% in 7 days, unconfirmed." movers.json publishes no start
+            # price, so a File's is worked back from the rounded change; the caption, pasted on its own, leaves it out.
             prev, last = r.get("prev") or {}, r.get("last") or {}
+            week = window == "7d"
             return (r["name"] + (f" ({r['set']})" if r.get("set") else "") + ": " +
-                    (f"{money(prev['price'])} the day before to " if prev.get("price") is not None else "") +
+                    (f"{money(prev['price'])} the day before to " if prev.get("price") is not None and not week else "") +
                     money(last.get("price")) + (f" on {fmt_date(last['date'])}" if last.get("date") else "") +
-                    f", {pct(r['change_pct'], 1)}" + (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
+                    f", {pct(r['change_pct'], 1)}" + (" in 7 days" if week else "") +
+                    (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
 
         self.page("file-market-cover.html", f"file-{day}-cover", {
             "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
@@ -704,7 +729,7 @@ class Kit:
                     f" Source: {source}. {SITE}"),
             alt=(f"The File on the Astronaut Time board: {sentence(title)} {hero_title}: {hero_value}"
                  f"{f', {hero_note}' if hero_note else ''}. "
-                 f"{count_word(len(shown))} one-day TCGplayer moves as bars, each with its change, price and label" +
+                 f"{count_word(len(shown))} {MARKET_WINDOW_WORDS[window]['adj']} TCGplayer moves as bars, each with its change, price and label" +
                  (f", and the flags tally, {head['value']} of {head.get('of')}." if flags_ctx else ".")))
 
     # --- flags: the hand-checked file plus the nightly feed ---
@@ -960,6 +985,10 @@ class Kit:
                 label = (((f.get("flags") or {}).get("headline") or {}).get("label") if value == tally_of(f) else None) or title
                 stat = {"name": str(f.get("headline") or f.get("title") or "").strip(), "pct": num, "small": small,
                         "pct_class": tone(value, f), "line2": sentence(label)}
+                # A long headline sits on one line and pushes the box across the lead ("The +211% that wasn't." never
+                # does): past 32 characters the box keeps to 470px and wraps it.
+                if len(stat["name"]) > 32:
+                    stat["max"] = 470
         elif row:
             stat = {"name": f"{row['name']} {row['tier']}", "pct": pct(row.get("change_pct")),
                     "pct_class": "up" if (row.get("change_pct") or 0) >= 0 else "down",

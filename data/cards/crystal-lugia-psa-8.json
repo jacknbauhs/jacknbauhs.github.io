@@ -25,7 +25,7 @@
   "date": "2026-09-27",
   "price": 19500.0
  },
- "summary": "Up about 62% since June on real volume: 18 clean sales, including five auctions with 31 to 54 bidders. The climb started months before the reprint hit shelves on Sep 16.",
+ "summary": "Up about 62% since June on real volume: 18 clean sales, including five auctions with 31 to 54 bids. The climb started months before the reprint hit shelves on Sep 16.",
  "naive": {
   "label": "A plain September average with the $1,900 print in it",
   "value": 15262.81,
@@ -200,7 +200,7 @@
    "bids": null,
    "ask": 19995.0,
    "label": "RELIST",
-   "why": "The same listing sold again on Sep 15. The first sale may not have gone through. Counts half.",
+   "why": "The same listing sold again on Sep 15. The first sale may not have gone through. Left out of the clean median.",
    "weight": 0.5
   },
   {
@@ -230,7 +230,7 @@
    "bids": null,
    "ask": 19999.99,
    "label": "RELIST",
-   "why": "Second sale of the Sep 6 listing, higher this time. Counts half.",
+   "why": "Second sale of the Sep 6 listing, higher this time. Left out of the clean median.",
    "weight": 0.5
   },
   {

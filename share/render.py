@@ -39,6 +39,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import hashlib
+import html
 import json
 import math
 import random
@@ -247,8 +248,9 @@ def short_version(v) -> str:
 
 
 def texts(items) -> list:
-    """A hand-written list as clean strings: no None, no blanks, and anything that isn't a list reads as empty."""
-    return [str(x).strip() for x in (items if isinstance(items, list) else []) if x is not None and str(x).strip()]
+    """A hand-written list as clean strings: strings only (as the board's str() keeps), no blanks, and anything that
+    isn't a list reads as empty, so a number or an object in it never reaches a cover or caption as a Python repr."""
+    return [x.strip() for x in (items if isinstance(items, list) else []) if isinstance(x, str) and x.strip()]
 
 
 def common(lists) -> list:
@@ -503,12 +505,13 @@ class Kit:
                   "l2": "Suspect pumps, washes and data errors, taken out before the math."},
                  alt=f"What got caught last week: {pct(feed_head['value'])} {feed_head.get('label', '')}.")
         elif is_build(f):
-            # A build File has no sales, so no flags. The placeholder below would read as if flags had never started, while
+            # No sales were checked for a build File, so it has no flags ("were checked": unknown, never "no sales", which
+            # would read as these cards having none). The placeholder below would read as if flags had never started, while
             # latest-flags.png on the same site still shows the last real flags cover.
             tile("tile-flags", "What got caught", "Mission Control", "flag",
                  {"eyebrow": "Sale Integrity Layer", "big": "—", "big_size": "md", "big_class": "flagc",
-                  "l1": "This File is about Mission Control's card model: no sales, so no flags.", "l2": ""},
-                 alt="This File on the Astronaut Time board is about Mission Control's card model, so it has no flags.")
+                  "l1": "This File is about Mission Control's card model. No sales were checked, so it has no flags.", "l2": ""},
+                 alt="This File on the Astronaut Time board is about Mission Control's card model. No sales were checked, so it has no flags.")
         else:
             tile("tile-flags", "What got caught", "Mission Control", "flag",
                  {"eyebrow": "Sale Integrity Layer", "big": "—", "big_size": "md", "big_class": "flagc",
@@ -793,8 +796,9 @@ class Kit:
         source = str(f.get("source") or "").strip()
         pulled = f.get("pulled") or f.get("as_of")
         # What every card shares is said once under the rows; what is a card's own (its population) stays on its row.
-        shared_reads = common([(r["after"].get("reads") or []) for r in rows])
-        shared_not = common([(r["after"].get("not_read") or []) for r in rows])
+        # A File of one card has nothing shared: everything stays on its row.
+        shared_reads = common([(r["after"].get("reads") or []) for r in rows]) if len(rows) > 1 else []
+        shared_not = common([(r["after"].get("not_read") or []) for r in rows]) if len(rows) > 1 else []
         confs = {str(r["after"].get("confidence") or "").strip() for r in rows if r["after"].get("read")}
         conf = confs.pop() if len(confs) == 1 and len(rows) == len([r for r in rows if r["after"].get("read")]) else ""
 
@@ -821,8 +825,11 @@ class Kit:
             own = [x for x in texts(a.get("reads")) if x not in shared_reads]
             not_read = [x for x in texts(a.get("not_read")) if x not in shared_not]
             line3 = "; ".join(own)
+            # "used" for inputs, so "read" only ever means the model's verdict
             if not_read:
-                line3 += (". " if line3 else "") + "Not read yet: " + ", ".join(not_read)
+                line3 += (". " if line3 else "") + "Not used yet: " + ", ".join(not_read)
+            # The caption says a card's own unknowns too, as its row on the cover does.
+            nr = f" Not used yet: {', '.join(not_read)}." if not_read else ""
             # One track per card: after (purple) under before (grey), so what the change added shows past the grey.
             width = {k: f"{max(0.0, min(1.0, r[k]['coverage'] if isinstance(r[k].get('coverage'), (int, float)) else 0.0)) * 100:.1f}"
                      for k in ("before", "after")}
@@ -836,25 +843,25 @@ class Kit:
             c = str(a.get("confidence") or "").strip()
             label = f"{r['name']}{' ' + tier if tier else ''}{f' ({set_line})' if set_line else ''}"
             if same:
-                sentences.append(f"{label}: {sentence('; '.join(own))}" if own else f"{label}.")
+                sentences.append((f"{label}: {sentence('; '.join(own))}" if own else f"{label}.") + nr)
             else:
                 sentences.append(
-                    f"{label}: "
-                    f"before ({short_version(b.get('version'))}), {read_word(b)}: {share_of(b.get('coverage'))} of the model had inputs, it needs {share_of(min_cov)}; "
-                    f"after ({short_version(a.get('version'))}), {read_word(a)}: {share_of(a.get('coverage'))} had inputs" + (f", {c} confidence" if a.get("read") and c else "") +
-                    (f". {sentence('; '.join(own))}" if own else "."))
+                    f"{label}. "
+                    f"Before ({short_version(b.get('version'))}): {read_word(b)}; {share_of(b.get('coverage'))} of the model had inputs, under the {share_of(min_cov)} it needs. "
+                    f"After ({short_version(a.get('version'))}): {read_word(a)}" + (f", {c} confidence" if a.get("read") and c else "") +
+                    f"; {share_of(a.get('coverage'))} had inputs." + (f" {sentence('; '.join(own))}" if own else "") + nr)
         if same:
             b, a = rows[0]["before"], rows[0]["after"]
             c = str(a.get("confidence") or "").strip()
-            sentences.insert(0, f"All {count_word(len(rows)).lower()}, before ({short_version(b.get('version'))}): {read_word(b)}, "
-                                f"{share_of(b.get('coverage'))} of the model had inputs, it needs {share_of(min_cov)}. "
-                                f"After ({short_version(a.get('version'))}): {read_word(a)}, {share_of(a.get('coverage'))} had inputs" +
-                                (f", {c} confidence." if a.get("read") and c else "."))
+            sentences.insert(0, f"All {count_word(len(rows)).lower()}, before ({short_version(b.get('version'))}): {read_word(b)}; "
+                                f"{share_of(b.get('coverage'))} of the model had inputs, under the {share_of(min_cov)} it needs. "
+                                f"After ({short_version(a.get('version'))}): {read_word(a)}" + (f", {c} confidence" if a.get("read") and c else "") +
+                                f"; {share_of(a.get('coverage'))} had inputs.")
         shared = []
         if shared_reads:
-            shared.append(f"On each card it also read {', '.join(shared_reads[:-1]) + ' and ' if len(shared_reads) > 1 else ''}{shared_reads[-1]}.")
+            shared.append(f"On each card it also used {', '.join(shared_reads[:-1]) + ' and ' if len(shared_reads) > 1 else ''}{shared_reads[-1]}.")
         if shared_not:
-            shared.append(f"Not read yet: {', '.join(shared_not)}.")
+            shared.append(f"Not used yet: {', '.join(shared_not)}.")
         closing = "No score shown" + (f": each read is {conf} confidence." if conf else ".") + " Not a forecast, not advice."
         # The footer tag is the image's source mark (the cover travels without its caption): the population's source and
         # the day it was read, in full, when every row shares them; shortened only if the full line can't fit the footer.
@@ -874,7 +881,7 @@ class Kit:
         legend = (f"Bar: how much of {name} had inputs on each card, grey before{f' ({bv})' if bv else ''}, "
                   f"purple after{f' ({av})' if av else ''}. Dashed: the {share_of(min_cov)} it needs for a read.")
         sets = {str(r.get("set") or "").strip() for r in rows}
-        what = f"{count_word(len(rows))} {sets.pop() + ' ' if len(sets) == 1 and '' not in sets else ''}cards"
+        what = f"{count_word(len(rows))} {sets.pop() + ' ' if len(sets) == 1 and '' not in sets else ''}card{'s' if len(rows) != 1 else ''}"
         self.page("file-build-cover.html", f"file-{day}-cover", {
             "kicker": kicker, "tag": tag, "file_title": title, "lede": dek,
             "slot": slot, "legend": legend, "min": f"{min_cov * 100:.1f}", "rows": cover_rows, "shared": " ".join(shared),
@@ -883,9 +890,9 @@ class Kit:
                     " ".join(sentences) + (" " + " ".join(shared) if shared else "") +
                     "".join(f" {s_['label']}: {s_['text']}" for s_ in story) +
                     (f" Source: {sentence(source)}" if source else "") + f" {closing} {SITE}"),
-            alt=(f"The File on the Astronaut Time board: {sentence(title)} {what}, each with a bar for how much of {name} had inputs "
+            alt=(f"The File on the Astronaut Time board: {sentence(title)} {what}, {'each ' if len(rows) != 1 else ''}with a bar for how much of {name} had inputs "
                  f"before ({short_version(rows[0]['before'].get('version'))}) and after ({short_version(rows[0]['after'].get('version'))}), "
-                 f"against the {share_of(min_cov)} it needs for a read, and what it read. No score is shown."))
+                 f"against the {share_of(min_cov)} it needs for a read, and what it used. No score is shown."))
 
     # --- flags: the hand-checked file plus the nightly feed ---
     def build_flags(self):
@@ -1136,8 +1143,10 @@ class Kit:
             # A build File's hero figure ("0 → 3"), with what it counts beside it. Never a score.
             title, value, note = build_hero(f)
             if build_rows(f) and value:
+                # The figure travels without a caption, so it says when the model ran (the footer's date is the board's).
+                ran = f" Both versions run {fmt_date_year(f.get('as_of'))}." if f.get("as_of") else ""
                 stat = {"name": str(f.get("headline") or f.get("title") or "").strip(), "pct": value, "small": "",
-                        "pct_class": "", "line2": sentence(f"{title}, {note}" if note else title)}
+                        "pct_class": "", "line2": sentence(f"{title}, {note}" if note else title) + ran}
                 stat_max = 470  # its headline and line run long: the box wraps them instead of squeezing the lead
         elif is_market(f):
             # A market File's hero figure, its "of" smaller ("15 of 30"), with what it counts beside it.
@@ -1164,10 +1173,11 @@ class Kit:
         else:
             headline = "The card market, with the fake sales taken out."
             lede = "Sales checked one by one, dated calls, release dates. Every number carries its source and its date."
+        self.og_alt = f"Mission Control by Astronaut Time: {headline[:1].lower()}{headline[1:]}"
         self.page("og.html", "og-board", {
             "frame_class": "og", "kicker": "Mission Control", "tag": f"Updated {fmt_date(updated)}",
             "headline": headline, "lede": lede, "stat": stat, "stat_max": stat_max,
-        }, caption="", alt=f"Mission Control by Astronaut Time: {headline[:1].lower()}{headline[1:]}", w=OG_W, h=OG_H)
+        }, caption="", alt=self.og_alt, w=OG_W, h=OG_H)
 
     # --- render ---
     def screenshot(self, changed_only: bool = False):
@@ -1249,6 +1259,11 @@ class Kit:
                 continue
             text = p.read_text(encoding="utf-8")
             new = re.sub(r"(https://board\.jacknbauhs\.com/assets/og\.png)(\?v=[0-9-]+)?", rf"\1?v={stamp}", text)
+            # The alt describes the image just rendered (its headline changes with the File's kind), not a fixed one.
+            alt = getattr(self, "og_alt", "")
+            if alt:
+                new = re.sub(r'(<meta property="og:image:alt" content=")[^"]*(")',
+                             lambda m_: m_.group(1) + html.escape(alt, quote=True) + m_.group(2), new)
             if new != text:
                 p.write_text(new, encoding="utf-8")
                 print(f"stamped og:image in {name} (?v={stamp})")

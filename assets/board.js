@@ -186,11 +186,12 @@
   function isBuild(file) { return str(file && file.kind).toLowerCase() === "build"; }
   // "moonshot-m1.1" -> "m1.1": the short version name for a column head or a bar label.
   function shortVersion(v) { return str(v).replace(/^moonshot-/i, ""); }
-  // A build row's line for one model version: "No read · 39% of the model" or "Read · 54% of the model · low confidence".
+  // A build row's line for one model version: "No read · 39% of the model had inputs" or "Read, low confidence · 54% of the
+  // model had inputs". The share says what it measures, so it can't be taken for a confidence or a score.
   function readLine(side) {
     var conf = str(side && side.confidence);
-    return (side && side.read ? "Read" : "No read") + (isNum(side && side.coverage) ? " · " + share(side.coverage) + " of the model" : "") +
-      (side && side.read && conf ? " · " + conf + " confidence" : "");
+    return (side && side.read ? "Read" + (conf ? ", " + conf + " confidence" : "") : "No read") +
+      (isNum(side && side.coverage) ? " · " + share(side.coverage) + " of the model had inputs" : "");
   }
   // The flags tally as the File shows it ("15 of 30"), or "" when it has none.
   function tally(file) {
@@ -797,11 +798,14 @@
         bars.appendChild(svg("rect", { x: x0, y: y, width: x1 - x0, height: 14, rx: 3, fill: "rgba(236,234,246,0.05)" }));
         if (isNum(side.coverage)) bars.appendChild(svg("rect", { x: x0, y: y, width: Math.max(2, x(cov) - x0), height: 14, rx: 3, fill: k[1], "fill-opacity": k[2] }));
         // The value sits just past the bar; "low confidence" only where there is room for it (the table always says it).
+        // When even the short label has no room there, it goes inside the bar's end (the halo keeps it readable on the bar).
         var full = share(side.coverage) + " · " + (side.read ? "read" : "no read") + (side.read && str(side.confidence) ? ", " + str(side.confidence) + " confidence" : "");
         var short = share(side.coverage) + " · " + (side.read ? "read" : "no read");
         var room = x1 - (x(cov) + 8);
-        g.appendChild(svgText(Object.assign({ x: x(cov) + 8, y: y + 11, "font-size": 12, fill: side.read ? COLORS.text : COLORS.muted, "font-family": mono }, halo),
-          full.length * 7.4 <= room ? full : short));
+        var label = full.length * 7.4 <= room ? full : short;
+        var inside = label.length * 7.4 > room;
+        g.appendChild(svgText(Object.assign({ x: inside ? x(cov) - 6 : x(cov) + 8, y: y + 11, "font-size": 12, fill: side.read ? COLORS.text : COLORS.muted,
+          "font-family": mono }, inside ? { "text-anchor": "end" } : {}, halo), label));
       });
       labels.appendChild(g);
     });
@@ -821,7 +825,7 @@
     var model = file.model && typeof file.model === "object" ? file.model : {};
     var before = shortVersion(model.before && model.before.version) || (rows[0] ? shortVersion(rows[0].before.version) : "");
     var after = shortVersion(model.after && model.after.version) || (rows[0] ? shortVersion(rows[0].after.version) : "");
-    var cols = ["Card", "Before" + (before ? " · " + before : ""), "After" + (after ? " · " + after : ""), "Not read yet"];
+    var cols = ["Card", "Before" + (before ? " · " + before : ""), "After" + (after ? " · " + after : ""), "Not used yet"];
     var head = $("#file-head");
     head.innerHTML = "";
     head.appendChild(el("tr", {}, cols.map(function (h) { return el("th", { scope: "col", text: h }); })));
@@ -841,7 +845,7 @@
       var reads = (Array.isArray(m.after.reads) ? m.after.reads : []).map(str);
       // When the first After line already gives the count, the Card cell gives only where it came from.
       var popLine = !count ? "" : reads.some(function (t) { return t.indexOf(count) !== -1; })
-        ? (popSrc ? "Population: " + popSrc : "")
+        ? (popSrc ? "Source: " + popSrc : "")
         : (str(m.tier) ? str(m.tier) + "s" : "At the grade") + ": " + count + " graded" + (popSrc ? " (" + popSrc + ")" : "");
       var notRead = (Array.isArray(m.after.not_read) ? m.after.not_read : []).map(str).filter(Boolean);
       body.appendChild(el("tr", {}, [

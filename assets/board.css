@@ -343,3 +343,17 @@ table.data.rip th { white-space: nowrap; }
   .market-hero .big-stat { text-align: left; }
   .market-hero .big-stat .muted { margin-left: 0; }
 }
+
+/* A build File ("kind": "build"): Mission Control's card model before and after on a few cards. It has no flags of its own,
+   so the "In The File" flags block hides (both are flex boxes, so [hidden] needs saying); its table cells hold short lists,
+   so they wrap, and on phones each label sits above its cell instead of beside it */
+.sub-h[hidden], .card.flags[hidden] { display: none; }
+table.data.build td { vertical-align: top; }
+table.data.build .cell { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+table.data.build .cell .main { font-family: var(--mono); font-size: 13px; color: var(--text-2); }
+table.data.build .cell .sub { margin-top: 0; line-height: 1.45; }
+table.data.build td.first .sub { margin-top: 3px; }
+@media (max-width: 820px) {
+  table.data.build td { display: block; padding: 6px 0; }
+  table.data.build td[data-label]::before { display: block; margin-bottom: 3px; }
+}

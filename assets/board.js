@@ -1,8 +1,9 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
    Kept by hand: file.json (The File, Tue / Thu / Sat) and cards/*.json, calls.json, drops.json.
-   The File comes in two kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind")
-   and a market File ("kind": "market": TCGplayer price moves, the day before against the next day, no card files).
+   The File comes in three kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind"),
+   a market File ("kind": "market": TCGplayer price moves, the day before against the next day, no card files) and a build
+   File ("kind": "build": Mission Control's model before and after on a few cards, no card files, no sales, never a score).
    Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json,
    digest.json and watching.json (the Today strip; both may be missing until Mission Control publishes them).
    A missing or broken file only blanks its own section. */
@@ -180,6 +181,17 @@
 
   // A market File is about TCGplayer price moves: no featured card, no card files, no 130point sales.
   function isMarket(file) { return str(file && file.kind).toLowerCase() === "market"; }
+  // A build File is about Mission Control itself: how much of its card model could read each card, before and after a
+  // change. No card files, no sales, no prices, and never a score, tier or stance (a low-confidence read gets none).
+  function isBuild(file) { return str(file && file.kind).toLowerCase() === "build"; }
+  // "moonshot-m1.1" -> "m1.1": the short version name for a column head or a bar label.
+  function shortVersion(v) { return str(v).replace(/^moonshot-/i, ""); }
+  // A build row's line for one model version: "No read · 39% of the model" or "Read · 54% of the model · low confidence".
+  function readLine(side) {
+    var conf = str(side && side.confidence);
+    return (side && side.read ? "Read" : "No read") + (isNum(side && side.coverage) ? " · " + share(side.coverage) + " of the model" : "") +
+      (side && side.read && conf ? " · " + conf + " confidence" : "");
+  }
   // The flags tally as the File shows it ("15 of 30"), or "" when it has none.
   function tally(file) {
     var h = file && file.flags && file.flags.headline;
@@ -595,8 +607,11 @@
     story.hidden = !story.childNodes.length;
 
     var featured = byId[file.featured];
-    var market = isMarket(file);
+    var market = isMarket(file), build = !market && isBuild(file);
     var mrows = market ? (Array.isArray(file.rows) ? file.rows : []).filter(function (r) { return r && str(r.name) && isNum(r.change_pct); }) : [];
+    var brows = build ? (Array.isArray(file.rows) ? file.rows : []).filter(function (r) {
+      return r && str(r.name) && r.before && typeof r.before === "object" && r.after && typeof r.after === "object";
+    }) : [];
     if (featured) {
       var hero = $("#hero-chart");
       hero.innerHTML = "";
@@ -608,13 +623,16 @@
       cap.appendChild(el("a", { href: "card.html?id=" + featured.id, text: "See every sale →" }));
     } else if (market) {
       marketHero(file, mrows);
+    } else if (build) {
+      buildHero(file, brows);
     }
 
     // stats: the file's cards (or the tiles it sets itself), its flag count, the next release
     var sEl = $("#stats");
     sEl.innerHTML = "";
     var given = fileStats(file);
-    var stats = given ? given.map(function (s) { return { v: s.v, c: tone(s.v, file), t: s.t }; }) : (file.rows || []).slice(0, 2).map(function (row) {
+    // A build File's rows have no change to show, so only its own tiles do.
+    var stats = given ? given.map(function (s) { return { v: s.v, c: tone(s.v, file), t: s.t }; }) : build ? [] : (file.rows || []).slice(0, 2).map(function (row) {
       return { v: pct(row.change_pct), c: row.change_pct >= 0 ? "up" : "down", t: row.stat || row.name };
     });
     // The flags tile, unless one of the File's own tiles already shows the same tally.
@@ -636,6 +654,8 @@
     body.innerHTML = "";
     if (market) {
       marketTable(file, mrows, body);
+    } else if (build) {
+      buildTable(file, brows, body);
     } else {
       (file.rows || []).forEach(function (m) {
         body.appendChild(el("tr", {}, [
@@ -653,8 +673,13 @@
     }
     $("#file-foot").textContent = file.foot || "";
 
-    // what the file threw out
+    // what the file threw out. A File with no flags (a build File) hides the block, so Sep 28's static "7/39" never shows.
     var f = file.flags;
+    if (!f) {
+      var fh = $("#file-flags-h"), fc = $("#file-flags");
+      if (fh) fh.hidden = true;
+      if (fc) fc.hidden = true;
+    }
     if (f) {
       $("#flag-count").textContent = f.headline.value + "/" + f.headline.of;
       $("#flag-text").textContent = f.text;
@@ -697,6 +722,131 @@
     var span = dateSpan(rows.map(function (r) { return r.last && r.last.date; }));
     $("#hero-caption").textContent = [str(file.source), span ? "Prices as of " + span : "", isDate(file.pulled) ? "Pulled " + fmtDateYear(file.pulled) : ""]
       .filter(Boolean).join(". ") + ".";
+  }
+
+  // A build File's hero: for each card, how much of the model had inputs before and after, against the share it needs.
+  // Every static line under the title and the number, the legend and the caption describe a sales chart, so all change.
+  // file.json "hero": {title, value, note}; "model": {name, min_coverage, before {version}, after {version}}.
+  function buildHero(file, rows) {
+    var hero = file.hero && typeof file.hero === "object" ? file.hero : {};
+    var model = file.model && typeof file.model === "object" ? file.model : {};
+    var min = isNum(model.min_coverage) ? model.min_coverage : 0.5;
+    var name = str(model.name) || "Mission Control's card model";
+    var big = $("#hero-change");
+    $("#hero-chart").parentNode.classList.add("market-hero"); // the same wide-figure layout as a market File
+    $("#hero-title").textContent = str(hero.title) || str(file.headline) || str(file.title);
+    // When every read after has the same confidence, the note says so, so it shows on a phone too, where a bar's label is short.
+    var confs = rows.map(function (r) { return r.after.read ? str(r.after.confidence) : ""; });
+    var conf = confs.length && confs.every(function (c) { return c && c === confs[0]; }) ? confs[0] : "";
+    $("#hero-note").textContent = "How much of " + name + " had inputs on each card, before and after. Under " + share(min) + " it gives no read." +
+      (conf ? " Every read after is " + conf + " confidence." : "");
+    big.textContent = str(hero.value);
+    big.className = "num";
+    big.style.color = "";
+    $("#hero-change-note").textContent = str(hero.note);
+    var box = $("#hero-chart");
+    box.innerHTML = "";
+    if (rows.length) box.appendChild(coverageChart(rows, fitChart(box, 0).width, min));
+    var before = shortVersion(model.before && model.before.version) || (rows[0] ? shortVersion(rows[0].before.version) : "");
+    var after = shortVersion(model.after && model.after.version) || (rows[0] ? shortVersion(rows[0].after.version) : "");
+    var lg = $("#hero-legend");
+    lg.innerHTML = "";
+    [[COLORS.neutral, "Before" + (before ? " · " + before : "")], [COLORS.accent, "After" + (after ? " · " + after : "")]].forEach(function (k) {
+      lg.appendChild(el("span", {}, [el("i", { class: "swatch", style: "background:" + k[0] + ";border-radius:3px" }), k[1]]));
+    });
+    lg.appendChild(el("span", {}, [el("i", { class: "swatch line", style: "background:repeating-linear-gradient(90deg," + COLORS.text + " 0 4px,transparent 4px 7px)" }),
+      share(min) + ": the least it needs for a read"]));
+    $("#hero-caption").textContent = [str(file.source), "Not a forecast, not advice"].filter(Boolean).join(". ") + ".";
+  }
+
+  /* ---------- coverage chart: a build File's rows, each card's before and after as bars on 0 to 100%, the minimum dashed ---------- */
+  function coverageChart(rows, W, min) {
+    var L = 2, R = 4, T = 24, B = 26, band = 76, lab = 44; // each card: its name line, then the before bar and the after bar
+    var H = T + rows.length * band + B;
+    var x0 = L + lab, x1 = W - R;
+    var x = function (f) { return x0 + Math.max(0, Math.min(1, f)) * (x1 - x0); };
+    var mono = "Geist Mono, monospace";
+    var halo = { stroke: COLORS.surface, "stroke-width": 4, "paint-order": "stroke", "stroke-linejoin": "round" };
+    var bars = svg("g", {}), labels = svg("g", {});
+    var root = svg("svg", { viewBox: "0 0 " + W + " " + H, class: "chart", role: "img",
+      "aria-label": "How much of the model had inputs on each card, before and after; under " + share(min) + " it gives no read: " + rows.map(function (r) {
+        return str(r.name) + (str(r.tier) ? " " + str(r.tier) : "") + ", " + share(r.before.coverage) + (r.before.read ? " (read)" : " (no read)") +
+          " to " + share(r.after.coverage) + (r.after.read ? " (read" + (str(r.after.confidence) ? ", " + str(r.after.confidence) + " confidence" : "") + ")" : " (no read)");
+      }).join("; ") + "." });
+    // 0%, the minimum and 100% along the bottom; the minimum dashed through every card, labeled at the top
+    [0, min, 1].forEach(function (v, i) {
+      root.appendChild(svgText({ x: x(v), y: H - 8, "text-anchor": i === 0 ? "start" : i === 2 ? "end" : "middle", "font-size": 12, fill: COLORS.muted, "font-family": mono }, share(v)));
+    });
+    root.appendChild(svg("line", { x1: x0, x2: x1, y1: H - B + 2, y2: H - B + 2, stroke: COLORS.grid }));
+    rows.forEach(function (r, i) {
+      var top = T + i * band, g = svg("g", {});
+      var title = svg("title", {});
+      title.textContent = [str(r.name) + (str(r.tier) ? " " + str(r.tier) : ""), [str(r.set), str(r.number)].filter(Boolean).join(" ")].filter(Boolean).join(", ") +
+        ": before (" + shortVersion(r.before.version) + ") " + readLine(r.before).toLowerCase() + "; after (" + shortVersion(r.after.version) + ") " + readLine(r.after).toLowerCase();
+      g.appendChild(title);
+      var sub = [str(r.set), str(r.number)].filter(Boolean).join(" ");
+      var head = svgText({ x: L, y: top + 16, "font-size": 14, "font-weight": 500, fill: COLORS.text }, str(r.name) + (str(r.tier) ? " " + str(r.tier) : ""));
+      if (sub) { var ts = svg("tspan", { fill: COLORS.muted, "font-weight": 400, "font-size": 12, dx: 8 }); ts.textContent = sub; head.appendChild(ts); }
+      g.appendChild(head);
+      [["before", COLORS.neutral, 0.55], ["after", COLORS.accent, 0.9]].forEach(function (k, n) {
+        var side = r[k[0]], y = top + 26 + n * 22, cov = isNum(side.coverage) ? side.coverage : 0;
+        g.appendChild(svgText({ x: L, y: y + 11, "font-size": 11, fill: COLORS.muted, "font-family": mono }, shortVersion(side.version)));
+        bars.appendChild(svg("rect", { x: x0, y: y, width: x1 - x0, height: 14, rx: 3, fill: "rgba(236,234,246,0.05)" }));
+        if (isNum(side.coverage)) bars.appendChild(svg("rect", { x: x0, y: y, width: Math.max(2, x(cov) - x0), height: 14, rx: 3, fill: k[1], "fill-opacity": k[2] }));
+        // The value sits just past the bar; "low confidence" only where there is room for it (the table always says it).
+        var full = share(side.coverage) + " · " + (side.read ? "read" : "no read") + (side.read && str(side.confidence) ? ", " + str(side.confidence) + " confidence" : "");
+        var short = share(side.coverage) + " · " + (side.read ? "read" : "no read");
+        var room = x1 - (x(cov) + 8);
+        g.appendChild(svgText(Object.assign({ x: x(cov) + 8, y: y + 11, "font-size": 12, fill: side.read ? COLORS.text : COLORS.muted, "font-family": mono }, halo),
+          full.length * 7.4 <= room ? full : short));
+      });
+      labels.appendChild(g);
+    });
+    // The bars, then the minimum dashed over them (so the after bar is seen to cross it), then every label on top.
+    root.appendChild(bars);
+    var mx = x(min);
+    root.appendChild(svg("line", { x1: mx, x2: mx, y1: T - 6, y2: H - B + 2, stroke: COLORS.text, "stroke-opacity": 0.55, "stroke-dasharray": "4 3" }));
+    root.appendChild(labels);
+    root.appendChild(svgText(Object.assign({ x: mx, y: T - 10, "text-anchor": "middle", "font-size": 11, fill: COLORS.text, "font-family": mono, "letter-spacing": 1 }, halo),
+      "NEEDS " + share(min) + " FOR A READ"));
+    return root;
+  }
+
+  // A build File's table: each card, what the model said before and after, and what it can't read yet. No links: these
+  // cards have no card page, and a missing cards/<id>.json would only show the load error.
+  function buildTable(file, rows, body) {
+    var model = file.model && typeof file.model === "object" ? file.model : {};
+    var before = shortVersion(model.before && model.before.version) || (rows[0] ? shortVersion(rows[0].before.version) : "");
+    var after = shortVersion(model.after && model.after.version) || (rows[0] ? shortVersion(rows[0].after.version) : "");
+    var cols = ["Card", "Before" + (before ? " · " + before : ""), "After" + (after ? " · " + after : ""), "Not read yet"];
+    var head = $("#file-head");
+    head.innerHTML = "";
+    head.appendChild(el("tr", {}, cols.map(function (h) { return el("th", { scope: "col", text: h }); })));
+    body.parentNode.classList.add("build");
+    $("#file-sub").textContent = "Tue · Thu · Sat · " + (str(model.name) || "Mission Control's card model") + ", before and after";
+    $("#moving-lede").textContent = "The File: what Mission Control's card model could read, before and after. Then the whole market from TCGplayer, each move labeled by what its checked sales show.";
+    function cell(label, main, subs) {
+      return el("td", { "data-label": label }, [el("span", { class: "cell" }, [main ? el("span", { class: "main", text: main }) : null].concat(
+        subs.filter(Boolean).map(function (t) { return el("span", { class: "sub", text: sentence(t, true) }); })))]);
+    }
+    rows.forEach(function (m) {
+      var p = m.pop && typeof m.pop === "object" ? m.pop : null;
+      var popLine = p && isNum(p.at_grade) && isNum(p.total)
+        ? (str(m.tier) ? str(m.tier) + "s" : "At the grade") + ": " + p.at_grade.toLocaleString("en-US") + " of " + p.total.toLocaleString("en-US") + " graded" +
+          (str(p.source) || isDate(p.observed) ? " (" + [str(p.source), isDate(p.observed) ? fmtDate(p.observed) : ""].filter(Boolean).join(", ") + ")" : "")
+        : "";
+      var notRead = (Array.isArray(m.after.not_read) ? m.after.not_read : []).map(str).filter(Boolean);
+      body.appendChild(el("tr", {}, [
+        el("td", { class: "first" }, [
+          el("span", { class: "name", text: str(m.name) + (str(m.tier) ? " " + str(m.tier) : "") }),
+          el("span", { class: "sub", text: [[str(m.set), str(m.number)].filter(Boolean).join(" "), str(m.note)].filter(Boolean).join(" · ") }),
+          popLine ? el("span", { class: "sub", text: popLine }) : null
+        ]),
+        cell(cols[1], readLine(m.before), [str(m.before.why)]),
+        cell(cols[2], readLine(m.after), (Array.isArray(m.after.reads) ? m.after.reads : []).map(str)),
+        cell(cols[3], notRead.length ? "" : "—", notRead.length ? [notRead.join(", ")] : [])
+      ]));
+    });
   }
 
   // A market File's table: the day before against the next day, the change, the label. Its links go to TCGplayer.

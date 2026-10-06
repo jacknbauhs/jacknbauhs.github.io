@@ -13,7 +13,7 @@
 @font-face { font-family: "Geist Mono"; font-weight: 600; font-style: normal; font-display: block; src: url("{{ fonts }}/geist-mono-latin-600-normal.woff2") format("woff2"); }
 @font-face { font-family: "Unbounded"; font-weight: 600; font-style: normal; font-display: block; src: url("{{ fonts }}/unbounded-latin-600-normal.woff2") format("woff2"); }
 @font-face { font-family: "Unbounded"; font-weight: 700; font-style: normal; font-display: block; src: url("{{ fonts }}/unbounded-latin-700-normal.woff2") format("woff2"); }
-{% include "share.css" %}
+{% include "share.css" %}{% block style %}{% endblock %}
 </style>
 </head>
 <body>

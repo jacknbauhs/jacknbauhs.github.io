@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-10-06",
+  "as_of": "2026-10-07",
   "daily": {
-    "date": "2026-10-06",
+    "date": "2026-10-07",
     "movers": [
       {
         "name": "Heatran LV.X - DP31",
@@ -9,81 +9,81 @@
         "change_pct": 55.1,
         "label": "UNCONFIRMED",
         "price": 78.32,
-        "observed": "2026-10-05"
+        "observed": "2026-10-06"
       },
       {
-        "name": "Jirachi ex - 155/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -48.1,
+        "name": "Giovanni's Persian",
+        "set": "Gym Challenge",
+        "change_pct": 46.9,
         "label": "UNCONFIRMED",
-        "price": 50.32,
-        "observed": "2026-10-05"
+        "price": 234.95,
+        "observed": "2026-10-06"
       },
       {
-        "name": "Armarouge (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 48.0,
+        "name": "Aegislash - 86/146 (Prerelease) [Staff]",
+        "set": "XY Promos",
+        "change_pct": -44.3,
         "label": "UNCONFIRMED",
-        "price": 43.25,
-        "observed": "2026-10-05"
+        "price": 52.87,
+        "observed": "2026-10-06"
       },
       {
-        "name": "Lugia",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -45.7,
+        "name": "Lugia EX (Team Plasma) (134 Full Art)",
+        "set": "Plasma Storm",
+        "change_pct": 43.2,
         "label": "UNCONFIRMED",
-        "price": 211.23,
-        "observed": "2026-10-05"
+        "price": 1344.25,
+        "observed": "2026-10-06"
       },
       {
-        "name": "Gengar (5)",
-        "set": "Fossil",
-        "change_pct": 44.8,
+        "name": "Snorlax Lv.X",
+        "set": "Rising Rivals",
+        "change_pct": 41.7,
         "label": "UNCONFIRMED",
-        "price": 663.25,
-        "observed": "2026-10-05"
+        "price": 850.0,
+        "observed": "2026-10-06"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Charizard - 3/110 (WotC Legendary Collection)",
-        "set": "Deck Exclusives",
-        "change_pct": 16.5,
+        "name": "Kyogre ex - 037 (EX Collector's Tins)",
+        "set": "Nintendo Promos",
+        "change_pct": 31.9,
         "label": "UNCONFIRMED",
-        "price": 160.38,
-        "observed": "2026-10-05"
+        "price": 241.94,
+        "observed": "2026-10-06"
       },
       {
-        "name": "Pikachu",
-        "set": "Skyridge",
-        "change_pct": 14.2,
-        "label": "UNCONFIRMED",
-        "price": 224.15,
-        "observed": "2026-10-05"
-      },
-      {
-        "name": "Mewtwo ex - 157/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": 12.7,
-        "label": "UNCONFIRMED",
-        "price": 48.88,
-        "observed": "2026-10-05"
-      },
-      {
-        "name": "Armarouge (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 12.6,
-        "label": "UNCONFIRMED",
-        "price": 43.25,
-        "observed": "2026-10-05"
-      },
-      {
-        "name": "Machamp (XY Evolutions Prerelease)",
+        "name": "Kingdra - XY39 (Prerelease)",
         "set": "XY Promos",
-        "change_pct": -11.1,
+        "change_pct": 23.4,
         "label": "UNCONFIRMED",
-        "price": 80.0,
-        "observed": "2026-10-05"
+        "price": 64.64,
+        "observed": "2026-10-06"
+      },
+      {
+        "name": "Snorlax Lv.X",
+        "set": "Rising Rivals",
+        "change_pct": 21.4,
+        "label": "UNCONFIRMED",
+        "price": 850.0,
+        "observed": "2026-10-06"
+      },
+      {
+        "name": "Shiftry ex",
+        "set": "EX Crystal Guardians",
+        "change_pct": 20.2,
+        "label": "UNCONFIRMED",
+        "price": 53.86,
+        "observed": "2026-10-06"
+      },
+      {
+        "name": "Arceus Lv.X (94)",
+        "set": "Arceus",
+        "change_pct": 19.9,
+        "label": "UNCONFIRMED",
+        "price": 85.83,
+        "observed": "2026-10-06"
       }
     ],
     "calls_due": [],

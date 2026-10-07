@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-06
+# Captions, board data of 2026-10-07
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
@@ -94,6 +94,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W41.png
 
-What's moving on TCGplayer, as of Oct 5, 2026. Ten cards moved 5% or more in the last 7 days. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +55.1%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128): $50.32, −48.1%, unconfirmed. Armarouge (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 012/084): $43.25, +48.0%, unconfirmed. Lugia (ME: 30th Celebration Classic Collection · 149/147): $211.23, −45.7%, unconfirmed. Gengar (5) (Fossil · 05/62): $663.25, +44.8%, unconfirmed. Aegislash - 86/146 (Prerelease) [Staff] (XY Promos · 86/146): $52.87, −44.3%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Gengar Lv.X (Arceus · 97/99): $680.45, +41.1%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 5, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 6, 2026. Ten cards moved 5% or more in the last 7 days. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +55.1%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Aegislash - 86/146 (Prerelease) [Staff] (XY Promos · 86/146): $52.87, −44.3%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Snorlax Lv.X (Rising Rivals · 111/111): $850, +41.7%, unconfirmed. Corviknight VMAX - 110/163 (Prize Pack Series Cards · 110/163): $80.36, +38.9%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128): $48.66, −38.6%, unconfirmed. Mew ex - 152/128 (ME: 30th Celebration · 152/128): $91.65, −38.6%, unconfirmed. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, as of Oct 6, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest TCGplayer moves in the last 7 days, each with its market price, its change and the label for what checked sales show.

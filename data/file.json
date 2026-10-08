@@ -1,258 +1,149 @@
 {
  "kind": "market",
- "date": "2026-10-06",
- "slot": "Tue story",
- "stance": "CAUTION",
- "as_of": "2026-10-04",
- "pulled": "2026-10-05",
- "title": "The +211% that wasn't",
- "headline": "The +211% that wasn't.",
- "dek": "On Oct 2, TCGplayer's market price for Raikou (Shiny) from Call of Legends jumped 210.7% in a day, to $698.99. Not one checked sale stood behind it. In our first three days of daily movers, half the moves looked like that.",
- "why_now": "The board started showing what moved since yesterday on Oct 3. Its first three lists (prices from Oct 2 to Oct 4) held 30 moves. None had a checked sale behind it, and 15 were bigger than 40%.",
- "risk": "Some of these may be real: a card that rarely trades can reprice on one honest sale. Unconfirmed means nobody has checked the sales yet, not that anything is wrong with them.",
- "what_to_watch": "From this week, a one-day move with no checked sale shows on the board only if it is 40% or less and the lowest listing moved the same way. Watch how many make the cut.",
+ "date": "2026-10-08",
+ "slot": "Thu market",
+ "stance": null,
+ "as_of": "2026-10-05",
+ "pulled": "2026-10-06",
+ "title": "30th Celebration, three weeks in",
+ "headline": "Our prices can see the 30th Celebration from day 12, not its launch.",
+ "dek": "TCGplayer's market price for the four 30th Celebration cards on the board's first 7-day list fell between 39.1% and 48.1% from Sep 28 to Oct 5. All four are unconfirmed: no sale checked on any of them. What the list doesn't show: the set's launch week, the set as a whole, or the original cards its Classic Collection reprints.",
+ "why_now": "The board's 7-day list filled in for the first time on Oct 6, with prices from Sep 28 to Oct 5: days 12 to 19 after the Sep 16 launch. Our prices start Sep 28, so launch week isn't in them.",
+ "risk": "Any of these moves may be real: unconfirmed means no sale was checked, not that anything is wrong. The list holds at most ten of the biggest moves that pass its rule, so it can't speak for the set. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "On the Oct 8 list (prices Sep 30 to Oct 7), TCGplayer's market price for Mew ex fell 41.3% to $84.80 and for Jirachi ex 39.4% to $46.96, both unconfirmed and still on the list two days later. The Lugia reprint and Gengar ex aren't on it. Off the list wouldn't mean steady: a card drops off by moving less than the list's smallest move (38.9% on Oct 8), more than 60% with no checked sale, without its lowest listing moving the same way, or below $20.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's daily movers (Oct 3 to 5, 2026)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's first 7-day list (prices Sep 28 to Oct 5, 2026, published Oct 6) and the Oct 8 list (prices Sep 30 to Oct 7, 2026, published Oct 8)",
  "hero": {
-  "title": "One-day moves with no checked sale behind them",
-  "value": "15 of 30",
-  "note": "over 40% in a day"
+  "title": "30th Celebration cards on the board's first 7-day list, none with a checked sale",
+  "value": "4 of 10",
+  "note": "days 12 to 19 after the Sep 16 launch (Sep 28 to Oct 5)"
  },
  "stats": [
   {
-   "value": "15 of 30",
-   "label": "one-day moves bigger than 40%, none with a checked sale"
-  },
-  {
-   "value": "+235.6%",
-   "label": "the biggest: Manectric ex, EX Deoxys"
+   "value": "Sep 28",
+   "label": "where our TCGplayer prices start, 12 days after the Sep 16 launch: launch week isn't in them"
   }
  ],
  "rows": [
   {
-   "id": 87167,
-   "name": "Manectric ex",
-   "set": "EX Deoxys 101/107",
+   "id": 716232,
+   "name": "Jirachi ex - 155/128",
+   "set": "ME: 30th Celebration",
    "tier": "Raw · TCGplayer market price",
+   "window_label": "7d",
    "prev": {
-    "price": 74.49,
-    "date": "2026-10-02"
+    "price": 97,
+    "approx": true,
+    "date": "2026-09-28"
    },
    "last": {
-    "price": 250.0,
-    "date": "2026-10-03"
+    "price": 50.32,
+    "date": "2026-10-05"
    },
-   "change_pct": 235.6,
+   "change_pct": -48.1,
    "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/87167"
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/716232"
   },
   {
-   "id": 88536,
-   "name": "Raikou (Shiny)",
-   "set": "Call of Legends SL9",
+   "id": 714386,
+   "name": "Lugia",
+   "set": "ME: 30th Celebration Classic Collection 149/147",
    "tier": "Raw · TCGplayer market price",
+   "window_label": "7d",
    "prev": {
-    "price": 224.97,
-    "date": "2026-10-01"
+    "price": 389,
+    "approx": true,
+    "date": "2026-09-28"
    },
    "last": {
-    "price": 698.99,
-    "date": "2026-10-02"
+    "price": 211.23,
+    "date": "2026-10-05"
    },
-   "change_pct": 210.7,
+   "change_pct": -45.7,
    "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/88536"
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/714386"
   },
   {
-   "id": 117601,
-   "name": "Garchomp - 5/147 (Cracked Ice Holo)",
-   "set": "Deck Exclusives 005/147",
+   "id": 717605,
+   "name": "Mew ex - 152/128",
+   "set": "ME: 30th Celebration",
    "tier": "Raw · TCGplayer market price",
+   "window_label": "7d",
    "prev": {
-    "price": 49.7,
-    "date": "2026-10-01"
+    "price": 154,
+    "approx": true,
+    "date": "2026-09-28"
    },
    "last": {
-    "price": 118.18,
-    "date": "2026-10-02"
+    "price": 92.28,
+    "date": "2026-10-05"
    },
-   "change_pct": 137.8,
+   "change_pct": -40.2,
    "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/117601"
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/717605"
   },
   {
-   "id": 480500,
-   "name": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon)",
-   "set": "World Championship Decks 95/95",
+   "id": 717610,
+   "name": "Gengar ex - 154/128",
+   "set": "ME: 30th Celebration",
    "tier": "Raw · TCGplayer market price",
+   "window_label": "7d",
    "prev": {
-    "price": 29.38,
-    "date": "2026-10-03"
+    "price": 119,
+    "approx": true,
+    "date": "2026-09-28"
    },
    "last": {
-    "price": 59.99,
-    "date": "2026-10-04"
+    "price": 72.18,
+    "date": "2026-10-05"
    },
-   "change_pct": 104.2,
+   "change_pct": -39.1,
    "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/480500"
-  },
-  {
-   "id": 88089,
-   "name": "Pikachu - DP16",
-   "set": "Diamond and Pearl Promos",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 119.97,
-    "date": "2026-10-03"
-   },
-   "last": {
-    "price": 243.3,
-    "date": "2026-10-04"
-   },
-   "change_pct": 102.8,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/88089"
-  },
-  {
-   "id": 83521,
-   "name": "Altaria",
-   "set": "Boundaries Crossed 152/149",
-   "tier": "Raw · TCGplayer market price",
-   "prev": {
-    "price": 155.82,
-    "date": "2026-10-02"
-   },
-   "last": {
-    "price": 299.95,
-    "date": "2026-10-03"
-   },
-   "change_pct": 92.5,
-   "label": "UNCONFIRMED",
-   "note": "one day, no checked sale",
-   "link": "https://www.tcgplayer.com/product/83521"
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/717610"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Moves: the board's one-day lists, prices as of Oct 2, 3 and 4, 2026. Day before: worked back from the listed price and its rounded change, so within a few cents. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Moves: the board's first 7-day list, published Oct 6, prices as of Sep 28 and Oct 5, 2026, and the Oct 8 list, prices as of Sep 30 and Oct 7, 2026. Launch: Sep 16, 2026, the date on the board's calls and its Crystal Lugia card file. Sep 28 prices: worked back from the listed price and its rounded change, then rounded to the dollar, so within 60 cents; the list doesn't publish them. The list: up to 10 cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less and the lowest listing moved the same way. A card not on it may have moved less, more, or without its lowest listing moving the same way. Original printings: the raw 2003 Crystal Lugia wasn't on any list through Oct 7. That doesn't mean its price held steady: the board doesn't publish it. Our only look at the original Lugia is the Sep 28 File on Crystal Lugia PSA 8 (eBay sales through Sep 27): a different grade, venue and window, so it isn't set against the Classic Collection Lugia. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 15,
-   "of": 30,
-   "label": "one-day moves over 40% with no checked sale"
+   "value": 4,
+   "of": 4,
+   "label": "moves from the 30th Celebration on the board's first 7-day list with no checked sale"
   },
-  "text": "TCGplayer's market price averages recent sales, so on a card that rarely sells, one sale can swing it by half or more overnight. None of these 15 moves had a sale checked by Mission Control behind it, so each one stays unconfirmed until a checked sale speaks to it.",
-  "stat": "Of the board's first 30 one-day moves, 15 were bigger than 40% and none had a checked sale.",
+  "text": "Mission Control hasn't checked a sale behind any move on the board's first 7-day list, these four included. With no checked sales, a move shows only if it's 60% or less over 7 days and TCGplayer's lowest listing moved the same way, by an amount we don't publish (it can be a cent).",
+  "stat": "No sale checked behind any of the four, or any other move on the list. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Manectric ex · EX Deoxys",
-    "date": "2026-10-03",
-    "price": 250.0,
+    "card": "Jirachi ex - 155/128",
+    "date": "2026-10-05",
+    "price": 50.32,
     "label": "UNCONFIRMED",
-    "why": "+235.6% in a day; no checked sale"
+    "why": "−48.1% in 7 days; no checked sale"
    },
    {
-    "card": "Raikou (Shiny) · Call of Legends",
-    "date": "2026-10-02",
-    "price": 698.99,
+    "card": "Lugia 149/147 · Classic Collection",
+    "date": "2026-10-05",
+    "price": 211.23,
     "label": "UNCONFIRMED",
-    "why": "+210.7% in a day; no checked sale"
+    "why": "−45.7% in 7 days; no checked sale"
    },
    {
-    "card": "Garchomp - 5/147 (Cracked Ice Holo) · Deck Exclusives",
-    "date": "2026-10-02",
-    "price": 118.18,
+    "card": "Mew ex - 152/128",
+    "date": "2026-10-05",
+    "price": 92.28,
     "label": "UNCONFIRMED",
-    "why": "+137.8% in a day; no checked sale"
+    "why": "−40.2% in 7 days; no checked sale"
    },
    {
-    "card": "Suicune & Entei Legend LEGEND (95) - 2011 (Ross Cawthon) · World Championship Decks",
-    "date": "2026-10-04",
-    "price": 59.99,
+    "card": "Gengar ex - 154/128",
+    "date": "2026-10-05",
+    "price": 72.18,
     "label": "UNCONFIRMED",
-    "why": "+104.2% in a day; no checked sale"
-   },
-   {
-    "card": "Pikachu - DP16 · Diamond and Pearl Promos",
-    "date": "2026-10-04",
-    "price": 243.3,
-    "label": "UNCONFIRMED",
-    "why": "+102.8% in a day; no checked sale"
-   },
-   {
-    "card": "Altaria · Boundaries Crossed",
-    "date": "2026-10-03",
-    "price": 299.95,
-    "label": "UNCONFIRMED",
-    "why": "+92.5% in a day; no checked sale"
-   },
-   {
-    "card": "Gyarados · Base Set (Shadowless)",
-    "date": "2026-10-04",
-    "price": 111.61,
-    "label": "UNCONFIRMED",
-    "why": "−82.4% in a day; no checked sale"
-   },
-   {
-    "card": "Garchomp · Supreme Victors",
-    "date": "2026-10-02",
-    "price": 102.42,
-    "label": "UNCONFIRMED",
-    "why": "+77.7% in a day; no checked sale"
-   },
-   {
-    "card": "Lugia EX (Team Plasma) (134 Full Art) · Plasma Storm",
-    "date": "2026-10-04",
-    "price": 1344.25,
-    "label": "UNCONFIRMED",
-    "why": "+69.7% in a day; no checked sale"
-   },
-   {
-    "card": "Gardevoir · EX Emerald",
-    "date": "2026-10-04",
-    "price": 199.99,
-    "label": "UNCONFIRMED",
-    "why": "+58.9% in a day; no checked sale"
-   },
-   {
-    "card": "Rocket's Articuno ex · EX Team Rocket Returns",
-    "date": "2026-10-03",
-    "price": 184.99,
-    "label": "UNCONFIRMED",
-    "why": "−51.3% in a day; no checked sale"
-   },
-   {
-    "card": "Regice Star · EX Legend Maker",
-    "date": "2026-10-02",
-    "price": 649.98,
-    "label": "UNCONFIRMED",
-    "why": "−48.0% in a day; no checked sale"
-   },
-   {
-    "card": "Mamoswine (Japanese 11th Movie Commemoration Set) · Miscellaneous Cards & Products",
-    "date": "2026-10-02",
-    "price": 35.0,
-    "label": "UNCONFIRMED",
-    "why": "+46.0% in a day; no checked sale"
-   },
-   {
-    "card": "Heatran LV.X - DP31 · Diamond and Pearl Promos",
-    "date": "2026-10-04",
-    "price": 78.32,
-    "label": "UNCONFIRMED",
-    "why": "+45.1% in a day; no checked sale"
-   },
-   {
-    "card": "Porygon-Z LV.X · Majestic Dawn",
-    "date": "2026-10-04",
-    "price": 122.28,
-    "label": "UNCONFIRMED",
-    "why": "+43.3% in a day; no checked sale"
+    "why": "−39.1% in 7 days; no checked sale"
    }
   ]
  }

@@ -7,7 +7,7 @@
       <p class="sub">{{ lede }}</p>
     </div>
     {% if stat %}
-    <div class="stat">
+    <div class="stat"{% if stat.max %} style="max-width: {{ stat.max }}px"{% endif %}>
       <span class="eyebrow" style="font-size: 14px">The File</span>
       <div class="name" style="margin-top: 8px">{{ stat.name }}</div>
       <div class="pct {{ stat.pct_class }}">{{ stat.pct }}{% if stat.small %}<small>{{ stat.small }}</small>{% endif %}</div>

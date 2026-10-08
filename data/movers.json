@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-10-06",
+  "as_of": "2026-10-07",
   "items": [
     {
       "id": 86055,
@@ -9,7 +9,7 @@
       "tier": "Promo",
       "last": {
         "price": 78.32,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": 55.1,
       "window_label": "7d",
@@ -17,7 +17,43 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 157675,
+      "name": "Giratina Prism Star",
+      "set": "SM - Ultra Prism",
+      "number": "58/156",
+      "tier": "Prism Rare",
+      "last": {
+        "price": 39.64,
+        "date": "2026-10-07"
+      },
+      "change_pct": 53.2,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 88954,
+      "name": "Sceptile ex",
+      "set": "EX Team Magma vs Team Aqua",
+      "number": "93/95",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 372.49,
+        "date": "2026-10-07"
+      },
+      "change_pct": 49.0,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
     },
     {
       "id": 85724,
@@ -27,7 +63,7 @@
       "tier": "Holo Rare",
       "last": {
         "price": 234.95,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": 46.9,
       "window_label": "7d",
@@ -35,7 +71,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
       "id": 243196,
@@ -45,7 +81,7 @@
       "tier": "Promo",
       "last": {
         "price": 52.87,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": -44.3,
       "window_label": "7d",
@@ -53,7 +89,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
       "id": 86916,
@@ -63,7 +99,7 @@
       "tier": "Ultra Rare",
       "last": {
         "price": 1344.25,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": 43.2,
       "window_label": "7d",
@@ -71,7 +107,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
       "id": 89397,
@@ -81,7 +117,7 @@
       "tier": "Ultra Rare",
       "last": {
         "price": 850.0,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": 41.7,
       "window_label": "7d",
@@ -89,7 +125,43 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 717605,
+      "name": "Mew ex - 152/128",
+      "set": "ME: 30th Celebration",
+      "number": "152/128",
+      "tier": "Special Illustration Rare",
+      "last": {
+        "price": 84.8,
+        "date": "2026-10-07"
+      },
+      "change_pct": -41.3,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 716232,
+      "name": "Jirachi ex - 155/128",
+      "set": "ME: 30th Celebration",
+      "number": "155/128",
+      "tier": "Special Illustration Rare",
+      "last": {
+        "price": 46.96,
+        "date": "2026-10-07"
+      },
+      "change_pct": -39.4,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
     },
     {
       "id": 476063,
@@ -99,7 +171,7 @@
       "tier": "Ultra Rare",
       "last": {
         "price": 80.36,
-        "date": "2026-10-06"
+        "date": "2026-10-07"
       },
       "change_pct": 38.9,
       "window_label": "7d",
@@ -107,25 +179,117 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
+      "observed": "2026-10-07"
+    }
+  ],
+  "one_day": [
     {
-      "id": 716232,
-      "name": "Jirachi ex - 155/128",
-      "set": "ME: 30th Celebration",
-      "number": "155/128",
-      "tier": "Special Illustration Rare",
+      "id": 86332,
+      "name": "Jirachi ex",
+      "set": "EX Crystal Guardians",
+      "number": "94/100",
+      "tier": "Ultra Rare",
       "last": {
-        "price": 48.66,
-        "date": "2026-10-06"
+        "price": 210.39,
+        "date": "2026-10-07"
       },
-      "change_pct": -38.6,
-      "window_label": "7d",
+      "change_pct": -19.1,
+      "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 211454,
+      "name": "Espeon & Deoxys GX Oversized - SM240 (SM Black Star Promo)",
+      "set": "Jumbo Cards",
+      "number": "SM240",
+      "tier": "Promo",
+      "last": {
+        "price": 25.28,
+        "date": "2026-10-07"
+      },
+      "change_pct": 13.6,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 717603,
+      "name": "Mewtwo ex - 151/128",
+      "set": "ME: 30th Celebration",
+      "number": "151/128",
+      "tier": "Special Illustration Rare",
+      "last": {
+        "price": 54.18,
+        "date": "2026-10-07"
+      },
+      "change_pct": 11.3,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 86673,
+      "name": "Latios ex",
+      "set": "EX Dragon",
+      "number": "94/97",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 249.48,
+        "date": "2026-10-07"
+      },
+      "change_pct": -11.1,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 178975,
+      "name": "Ditto Prism Star",
+      "set": "SM - Lost Thunder",
+      "number": "154/214",
+      "tier": "Prism Rare",
+      "last": {
+        "price": 23.07,
+        "date": "2026-10-07"
+      },
+      "change_pct": 9.7,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
+    },
+    {
+      "id": 157675,
+      "name": "Giratina Prism Star",
+      "set": "SM - Ultra Prism",
+      "number": "58/156",
+      "tier": "Prism Rare",
+      "last": {
+        "price": 39.64,
+        "date": "2026-10-07"
+      },
+      "change_pct": 8.2,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-07"
     },
     {
       "id": 717605,
@@ -134,234 +298,70 @@
       "number": "152/128",
       "tier": "Special Illustration Rare",
       "last": {
-        "price": 91.65,
-        "date": "2026-10-06"
+        "price": 84.8,
+        "date": "2026-10-07"
       },
-      "change_pct": -38.6,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 714386,
-      "name": "Lugia",
-      "set": "ME: 30th Celebration Classic Collection",
-      "number": "149/147",
-      "tier": "Classic Collection",
-      "last": {
-        "price": 203.24,
-        "date": "2026-10-06"
-      },
-      "change_pct": -38.4,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 716230,
-      "name": "Greninja ex - 148/128",
-      "set": "ME: 30th Celebration",
-      "number": "148/128",
-      "tier": "Special Illustration Rare",
-      "last": {
-        "price": 21.13,
-        "date": "2026-10-06"
-      },
-      "change_pct": -38.2,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    }
-  ],
-  "one_day": [
-    {
-      "id": 86558,
-      "name": "Kyogre ex - 037 (EX Collector's Tins)",
-      "set": "Nintendo Promos",
-      "number": "037",
-      "tier": "Promo",
-      "last": {
-        "price": 241.94,
-        "date": "2026-10-06"
-      },
-      "change_pct": 31.9,
+      "change_pct": -7.5,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
-      "id": 96413,
-      "name": "Kingdra - XY39 (Prerelease)",
-      "set": "XY Promos",
-      "number": "XY39",
-      "tier": "Promo",
-      "last": {
-        "price": 64.64,
-        "date": "2026-10-06"
-      },
-      "change_pct": 23.4,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 89397,
-      "name": "Snorlax Lv.X",
-      "set": "Rising Rivals",
-      "number": "111/111",
+      "id": 89113,
+      "name": "Shaymin EX (Full Art)",
+      "set": "Legendary Treasures: Radiant Collection",
+      "number": "RC21/RC25",
       "tier": "Ultra Rare",
       "last": {
-        "price": 850.0,
-        "date": "2026-10-06"
+        "price": 53.95,
+        "date": "2026-10-07"
       },
-      "change_pct": 21.4,
+      "change_pct": -7.3,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
-      "id": 89160,
-      "name": "Shiftry ex",
-      "set": "EX Crystal Guardians",
-      "number": "97/100",
-      "tier": "Ultra Rare",
-      "last": {
-        "price": 53.86,
-        "date": "2026-10-06"
-      },
-      "change_pct": 20.2,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 83602,
-      "name": "Arceus Lv.X (94)",
-      "set": "Arceus",
-      "number": "94/99",
-      "tier": "Ultra Rare",
-      "last": {
-        "price": 85.83,
-        "date": "2026-10-06"
-      },
-      "change_pct": 19.9,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 43053,
-      "name": "Rayquaza - 22/107",
-      "set": "Deck Exclusives",
-      "number": "022/107",
+      "id": 106524,
+      "name": "Hypno (8)",
+      "set": "Fossil",
+      "number": "08/62",
       "tier": "Holo Rare",
       "last": {
-        "price": 144.57,
-        "date": "2026-10-06"
+        "price": 109.3,
+        "date": "2026-10-07"
       },
-      "change_pct": 13.2,
+      "change_pct": 7.2,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     },
     {
-      "id": 211425,
-      "name": "Darkrai - BW73 (BW Black Star Promos)",
-      "set": "Jumbo Cards",
-      "number": "BW73",
-      "tier": "Promo",
-      "last": {
-        "price": 29.7,
-        "date": "2026-10-06"
-      },
-      "change_pct": 12.0,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 213026,
-      "name": "Shellos East Sea - 106/132 (Origins Game Fair 2008)",
-      "set": "Nintendo Promos",
-      "number": "106/132",
-      "tier": "Promo",
-      "last": {
-        "price": 26.04,
-        "date": "2026-10-06"
-      },
-      "change_pct": 11.1,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 87287,
-      "name": "Meganium (11)",
-      "set": "Neo Genesis",
-      "number": "011/111",
+      "id": 106520,
+      "name": "Dragonite (4)",
+      "set": "Fossil",
+      "number": "04/62",
       "tier": "Holo Rare",
       "last": {
-        "price": 258.1,
-        "date": "2026-10-06"
+        "price": 502.15,
+        "date": "2026-10-07"
       },
-      "change_pct": 10.1,
+      "change_pct": 6.8,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
-    },
-    {
-      "id": 705526,
-      "name": "Primarina - 020/084 (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "020/084",
-      "tier": "Rare",
-      "last": {
-        "price": 25.99,
-        "date": "2026-10-06"
-      },
-      "change_pct": 9.2,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-06"
+      "observed": "2026-10-07"
     }
   ]
 }

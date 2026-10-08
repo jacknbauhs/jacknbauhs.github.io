@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-10-07",
+  "as_of": "2026-10-08",
   "daily": {
-    "date": "2026-10-07",
+    "date": "2026-10-08",
     "movers": [
       {
         "name": "Heatran LV.X - DP31",
@@ -9,7 +9,23 @@
         "change_pct": 55.1,
         "label": "UNCONFIRMED",
         "price": 78.32,
-        "observed": "2026-10-06"
+        "observed": "2026-10-07"
+      },
+      {
+        "name": "Giratina Prism Star",
+        "set": "SM - Ultra Prism",
+        "change_pct": 53.2,
+        "label": "UNCONFIRMED",
+        "price": 39.64,
+        "observed": "2026-10-07"
+      },
+      {
+        "name": "Sceptile ex",
+        "set": "EX Team Magma vs Team Aqua",
+        "change_pct": 49.0,
+        "label": "UNCONFIRMED",
+        "price": 372.49,
+        "observed": "2026-10-07"
       },
       {
         "name": "Giovanni's Persian",
@@ -17,7 +33,7 @@
         "change_pct": 46.9,
         "label": "UNCONFIRMED",
         "price": 234.95,
-        "observed": "2026-10-06"
+        "observed": "2026-10-07"
       },
       {
         "name": "Aegislash - 86/146 (Prerelease) [Staff]",
@@ -25,65 +41,49 @@
         "change_pct": -44.3,
         "label": "UNCONFIRMED",
         "price": 52.87,
-        "observed": "2026-10-06"
-      },
-      {
-        "name": "Lugia EX (Team Plasma) (134 Full Art)",
-        "set": "Plasma Storm",
-        "change_pct": 43.2,
-        "label": "UNCONFIRMED",
-        "price": 1344.25,
-        "observed": "2026-10-06"
-      },
-      {
-        "name": "Snorlax Lv.X",
-        "set": "Rising Rivals",
-        "change_pct": 41.7,
-        "label": "UNCONFIRMED",
-        "price": 850.0,
-        "observed": "2026-10-06"
+        "observed": "2026-10-07"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Kyogre ex - 037 (EX Collector's Tins)",
-        "set": "Nintendo Promos",
-        "change_pct": 31.9,
-        "label": "UNCONFIRMED",
-        "price": 241.94,
-        "observed": "2026-10-06"
-      },
-      {
-        "name": "Kingdra - XY39 (Prerelease)",
-        "set": "XY Promos",
-        "change_pct": 23.4,
-        "label": "UNCONFIRMED",
-        "price": 64.64,
-        "observed": "2026-10-06"
-      },
-      {
-        "name": "Snorlax Lv.X",
-        "set": "Rising Rivals",
-        "change_pct": 21.4,
-        "label": "UNCONFIRMED",
-        "price": 850.0,
-        "observed": "2026-10-06"
-      },
-      {
-        "name": "Shiftry ex",
+        "name": "Jirachi ex",
         "set": "EX Crystal Guardians",
-        "change_pct": 20.2,
+        "change_pct": -19.1,
         "label": "UNCONFIRMED",
-        "price": 53.86,
-        "observed": "2026-10-06"
+        "price": 210.39,
+        "observed": "2026-10-07"
       },
       {
-        "name": "Arceus Lv.X (94)",
-        "set": "Arceus",
-        "change_pct": 19.9,
+        "name": "Espeon & Deoxys GX Oversized - SM240 (SM Black Star Promo)",
+        "set": "Jumbo Cards",
+        "change_pct": 13.6,
         "label": "UNCONFIRMED",
-        "price": 85.83,
-        "observed": "2026-10-06"
+        "price": 25.28,
+        "observed": "2026-10-07"
+      },
+      {
+        "name": "Mewtwo ex - 151/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": 11.3,
+        "label": "UNCONFIRMED",
+        "price": 54.18,
+        "observed": "2026-10-07"
+      },
+      {
+        "name": "Latios ex",
+        "set": "EX Dragon",
+        "change_pct": -11.1,
+        "label": "UNCONFIRMED",
+        "price": 249.48,
+        "observed": "2026-10-07"
+      },
+      {
+        "name": "Ditto Prism Star",
+        "set": "SM - Lost Thunder",
+        "change_pct": 9.7,
+        "label": "UNCONFIRMED",
+        "price": 23.07,
+        "observed": "2026-10-07"
       }
     ],
     "calls_due": [],

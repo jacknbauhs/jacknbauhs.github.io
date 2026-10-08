@@ -78,6 +78,12 @@ SLOTS = ("Tue story", "Thu market", "Sat build")
 # What Mission Control's movers lists cover: window label -> (lowest price in $, smallest move in %). Keep in step with
 # its config/board.py (MOVER_MIN_CENTS and MOVER_MIN_PCT for 7d; the one_day list for 1d).
 MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
+# Both lists also leave out big unbacked jumps: a move with checked sales always shows, an Unconfirmed one only up to
+# this size and only when TCGplayer's lowest listing moved the same way. Keep in step with config/board.py and ONE_DAY
+# and WEEK in assets/board.js.
+DAY_UNCONFIRMED_MAX_PCT = 40
+WEEK_UNCONFIRMED_MAX_PCT = 60
+UNCONFIRMED_MAX_PCT = {"7d": WEEK_UNCONFIRMED_MAX_PCT, "1d": DAY_UNCONFIRMED_MAX_PCT}
 MOVING_ROWS = 8
 # On a mover, a label speaks to the move, so two read differently than on a single sale.
 MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
@@ -687,14 +693,18 @@ class Kit:
         when = "since yesterday" if window == "1d" else f"in the last {days.group(1)} days" if days else "lately"
         n, shown = len(items), items[:MOVING_ROWS]
         rule = MOVER_RULES.get(window)
+        # The headline and the alt text count the list, never the market: Mission Control caps each list and leaves out
+        # the big unbacked jumps, so more cards can clear the floor than make the list.
         if rule:
-            headline = f"{count_word(n)} card{'s' if n != 1 else ''} moved {rule[1]}% or more {when}."
+            headline = f"{count_word(n)} move{'s' if n != 1 else ''} of {rule[1]}% or more made the list {when}."
             lede = f"Pokémon cards worth ${rule[0]} or more on TCGplayer. Each label says what the checked sales show."
         else:
-            headline = f"The biggest TCGplayer moves {when}."
+            headline = f"{count_word(n)} card{'s' if n != 1 else ''} made the list {when}."
             lede = "Pokémon cards on TCGplayer. Each label says what the checked sales show."
         if n > len(shown):
             lede += f" The {len(shown)} biggest are here; all {n} are on the board."
+        listed = (f"the {len(shown)} biggest of the {n} TCGplayer moves on the list {when}" if n > len(shown)
+                  else f"the {n} TCGplayer move{'s' if n != 1 else ''} on the list {when}")
         rows, present = [], []
         for m in shown:
             text, chip, _, _, _ = label_info(m.get("label"))
@@ -705,12 +715,20 @@ class Kit:
                          "price": money((m.get("last") or {}).get("price")), "pct": pct(chg, 1),
                          "pct_class": "" if chg is None else ("up" if chg >= 0 else "down"),
                          "chip": chip, "label_text": text, "has_label": bool(m.get("label"))})
+        # Each list leaves out big unbacked jumps, so its rule is said, and it says what Unconfirmed means in one sentence
+        # (two would push the foot into the footer on a full image).
+        cap = UNCONFIRMED_MAX_PCT.get(window)
+        list_rule = ""
+        if cap:
+            list_rule = f"Unconfirmed: no checked sales yet, so it shows only if it's {cap}% or less and the lowest listing moved the same way."
         meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
-        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k])
+        legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k] and not (list_rule and k == "UNCONFIRMED"))
         # The image says what Unconfirmed means; the caption carries every label's meaning, the board explains them all.
         source = items[0].get("source") or "TCGplayer market prices via tcgcsv.com"
         foot = f"{source}, as of {fmt_date_year(as_of)}."
-        if "UNCONFIRMED" in present:
+        if list_rule:
+            foot += f" {list_rule}"
+        elif "UNCONFIRMED" in present:
             foot += f" Unconfirmed: {MOVER_MEANINGS['UNCONFIRMED']}"
         self.page("moving.html", f"moving-{year}-W{week:02d}", {
             "kicker": f"What's moving · {fmt_date(as_of)}", "tag": f"TCGplayer · {fmt_date(as_of)}",
@@ -719,8 +737,10 @@ class Kit:
         }, caption=(f"What's moving on TCGplayer, as of {fmt_date_year(as_of)}. {headline} " +
                     " ".join(f"{r['name']}" + (f" ({r['line2']})" if r["line2"] else "") + f": {r['price']}, {r['pct']}" +
                              (f", {r['label_text'].lower()}." if r["has_label"] else ".") for r in rows) +
-                    (f" {legend}" if legend else "") + f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
-            alt=f"What's moving: the {len(rows)} biggest TCGplayer moves {when}, each with its market price, its change and the label for what checked sales show.")
+                    (f" {legend}" if legend else "") + (f" {list_rule}" if list_rule else "") +
+                    f" Source: {source}, as of {fmt_date_year(as_of)}. {SITE}"),
+            alt=f"What's moving: {listed}, {'each ' if len(shown) != 1 else ''}with its market price, its change and the label for what "
+                "checked sales show.")
 
     # --- link preview ---
     def build_og(self):

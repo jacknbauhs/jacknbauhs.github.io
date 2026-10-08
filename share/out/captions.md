@@ -2,71 +2,17 @@
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
-## file-2026-09-28-cover.png
+## file-2026-10-08-cover.png
 
-The File, Sep 28: Crystal Lugia and Crystal Charizard. Crystal Lugia PSA 8 +62%: clean median $15,999 in September, from $9,900 in June. Crystal Charizard PSA 9 +37%: clean median $38,500 in September, from $28,108 in June. 7 of 39 sold records don't belong in the math. Source: 130point, pulled Sep 28. board.jacknbauhs.com
+The File, Oct 8 (Thu market): Our prices can see the 30th Celebration from day 12, not its launch. TCGplayer's market price for the four 30th Celebration cards on the board's first 7-day list fell between 39.1% and 48.1% from Sep 28 to Oct 5. All four are unconfirmed: no sale checked on any of them. What the list doesn't show: the set's launch week, the set as a whole, or the original cards its Classic Collection reprints. Jirachi ex - 155/128 (ME: 30th Celebration): TCGplayer market price $50.32 on Oct 5, −48.1% in 7 days, unconfirmed. Lugia (ME: 30th Celebration Classic Collection 149/147): TCGplayer market price $211.23 on Oct 5, −45.7% in 7 days, unconfirmed. Mew ex - 152/128 (ME: 30th Celebration): TCGplayer market price $92.28 on Oct 5, −40.2% in 7 days, unconfirmed. Gengar ex - 154/128 (ME: 30th Celebration): TCGplayer market price $72.18 on Oct 5, −39.1% in 7 days, unconfirmed. 4 of 4 moves from the 30th Celebration on the board's first 7-day list with no checked sale. Why now: The board's 7-day list filled in for the first time on Oct 6, with prices from Sep 28 to Oct 5: days 12 to 19 after the Sep 16 launch. Our prices start Sep 28, so launch week isn't in them. What could break it: Any of these moves may be real: unconfirmed means no sale was checked, not that anything is wrong. The list holds at most ten of the biggest moves that pass its rule, so it can't speak for the set. This is not a read on whether these prices are high or low. What we're watching: On the Oct 8 list (prices Sep 30 to Oct 7), TCGplayer's market price for Mew ex fell 41.3% to $84.80 and for Jirachi ex 39.4% to $46.96, both unconfirmed and still on the list two days later. The Lugia reprint and Gengar ex aren't on it. Off the list wouldn't mean steady: a card drops off by moving less than the list's smallest move (38.9% on Oct 8), more than 60% with no checked sale, without its lowest listing moving the same way, or below $20. Unconfirmed: no checked sales speak to the move yet. Source: TCGplayer market prices via tcgcsv.com, from the board's first 7-day list (prices Sep 28 to Oct 5, 2026, published Oct 6) and the Oct 8 list (prices Sep 30 to Oct 7, 2026, published Oct 8). board.jacknbauhs.com
 
-Alt: The File on the Astronaut Time board: Crystal Lugia and Crystal Charizard, with each card's clean move and how many records were kept out.
+Alt: The File on the Astronaut Time board: Our prices can see the 30th Celebration from day 12, not its launch. 30th Celebration cards on the board's first 7-day list, none with a checked sale: 4 of 10, days 12 to 19 after the Sep 16 launch (Sep 28 to Oct 5). Four 7-day TCGplayer moves as bars, each with its change, price and label, and the flags tally, 4 of 4.
 
-## file-2026-09-28-crystal-lugia-psa-8.png
+## flags-2026-10-05-cover.png
 
-Crystal Lugia PSA 8: +62% on the clean median, June to September ($9,900 to $15,999). Up about 62% since June on real volume: 18 clean sales, including five auctions with 31 to 54 bidders. The climb started months before the reprint hit shelves on Sep 16. Every dot is a sold record; the flagged ones are marked. Source: 130point, pulled Sep 28. board.jacknbauhs.com
+4 of 4 moves from the 30th Celebration on the board's first 7-day list with no checked sale. Mission Control hasn't checked a sale behind any move on the board's first 7-day list, these four included. With no checked sales, a move shows only if it's 60% or less over 7 days and TCGplayer's lowest listing moved the same way, by an amount we don't publish (it can be a cent). Jirachi ex - 155/128, Oct 5: $50.32, −48.1% in 7 days; no checked sale. Lugia 149/147 · Classic Collection, Oct 5: $211.23, −45.7% in 7 days; no checked sale. Mew ex - 152/128, Oct 5: $92.28, −40.2% in 7 days; no checked sale. Gengar ex - 154/128, Oct 5: $72.18, −39.1% in 7 days; no checked sale. Every one is on the board with its label. Prices are TCGplayer's market price after the move. Source: TCGplayer market prices via tcgcsv.com, from the board's first 7-day list (prices Sep 28 to Oct 5, 2026, published Oct 6) and the Oct 8 list (prices Sep 30 to Oct 7, 2026, published Oct 8). board.jacknbauhs.com
 
-Alt: Crystal Lugia PSA 8, +62% on the clean monthly median from June to September, with every sold record plotted and the flagged ones marked.
-
-## file-2026-09-28-crystal-charizard-psa-9.png
-
-Crystal Charizard PSA 9: +37% on the clean median, June to September ($28,108 to $38,500). Never reprinted, and up about 37% since June anyway. Its only August record is a $46 sale, so an average of every sold listing would show this card down 99.9% in August. Every dot is a sold record; the flagged ones are marked. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Crystal Charizard PSA 9, +37% on the clean monthly median from June to September, with every sold record plotted and the flagged ones marked.
-
-## flags-2026-09-28-cover.png
-
-7 of 39 sold records that don't belong in the math. Two cards, 39 sold records since May. Seven of them would bend a plain average: a $46 "PSA 9 Crystal Charizard," a $1,900 "PSA 8 Crystal Lugia," a raw card and a two-grade slab in a PSA 8 search, a double-counted auction, and one listing that sold twice. Every one is labeled on the board with the reason. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: What got caught: 7 of 39 sold records that don't belong in the math, listed with dates, prices and labels.
-
-## flag-2026-08-19-crystal-charizard-psa-9-doesn-t-belong.png
-
-Crystal Charizard PSA 9, sold Aug 19, 2026 for $46.30. $46 for a PSA 9 Crystal Charizard. Whatever sold, it wasn't this card. Label: doesn't belong. Wrong card, wrong grade, or a price no real copy sells for. Left out. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Charizard PSA 9 for $46.30 on Aug 19, 2026, labeled doesn't belong. $46 for a PSA 9 Crystal Charizard. Whatever sold, it wasn't this card.
-
-## flag-2026-09-25-crystal-lugia-psa-8-doesn-t-belong.png
-
-Crystal Lugia PSA 8, sold Sep 25, 2026 for $1,900. 87% under the next-lowest September sale. Label: doesn't belong. Wrong card, wrong grade, or a price no real copy sells for. Left out. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Lugia PSA 8 for $1,900 on Sep 25, 2026, labeled doesn't belong. 87% under the next-lowest September sale.
-
-## flag-2026-09-05-crystal-charizard-psa-9-best-offer.png
-
-Crystal Charizard PSA 9, sold Sep 5, 2026 for $35,800. Listed at $39,999, sold for $35,800. Trackers that show the ask get this one wrong. Label: best offer. Shown at the accepted price, not the asking price. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Charizard PSA 9 for $35,800 on Sep 5, 2026, labeled best offer. Listed at $39,999, sold for $35,800. Trackers that show the ask get this one wrong.
-
-## flag-2026-09-15-crystal-lugia-psa-8-relist.png
-
-Crystal Lugia PSA 8, sold Sep 15, 2026 for $18,500. The same listing sold on Sep 6 for $17,750, then again on Sep 15. Both count half. Label: relist. The same listing sold more than once. The first sale may not have gone through. Counts half. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Lugia PSA 8 for $18,500 on Sep 15, 2026, labeled relist. The same listing sold on Sep 6 for $17,750, then again on Sep 15. Both count half.
-
-## flag-2026-08-31-crystal-lugia-psa-8-duplicate.png
-
-Crystal Lugia PSA 8, sold Aug 31, 2026 for $13,800. Same title, same price, same 31 bids, a day apart. Counted once. Label: duplicate. One sale recorded twice. Counted once. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Lugia PSA 8 for $13,800 on Aug 31, 2026, labeled duplicate. Same title, same price, same 31 bids, a day apart. Counted once.
-
-## flag-2026-07-21-crystal-lugia-psa-8-doesn-t-belong.png
-
-Crystal Lugia PSA 8, sold Jul 21, 2026 for $8,600. Two grades in one title (CGC 8.5 and PSA 8). Label: doesn't belong. Wrong card, wrong grade, or a price no real copy sells for. Left out. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Lugia PSA 8 for $8,600 on Jul 21, 2026, labeled doesn't belong. Two grades in one title (CGC 8.5 and PSA 8).
-
-## flag-2026-06-22-crystal-lugia-psa-8-doesn-t-belong.png
-
-Crystal Lugia PSA 8, sold Jun 22, 2026 for $5,735.50. A raw card titled "PSA gradable 7-8.". Label: doesn't belong. Wrong card, wrong grade, or a price no real copy sells for. Left out. Source: 130point, pulled Sep 28. board.jacknbauhs.com
-
-Alt: Flagged sold record: Crystal Lugia PSA 8 for $5,735.50 on Jun 22, 2026, labeled doesn't belong. A raw card titled "PSA gradable 7-8.".
+Alt: What we couldn't confirm: 4 of 4 moves from the 30th Celebration on the board's first 7-day list with no checked sale, all 4 listed one per line with the day, the card, the change and the TCGplayer market price after it.
 
 ## call-001-2026-09-28.png
 

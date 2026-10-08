@@ -23,7 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&family=Unbounded:wght@600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/board.css?v=2026-10-05">
+<link rel="stylesheet" href="assets/board.css?v=2026-10-06">
 </head>
 <body data-page="index">
 <div class="sky" aria-hidden="true">
@@ -72,12 +72,12 @@
         <div>
           <div class="file-kicker"><span class="kicker" id="hero-kicker" style="color:var(--muted);font-size:11px;letter-spacing:.14em">The File</span><span id="hero-stance"></span></div>
           <div class="chart-title" id="hero-title">Crystal Lugia PSA 8</div>
-          <div class="muted" style="font-size:14px">Every sold record since June. The purple line is the clean monthly median.</div>
+          <div class="muted" style="font-size:14px" id="hero-note">Every sold record since June. The purple line is the clean monthly median.</div>
         </div>
-        <div class="big-stat"><span class="num up" id="hero-change">+62%</span><div class="muted" style="font-size:12px">since June, clean</div></div>
+        <div class="big-stat"><span class="num up" id="hero-change">+62%</span><div class="muted" style="font-size:12px" id="hero-change-note">since June, clean</div></div>
       </div>
       <div id="hero-chart"></div>
-      <div class="legend">
+      <div class="legend" id="hero-legend">
         <span><i class="swatch" style="border:2px solid #ECEAF6"></i>Clean sale</span>
         <span><i class="swatch" style="background:#FBBF24"></i>Relist, counts half</span>
         <span><i class="swatch" style="background:#9A96B8"></i>Duplicate</span>
@@ -100,12 +100,12 @@
   <p id="load-error" class="muted" hidden>The board couldn't load its data. Refresh to try again.</p>
 
   <section id="moving" class="block" aria-labelledby="moving-h">
-    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p>The File, checked sale by sale, then the whole market from TCGplayer, each move labeled by what its checked sales show.</p></div></div>
-    <h3 class="sub-h">The File <span>Tue · Thu · Sat · Checked by hand on 130point</span></h3>
+    <div class="block-head"><div><div class="kicker">01 · Market</div><h2 id="moving-h">What's moving</h2><p id="moving-lede">The File, checked sale by sale, then the whole market from TCGplayer, each move labeled by what its checked sales show.</p></div></div>
+    <h3 class="sub-h">The File <span id="file-sub">Tue · Thu · Sat · Checked by hand on 130point</span></h3>
     <div class="card file-story" id="file-story" hidden></div>
     <div class="card table-card">
       <table class="data">
-        <thead><tr><th scope="col">Card</th><th scope="col">Tier</th><th scope="col">Last sale</th><th scope="col">Clean median</th><th scope="col">Change</th><th scope="col">Flagged</th></tr></thead>
+        <thead id="file-head"><tr><th scope="col">Card</th><th scope="col">Tier</th><th scope="col">Last sale</th><th scope="col">Clean median</th><th scope="col">Change</th><th scope="col">Flagged</th></tr></thead>
         <tbody id="file-body"></tbody>
       </table>
       <div class="table-foot" id="file-foot">Clean median: September, confirmed sales only. Change: clean median, June to September. Source: 130point, pulled Sep 28, 2026.</div>
@@ -115,7 +115,7 @@
   </section>
 
   <section id="flags" class="block" aria-labelledby="flags-h">
-    <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p>Sold lists are full of junk that bends every average. Here's what got thrown out, and why.</p></div></div>
+    <div class="block-head"><div><div class="kicker">02 · Flags</div><h2 id="flags-h">What got caught</h2><p id="flags-lede">Sold lists are full of junk that bends every average. Here's what got thrown out, and why.</p></div></div>
     <h3 class="sub-h">In The File</h3>
     <div class="card flags">
       <div class="flag-head">
@@ -190,6 +190,6 @@
   <div><h2>SOURCES</h2><ul><li>130point (eBay, Goldin)</li><li>TCGplayer prices via tcgcsv</li><li>Published pull-rate studies</li><li>Release calendars</li></ul></div>
   <div class="fineprint"><span>The File (Tue, Thu, Sat), the calls and the drops are checked by hand. Market movers, flags and Rip EV update nightly from Mission Control. Every number shows its source and date. Not financial advice.</span><span>© 2026 Jack Bauhs · jacknbauhs.com</span></div>
 </footer>
-<script src="assets/board.js?v=2026-10-05"></script>
+<script src="assets/board.js?v=2026-10-06"></script>
 </body>
 </html>

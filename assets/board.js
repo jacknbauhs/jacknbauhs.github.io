@@ -20,10 +20,10 @@
   var LABELS = {
     ORGANIC: { text: "Clean", chip: "chip-ok", meaning: "A real sale of the right card. Counts in full." },
     BEST_OFFER: { text: "Best offer", chip: "chip-info", meaning: "Shown at the accepted price, not the asking price." },
-    RELIST: { text: "Relist", chip: "chip-warn", meaning: "The same listing sold more than once. The first sale may not have gone through. Counts half." },
+    RELIST: { text: "Relist", chip: "chip-warn", meaning: "The same listing sold more than once. The first sale may not have gone through. Left out of the clean median." },
     DUPLICATE: { text: "Duplicate", chip: "chip-neutral", meaning: "One sale recorded twice. Counted once." },
     DATA_ERROR: { text: "Doesn't belong", chip: "chip-flag", meaning: "Wrong card, wrong grade, or a price no real copy sells for. Left out." },
-    EVENT_DRIVEN: { text: "Event", chip: "chip-info", meaning: "A jump tied to news, like a reprint or a viral pull. Counts half until it holds." },
+    EVENT_DRIVEN: { text: "Event", chip: "chip-info", meaning: "A jump tied to news, like a reprint or a viral pull. Left out of the clean median." },
     SUPPLY_SHOCK: { text: "Supply shock", chip: "chip-warn", meaning: "More copies selling while the price sits flat or falls." },
     THIN_SPIKE: { text: "Thin spike", chip: "chip-warn", meaning: "Up on a handful of sales, with no volume behind it." },
     SUSPECT_PUMP: { text: "Suspect pump", chip: "chip-flag", meaning: "A spike with warning signs, like one seller doing most of the selling. Left out." },
@@ -981,7 +981,7 @@
         { l: "Last sale · " + fmtDate(c.last.date), v: money(c.last.price), p: "" },
         { l: "Clean median · " + MONTHS[+sep.split("-")[1] - 1], v: money(c.monthly_clean[sep]), p: "Confirmed sales only" },
         { l: c.change_label, v: pct(c.change_pct), p: "", cls: "up" },
-        { l: "Flagged", v: flagged + " of " + c.sales.length, p: "Records left out or counted half", cls: "flag" }
+        { l: "Flagged", v: flagged + " of " + c.sales.length, p: "Records not labeled Clean", cls: "flag" }
       ];
       var k = $("#kpis");
       kpis.forEach(function (q) {
@@ -1003,7 +1003,7 @@
         if (sc) story.appendChild(el("p", { class: "story-note", text: "A stance is a read on the numbers, not advice." }));
         story.hidden = false;
       });
-      $("#card-source").textContent = "Source: " + c.source + ". Clean median = median of confirmed sales in the month; relists count half, errors and duplicates are left out.";
+      $("#card-source").textContent = "Source: " + c.source + ". Clean median = median of confirmed sales in the month; relists, duplicates and records that don't belong are left out.";
       var tb = $("#sales-body");
       c.sales.slice().reverse().forEach(function (s) {
         var fmt = s.format === "best_offer" ? "Best offer" + (s.ask ? " (asked " + money(s.ask) + ")" : "") : s.format === "auction" ? "Auction" + (s.bids ? " · " + s.bids : "") : "Buy it now";

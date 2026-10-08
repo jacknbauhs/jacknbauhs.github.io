@@ -63,10 +63,10 @@ MONTHS_LONG = ["January", "February", "March", "April", "May", "June", "July", "
 LABELS = {
     "ORGANIC": ("Clean", "chip-ok", "okc", "#6EE7B7", "A real sale of the right card. Counts in full."),
     "BEST_OFFER": ("Best offer", "chip-info", "infoc", "#7DD3FC", "Shown at the accepted price, not the asking price."),
-    "RELIST": ("Relist", "chip-warn", "warnc", "#FCD34D", "The same listing sold more than once. The first sale may not have gone through. Counts half."),
+    "RELIST": ("Relist", "chip-warn", "warnc", "#FCD34D", "The same listing sold more than once. The first sale may not have gone through. Left out of the clean median."),
     "DUPLICATE": ("Duplicate", "chip-neutral", "neutralc", "#9A96B8", "One sale recorded twice. Counted once."),
     "DATA_ERROR": ("Doesn't belong", "chip-flag", "flagc", "#F472B6", "Wrong card, wrong grade, or a price no real copy sells for. Left out."),
-    "EVENT_DRIVEN": ("Event", "chip-info", "infoc", "#7DD3FC", "A jump tied to news, like a reprint or a viral pull. Counts half until it holds."),
+    "EVENT_DRIVEN": ("Event", "chip-info", "infoc", "#7DD3FC", "A jump tied to news, like a reprint or a viral pull. Left out of the clean median."),
     "SUPPLY_SHOCK": ("Supply shock", "chip-warn", "warnc", "#FCD34D", "More copies selling while the price sits flat or falls."),
     "THIN_SPIKE": ("Thin spike", "chip-warn", "warnc", "#FCD34D", "Up on a handful of sales, with no volume behind it."),
     "SUSPECT_PUMP": ("Suspect pump", "chip-flag", "flagc", "#F472B6", "A spike with warning signs, like one seller doing most of the selling. Left out."),

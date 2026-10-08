@@ -200,7 +200,7 @@
    "bids": null,
    "ask": 19995.0,
    "label": "RELIST",
-   "why": "The same listing sold again on Sep 15. The first sale may not have gone through. Counts half.",
+   "why": "The same listing sold again on Sep 15. The first sale may not have gone through. Left out of the clean median.",
    "weight": 0.5
   },
   {
@@ -230,7 +230,7 @@
    "bids": null,
    "ask": 19999.99,
    "label": "RELIST",
-   "why": "Second sale of the Sep 6 listing, higher this time. Counts half.",
+   "why": "Second sale of the Sep 6 listing, higher this time. Left out of the clean median.",
    "weight": 0.5
   },
   {

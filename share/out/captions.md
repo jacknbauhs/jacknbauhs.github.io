@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-08
+# Captions, board data of 2026-10-09
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
@@ -40,6 +40,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W41.png
 
-What's moving on TCGplayer, as of Oct 7, 2026. Ten moves of 5% or more made the list in the last 7 days. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +55.1%, unconfirmed. Giratina Prism Star (SM - Ultra Prism · 58/156): $39.64, +53.2%, unconfirmed. Sceptile ex (EX Team Magma vs Team Aqua · 93/95): $372.49, +49.0%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Aegislash - 86/146 (Prerelease) [Staff] (XY Promos · 86/146): $52.87, −44.3%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Snorlax Lv.X (Rising Rivals · 111/111): $850, +41.7%, unconfirmed. Mew ex - 152/128 (ME: 30th Celebration · 152/128): $84.80, −41.3%, unconfirmed. Unconfirmed: no checked sales yet, so it shows only if it's 60% or less and the lowest listing moved the same way. Source: TCGplayer market prices via tcgcsv.com, as of Oct 7, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 8, 2026. Ten moves of 5% or more made the list in the last 7 days. Sceptile ex (EX Team Magma vs Team Aqua · 93/95): $372.49, +49.0%, unconfirmed. Kyogre ex - 037 (EX Collector's Tins) (Nintendo Promos · 037): $272.97, +48.8%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Mew ex - 152/128 (ME: 30th Celebration · 152/128): $80.96, −38.5%, unconfirmed. Armarouge (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 012/084): $46.46, +37.0%, unconfirmed. Sylveon ex - 153/128 (ME: 30th Celebration · 153/128): $43.46, −33.7%, unconfirmed. Greninja ex - 148/128 (ME: 30th Celebration · 148/128): $21.22, −33.0%, unconfirmed. Unconfirmed: no checked sales yet, so it shows only if it's 60% or less and the lowest listing moved the same way. Source: TCGplayer market prices via tcgcsv.com, as of Oct 8, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

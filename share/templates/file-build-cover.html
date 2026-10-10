@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% block style %}
+/* A build File's cover (.build): each card's share of the model with inputs, before and after, on one 0 to 100% scale, with
+   the minimum dashed through both bars; the narrower bar is drawn last, so a change that removes inputs still shows both.
+   Its styles live here, not in share.css, so no other image's filled HTML changes. */
+.build .title.xl { font-size: 46px; }
+.build .sub { font-size: 21px; }
+.build .legend-line { font-family: var(--mono); font-size: 15px; line-height: 1.45; color: var(--muted); margin: 16px 0 0; }
+.rows.cov { margin-top: 8px; }
+.row.cov-row { grid-template-columns: minmax(0, 1fr) auto; gap: 4px 24px; padding: 11px 0; align-items: baseline; }
+.row.cov-row .name { font-size: 27px; line-height: 1.2; }
+.row.cov-row .name .set { font-size: 19px; font-weight: 400; color: var(--muted); margin-left: 10px; letter-spacing: 0; }
+.row.cov-row .verdict { font-family: var(--mono); font-size: 18px; color: var(--text-2); text-align: right; white-space: nowrap; }
+.cov-bar { grid-column: 1 / -1; display: grid; grid-template-columns: minmax(0, 1fr) 230px; gap: 18px; align-items: center; margin-top: 6px; }
+.cov-bar .track { position: relative; height: 18px; border-radius: 5px; background: rgba(236, 234, 246, 0.05); }
+.cov-bar .track i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 5px; }
+.cov-bar .track i.after { background: var(--accent-line); opacity: 0.9; }
+.cov-bar .track i.before { background: #6E6A8C; }
+.cov-bar .track b { position: absolute; top: -6px; bottom: -6px; border-left: 2px dashed rgba(236, 234, 246, 0.7); }
+.cov-bar .p { font-family: var(--mono); font-size: 20px; color: var(--text); text-align: right; white-space: nowrap; }
+.row.cov-row .why { grid-column: 1 / -1; font-size: 19px; line-height: 1.35; color: var(--text-3); margin-top: 4px; }
+.build .shared { font-size: 19px; line-height: 1.4; color: var(--text-2); margin: 16px 0 0; }
+.build .story { margin-top: 22px; gap: 10px; }
+.build .story p { font-size: 20px; }
+.build .closing { font-family: var(--mono); font-size: 16px; line-height: 1.45; color: var(--muted); margin: 16px 0 0; }
+{% endblock %}
+{% block body %}
+    <div class="chip-row"><span class="eyebrow">The File{% if slot %} · {{ slot }}{% endif %}</span></div>
+    <h1 class="title xl" style="margin-top: 12px">{{ file_title }}</h1>
+    {% if lede %}<p class="sub">{{ lede }}</p>{% endif %}
+    <p class="legend-line">{{ legend }}</p>
+    <div class="rows cov">
+      {% for r in rows %}
+      <div class="row cov-row">
+        <div class="name">{{ r.name }} {{ r.tier }}{% if r.line2 %}<span class="set">{{ r.line2 }}</span>{% endif %}</div>
+        <div class="verdict">{{ r.verdict }}</div>
+        <div class="cov-bar"><span class="track">{% if r.before_w|float <= r.after_w|float %}<i class="after" style="width: {{ r.after_w }}%"></i><i class="before" style="width: {{ r.before_w }}%"></i>{% else %}<i class="before" style="width: {{ r.before_w }}%"></i><i class="after" style="width: {{ r.after_w }}%"></i>{% endif %}<b style="left: {{ min }}%"></b></span><span class="p">{{ r.pcts }}</span></div>
+        {% if r.line3 %}<div class="why">{{ r.line3 }}</div>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+    {% if shared %}<p class="shared">{{ shared }}</p>{% endif %}
+    {% if story %}
+    <div class="story">
+      {% for s in story %}<div><span class="eyebrow">{{ s.label }}</span><p>{{ s.text }}</p></div>{% endfor %}
+    </div>
+    {% endif %}
+    <p class="closing">{{ closing }}</p>
+{% endblock %}

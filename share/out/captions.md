@@ -1,4 +1,4 @@
-# Captions, board data of 2026-10-10
+# Captions, board data of 2026-10-11
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
@@ -40,6 +40,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W41.png
 
-What's moving on TCGplayer, as of Oct 9, 2026. Ten moves of 5% or more made the list in the last 7 days. Kyogre ex - 037 (EX Collector's Tins) (Nintendo Promos · 037): $272.97, +48.8%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +45.1%, unconfirmed. Lugia EX (Team Plasma) (134 Full Art) (Plasma Storm · 134/135): $1,344.25, +43.2%, unconfirmed. Togepi (WoTC Promo · 30/53): $31.24, +37.4%, unconfirmed. Mew - 040 (Trainer's Challenge Set) (Nintendo Promos · 040): $200.22, +34.6%, unconfirmed. Butterfree (5) (Expedition · 005/165): $123.31, −31.5%, unconfirmed. Umbreon - 10/90 (Cracked Ice Holo) (Deck Exclusives · 010/090): $115.85, +31.4%, unconfirmed. Unconfirmed: no checked sales yet, so it shows only if it's 60% or less and the lowest listing moved the same way. Source: TCGplayer market prices via tcgcsv.com, as of Oct 9, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 10, 2026. Ten moves of 5% or more made the list in the last 7 days. Armarouge (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 012/084): $55.37, +52.0%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Heatran LV.X - DP31 (Diamond and Pearl Promos · DP31): $78.32, +45.1%, unconfirmed. Kyogre ex - 037 (EX Collector's Tins) (Nintendo Promos · 037): $266.11, +45.1%, unconfirmed. Butterfree (5) (Expedition · 005/165): $123.31, −31.5%, unconfirmed. Umbreon - 10/90 (Cracked Ice Holo) (Deck Exclusives · 010/090): $115.85, +31.4%, unconfirmed. Rayquaza ex (EX Dragon · 97/97): $595.55, +29.3%, unconfirmed. Flareon ex (EX Delta Species · 108/113): $329.31, −29.1%, unconfirmed. Unconfirmed: no checked sales yet, so it shows only if it's 60% or less and the lowest listing moved the same way. Source: TCGplayer market prices via tcgcsv.com, as of Oct 10, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

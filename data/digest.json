@@ -1,15 +1,15 @@
 {
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-11",
   "daily": {
-    "date": "2026-10-10",
+    "date": "2026-10-11",
     "movers": [
       {
-        "name": "Kyogre ex - 037 (EX Collector's Tins)",
-        "set": "Nintendo Promos",
-        "change_pct": 48.8,
+        "name": "Armarouge (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 52.0,
         "label": "UNCONFIRMED",
-        "price": 272.97,
-        "observed": "2026-10-09"
+        "price": 55.37,
+        "observed": "2026-10-10"
       },
       {
         "name": "Giovanni's Persian",
@@ -17,7 +17,7 @@
         "change_pct": 46.9,
         "label": "UNCONFIRMED",
         "price": 234.95,
-        "observed": "2026-10-09"
+        "observed": "2026-10-10"
       },
       {
         "name": "Heatran LV.X - DP31",
@@ -25,65 +25,65 @@
         "change_pct": 45.1,
         "label": "UNCONFIRMED",
         "price": 78.32,
-        "observed": "2026-10-09"
+        "observed": "2026-10-10"
       },
       {
-        "name": "Lugia EX (Team Plasma) (134 Full Art)",
-        "set": "Plasma Storm",
-        "change_pct": 43.2,
+        "name": "Kyogre ex - 037 (EX Collector's Tins)",
+        "set": "Nintendo Promos",
+        "change_pct": 45.1,
         "label": "UNCONFIRMED",
-        "price": 1344.25,
-        "observed": "2026-10-09"
+        "price": 266.11,
+        "observed": "2026-10-10"
       },
       {
-        "name": "Togepi",
-        "set": "WoTC Promo",
-        "change_pct": 37.4,
+        "name": "Butterfree (5)",
+        "set": "Expedition",
+        "change_pct": -31.5,
         "label": "UNCONFIRMED",
-        "price": 31.24,
-        "observed": "2026-10-09"
+        "price": 123.31,
+        "observed": "2026-10-10"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Giratina Prism Star",
-        "set": "SM - Ultra Prism",
-        "change_pct": 36.5,
+        "name": "Latias Prism Star",
+        "set": "SM - Celestial Storm",
+        "change_pct": 33.0,
         "label": "UNCONFIRMED",
-        "price": 61.6,
-        "observed": "2026-10-09"
+        "price": 54.69,
+        "observed": "2026-10-10"
       },
       {
-        "name": "Umbreon - 10/90 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 29.6,
+        "name": "Victini Prism Star",
+        "set": "Dragon Majesty",
+        "change_pct": 28.0,
         "label": "UNCONFIRMED",
-        "price": 115.85,
-        "observed": "2026-10-09"
+        "price": 29.35,
+        "observed": "2026-10-10"
       },
       {
-        "name": "Torchic - 017 (EX Deck Tin)",
-        "set": "Nintendo Promos",
-        "change_pct": 16.0,
+        "name": "Jirachi Prism Star",
+        "set": "SM - Celestial Storm",
+        "change_pct": 22.2,
         "label": "UNCONFIRMED",
-        "price": 39.16,
-        "observed": "2026-10-09"
+        "price": 50.88,
+        "observed": "2026-10-10"
       },
       {
-        "name": "Super Potion",
-        "set": "Base Set (Shadowless)",
-        "change_pct": 13.2,
+        "name": "Armarouge (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 19.2,
         "label": "UNCONFIRMED",
-        "price": 23.07,
-        "observed": "2026-10-09"
+        "price": 55.37,
+        "observed": "2026-10-10"
       },
       {
-        "name": "Feraligatr (Prime)",
-        "set": "HeartGold SoulSilver",
-        "change_pct": 12.8,
+        "name": "Celebi Prism Star",
+        "set": "SM - Lost Thunder",
+        "change_pct": 17.9,
         "label": "UNCONFIRMED",
-        "price": 124.55,
-        "observed": "2026-10-09"
+        "price": 63.86,
+        "observed": "2026-10-10"
       }
     ],
     "calls_due": [],

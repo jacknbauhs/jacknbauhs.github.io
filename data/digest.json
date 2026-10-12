@@ -1,15 +1,23 @@
 {
-  "as_of": "2026-10-11",
+  "as_of": "2026-10-12",
   "daily": {
-    "date": "2026-10-11",
+    "date": "2026-10-12",
     "movers": [
       {
-        "name": "Armarouge (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 52.0,
+        "name": "Dark Crobat",
+        "set": "EX Team Rocket Returns",
+        "change_pct": 55.6,
         "label": "UNCONFIRMED",
-        "price": 55.37,
-        "observed": "2026-10-10"
+        "price": 61.78,
+        "observed": "2026-10-11"
+      },
+      {
+        "name": "Boltund VMAX - 104/264",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 50.6,
+        "label": "UNCONFIRMED",
+        "price": 126.37,
+        "observed": "2026-10-11"
       },
       {
         "name": "Giovanni's Persian",
@@ -17,15 +25,7 @@
         "change_pct": 46.9,
         "label": "UNCONFIRMED",
         "price": 234.95,
-        "observed": "2026-10-10"
-      },
-      {
-        "name": "Heatran LV.X - DP31",
-        "set": "Diamond and Pearl Promos",
-        "change_pct": 45.1,
-        "label": "UNCONFIRMED",
-        "price": 78.32,
-        "observed": "2026-10-10"
+        "observed": "2026-10-11"
       },
       {
         "name": "Kyogre ex - 037 (EX Collector's Tins)",
@@ -33,57 +33,57 @@
         "change_pct": 45.1,
         "label": "UNCONFIRMED",
         "price": 266.11,
-        "observed": "2026-10-10"
+        "observed": "2026-10-11"
       },
       {
-        "name": "Butterfree (5)",
-        "set": "Expedition",
-        "change_pct": -31.5,
+        "name": "Poliwrath (9)",
+        "set": "Neo Discovery",
+        "change_pct": 42.7,
         "label": "UNCONFIRMED",
-        "price": 123.31,
-        "observed": "2026-10-10"
+        "price": 69.0,
+        "observed": "2026-10-11"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Latias Prism Star",
-        "set": "SM - Celestial Storm",
-        "change_pct": 33.0,
+        "name": "Detective Pikachu - SM170 (Stamped)",
+        "set": "SM Promos",
+        "change_pct": 37.2,
         "label": "UNCONFIRMED",
-        "price": 54.69,
-        "observed": "2026-10-10"
+        "price": 45.67,
+        "observed": "2026-10-11"
+      },
+      {
+        "name": "Boltund VMAX - 104/264",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 37.1,
+        "label": "UNCONFIRMED",
+        "price": 126.37,
+        "observed": "2026-10-11"
+      },
+      {
+        "name": "Mew V - 113/264",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 16.6,
+        "label": "UNCONFIRMED",
+        "price": 163.45,
+        "observed": "2026-10-11"
       },
       {
         "name": "Victini Prism Star",
         "set": "Dragon Majesty",
-        "change_pct": 28.0,
+        "change_pct": 13.9,
         "label": "UNCONFIRMED",
-        "price": 29.35,
-        "observed": "2026-10-10"
+        "price": 33.43,
+        "observed": "2026-10-11"
       },
       {
-        "name": "Jirachi Prism Star",
+        "name": "Latias Prism Star",
         "set": "SM - Celestial Storm",
-        "change_pct": 22.2,
+        "change_pct": 12.7,
         "label": "UNCONFIRMED",
-        "price": 50.88,
-        "observed": "2026-10-10"
-      },
-      {
-        "name": "Armarouge (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 19.2,
-        "label": "UNCONFIRMED",
-        "price": 55.37,
-        "observed": "2026-10-10"
-      },
-      {
-        "name": "Celebi Prism Star",
-        "set": "SM - Lost Thunder",
-        "change_pct": 17.9,
-        "label": "UNCONFIRMED",
-        "price": 63.86,
-        "observed": "2026-10-10"
+        "price": 61.63,
+        "observed": "2026-10-11"
       }
     ],
     "calls_due": [],
@@ -93,7 +93,7 @@
     }
   },
   "weekly": {
-    "week_of": "2026-09-28",
+    "week_of": "2026-10-05",
     "flags_headline": {
       "value": null,
       "label": "no sales checked last week"

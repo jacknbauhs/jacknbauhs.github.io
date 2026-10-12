@@ -1,23 +1,41 @@
 {
-  "as_of": "2026-10-10",
+  "as_of": "2026-10-11",
   "items": [
     {
-      "id": 705528,
-      "name": "Armarouge (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "012/084",
-      "tier": "Rare",
+      "id": 84577,
+      "name": "Dark Crobat",
+      "set": "EX Team Rocket Returns",
+      "number": "3/109",
+      "tier": "Holo Rare",
       "last": {
-        "price": 55.37,
-        "date": "2026-10-10"
+        "price": 61.78,
+        "date": "2026-10-11"
       },
-      "change_pct": 52.0,
+      "change_pct": 55.6,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 495976,
+      "name": "Boltund VMAX - 104/264",
+      "set": "Prize Pack Series Cards",
+      "number": "104/264",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 126.37,
+        "date": "2026-10-11"
+      },
+      "change_pct": 50.6,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
     },
     {
       "id": 85724,
@@ -27,7 +45,7 @@
       "tier": "Holo Rare",
       "last": {
         "price": 234.95,
-        "date": "2026-10-10"
+        "date": "2026-10-11"
       },
       "change_pct": 46.9,
       "window_label": "7d",
@@ -35,25 +53,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 86055,
-      "name": "Heatran LV.X - DP31",
-      "set": "Diamond and Pearl Promos",
-      "number": "DP31",
-      "tier": "Promo",
-      "last": {
-        "price": 78.32,
-        "date": "2026-10-10"
-      },
-      "change_pct": 45.1,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
       "id": 86558,
@@ -63,7 +63,7 @@
       "tier": "Promo",
       "last": {
         "price": 266.11,
-        "date": "2026-10-10"
+        "date": "2026-10-11"
       },
       "change_pct": 45.1,
       "window_label": "7d",
@@ -71,7 +71,61 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 88269,
+      "name": "Poliwrath (9)",
+      "set": "Neo Discovery",
+      "number": "09/75",
+      "tier": "Holo Rare",
+      "last": {
+        "price": 69.0,
+        "date": "2026-10-11"
+      },
+      "change_pct": 42.7,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 89115,
+      "name": "Shaymin Lv.X (Sky Forme)",
+      "set": "Platinum",
+      "number": "127/127",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 97.5,
+        "date": "2026-10-11"
+      },
+      "change_pct": 41.1,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 206823,
+      "name": "Detective Pikachu - SM170 (Stamped)",
+      "set": "SM Promos",
+      "number": "SM170",
+      "tier": "Promo",
+      "last": {
+        "price": 45.67,
+        "date": "2026-10-11"
+      },
+      "change_pct": 37.5,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
     },
     {
       "id": 84059,
@@ -81,7 +135,7 @@
       "tier": "Holo Rare",
       "last": {
         "price": 123.31,
-        "date": "2026-10-10"
+        "date": "2026-10-11"
       },
       "change_pct": -31.5,
       "window_label": "7d",
@@ -89,7 +143,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
       "id": 125044,
@@ -99,7 +153,7 @@
       "tier": "Holo Rare",
       "last": {
         "price": 115.85,
-        "date": "2026-10-10"
+        "date": "2026-10-11"
       },
       "change_pct": 31.4,
       "window_label": "7d",
@@ -107,99 +161,81 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
-      "id": 88642,
-      "name": "Rayquaza ex",
-      "set": "EX Dragon",
-      "number": "97/97",
+      "id": 83656,
+      "name": "Articuno EX (Team Plasma)",
+      "set": "Plasma Storm",
+      "number": "25/135",
       "tier": "Ultra Rare",
       "last": {
-        "price": 595.55,
-        "date": "2026-10-10"
+        "price": 30.3,
+        "date": "2026-10-11"
       },
-      "change_pct": 29.3,
+      "change_pct": 28.1,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 85505,
-      "name": "Flareon ex",
-      "set": "EX Delta Species",
-      "number": "108/113",
-      "tier": "Ultra Rare",
-      "last": {
-        "price": 329.31,
-        "date": "2026-10-10"
-      },
-      "change_pct": -29.1,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 676090,
-      "name": "Mega Eelektross ex - 278/217",
-      "set": "ME: Ascended Heroes",
-      "number": "278/217",
-      "tier": "Special Illustration Rare",
-      "last": {
-        "price": 20.09,
-        "date": "2026-10-10"
-      },
-      "change_pct": -27.9,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 212992,
-      "name": "Umbreon - 60/108 (Regional Championships)",
-      "set": "League & Championship Cards",
-      "number": "060/108",
-      "tier": "Promo",
-      "last": {
-        "price": 278.0,
-        "date": "2026-10-10"
-      },
-      "change_pct": 27.8,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     }
   ],
   "one_day": [
     {
-      "id": 170934,
-      "name": "Latias Prism Star",
-      "set": "SM - Celestial Storm",
-      "number": "107/168",
-      "tier": "Prism Rare",
+      "id": 206823,
+      "name": "Detective Pikachu - SM170 (Stamped)",
+      "set": "SM Promos",
+      "number": "SM170",
+      "tier": "Promo",
       "last": {
-        "price": 54.69,
-        "date": "2026-10-10"
+        "price": 45.67,
+        "date": "2026-10-11"
       },
-      "change_pct": 33.0,
+      "change_pct": 37.2,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 495976,
+      "name": "Boltund VMAX - 104/264",
+      "set": "Prize Pack Series Cards",
+      "number": "104/264",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 126.37,
+        "date": "2026-10-11"
+      },
+      "change_pct": 37.1,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 489307,
+      "name": "Mew V - 113/264",
+      "set": "Prize Pack Series Cards",
+      "number": "113/264",
+      "tier": "Ultra Rare",
+      "last": {
+        "price": 163.45,
+        "date": "2026-10-11"
+      },
+      "change_pct": 16.6,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
     },
     {
       "id": 175275,
@@ -208,88 +244,34 @@
       "number": "7/70",
       "tier": "Prism Rare",
       "last": {
-        "price": 29.35,
-        "date": "2026-10-10"
+        "price": 33.43,
+        "date": "2026-10-11"
       },
-      "change_pct": 28.0,
+      "change_pct": 13.9,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
-      "id": 170922,
-      "name": "Jirachi Prism Star",
+      "id": 170934,
+      "name": "Latias Prism Star",
       "set": "SM - Celestial Storm",
-      "number": "97/168",
+      "number": "107/168",
       "tier": "Prism Rare",
       "last": {
-        "price": 50.88,
-        "date": "2026-10-10"
+        "price": 61.63,
+        "date": "2026-10-11"
       },
-      "change_pct": 22.2,
+      "change_pct": 12.7,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 705528,
-      "name": "Armarouge (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "012/084",
-      "tier": "Rare",
-      "last": {
-        "price": 55.37,
-        "date": "2026-10-10"
-      },
-      "change_pct": 19.2,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 178818,
-      "name": "Celebi Prism Star",
-      "set": "SM - Lost Thunder",
-      "number": "19/214",
-      "tier": "Prism Rare",
-      "last": {
-        "price": 63.86,
-        "date": "2026-10-10"
-      },
-      "change_pct": 17.9,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 165758,
-      "name": "Arceus Prism Star",
-      "set": "SM - Forbidden Light",
-      "number": "96/131",
-      "tier": "Prism Rare",
-      "last": {
-        "price": 39.36,
-        "date": "2026-10-10"
-      },
-      "change_pct": 15.6,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
       "id": 170935,
@@ -298,34 +280,70 @@
       "number": "108/168",
       "tier": "Prism Rare",
       "last": {
-        "price": 74.29,
-        "date": "2026-10-10"
+        "price": 81.56,
+        "date": "2026-10-11"
       },
-      "change_pct": 14.4,
+      "change_pct": 9.8,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     },
     {
-      "id": 479921,
-      "name": "Mewtwo - 2009 (David Cohen)",
-      "set": "World Championship Decks",
-      "number": "9/100",
-      "tier": "Rare",
+      "id": 86053,
+      "name": "Heatran EX (Team Plasma) (Full Art)",
+      "set": "Plasma Freeze",
+      "number": "109/116",
+      "tier": "Ultra Rare",
       "last": {
-        "price": 29.41,
-        "date": "2026-10-10"
+        "price": 186.23,
+        "date": "2026-10-11"
       },
-      "change_pct": 10.5,
+      "change_pct": 8.8,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 165758,
+      "name": "Arceus Prism Star",
+      "set": "SM - Forbidden Light",
+      "number": "96/131",
+      "tier": "Prism Rare",
+      "last": {
+        "price": 42.37,
+        "date": "2026-10-11"
+      },
+      "change_pct": 7.6,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
+    },
+    {
+      "id": 714386,
+      "name": "Lugia",
+      "set": "ME: 30th Celebration Classic Collection",
+      "number": "149/147",
+      "tier": "Classic Collection",
+      "last": {
+        "price": 177.82,
+        "date": "2026-10-11"
+      },
+      "change_pct": -6.8,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-10-11"
     },
     {
       "id": 157675,
@@ -334,34 +352,16 @@
       "number": "58/156",
       "tier": "Prism Rare",
       "last": {
-        "price": 67.02,
-        "date": "2026-10-10"
+        "price": 71.03,
+        "date": "2026-10-11"
       },
-      "change_pct": 8.8,
+      "change_pct": 6.0,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
-    },
-    {
-      "id": 704875,
-      "name": "Gladion's Final Battle - 118/084",
-      "set": "ME05: Pitch Black",
-      "number": "118/084",
-      "tier": "Special Illustration Rare",
-      "last": {
-        "price": 23.2,
-        "date": "2026-10-10"
-      },
-      "change_pct": -5.7,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-10-10"
+      "observed": "2026-10-11"
     }
   ]
 }

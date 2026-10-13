@@ -49,7 +49,7 @@
   // price that changed in the last maxStaleDays days (WEEK_MAX_STALE_DAYS); in both, a card whose price changed on at least
   // minUpdates of the last activityDays days (MIN_MARKET_UPDATES, MARKET_ACTIVITY_DAYS). `variant` names the printing.
   var ONE_DAY = { minPrice: 20, minPct: 3, maxUnconfirmedPct: 40 };
-  var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60, maxStaleDays: 2 };
+  var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60, maxStaleDays: 2, smoothDays: 3 };
   var ACTIVE = { minUpdates: 3, activityDays: 14 };
   var TRADES = "it trades (its price changed on " + ACTIVE.minUpdates + "+ of the last " + ACTIVE.activityDays + " days)";
   var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
@@ -759,7 +759,9 @@
       return;
     }
     var win = items[0].window_label || "7d";
-    $("#movers-sub").textContent = "TCGplayer · last " + win.replace(/d$/, " days");
+    // The 7-day change is between 3-day medians at each end (config/board.py WEEK_SMOOTH_DAYS); the price is the latest.
+    $("#movers-sub").textContent = "TCGplayer · last " + win.replace(/d$/, " days") +
+      (win === "7d" ? " · change between " + WEEK.smoothDays + "-day medians, latest price" : "");
     var tb = el("tbody");
     items.forEach(function (m) {
       var bits = [m.set, m.number, m.variant, m.tier].filter(Boolean).join(" · ");

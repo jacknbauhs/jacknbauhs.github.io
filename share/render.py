@@ -79,14 +79,21 @@ SLOTS = ("Tue story", "Thu market", "Sat build")
 # What Mission Control's movers lists cover: window label -> (lowest price in $, smallest move in %). Keep in step with
 # its config/board.py (MOVER_MIN_CENTS and MOVER_MIN_PCT for 7d; the one_day list for 1d).
 MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
-# Both lists also leave out big unbacked jumps: a move with checked sales always shows, an Unconfirmed one only up to
-# this size and only when TCGplayer's lowest listing moved the same way (by at least a quarter as much; in the 7-day list
-# the price also changed in the last 2 days: the image's one-sentence foot and caption leave those two out, the board
-# say them). Keep in step with config/board.py and ONE_DAY and WEEK in assets/board.js.
+# Both lists also leave out big unbacked jumps: a move with checked sales always shows; an Unconfirmed one only up to
+# this size, only on a card that trades (its price changed on 3+ of the last 14 days) and only when TCGplayer's lowest
+# listing moved the same way by at least a quarter as much; in the 7-day list its price also changed in the last 2 days.
+# UNCONFIRMED_RULE says it in the one sentence the image's foot has room for. Keep in step with config/board.py and
+# ONE_DAY, WEEK and ACTIVE in assets/board.js.
 DAY_UNCONFIRMED_MAX_PCT = 40
 WEEK_UNCONFIRMED_MAX_PCT = 60
 UNCONFIRMED_MAX_PCT = {"7d": WEEK_UNCONFIRMED_MAX_PCT, "1d": DAY_UNCONFIRMED_MAX_PCT}
 MOVING_ROWS = 8
+UNCONFIRMED_RULE = {
+    "1d": "Unconfirmed: no checked sales; shown only if {cap}% or less, actively traded and the lowest listing agreed.",
+    "7d": "Unconfirmed: no checked sales; shown only if ≤{cap}%, actively traded, low listing agreed, priced within 2 days.",
+}
+# The 7-day list's freshness rule (config/board.py WEEK_MAX_STALE_DAYS), for the pre-post check in captions.md.
+WEEK_MAX_STALE_DAYS = 2
 # On a mover, a label speaks to the move, so two read differently than on a single sale.
 MOVER_MEANINGS = {"ORGANIC": "the sales checked in the window hold up.", "UNCONFIRMED": "no checked sales speak to the move yet."}
 # A market File ("kind": "market" in file.json): TCGplayer price moves instead of a graded card's sales. Its cover shows
@@ -105,6 +112,42 @@ LATEST = (("file", "file-*-cover.png", "file cover"), ("flags", "flags-*-cover.p
 
 
 # ---------- helpers ----------
+def post_checks(movers: dict | None, meta: dict | None, today: dt.date) -> list[str]:
+    """What to know before posting today's movers, as lines for the top of
+    captions.md: whether any move has a checked sale behind it, how old the
+    prices are, and any 7-day row whose price is older than the list allows
+    (a sign the Mission Control deploy is behind). Plain facts; an empty
+    board reads as such."""
+    movers, meta = movers or {}, meta or {}
+    out = []
+    as_of = movers.get("as_of")
+    tcg = next((x.get("as_of") for x in meta.get("sources") or [] if x.get("id") == "tcgcsv"), None) or as_of
+    if tcg:
+        age = (today - parse_date(tcg)).days
+        out.append(f"{'⚠️' if age > 2 else '✅'} Prices are from {fmt_date_year(tcg)}"
+                   + (f", {age} days old: don't call them today's." if age > 2 else "."))
+    for key, name in (("items", "7-day list"), ("one_day", "since-yesterday list")):
+        rows = [m for m in movers.get(key) or [] if isinstance(m, dict)]
+        if not rows:
+            out.append(f"• The {name} is empty: nothing passed the rules. Say so, or skip the movers post.")
+            continue
+        unc = sum(1 for m in rows if m.get("label") == "UNCONFIRMED")
+        if unc == len(rows):
+            out.append(f"⚠️ All {len(rows)} on the {name} are unconfirmed: no checked sale behind any. Keep "
+                       "\"unconfirmed\" in the post and call them price moves, not sales.")
+        else:
+            out.append(f"✅ {len(rows) - unc} of {len(rows)} on the {name} have checked sales behind them"
+                       + (f"; {unc} are unconfirmed and must say so." if unc else "."))
+        if key == "items" and as_of:
+            old = [m.get("name") for m in rows if m.get("label") == "UNCONFIRMED" and (m.get("last") or {}).get("date")
+                   and (parse_date(as_of) - parse_date(m["last"]["date"])).days > WEEK_MAX_STALE_DAYS]
+            if old:
+                out.append(f"⚠️ {len(old)} unconfirmed 7-day row(s) carry a price older than {WEEK_MAX_STALE_DAYS} days "
+                           f"({', '.join(map(str, old[:3]))}): Mission Control may not have deployed the 2026-10-13 rules. "
+                           "Don't post them.")
+    return out
+
+
 def load(name: str):
     p = DATA / name
     if not p.exists():
@@ -948,7 +991,7 @@ class Kit:
         cap = UNCONFIRMED_MAX_PCT.get(window)
         list_rule = ""
         if cap:
-            list_rule = f"Unconfirmed: no checked sales yet, so it shows only if it's {cap}% or less and the lowest listing moved the same way."
+            list_rule = UNCONFIRMED_RULE[window].format(cap=cap)
         meanings = {k: MOVER_MEANINGS.get(k) or (label_info(k)[4][:1].lower() + label_info(k)[4][1:]) for k in present}
         legend = " ".join(f"{label_info(k)[0]}: {meanings[k]}" for k in present if meanings[k] and not (list_rule and k == "UNCONFIRMED"))
         # The image says what Unconfirmed means; the caption carries every label's meaning, the board explains them all.
@@ -1067,6 +1110,9 @@ class Kit:
         stamp = str((load("meta.json") or {}).get("generated_at") or (load("file.json") or {}).get("as_of") or dt.date.today())[:10]
         lines = [f"# Captions, board data of {stamp}", "",
                  "One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.", ""]
+        checks = post_checks(load("movers.json"), load("meta.json"), parse_date(stamp) if stamp[:4].isdigit() else dt.date.today())
+        if checks:
+            lines += ["## Before you post", ""] + [f"- {c}" for c in checks] + [""]
         for pg in self.pages:
             if not pg["caption"]:
                 continue

@@ -46,9 +46,12 @@
   // What Mission Control's since-yesterday list (movers.json one_day) and 7-day list (movers.json items) cover. Keep in step
   // with its config/board.py: a move with checked sales always shows; an Unconfirmed one only up to maxUnconfirmedPct, with
   // the lowest listing moving the same way by at least a quarter as much (LOW_CONFIRM_SHARE), and, in the 7-day list, a
-  // price that changed in the last maxStaleDays days (WEEK_MAX_STALE_DAYS).
+  // price that changed in the last maxStaleDays days (WEEK_MAX_STALE_DAYS); in both, a card whose price changed on at least
+  // minUpdates of the last activityDays days (MIN_MARKET_UPDATES, MARKET_ACTIVITY_DAYS). `variant` names the printing.
   var ONE_DAY = { minPrice: 20, minPct: 3, maxUnconfirmedPct: 40 };
   var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60, maxStaleDays: 2 };
+  var ACTIVE = { minUpdates: 3, activityDays: 14 };
+  var TRADES = "it trades (its price changed on " + ACTIVE.minUpdates + "+ of the last " + ACTIVE.activityDays + " days)";
   var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
 
   /* ---------- helpers ---------- */
@@ -505,7 +508,7 @@
     rows = rows.filter(function (m) { return m && str(m.name); });
     // The rule, said the same way in both states: in the quiet line, and in a note under a list.
     var covers = "cards worth $" + ONE_DAY.minPrice + " or more that moved " + ONE_DAY.minPct + "% or more";
-    var unbacked = "with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way, by at least a quarter as much.";
+    var unbacked = "with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less, the lowest listing moved the same way by at least a quarter as much, and " + TRADES + ".";
     var body;
     if (!rows.length) {
       body = el("p", { class: "today-quiet", text: "Quiet since yesterday: nothing made the list. It takes " + covers + "; " + unbacked });
@@ -515,7 +518,7 @@
         var price = m.last && isNum(m.last.price) ? m.last.price : m.price;
         var has = isNum(m.change_pct), up = m.change_pct >= 0;
         body.appendChild(el("li", { class: "today-mover" }, [
-          el("span", { class: "t-main" }, [el("span", { class: "name", text: m.name }), el("span", { class: "sub", text: [m.set, m.number].filter(Boolean).join(" · ") })]),
+          el("span", { class: "t-main" }, [el("span", { class: "name", text: m.name }), el("span", { class: "sub", text: [m.set, m.number, m.variant].filter(Boolean).join(" · ") })]),
           el("span", { class: "t-fig" }, [
             el("span", { class: "num " + (has ? (up ? "up" : "down") : ""), text: has ? (up ? "▲ " : "▼ ") + pct(m.change_pct, 1) : "—" }),
             el("span", { class: "sub num", text: money(price) })
@@ -745,7 +748,7 @@
     var items = movers && movers.items ? movers.items : [];
     // The rule, said the same way in every state: the empty card's text, and a note under a list.
     var covers = "Pokémon cards worth $" + WEEK.minPrice + " or more that moved " + WEEK.minPct + "% or more in a week on TCGplayer";
-    var unbacked = "with no checked sales, a move shows only if it's " + WEEK.maxUnconfirmedPct + "% or less, the lowest listing moved the same way by at least a quarter as much, and the price changed in the last " + WEEK.maxStaleDays + " days.";
+    var unbacked = "with no checked sales, a move shows only if it's " + WEEK.maxUnconfirmedPct + "% or less, the lowest listing moved the same way by at least a quarter as much, and the price changed in the last " + WEEK.maxStaleDays + " days, and " + TRADES + ".";
     if (!items.length) {
       wrap.appendChild(movers && movers.pending
         ? emptyCard("Market movers start with the nightly feed.",
@@ -759,7 +762,7 @@
     $("#movers-sub").textContent = "TCGplayer · last " + win.replace(/d$/, " days");
     var tb = el("tbody");
     items.forEach(function (m) {
-      var bits = [m.set, m.number, m.tier].filter(Boolean).join(" · ");
+      var bits = [m.set, m.number, m.variant, m.tier].filter(Boolean).join(" · ");
       tb.appendChild(el("tr", {}, [
         el("td", { class: "first" }, [el("span", { class: "name", text: m.name }), el("span", { class: "sub", text: bits })]),
         el("td", { "data-label": "Market price", class: "num" }, [stack(money(m.last && m.last.price), m.last && m.last.date ? fmtDate(m.last.date) : "")]),

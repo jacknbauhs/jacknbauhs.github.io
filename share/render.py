@@ -939,7 +939,7 @@ class Kit:
             if m.get("label") and m["label"] not in present:
                 present.append(m["label"])
             chg = m.get("change_pct")
-            rows.append({"name": m["name"], "line2": " · ".join(str(x) for x in (m.get("set"), m.get("number")) if x),
+            rows.append({"name": m["name"], "line2": " · ".join(str(x) for x in (m.get("set"), m.get("number"), m.get("variant")) if x),
                          "price": money((m.get("last") or {}).get("price")), "pct": pct(chg, 1),
                          "pct_class": "" if chg is None else ("up" if chg >= 0 else "down"),
                          "chip": chip, "label_text": text, "has_label": bool(m.get("label"))})

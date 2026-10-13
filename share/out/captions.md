@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-12
+# Captions, board data of 2026-10-13
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 11, 2026.
+- ✅ Prices are from Oct 12, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -44,8 +44,8 @@ Three calls on the record. #001: The 30th Celebration Booster Bundle's premium c
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
 
-## moving-2026-W41.png
+## moving-2026-W42.png
 
-What's moving on TCGplayer, as of Oct 11, 2026. Ten moves of 5% or more made the list in the last 7 days. Dark Crobat (EX Team Rocket Returns · 3/109): $61.78, +55.6%, unconfirmed. Boltund VMAX - 104/264 (Prize Pack Series Cards · 104/264): $126.37, +50.6%, unconfirmed. Giovanni's Persian (Gym Challenge · 008/132): $234.95, +46.9%, unconfirmed. Kyogre ex - 037 (EX Collector's Tins) (Nintendo Promos · 037): $266.11, +45.1%, unconfirmed. Poliwrath (9) (Neo Discovery · 09/75): $69, +42.7%, unconfirmed. Shaymin Lv.X (Sky Forme) (Platinum · 127/127): $97.50, +41.1%, unconfirmed. Detective Pikachu - SM170 (Stamped) (SM Promos · SM170): $45.67, +37.5%, unconfirmed. Butterfree (5) (Expedition · 005/165): $123.31, −31.5%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 11, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 12, 2026. Ten moves of 5% or more made the list in the last 7 days. Boltund VMAX - 104/264 (Prize Pack Series Cards · 104/264 · Holofoil): $126.37, +50.6%, unconfirmed. Kyogre ex - 037 (EX Collector's Tins) (Nintendo Promos · 037 · Holofoil): $266.11, +45.1%, unconfirmed. Primarina - 020/084 (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 020/084 · Holofoil): $33.16, +27.6%, unconfirmed. Mega Eelektross ex - 278/217 (ME: Ascended Heroes · 278/217 · Holofoil): $20.18, −26.9%, unconfirmed. Articuno EX (Team Plasma) (Plasma Storm · 25/135 · Holofoil): $29.85, +26.2%, unconfirmed. Lugia EX (Team Plasma) (Plasma Storm · 108/135 · Holofoil): $108.65, +24.9%, unconfirmed. Rampardos (Platinum · 13/127 · Holofoil): $34.19, +23.5%, unconfirmed. Latios ex (EX Dragon · 94/97 · Holofoil): $241.07, −22.0%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 12, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

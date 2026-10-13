@@ -45,9 +45,10 @@
   var WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   // What Mission Control's since-yesterday list (movers.json one_day) and 7-day list (movers.json items) cover. Keep in step
   // with its config/board.py: a move with checked sales always shows; an Unconfirmed one only up to maxUnconfirmedPct, with
-  // the lowest listing moving the same way.
+  // the lowest listing moving the same way by at least a quarter as much (LOW_CONFIRM_SHARE), and, in the 7-day list, a
+  // price that changed in the last maxStaleDays days (WEEK_MAX_STALE_DAYS).
   var ONE_DAY = { minPrice: 20, minPct: 3, maxUnconfirmedPct: 40 };
-  var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60 };
+  var WEEK = { minPrice: 20, minPct: 5, maxUnconfirmedPct: 60, maxStaleDays: 2 };
   var SOURCES = { youtube: "YouTube", reddit: "Reddit", news: "News" };
 
   /* ---------- helpers ---------- */
@@ -504,7 +505,7 @@
     rows = rows.filter(function (m) { return m && str(m.name); });
     // The rule, said the same way in both states: in the quiet line, and in a note under a list.
     var covers = "cards worth $" + ONE_DAY.minPrice + " or more that moved " + ONE_DAY.minPct + "% or more";
-    var unbacked = "with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way.";
+    var unbacked = "with no checked sales, a move shows only if it's " + ONE_DAY.maxUnconfirmedPct + "% or less and the lowest listing moved the same way, by at least a quarter as much.";
     var body;
     if (!rows.length) {
       body = el("p", { class: "today-quiet", text: "Quiet since yesterday: nothing made the list. It takes " + covers + "; " + unbacked });
@@ -744,7 +745,7 @@
     var items = movers && movers.items ? movers.items : [];
     // The rule, said the same way in every state: the empty card's text, and a note under a list.
     var covers = "Pokémon cards worth $" + WEEK.minPrice + " or more that moved " + WEEK.minPct + "% or more in a week on TCGplayer";
-    var unbacked = "with no checked sales, a move shows only if it's " + WEEK.maxUnconfirmedPct + "% or less and the lowest listing moved the same way.";
+    var unbacked = "with no checked sales, a move shows only if it's " + WEEK.maxUnconfirmedPct + "% or less, the lowest listing moved the same way by at least a quarter as much, and the price changed in the last " + WEEK.maxStaleDays + " days.";
     if (!items.length) {
       wrap.appendChild(movers && movers.pending
         ? emptyCard("Market movers start with the nightly feed.",

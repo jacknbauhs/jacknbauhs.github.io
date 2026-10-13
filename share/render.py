@@ -80,8 +80,9 @@ SLOTS = ("Tue story", "Thu market", "Sat build")
 # its config/board.py (MOVER_MIN_CENTS and MOVER_MIN_PCT for 7d; the one_day list for 1d).
 MOVER_RULES = {"7d": (20, 5), "1d": (20, 3)}
 # Both lists also leave out big unbacked jumps: a move with checked sales always shows, an Unconfirmed one only up to
-# this size and only when TCGplayer's lowest listing moved the same way. Keep in step with config/board.py and ONE_DAY
-# and WEEK in assets/board.js.
+# this size and only when TCGplayer's lowest listing moved the same way (by at least a quarter as much; in the 7-day list
+# the price also changed in the last 2 days: the image's one-sentence foot and caption leave those two out, the board
+# say them). Keep in step with config/board.py and ONE_DAY and WEEK in assets/board.js.
 DAY_UNCONFIRMED_MAX_PCT = 40
 WEEK_UNCONFIRMED_MAX_PCT = 60
 UNCONFIRMED_MAX_PCT = {"7d": WEEK_UNCONFIRMED_MAX_PCT, "1d": DAY_UNCONFIRMED_MAX_PCT}

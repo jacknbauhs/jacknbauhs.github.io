@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-15
+# Captions, board data of 2026-10-16
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 14, 2026.
+- ✅ Prices are from Oct 15, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W42.png
 
-What's moving on TCGplayer, as of Oct 14, 2026. Ten moves of 5% or more made the list in the last 7 days. Lugia EX (Team Plasma) (Plasma Storm · 108/135 · Holofoil): $151.44, +54.3%, unconfirmed. Boltund VMAX - 104/264 (Prize Pack Series Cards · 104/264 · Holofoil): $126.37, +50.6%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $249.25, −37.7%, unconfirmed. Snorlax GX - SM05 (SM Promos · SM05 · Holofoil): $28.58, +31.5%, unconfirmed. Umbreon - 10/90 (Cracked Ice Holo) (Deck Exclusives · 010/090 · Holofoil): $118.51, +31.4%, unconfirmed. Lightning Energy (WotC 2002 League Promo) (League & Championship Cards · Holofoil): $58.62, +27.2%, unconfirmed. Lugia EX (Team Plasma) - BW83 (Black and White Promos · BW83 · Holofoil): $65.91, +26.2%, unconfirmed. Articuno EX (Team Plasma) (Plasma Storm · 25/135 · Holofoil): $30.53, +22.9%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 14, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 15, 2026. Ten moves of 5% or more made the list in the last 7 days. Lugia EX (Team Plasma) (Plasma Storm · 108/135 · Holofoil): $151.44, +59.9%, unconfirmed. Boltund VMAX - 104/264 (Prize Pack Series Cards · 104/264 · Holofoil): $126.37, +50.6%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $249.25, −37.7%, unconfirmed. Lightning Energy (WotC 2002 League Promo) (League & Championship Cards · Holofoil): $58.62, +37.2%, unconfirmed. Detective Pikachu - SM170 (Stamped) (SM Promos · SM170 · Holofoil): $46.47, +37.2%, unconfirmed. Snorlax GX - SM05 (SM Promos · SM05 · Holofoil): $28.39, +29.8%, unconfirmed. Primarina - 020/084 (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 020/084 · Holofoil): $34.69, +28.2%, unconfirmed. Garchomp C LV.X - DP46 (Diamond and Pearl Promos · DP46 · Holofoil): $119.27, +25.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 15, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

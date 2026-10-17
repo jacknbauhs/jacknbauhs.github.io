@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-16",
+  "as_of": "2026-10-17",
   "daily": {
-    "date": "2026-10-16",
+    "date": "2026-10-17",
     "movers": [
-      {
-        "name": "Lugia EX (Team Plasma)",
-        "set": "Plasma Storm",
-        "change_pct": 59.9,
-        "label": "UNCONFIRMED",
-        "price": 151.44,
-        "observed": "2026-10-15"
-      },
       {
         "name": "Boltund VMAX - 104/264",
         "set": "Prize Pack Series Cards",
         "change_pct": 50.6,
         "label": "UNCONFIRMED",
         "price": 126.37,
-        "observed": "2026-10-15"
+        "observed": "2026-10-16"
+      },
+      {
+        "name": "Charizard (Delta Species)",
+        "set": "EX Crystal Guardians",
+        "change_pct": -39.9,
+        "label": "UNCONFIRMED",
+        "price": 564.76,
+        "observed": "2026-10-16"
+      },
+      {
+        "name": "Detective Pikachu - SM170 (Stamped)",
+        "set": "SM Promos",
+        "change_pct": 39.6,
+        "label": "UNCONFIRMED",
+        "price": 46.47,
+        "observed": "2026-10-16"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
         "change_pct": -37.7,
         "label": "UNCONFIRMED",
-        "price": 249.25,
-        "observed": "2026-10-15"
+        "price": 216.17,
+        "observed": "2026-10-16"
       },
       {
-        "name": "Lightning Energy (WotC 2002 League Promo)",
-        "set": "League & Championship Cards",
-        "change_pct": 37.2,
+        "name": "Mew - 040 (Trainer's Challenge Set)",
+        "set": "Nintendo Promos",
+        "change_pct": 32.5,
         "label": "UNCONFIRMED",
-        "price": 58.62,
-        "observed": "2026-10-15"
-      },
-      {
-        "name": "Detective Pikachu - SM170 (Stamped)",
-        "set": "SM Promos",
-        "change_pct": 37.2,
-        "label": "UNCONFIRMED",
-        "price": 46.47,
-        "observed": "2026-10-15"
+        "price": 210.25,
+        "observed": "2026-10-16"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Dragonair",
-        "set": "Base Set (Shadowless)",
+        "name": "Pikachu (Collector Chest)",
+        "set": "XY Promos",
         "change_pct": -16.8,
         "label": "UNCONFIRMED",
-        "price": 140.0,
-        "observed": "2026-10-15"
+        "price": 37.8,
+        "observed": "2026-10-16"
       },
       {
-        "name": "Latias & Latios GX (Alternate Full Art)",
-        "set": "SM - Team Up",
-        "change_pct": 14.9,
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -13.3,
         "label": "UNCONFIRMED",
-        "price": 4499.66,
-        "observed": "2026-10-15"
+        "price": 216.17,
+        "observed": "2026-10-16"
       },
       {
-        "name": "Rayquaza C",
-        "set": "Supreme Victors",
-        "change_pct": -8.1,
+        "name": "Latias Prism Star",
+        "set": "SM - Celestial Storm",
+        "change_pct": -12.0,
         "label": "UNCONFIRMED",
-        "price": 235.14,
-        "observed": "2026-10-15"
+        "price": 58.73,
+        "observed": "2026-10-16"
       },
       {
         "name": "Latios Prism Star",
         "set": "SM - Celestial Storm",
-        "change_pct": -7.9,
+        "change_pct": -10.8,
         "label": "UNCONFIRMED",
-        "price": 74.51,
-        "observed": "2026-10-15"
+        "price": 66.49,
+        "observed": "2026-10-16"
       },
       {
-        "name": "Blaziken",
-        "set": "Great Encounters",
-        "change_pct": 7.8,
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -8.9,
         "label": "UNCONFIRMED",
-        "price": 25.7,
-        "observed": "2026-10-15"
+        "price": 211.99,
+        "observed": "2026-10-16"
       }
     ],
     "calls_due": [],

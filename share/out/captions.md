@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-19
+# Captions, board data of 2026-10-20
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 18, 2026.
+- ✅ Prices are from Oct 19, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -44,8 +44,8 @@ Three calls on the record. #001: The 30th Celebration Booster Bundle's premium c
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
 
-## moving-2026-W42.png
+## moving-2026-W43.png
 
-What's moving on TCGplayer, as of Oct 18, 2026. Ten moves of 5% or more made the list in the last 7 days. Shinx - 98/130 (City Championships) [Staff] (Nintendo Promos · 98/130): $147.50, +47.5%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $199.63, −46.0%, unconfirmed. Lugia EX (Team Plasma) (Legendary Treasures · 102/113 · Holofoil): $67.95, +42.1%, unconfirmed. Celebi Prism Star (SM - Lost Thunder · 19/214 · Holofoil): $40.81, −36.1%, unconfirmed. Jirachi Prism Star (SM - Celestial Storm · 97/168 · Holofoil): $66.28, +34.7%, unconfirmed. Darkrai Prism Star (SM - Ultra Prism · 77/156 · Holofoil): $83.46, +33.8%, unconfirmed. Heracross (Neo Genesis · 006/111 · 1st Edition Holofoil): $281.06, +30.6%, unconfirmed. Latios (EX Trainer Kit 1: Latias & Latios · 2/10 · Holofoil): $26.74, +29.9%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 18, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 19, 2026. Ten moves of 5% or more made the list in the last 7 days. Dialga - DP49 (Diamond and Pearl Promos · DP49 · Holofoil): $34.31, +51.9%, unconfirmed. Zoroark - BW19 (Black and White Promos · BW19 · Holofoil): $46.06, +39.5%, unconfirmed. Lugia EX (Team Plasma) (Legendary Treasures · 102/113 · Holofoil): $67.95, +37.3%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $199.63, −33.3%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $32.54, +31.5%, unconfirmed. Heracross (Neo Genesis · 006/111 · 1st Edition Holofoil): $281.06, +30.6%, unconfirmed. Darkrai Prism Star (SM - Ultra Prism · 77/156 · Holofoil): $83.46, +26.8%, unconfirmed. Pumpkaboo - 076/203 (Prize Pack Series Cards · 076/203 · Holofoil): $31.34, +24.5%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 19, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

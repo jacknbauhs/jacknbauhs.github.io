@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-19",
+  "as_of": "2026-10-20",
   "daily": {
-    "date": "2026-10-19",
+    "date": "2026-10-20",
     "movers": [
       {
-        "name": "Shinx - 98/130 (City Championships) [Staff]",
-        "set": "Nintendo Promos",
-        "change_pct": 47.5,
+        "name": "Dialga - DP49",
+        "set": "Diamond and Pearl Promos",
+        "change_pct": 51.9,
         "label": "UNCONFIRMED",
-        "price": 147.5,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -46.0,
-        "label": "UNCONFIRMED",
-        "price": 199.63,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Lugia EX (Team Plasma)",
-        "set": "Legendary Treasures",
-        "change_pct": 42.1,
-        "label": "UNCONFIRMED",
-        "price": 67.95,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Celebi Prism Star",
-        "set": "SM - Lost Thunder",
-        "change_pct": -36.1,
-        "label": "UNCONFIRMED",
-        "price": 40.81,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Jirachi Prism Star",
-        "set": "SM - Celestial Storm",
-        "change_pct": 34.7,
-        "label": "UNCONFIRMED",
-        "price": 66.28,
-        "observed": "2026-10-18"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Serperior - 064 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 20.9,
-        "label": "UNCONFIRMED",
-        "price": 32.09,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Mew ex - 158/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -17.5,
-        "label": "UNCONFIRMED",
-        "price": 41.55,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Sylveon ex - 156/131",
-        "set": "SV: Prismatic Evolutions",
-        "change_pct": -12.6,
-        "label": "UNCONFIRMED",
-        "price": 369.9,
-        "observed": "2026-10-18"
-      },
-      {
-        "name": "Mew VMAX",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": 10.5,
-        "label": "UNCONFIRMED",
-        "price": 22.12,
-        "observed": "2026-10-18"
+        "price": 34.31,
+        "observed": "2026-10-19"
       },
       {
         "name": "Zoroark - BW19",
         "set": "Black and White Promos",
-        "change_pct": 9.3,
+        "change_pct": 39.5,
         "label": "UNCONFIRMED",
         "price": 46.06,
-        "observed": "2026-10-18"
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Lugia EX (Team Plasma)",
+        "set": "Legendary Treasures",
+        "change_pct": 37.3,
+        "label": "UNCONFIRMED",
+        "price": 67.95,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -33.3,
+        "label": "UNCONFIRMED",
+        "price": 199.63,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Kyogre - XY51",
+        "set": "XY Promos",
+        "change_pct": 31.5,
+        "label": "UNCONFIRMED",
+        "price": 32.54,
+        "observed": "2026-10-19"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Mew ex - 158/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": 13.2,
+        "label": "UNCONFIRMED",
+        "price": 47.05,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Mew VMAX",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": 12.7,
+        "label": "UNCONFIRMED",
+        "price": 24.93,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Hero's Cape",
+        "set": "SV05: Temporal Forces",
+        "change_pct": -10.9,
+        "label": "UNCONFIRMED",
+        "price": 24.36,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Gyarados EX",
+        "set": "XY Promos",
+        "change_pct": 8.0,
+        "label": "UNCONFIRMED",
+        "price": 26.21,
+        "observed": "2026-10-19"
+      },
+      {
+        "name": "Celebi - XY187",
+        "set": "XY Promos",
+        "change_pct": 6.9,
+        "label": "UNCONFIRMED",
+        "price": 37.11,
+        "observed": "2026-10-19"
       }
     ],
     "calls_due": [],

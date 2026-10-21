@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-20
+# Captions, board data of 2026-10-21
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 19, 2026.
+- ✅ Prices are from Oct 20, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W43.png
 
-What's moving on TCGplayer, as of Oct 19, 2026. Ten moves of 5% or more made the list in the last 7 days. Dialga - DP49 (Diamond and Pearl Promos · DP49 · Holofoil): $34.31, +51.9%, unconfirmed. Zoroark - BW19 (Black and White Promos · BW19 · Holofoil): $46.06, +39.5%, unconfirmed. Lugia EX (Team Plasma) (Legendary Treasures · 102/113 · Holofoil): $67.95, +37.3%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $199.63, −33.3%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $32.54, +31.5%, unconfirmed. Heracross (Neo Genesis · 006/111 · 1st Edition Holofoil): $281.06, +30.6%, unconfirmed. Darkrai Prism Star (SM - Ultra Prism · 77/156 · Holofoil): $83.46, +26.8%, unconfirmed. Pumpkaboo - 076/203 (Prize Pack Series Cards · 076/203 · Holofoil): $31.34, +24.5%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 19, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 20, 2026. Ten moves of 5% or more made the list in the last 7 days. Dialga - DP49 (Diamond and Pearl Promos · DP49 · Holofoil): $34.31, +48.6%, unconfirmed. Zoroark - BW19 (Black and White Promos · BW19 · Holofoil): $46.06, +39.5%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $32.54, +31.5%, unconfirmed. Primarina - 020/084 (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 020/084 · Holofoil): $42.65, +31.1%, unconfirmed. Pumpkaboo - 076/203 (Prize Pack Series Cards · 076/203 · Holofoil): $31.34, +29.6%, unconfirmed. Hero's Cape (SV05: Temporal Forces · 152/162 · Holofoil): $22.67, −27.9%, unconfirmed. Victini Prism Star (Dragon Majesty · 7/70 · Holofoil): $48.01, +26.1%, unconfirmed. Latios Prism Star (SM - Celestial Storm · 108/168 · Holofoil): $60.09, −25.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 20, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

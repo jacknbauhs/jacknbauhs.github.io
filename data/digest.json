@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-21",
+  "as_of": "2026-10-22",
   "daily": {
-    "date": "2026-10-21",
+    "date": "2026-10-22",
     "movers": [
       {
-        "name": "Dialga - DP49",
-        "set": "Diamond and Pearl Promos",
-        "change_pct": 48.6,
+        "name": "Giratina - 97/214 (Cosmos Holo)",
+        "set": "Blister Exclusives",
+        "change_pct": 56.6,
         "label": "UNCONFIRMED",
-        "price": 34.31,
-        "observed": "2026-10-20"
+        "price": 47.11,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Zoroark - BW19",
-        "set": "Black and White Promos",
-        "change_pct": 39.5,
+        "name": "Celebi Prism Star",
+        "set": "SM - Lost Thunder",
+        "change_pct": -43.9,
         "label": "UNCONFIRMED",
-        "price": 46.06,
-        "observed": "2026-10-20"
+        "price": 41.89,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Kyogre - XY51",
-        "set": "XY Promos",
-        "change_pct": 31.5,
-        "label": "UNCONFIRMED",
-        "price": 32.54,
-        "observed": "2026-10-20"
-      },
-      {
-        "name": "Primarina - 020/084 (What's Your Favorite Stamp)",
+        "name": "Zekrom - 39/116 (Cosmos Holo)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 31.1,
+        "change_pct": 36.8,
         "label": "UNCONFIRMED",
-        "price": 42.65,
-        "observed": "2026-10-20"
+        "price": 45.32,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Pumpkaboo - 076/203",
-        "set": "Prize Pack Series Cards",
-        "change_pct": 29.6,
+        "name": "Rotom",
+        "set": "Great Encounters",
+        "change_pct": 33.2,
         "label": "UNCONFIRMED",
-        "price": 31.34,
-        "observed": "2026-10-20"
+        "price": 77.25,
+        "observed": "2026-10-21"
+      },
+      {
+        "name": "Hero's Cape",
+        "set": "SV05: Temporal Forces",
+        "change_pct": -32.4,
+        "label": "UNCONFIRMED",
+        "price": 22.7,
+        "observed": "2026-10-21"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Charizard",
-        "set": "ME: 30th Celebration Classic Collection",
+        "name": "Lugia - 78/124 (XY Fates Collide)",
+        "set": "Deck Exclusives",
         "change_pct": 12.9,
         "label": "UNCONFIRMED",
-        "price": 162.5,
-        "observed": "2026-10-20"
+        "price": 32.35,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Lugia",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": 7.5,
+        "name": "Pikachu - 35/108 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 10.4,
         "label": "UNCONFIRMED",
-        "price": 203.34,
-        "observed": "2026-10-20"
+        "price": 26.38,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Latias Prism Star",
-        "set": "SM - Celestial Storm",
-        "change_pct": -6.3,
+        "name": "Giratina VSTAR (201) (Secret)",
+        "set": "SWSH11: Lost Origin",
+        "change_pct": -8.4,
         "label": "UNCONFIRMED",
-        "price": 50.72,
-        "observed": "2026-10-20"
+        "price": 25.58,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Sylveon ex - 156/131",
-        "set": "SV: Prismatic Evolutions",
+        "name": "Mew - B/RGB",
+        "set": "ME: 30th Celebration",
         "change_pct": 6.1,
         "label": "UNCONFIRMED",
-        "price": 415.72,
-        "observed": "2026-10-20"
+        "price": 3976.43,
+        "observed": "2026-10-21"
       },
       {
-        "name": "Umbreon - 10/90 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": -5.5,
+        "name": "Mew VMAX",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -6.0,
         "label": "UNCONFIRMED",
-        "price": 118.51,
-        "observed": "2026-10-20"
+        "price": 23.6,
+        "observed": "2026-10-21"
       }
     ],
     "calls_due": [],

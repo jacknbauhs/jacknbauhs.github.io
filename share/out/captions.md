@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-21
+# Captions, board data of 2026-10-22
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 20, 2026.
+- ✅ Prices are from Oct 21, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W43.png
 
-What's moving on TCGplayer, as of Oct 20, 2026. Ten moves of 5% or more made the list in the last 7 days. Dialga - DP49 (Diamond and Pearl Promos · DP49 · Holofoil): $34.31, +48.6%, unconfirmed. Zoroark - BW19 (Black and White Promos · BW19 · Holofoil): $46.06, +39.5%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $32.54, +31.5%, unconfirmed. Primarina - 020/084 (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 020/084 · Holofoil): $42.65, +31.1%, unconfirmed. Pumpkaboo - 076/203 (Prize Pack Series Cards · 076/203 · Holofoil): $31.34, +29.6%, unconfirmed. Hero's Cape (SV05: Temporal Forces · 152/162 · Holofoil): $22.67, −27.9%, unconfirmed. Victini Prism Star (Dragon Majesty · 7/70 · Holofoil): $48.01, +26.1%, unconfirmed. Latios Prism Star (SM - Celestial Storm · 108/168 · Holofoil): $60.09, −25.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 20, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 21, 2026. Ten moves of 5% or more made the list in the last 7 days. Giratina - 97/214 (Cosmos Holo) (Blister Exclusives · 097/214 · Holofoil): $47.11, +56.6%, unconfirmed. Celebi Prism Star (SM - Lost Thunder · 19/214 · Holofoil): $41.89, −43.9%, unconfirmed. Zekrom - 39/116 (Cosmos Holo) (Miscellaneous Cards & Products · 039/116 · Holofoil): $45.32, +36.8%, unconfirmed. Rotom (Great Encounters · 7/106 · Holofoil): $77.25, +33.2%, unconfirmed. Hero's Cape (SV05: Temporal Forces · 152/162 · Holofoil): $22.70, −32.4%, unconfirmed. Primarina - 020/084 (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 020/084 · Holofoil): $46.40, +31.4%, unconfirmed. Pumpkaboo - 076/203 (Prize Pack Series Cards · 076/203 · Holofoil): $31.34, +29.6%, unconfirmed. Latias Prism Star (SM - Celestial Storm · 107/168 · Holofoil): $48.84, −28.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 21, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

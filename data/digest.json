@@ -1,31 +1,15 @@
 {
-  "as_of": "2026-10-22",
+  "as_of": "2026-10-23",
   "daily": {
-    "date": "2026-10-22",
+    "date": "2026-10-23",
     "movers": [
       {
-        "name": "Giratina - 97/214 (Cosmos Holo)",
-        "set": "Blister Exclusives",
-        "change_pct": 56.6,
-        "label": "UNCONFIRMED",
-        "price": 47.11,
-        "observed": "2026-10-21"
-      },
-      {
-        "name": "Celebi Prism Star",
-        "set": "SM - Lost Thunder",
-        "change_pct": -43.9,
-        "label": "UNCONFIRMED",
-        "price": 41.89,
-        "observed": "2026-10-21"
-      },
-      {
-        "name": "Zekrom - 39/116 (Cosmos Holo)",
+        "name": "Primarina - 020/084 (What's Your Favorite Stamp)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 36.8,
+        "change_pct": 39.3,
         "label": "UNCONFIRMED",
-        "price": 45.32,
-        "observed": "2026-10-21"
+        "price": 48.25,
+        "observed": "2026-10-22"
       },
       {
         "name": "Rotom",
@@ -33,57 +17,73 @@
         "change_pct": 33.2,
         "label": "UNCONFIRMED",
         "price": 77.25,
-        "observed": "2026-10-21"
+        "observed": "2026-10-22"
       },
       {
-        "name": "Hero's Cape",
-        "set": "SV05: Temporal Forces",
-        "change_pct": -32.4,
+        "name": "Latias Prism Star",
+        "set": "SM - Celestial Storm",
+        "change_pct": -31.0,
         "label": "UNCONFIRMED",
-        "price": 22.7,
-        "observed": "2026-10-21"
+        "price": 47.7,
+        "observed": "2026-10-22"
+      },
+      {
+        "name": "Latios Prism Star",
+        "set": "SM - Celestial Storm",
+        "change_pct": -30.1,
+        "label": "UNCONFIRMED",
+        "price": 54.95,
+        "observed": "2026-10-22"
+      },
+      {
+        "name": "Blastoise - 16/101 (Cosmos Holo)",
+        "set": "Blister Exclusives",
+        "change_pct": 28.2,
+        "label": "UNCONFIRMED",
+        "price": 41.7,
+        "observed": "2026-10-22"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Lugia - 78/124 (XY Fates Collide)",
+        "name": "Shaymin VSTAR - 014/172",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 21.0,
+        "label": "UNCONFIRMED",
+        "price": 136.57,
+        "observed": "2026-10-22"
+      },
+      {
+        "name": "Dragonite - 151/236 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 12.9,
+        "change_pct": 7.8,
         "label": "UNCONFIRMED",
-        "price": 32.35,
-        "observed": "2026-10-21"
+        "price": 42.5,
+        "observed": "2026-10-22"
       },
       {
-        "name": "Pikachu - 35/108 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 10.4,
+        "name": "Ho-oh [Pokemon Center NY]",
+        "set": "WoTC Promo",
+        "change_pct": 7.2,
         "label": "UNCONFIRMED",
-        "price": 26.38,
-        "observed": "2026-10-21"
+        "price": 111.82,
+        "observed": "2026-10-22"
       },
       {
-        "name": "Giratina VSTAR (201) (Secret)",
-        "set": "SWSH11: Lost Origin",
-        "change_pct": -8.4,
+        "name": "Salamence Lv.X",
+        "set": "Arceus",
+        "change_pct": -6.3,
         "label": "UNCONFIRMED",
-        "price": 25.58,
-        "observed": "2026-10-21"
+        "price": 131.11,
+        "observed": "2026-10-22"
       },
       {
-        "name": "Mew - B/RGB",
-        "set": "ME: 30th Celebration",
-        "change_pct": 6.1,
+        "name": "Magikarp - 203/193",
+        "set": "SV02: Paldea Evolved",
+        "change_pct": -5.7,
         "label": "UNCONFIRMED",
-        "price": 3976.43,
-        "observed": "2026-10-21"
-      },
-      {
-        "name": "Mew VMAX",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -6.0,
-        "label": "UNCONFIRMED",
-        "price": 23.6,
-        "observed": "2026-10-21"
+        "price": 316.54,
+        "observed": "2026-10-22"
       }
     ],
     "calls_due": [],

@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-23",
+  "as_of": "2026-10-24",
   "daily": {
-    "date": "2026-10-23",
+    "date": "2026-10-24",
     "movers": [
+      {
+        "name": "Rayquaza EX - XY66",
+        "set": "XY Promos",
+        "change_pct": 48.7,
+        "label": "UNCONFIRMED",
+        "price": 103.48,
+        "observed": "2026-10-23"
+      },
       {
         "name": "Primarina - 020/084 (What's Your Favorite Stamp)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 39.3,
+        "change_pct": 39.1,
         "label": "UNCONFIRMED",
-        "price": 48.25,
-        "observed": "2026-10-22"
+        "price": 49.13,
+        "observed": "2026-10-23"
       },
       {
-        "name": "Rotom",
-        "set": "Great Encounters",
-        "change_pct": 33.2,
+        "name": "Lugia EX (Team Plasma)",
+        "set": "Legendary Treasures",
+        "change_pct": 37.3,
         "label": "UNCONFIRMED",
-        "price": 77.25,
-        "observed": "2026-10-22"
+        "price": 69.6,
+        "observed": "2026-10-23"
+      },
+      {
+        "name": "Serperior - 064 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 31.5,
+        "label": "UNCONFIRMED",
+        "price": 34.9,
+        "observed": "2026-10-23"
       },
       {
         "name": "Latias Prism Star",
         "set": "SM - Celestial Storm",
-        "change_pct": -31.0,
+        "change_pct": -28.6,
         "label": "UNCONFIRMED",
-        "price": 47.7,
-        "observed": "2026-10-22"
-      },
-      {
-        "name": "Latios Prism Star",
-        "set": "SM - Celestial Storm",
-        "change_pct": -30.1,
-        "label": "UNCONFIRMED",
-        "price": 54.95,
-        "observed": "2026-10-22"
-      },
-      {
-        "name": "Blastoise - 16/101 (Cosmos Holo)",
-        "set": "Blister Exclusives",
-        "change_pct": 28.2,
-        "label": "UNCONFIRMED",
-        "price": 41.7,
-        "observed": "2026-10-22"
+        "price": 47.69,
+        "observed": "2026-10-23"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Shaymin VSTAR - 014/172",
-        "set": "Prize Pack Series Cards",
-        "change_pct": 21.0,
+        "name": "Tyrantrum - 066 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 16.3,
         "label": "UNCONFIRMED",
-        "price": 136.57,
-        "observed": "2026-10-22"
+        "price": 49.05,
+        "observed": "2026-10-23"
       },
       {
-        "name": "Dragonite - 151/236 (Cracked Ice Holo)",
+        "name": "Tapu Lele GX (Secret)",
+        "set": "SM - Guardians Rising",
+        "change_pct": 9.4,
+        "label": "UNCONFIRMED",
+        "price": 28.65,
+        "observed": "2026-10-23"
+      },
+      {
+        "name": "Metagross - 4/95 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 7.8,
+        "change_pct": 8.9,
         "label": "UNCONFIRMED",
-        "price": 42.5,
-        "observed": "2026-10-22"
+        "price": 33.19,
+        "observed": "2026-10-23"
       },
       {
-        "name": "Ho-oh [Pokemon Center NY]",
-        "set": "WoTC Promo",
-        "change_pct": 7.2,
+        "name": "Entei - 4/132 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 8.7,
         "label": "UNCONFIRMED",
-        "price": 111.82,
-        "observed": "2026-10-22"
+        "price": 34.45,
+        "observed": "2026-10-23"
       },
       {
-        "name": "Salamence Lv.X",
-        "set": "Arceus",
-        "change_pct": -6.3,
+        "name": "Ceruledge ex",
+        "set": "SV: Prismatic Evolutions",
+        "change_pct": -7.1,
         "label": "UNCONFIRMED",
-        "price": 131.11,
-        "observed": "2026-10-22"
-      },
-      {
-        "name": "Magikarp - 203/193",
-        "set": "SV02: Paldea Evolved",
-        "change_pct": -5.7,
-        "label": "UNCONFIRMED",
-        "price": 316.54,
-        "observed": "2026-10-22"
+        "price": 84.71,
+        "observed": "2026-10-23"
       }
     ],
     "calls_due": [],

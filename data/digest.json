@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-25",
+  "as_of": "2026-10-26",
   "daily": {
-    "date": "2026-10-25",
+    "date": "2026-10-26",
     "movers": [
       {
-        "name": "Flygon - 15/97 (Pokemon League) [Winner]",
-        "set": "League & Championship Cards",
-        "change_pct": 46.7,
+        "name": "Pikachu - DP16",
+        "set": "Diamond and Pearl Promos",
+        "change_pct": -48.4,
         "label": "UNCONFIRMED",
-        "price": 330.0,
-        "observed": "2026-10-24"
-      },
-      {
-        "name": "Giratina - 97/214 (Cosmos Holo)",
-        "set": "Blister Exclusives",
-        "change_pct": 43.4,
-        "label": "UNCONFIRMED",
-        "price": 46.27,
-        "observed": "2026-10-24"
-      },
-      {
-        "name": "Rayquaza",
-        "set": "Dragon Vault",
-        "change_pct": 33.1,
-        "label": "UNCONFIRMED",
-        "price": 82.69,
-        "observed": "2026-10-24"
-      },
-      {
-        "name": "Serperior - 064 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 31.5,
-        "label": "UNCONFIRMED",
-        "price": 35.84,
-        "observed": "2026-10-24"
+        "price": 119.9,
+        "observed": "2026-10-25"
       },
       {
         "name": "Dragonite - 151/236 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 27.4,
+        "change_pct": 31.1,
         "label": "UNCONFIRMED",
         "price": 44.04,
-        "observed": "2026-10-24"
+        "observed": "2026-10-25"
+      },
+      {
+        "name": "Rayquaza",
+        "set": "Dragon Vault",
+        "change_pct": 28.0,
+        "label": "UNCONFIRMED",
+        "price": 85.6,
+        "observed": "2026-10-25"
+      },
+      {
+        "name": "Gyarados - 4/123 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 23.7,
+        "label": "UNCONFIRMED",
+        "price": 57.82,
+        "observed": "2026-10-25"
+      },
+      {
+        "name": "Entei - 4/132 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 23.2,
+        "label": "UNCONFIRMED",
+        "price": 35.04,
+        "observed": "2026-10-25"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Pikachu - 28/73 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 15.3,
+        "name": "Articuno EX (Team Plasma)",
+        "set": "Plasma Storm",
+        "change_pct": 10.9,
         "label": "UNCONFIRMED",
-        "price": 30.86,
-        "observed": "2026-10-24"
+        "price": 44.73,
+        "observed": "2026-10-25"
       },
       {
-        "name": "Mega Emboar ex - 273/217",
-        "set": "ME: Ascended Heroes",
-        "change_pct": -6.6,
+        "name": "Shining Celebi",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -6.8,
         "label": "UNCONFIRMED",
-        "price": 31.92,
-        "observed": "2026-10-24"
+        "price": 23.01,
+        "observed": "2026-10-25"
       },
       {
-        "name": "Ninetales V (Full Art)",
-        "set": "SWSH02: Rebel Clash",
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
         "change_pct": -6.5,
         "label": "UNCONFIRMED",
-        "price": 38.0,
-        "observed": "2026-10-24"
+        "price": 193.25,
+        "observed": "2026-10-25"
       },
       {
-        "name": "Ditto Prism Star",
-        "set": "SM - Lost Thunder",
-        "change_pct": -3.7,
+        "name": "Bulbasaur (Pokemon Day 2026)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 6.2,
         "label": "UNCONFIRMED",
-        "price": 42.62,
-        "observed": "2026-10-24"
+        "price": 37.92,
+        "observed": "2026-10-25"
       },
       {
-        "name": "Charizard ex - 228/197",
-        "set": "SV03: Obsidian Flames",
-        "change_pct": 3.6,
+        "name": "Mega Chandelure ex - 115/084",
+        "set": "ME05: Pitch Black",
+        "change_pct": -5.7,
         "label": "UNCONFIRMED",
-        "price": 36.21,
-        "observed": "2026-10-24"
+        "price": 30.28,
+        "observed": "2026-10-25"
       }
     ],
     "calls_due": [],
@@ -93,7 +93,7 @@
     }
   },
   "weekly": {
-    "week_of": "2026-10-12",
+    "week_of": "2026-10-19",
     "flags_headline": {
       "value": null,
       "label": "no sales checked last week"

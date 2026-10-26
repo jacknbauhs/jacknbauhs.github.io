@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-25
+# Captions, board data of 2026-10-26
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 24, 2026.
+- ✅ Prices are from Oct 25, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W43.png
 
-What's moving on TCGplayer, as of Oct 24, 2026. Ten moves of 5% or more made the list in the last 7 days. Flygon - 15/97 (Pokemon League) [Winner] (League & Championship Cards · 015/097 · Holofoil): $330, +46.7%, unconfirmed. Giratina - 97/214 (Cosmos Holo) (Blister Exclusives · 097/214 · Holofoil): $46.27, +43.4%, unconfirmed. Rayquaza (Dragon Vault · 11/20 · Holofoil): $82.69, +33.1%, unconfirmed. Serperior - 064 [Staff] (ME: Mega Evolution Promo · 064 · Holofoil): $35.84, +31.5%, unconfirmed. Dragonite - 151/236 (Cracked Ice Holo) (Deck Exclusives · 151/236 · Holofoil): $44.04, +27.4%, unconfirmed. Arceus - DP50 (Diamond and Pearl Promos · DP50 · Holofoil): $74.90, +26.9%, unconfirmed. Golem (EX Dragon · 5/97 · Holofoil): $55.66, +26.5%, unconfirmed. Light Machoke (Neo Destiny · 049/105 · 1st Edition): $36.16, +26.1%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 24, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 25, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu - DP16 (Diamond and Pearl Promos · DP16 · Holofoil): $119.90, −48.4%, unconfirmed. Dragonite - 151/236 (Cracked Ice Holo) (Deck Exclusives · 151/236 · Holofoil): $44.04, +31.1%, unconfirmed. Rayquaza (Dragon Vault · 11/20 · Holofoil): $85.60, +28.0%, unconfirmed. Gyarados - 4/123 (Cracked Ice Holo) (Miscellaneous Cards & Products · 004/123 · Holofoil): $57.82, +23.7%, unconfirmed. Entei - 4/132 (Cracked Ice Holo) (Miscellaneous Cards & Products · 004/132 · Holofoil): $35.04, +23.2%, unconfirmed. Light Flareon (Neo Destiny · 046/105 · 1st Edition): $75.67, +22.7%, unconfirmed. Dark Charizard (4) (Team Rocket · 04/82 · 1st Edition Holofoil): $75.12, +20.5%, unconfirmed. Victini Prism Star (Dragon Majesty · 7/70 · Holofoil): $53.58, +20.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 25, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

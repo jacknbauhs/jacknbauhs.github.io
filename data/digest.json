@@ -1,15 +1,39 @@
 {
-  "as_of": "2026-10-26",
+  "as_of": "2026-10-27",
   "daily": {
-    "date": "2026-10-26",
+    "date": "2026-10-27",
     "movers": [
       {
         "name": "Pikachu - DP16",
         "set": "Diamond and Pearl Promos",
-        "change_pct": -48.4,
+        "change_pct": -50.7,
         "label": "UNCONFIRMED",
         "price": 119.9,
-        "observed": "2026-10-25"
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Gyarados",
+        "set": "Call of Legends",
+        "change_pct": 45.9,
+        "label": "UNCONFIRMED",
+        "price": 132.18,
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Gyarados - 4/123 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 41.3,
+        "label": "UNCONFIRMED",
+        "price": 57.82,
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Rayquaza",
+        "set": "Dragon Vault",
+        "change_pct": 32.5,
+        "label": "UNCONFIRMED",
+        "price": 85.6,
+        "observed": "2026-10-26"
       },
       {
         "name": "Dragonite - 151/236 (Cracked Ice Holo)",
@@ -17,73 +41,49 @@
         "change_pct": 31.1,
         "label": "UNCONFIRMED",
         "price": 44.04,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Rayquaza",
-        "set": "Dragon Vault",
-        "change_pct": 28.0,
-        "label": "UNCONFIRMED",
-        "price": 85.6,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Gyarados - 4/123 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 23.7,
-        "label": "UNCONFIRMED",
-        "price": 57.82,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Entei - 4/132 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 23.2,
-        "label": "UNCONFIRMED",
-        "price": 35.04,
-        "observed": "2026-10-25"
+        "observed": "2026-10-26"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Articuno EX (Team Plasma)",
-        "set": "Plasma Storm",
-        "change_pct": 10.9,
+        "name": "Ceruledge ex",
+        "set": "SV: Prismatic Evolutions",
+        "change_pct": 7.3,
         "label": "UNCONFIRMED",
-        "price": 44.73,
-        "observed": "2026-10-25"
+        "price": 90.01,
+        "observed": "2026-10-26"
       },
       {
-        "name": "Shining Celebi",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -6.8,
-        "label": "UNCONFIRMED",
-        "price": 23.01,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -6.5,
-        "label": "UNCONFIRMED",
-        "price": 193.25,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Bulbasaur (Pokemon Day 2026)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 6.2,
-        "label": "UNCONFIRMED",
-        "price": 37.92,
-        "observed": "2026-10-25"
-      },
-      {
-        "name": "Mega Chandelure ex - 115/084",
-        "set": "ME05: Pitch Black",
+        "name": "Mega Meganium ex - 272/217",
+        "set": "ME: Ascended Heroes",
         "change_pct": -5.7,
         "label": "UNCONFIRMED",
-        "price": 30.28,
-        "observed": "2026-10-25"
+        "price": 58.58,
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Pikachu & Zekrom GX",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": 5.7,
+        "label": "UNCONFIRMED",
+        "price": 29.51,
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Jirachi ex - 155/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -5.2,
+        "label": "UNCONFIRMED",
+        "price": 39.77,
+        "observed": "2026-10-26"
+      },
+      {
+        "name": "Mr. Mime GX (Full Art)",
+        "set": "SM - Celestial Storm",
+        "change_pct": 5.0,
+        "label": "UNCONFIRMED",
+        "price": 34.32,
+        "observed": "2026-10-26"
       }
     ],
     "calls_due": [],

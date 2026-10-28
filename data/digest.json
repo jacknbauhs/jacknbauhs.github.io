@@ -1,31 +1,15 @@
 {
-  "as_of": "2026-10-27",
+  "as_of": "2026-10-28",
   "daily": {
-    "date": "2026-10-27",
+    "date": "2026-10-28",
     "movers": [
-      {
-        "name": "Pikachu - DP16",
-        "set": "Diamond and Pearl Promos",
-        "change_pct": -50.7,
-        "label": "UNCONFIRMED",
-        "price": 119.9,
-        "observed": "2026-10-26"
-      },
-      {
-        "name": "Gyarados",
-        "set": "Call of Legends",
-        "change_pct": 45.9,
-        "label": "UNCONFIRMED",
-        "price": 132.18,
-        "observed": "2026-10-26"
-      },
       {
         "name": "Gyarados - 4/123 (Cracked Ice Holo)",
         "set": "Miscellaneous Cards & Products",
         "change_pct": 41.3,
         "label": "UNCONFIRMED",
         "price": 57.82,
-        "observed": "2026-10-26"
+        "observed": "2026-10-27"
       },
       {
         "name": "Rayquaza",
@@ -33,57 +17,73 @@
         "change_pct": 32.5,
         "label": "UNCONFIRMED",
         "price": 85.6,
-        "observed": "2026-10-26"
+        "observed": "2026-10-27"
       },
       {
-        "name": "Dragonite - 151/236 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 31.1,
+        "name": "Rayquaza & Deoxys Legend (90) - 2011 (David Cohen)",
+        "set": "World Championship Decks",
+        "change_pct": 30.9,
         "label": "UNCONFIRMED",
-        "price": 44.04,
-        "observed": "2026-10-26"
+        "price": 66.25,
+        "observed": "2026-10-27"
+      },
+      {
+        "name": "Minccino - BW13 (Cracked Ice Holo)",
+        "set": "Black and White Promos",
+        "change_pct": 20.8,
+        "label": "UNCONFIRMED",
+        "price": 22.69,
+        "observed": "2026-10-27"
+      },
+      {
+        "name": "Rayquaza - 22/107 (2004-2005 Gym Challenge)",
+        "set": "League & Championship Cards",
+        "change_pct": 19.6,
+        "label": "UNCONFIRMED",
+        "price": 297.18,
+        "observed": "2026-10-27"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Ceruledge ex",
-        "set": "SV: Prismatic Evolutions",
-        "change_pct": 7.3,
+        "name": "Metagross - 4/95 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 28.5,
         "label": "UNCONFIRMED",
-        "price": 90.01,
-        "observed": "2026-10-26"
+        "price": 42.66,
+        "observed": "2026-10-27"
       },
       {
-        "name": "Mega Meganium ex - 272/217",
-        "set": "ME: Ascended Heroes",
-        "change_pct": -5.7,
+        "name": "Typhlosion - 32/123 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 13.8,
         "label": "UNCONFIRMED",
-        "price": 58.58,
-        "observed": "2026-10-26"
+        "price": 27.2,
+        "observed": "2026-10-27"
       },
       {
-        "name": "Pikachu & Zekrom GX",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": 5.7,
+        "name": "Pikachu - 35/108 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 9.8,
         "label": "UNCONFIRMED",
-        "price": 29.51,
-        "observed": "2026-10-26"
+        "price": 29.22,
+        "observed": "2026-10-27"
       },
       {
-        "name": "Jirachi ex - 155/128",
+        "name": "Mewtwo ex - 157/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -5.2,
+        "change_pct": -7.4,
         "label": "UNCONFIRMED",
-        "price": 39.77,
-        "observed": "2026-10-26"
+        "price": 35.23,
+        "observed": "2026-10-27"
       },
       {
-        "name": "Mr. Mime GX (Full Art)",
-        "set": "SM - Celestial Storm",
-        "change_pct": 5.0,
+        "name": "Electabuzz ex",
+        "set": "EX Ruby and Sapphire",
+        "change_pct": 6.9,
         "label": "UNCONFIRMED",
-        "price": 34.32,
-        "observed": "2026-10-26"
+        "price": 104.82,
+        "observed": "2026-10-27"
       }
     ],
     "calls_due": [],

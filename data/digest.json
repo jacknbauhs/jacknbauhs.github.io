@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-28",
+  "as_of": "2026-10-29",
   "daily": {
-    "date": "2026-10-28",
+    "date": "2026-10-29",
     "movers": [
       {
-        "name": "Gyarados - 4/123 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 41.3,
+        "name": "Torchic - 017 (EX Deck Tin)",
+        "set": "Nintendo Promos",
+        "change_pct": 42.6,
         "label": "UNCONFIRMED",
-        "price": 57.82,
-        "observed": "2026-10-27"
+        "price": 61.1,
+        "observed": "2026-10-28"
       },
-      {
-        "name": "Rayquaza",
-        "set": "Dragon Vault",
-        "change_pct": 32.5,
-        "label": "UNCONFIRMED",
-        "price": 85.6,
-        "observed": "2026-10-27"
-      },
-      {
-        "name": "Rayquaza & Deoxys Legend (90) - 2011 (David Cohen)",
-        "set": "World Championship Decks",
-        "change_pct": 30.9,
-        "label": "UNCONFIRMED",
-        "price": 66.25,
-        "observed": "2026-10-27"
-      },
-      {
-        "name": "Minccino - BW13 (Cracked Ice Holo)",
-        "set": "Black and White Promos",
-        "change_pct": 20.8,
-        "label": "UNCONFIRMED",
-        "price": 22.69,
-        "observed": "2026-10-27"
-      },
-      {
-        "name": "Rayquaza - 22/107 (2004-2005 Gym Challenge)",
-        "set": "League & Championship Cards",
-        "change_pct": 19.6,
-        "label": "UNCONFIRMED",
-        "price": 297.18,
-        "observed": "2026-10-27"
-      }
-    ],
-    "one_day_movers": [
       {
         "name": "Metagross - 4/95 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 28.5,
+        "change_pct": 39.9,
         "label": "UNCONFIRMED",
         "price": 42.66,
-        "observed": "2026-10-27"
+        "observed": "2026-10-28"
       },
       {
         "name": "Typhlosion - 32/123 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 13.8,
+        "change_pct": 30.5,
         "label": "UNCONFIRMED",
-        "price": 27.2,
-        "observed": "2026-10-27"
+        "price": 27.58,
+        "observed": "2026-10-28"
       },
       {
         "name": "Pikachu - 35/108 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 9.8,
+        "change_pct": 21.8,
         "label": "UNCONFIRMED",
-        "price": 29.22,
-        "observed": "2026-10-27"
+        "price": 29.1,
+        "observed": "2026-10-28"
       },
       {
-        "name": "Mewtwo ex - 157/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -7.4,
+        "name": "Ditto Prism Star",
+        "set": "SM - Lost Thunder",
+        "change_pct": -21.4,
         "label": "UNCONFIRMED",
-        "price": 35.23,
-        "observed": "2026-10-27"
+        "price": 37.03,
+        "observed": "2026-10-28"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Celebi - XY187",
+        "set": "XY Promos",
+        "change_pct": -8.3,
+        "label": "UNCONFIRMED",
+        "price": 34.02,
+        "observed": "2026-10-28"
       },
       {
-        "name": "Electabuzz ex",
-        "set": "EX Ruby and Sapphire",
-        "change_pct": 6.9,
+        "name": "Plusle",
+        "set": "EX Dragon",
+        "change_pct": 7.8,
         "label": "UNCONFIRMED",
-        "price": 104.82,
-        "observed": "2026-10-27"
+        "price": 101.92,
+        "observed": "2026-10-28"
+      },
+      {
+        "name": "Charizard - 25/185 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 7.0,
+        "label": "UNCONFIRMED",
+        "price": 22.01,
+        "observed": "2026-10-28"
+      },
+      {
+        "name": "Zeraora GX (Full Art)",
+        "set": "SM - Lost Thunder",
+        "change_pct": 5.9,
+        "label": "UNCONFIRMED",
+        "price": 42.26,
+        "observed": "2026-10-28"
+      },
+      {
+        "name": "Pikachu ex - 219/191",
+        "set": "SV08: Surging Sparks",
+        "change_pct": -5.9,
+        "label": "UNCONFIRMED",
+        "price": 23.98,
+        "observed": "2026-10-28"
       }
     ],
     "calls_due": [],

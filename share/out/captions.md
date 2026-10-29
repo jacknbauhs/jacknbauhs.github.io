@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-28
+# Captions, board data of 2026-10-29
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 27, 2026.
+- ✅ Prices are from Oct 28, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W44.png
 
-What's moving on TCGplayer, as of Oct 27, 2026. Ten moves of 5% or more made the list in the last 7 days. Gyarados - 4/123 (Cracked Ice Holo) (Miscellaneous Cards & Products · 004/123 · Holofoil): $57.82, +41.3%, unconfirmed. Rayquaza (Dragon Vault · 11/20 · Holofoil): $85.60, +32.5%, unconfirmed. Rayquaza & Deoxys Legend (90) - 2011 (David Cohen) (World Championship Decks · 90/90): $66.25, +30.9%, unconfirmed. Minccino - BW13 (Cracked Ice Holo) (Black and White Promos · BW13 · Holofoil): $22.69, +20.8%, unconfirmed. Rayquaza - 22/107 (2004-2005 Gym Challenge) (League & Championship Cards · 022/107): $297.18, +19.6%, unconfirmed. Mega Emboar ex - 273/217 (ME: Ascended Heroes · 273/217 · Holofoil): $29.59, −19.5%, unconfirmed. Lugia V - SWSH301 (SWSH: Sword & Shield Promo Cards · SWSH301 · Holofoil): $44.77, +18.4%, unconfirmed. Salamence ex (EX Power Keepers · 96/108 · Holofoil): $286.64, +17.9%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 27, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 28, 2026. Ten moves of 5% or more made the list in the last 7 days. Torchic - 017 (EX Deck Tin) (Nintendo Promos · 017 · Holofoil): $61.10, +42.6%, unconfirmed. Metagross - 4/95 (Cracked Ice Holo) (Deck Exclusives · 004/095 · Holofoil): $42.66, +39.9%, unconfirmed. Typhlosion - 32/123 (Cracked Ice Holo) (Deck Exclusives · 032/123 · Holofoil): $27.58, +30.5%, unconfirmed. Pikachu - 35/108 (Cracked Ice Holo) (Deck Exclusives · 035/108 · Holofoil): $29.10, +21.8%, unconfirmed. Ditto Prism Star (SM - Lost Thunder · 154/214 · Holofoil): $37.03, −21.4%, unconfirmed. Lugia V - SWSH301 (SWSH: Sword & Shield Promo Cards · SWSH301 · Holofoil): $43.93, +19.4%, unconfirmed. Mega Emboar ex - 273/217 (ME: Ascended Heroes · 273/217 · Holofoil): $28.56, −19.2%, unconfirmed. Serperior - 064 [Staff] (ME: Mega Evolution Promo · 064 · Holofoil): $36.98, +15.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 28, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

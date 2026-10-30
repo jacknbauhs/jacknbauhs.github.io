@@ -1,92 +1,108 @@
 {
-  "as_of": "2026-10-29",
+  "as_of": "2026-10-30",
   "daily": {
-    "date": "2026-10-29",
+    "date": "2026-10-30",
     "movers": [
-      {
-        "name": "Torchic - 017 (EX Deck Tin)",
-        "set": "Nintendo Promos",
-        "change_pct": 42.6,
-        "label": "UNCONFIRMED",
-        "price": 61.1,
-        "observed": "2026-10-28"
-      },
       {
         "name": "Metagross - 4/95 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
         "change_pct": 39.9,
         "label": "UNCONFIRMED",
-        "price": 42.66,
-        "observed": "2026-10-28"
+        "price": 43.19,
+        "observed": "2026-10-29"
       },
       {
-        "name": "Typhlosion - 32/123 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 30.5,
+        "name": "Blastoise",
+        "set": "POP Series 3",
+        "change_pct": 37.9,
         "label": "UNCONFIRMED",
-        "price": 27.58,
-        "observed": "2026-10-28"
+        "price": 300.0,
+        "observed": "2026-10-29"
       },
       {
-        "name": "Pikachu - 35/108 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 21.8,
+        "name": "Zapdos EX (Team Plasma)",
+        "set": "Plasma Storm",
+        "change_pct": 30.7,
         "label": "UNCONFIRMED",
-        "price": 29.1,
-        "observed": "2026-10-28"
+        "price": 31.58,
+        "observed": "2026-10-29"
       },
       {
-        "name": "Ditto Prism Star",
-        "set": "SM - Lost Thunder",
-        "change_pct": -21.4,
+        "name": "Zeraora - 103 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -30.6,
         "label": "UNCONFIRMED",
-        "price": 37.03,
-        "observed": "2026-10-28"
+        "price": 43.21,
+        "observed": "2026-10-29"
+      },
+      {
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -26.3,
+        "label": "UNCONFIRMED",
+        "price": 151.18,
+        "observed": "2026-10-29"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Celebi - XY187",
-        "set": "XY Promos",
-        "change_pct": -8.3,
+        "name": "Space Center - 91/107 (10th Anniversary)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 18.7,
         "label": "UNCONFIRMED",
-        "price": 34.02,
-        "observed": "2026-10-28"
+        "price": 82.33,
+        "observed": "2026-10-29"
       },
       {
-        "name": "Plusle",
-        "set": "EX Dragon",
-        "change_pct": 7.8,
+        "name": "Rayquaza GX (Secret)",
+        "set": "SM - Celestial Storm",
+        "change_pct": 16.4,
         "label": "UNCONFIRMED",
-        "price": 101.92,
-        "observed": "2026-10-28"
+        "price": 320.62,
+        "observed": "2026-10-29"
+      },
+      {
+        "name": "Rayquaza",
+        "set": "SWSH04: Vivid Voltage",
+        "change_pct": 13.3,
+        "label": "UNCONFIRMED",
+        "price": 27.49,
+        "observed": "2026-10-29"
       },
       {
         "name": "Charizard - 25/185 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 7.0,
+        "change_pct": 12.5,
         "label": "UNCONFIRMED",
-        "price": 22.01,
-        "observed": "2026-10-28"
+        "price": 24.77,
+        "observed": "2026-10-29"
       },
       {
-        "name": "Zeraora GX (Full Art)",
-        "set": "SM - Lost Thunder",
-        "change_pct": 5.9,
+        "name": "Lugia",
+        "set": "SM - Team Up",
+        "change_pct": 9.8,
         "label": "UNCONFIRMED",
-        "price": 42.26,
-        "observed": "2026-10-28"
-      },
-      {
-        "name": "Pikachu ex - 219/191",
-        "set": "SV08: Surging Sparks",
-        "change_pct": -5.9,
-        "label": "UNCONFIRMED",
-        "price": 23.98,
-        "observed": "2026-10-28"
+        "price": 26.66,
+        "observed": "2026-10-29"
       }
     ],
-    "calls_due": [],
+    "calls_due": [
+      {
+        "id": "001",
+        "text": "The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better.",
+        "check_date": "2026-10-30"
+      },
+      {
+        "id": "002",
+        "text": "Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it.",
+        "check_date": "2026-10-30"
+      },
+      {
+        "id": "003",
+        "text": "Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.",
+        "check_date": "2026-10-30"
+      }
+    ],
     "flags_headline": {
       "value": null,
       "label": "no sales checked last week"

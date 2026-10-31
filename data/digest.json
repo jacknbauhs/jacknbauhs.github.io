@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-30",
+  "as_of": "2026-10-31",
   "daily": {
-    "date": "2026-10-30",
+    "date": "2026-10-31",
     "movers": [
-      {
-        "name": "Metagross - 4/95 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 39.9,
-        "label": "UNCONFIRMED",
-        "price": 43.19,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Blastoise",
-        "set": "POP Series 3",
-        "change_pct": 37.9,
-        "label": "UNCONFIRMED",
-        "price": 300.0,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Zapdos EX (Team Plasma)",
-        "set": "Plasma Storm",
-        "change_pct": 30.7,
-        "label": "UNCONFIRMED",
-        "price": 31.58,
-        "observed": "2026-10-29"
-      },
       {
         "name": "Zeraora - 103 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -30.6,
+        "change_pct": -54.0,
         "label": "UNCONFIRMED",
-        "price": 43.21,
-        "observed": "2026-10-29"
+        "price": 27.93,
+        "observed": "2026-10-30"
       },
       {
-        "name": "Pikachu ex - 109 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -26.3,
+        "name": "Bulbasaur (Pokemon Day 2026)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 50.7,
         "label": "UNCONFIRMED",
-        "price": 151.18,
-        "observed": "2026-10-29"
+        "price": 41.46,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Metagross - 4/95 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 41.7,
+        "label": "UNCONFIRMED",
+        "price": 43.19,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Victini - 102 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -38.9,
+        "label": "UNCONFIRMED",
+        "price": 36.58,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 36.8,
+        "label": "UNCONFIRMED",
+        "price": 36.1,
+        "observed": "2026-10-30"
       }
     ],
     "one_day_movers": [
       {
+        "name": "Victini - 102 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -38.2,
+        "label": "UNCONFIRMED",
+        "price": 36.58,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Zeraora - 103 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -35.4,
+        "label": "UNCONFIRMED",
+        "price": 27.93,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Mew ex - 152/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -14.6,
+        "label": "UNCONFIRMED",
+        "price": 65.79,
+        "observed": "2026-10-30"
+      },
+      {
+        "name": "Blastoise - 25/181 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 14.0,
+        "label": "UNCONFIRMED",
+        "price": 35.42,
+        "observed": "2026-10-30"
+      },
+      {
         "name": "Space Center - 91/107 (10th Anniversary)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 18.7,
+        "change_pct": 13.6,
         "label": "UNCONFIRMED",
-        "price": 82.33,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Rayquaza GX (Secret)",
-        "set": "SM - Celestial Storm",
-        "change_pct": 16.4,
-        "label": "UNCONFIRMED",
-        "price": 320.62,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Rayquaza",
-        "set": "SWSH04: Vivid Voltage",
-        "change_pct": 13.3,
-        "label": "UNCONFIRMED",
-        "price": 27.49,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Charizard - 25/185 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 12.5,
-        "label": "UNCONFIRMED",
-        "price": 24.77,
-        "observed": "2026-10-29"
-      },
-      {
-        "name": "Lugia",
-        "set": "SM - Team Up",
-        "change_pct": 9.8,
-        "label": "UNCONFIRMED",
-        "price": 26.66,
-        "observed": "2026-10-29"
+        "price": 93.5,
+        "observed": "2026-10-30"
       }
     ],
     "calls_due": [

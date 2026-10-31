@@ -1,10 +1,10 @@
-# Captions, board data of 2026-10-30
+# Captions, board data of 2026-10-31
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 29, 2026.
+- ✅ Prices are from Oct 30, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W44.png
 
-What's moving on TCGplayer, as of Oct 29, 2026. Ten moves of 5% or more made the list in the last 7 days. Metagross - 4/95 (Cracked Ice Holo) (Deck Exclusives · 004/095 · Holofoil): $43.19, +39.9%, unconfirmed. Blastoise (POP Series 3 · 001/017 · Holofoil): $300, +37.9%, unconfirmed. Zapdos EX (Team Plasma) (Plasma Storm · 48/135 · Holofoil): $31.58, +30.7%, unconfirmed. Zeraora - 103 (30th Celebration) (ME: Mega Evolution Promo · 103 · Holofoil): $43.21, −30.6%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $151.18, −26.3%, unconfirmed. Typhlosion - 32/123 (Cracked Ice Holo) (Deck Exclusives · 032/123 · Holofoil): $27.58, +23.1%, unconfirmed. Zarude (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 056/084 · Holofoil): $45.94, +22.0%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $156.08, −22.0%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 29, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Oct 30, 2026. Ten moves of 5% or more made the list in the last 7 days. Zeraora - 103 (30th Celebration) (ME: Mega Evolution Promo · 103 · Holofoil): $27.93, −54.0%, unconfirmed. Bulbasaur (Pokemon Day 2026) (Miscellaneous Cards & Products · 001/132 · Holofoil): $41.46, +50.7%, unconfirmed. Metagross - 4/95 (Cracked Ice Holo) (Deck Exclusives · 004/095 · Holofoil): $43.19, +41.7%, unconfirmed. Victini - 102 (30th Celebration) (ME: Mega Evolution Promo · 102 · Holofoil): $36.58, −38.9%, unconfirmed. Mewtwo - 51/108 (Cracked Ice Holo) (Deck Exclusives · 051/108 · Holofoil): $36.10, +36.8%, unconfirmed. Space Center - 91/107 (10th Anniversary) (Miscellaneous Cards & Products · 091/107): $93.50, +29.0%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $146.70, −28.7%, unconfirmed. Lugia EX (XY - Ancient Origins · 68/98 · Holofoil): $27.44, +25.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 30, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

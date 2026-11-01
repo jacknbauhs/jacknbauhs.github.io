@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-10-31",
+  "as_of": "2026-11-01",
   "daily": {
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "movers": [
       {
-        "name": "Zeraora - 103 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -54.0,
+        "name": "Space Center - 91/107 (10th Anniversary)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 46.5,
         "label": "UNCONFIRMED",
-        "price": 27.93,
-        "observed": "2026-10-30"
+        "price": 93.5,
+        "observed": "2026-10-31"
       },
       {
         "name": "Bulbasaur (Pokemon Day 2026)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 50.7,
+        "change_pct": 45.9,
         "label": "UNCONFIRMED",
-        "price": 41.46,
-        "observed": "2026-10-30"
+        "price": 42.16,
+        "observed": "2026-10-31"
       },
       {
         "name": "Metagross - 4/95 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 41.7,
+        "change_pct": 30.1,
         "label": "UNCONFIRMED",
         "price": 43.19,
-        "observed": "2026-10-30"
+        "observed": "2026-10-31"
       },
       {
-        "name": "Victini - 102 (30th Celebration)",
+        "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -38.9,
+        "change_pct": -29.2,
         "label": "UNCONFIRMED",
-        "price": 36.58,
-        "observed": "2026-10-30"
+        "price": 124.38,
+        "observed": "2026-10-31"
       },
       {
-        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 36.8,
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -28.5,
         "label": "UNCONFIRMED",
-        "price": 36.1,
-        "observed": "2026-10-30"
+        "price": 126.56,
+        "observed": "2026-10-31"
       }
     ],
     "one_day_movers": [
       {
         "name": "Victini - 102 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -38.2,
+        "change_pct": -26.5,
         "label": "UNCONFIRMED",
-        "price": 36.58,
-        "observed": "2026-10-30"
+        "price": 26.87,
+        "observed": "2026-10-31"
       },
       {
-        "name": "Zeraora - 103 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -35.4,
+        "name": "Dialga G LV.X",
+        "set": "Platinum",
+        "change_pct": 12.5,
         "label": "UNCONFIRMED",
-        "price": 27.93,
-        "observed": "2026-10-30"
+        "price": 274.67,
+        "observed": "2026-10-31"
       },
       {
         "name": "Mew ex - 152/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -14.6,
+        "change_pct": 11.3,
         "label": "UNCONFIRMED",
-        "price": 65.79,
-        "observed": "2026-10-30"
+        "price": 73.22,
+        "observed": "2026-10-31"
       },
       {
-        "name": "Blastoise - 25/181 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 14.0,
-        "label": "UNCONFIRMED",
-        "price": 35.42,
-        "observed": "2026-10-30"
-      },
-      {
-        "name": "Space Center - 91/107 (10th Anniversary)",
+        "name": "Entei - 4/132 (Cracked Ice Holo)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 13.6,
+        "change_pct": -7.9,
         "label": "UNCONFIRMED",
-        "price": 93.5,
-        "observed": "2026-10-30"
+        "price": 35.04,
+        "observed": "2026-10-31"
+      },
+      {
+        "name": "Haunter (6)",
+        "set": "Fossil",
+        "change_pct": -6.8,
+        "label": "UNCONFIRMED",
+        "price": 169.08,
+        "observed": "2026-10-31"
       }
     ],
     "calls_due": [

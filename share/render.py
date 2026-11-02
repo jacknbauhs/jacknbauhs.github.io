@@ -304,7 +304,7 @@ def market_span(rows, year: bool = False) -> str:
     """The days a market File's moves cover: its rows' last dates ("Oct 2 to Oct 4"), and for 7-day moves the week's start
     too ("Sep 28 to Oct 5"), since every row of a 7-day File compares against the same day a week back."""
     dates = [(r.get("last") or {}).get("date") for r in rows]
-    if market_window(rows) == "7d":
+    if not rows or market_window(rows) == "7d":
         dates += [(r.get("prev") or {}).get("date") for r in rows]
     return date_span(dates, year=year)
 
@@ -497,6 +497,13 @@ class Kit:
                         + (f"{row['note']}." if row.get("note") else "")},
                  alt=f"The File: {row['name']} {row['tier']}, {pct(row.get('change_pct'))} on the clean median "
                      f"({row.get('window_label', '')}). {row.get('sales')} sold records, {row.get('flagged')} kept out.")
+        elif is_market(f) and as_of:
+            # A market File with no rows (a quiet week on the nightly File): say so, not the placeholder.
+            hl = str(f.get("headline") or f.get("title") or "").strip()
+            tile("tile-file", "The File", f"TCGplayer · {fmt_date(as_of)}", "",
+                 {"eyebrow": hl, "big": "0", "big_size": "", "l1": "No move passed the board's 7-day rule this week.",
+                  "l2": sentence(f.get("dek")) or ""},
+                 alt=f"The File on the Astronaut Time board: {sentence(hl)} No move passed the board's 7-day rule this week.")
         else:
             tile("tile-file", "The File", "Mission Control", "",
                  {"eyebrow": "Every sale checked before it counts", "big": "—", "big_size": "md",
@@ -774,7 +781,8 @@ class Kit:
                     (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
 
         # Mission Control's nightly File (file.json "selection": "AUTO_SELECTED") renders at one stable name, so the
-        # repo doesn't gain a cover a day; a hand-written File keeps its dated name, and stays in share/out as the archive.
+        # repo doesn't gain a cover a day; a hand-written File keeps its dated name (git history is the archive: main()
+        # removes covers that are no longer in the set).
         if is_auto(f):
             self.current_cover = "file-nightly-cover.png"
         self.page("file-market-cover.html", self.current_cover[:-4], {

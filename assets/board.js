@@ -296,7 +296,8 @@
   // A market File's window, said the way its rows are: every row a 7-day move (window_label "7d", as movers.json has it)
   // reads over 7 days; anything else reads from the day before, as every market File did before the 7-day list.
   function marketWords(rows) {
-    var week = rows.length > 0 && rows.every(function (r) { return str(r.window_label) === "7d"; });
+    // No rows (a quiet week on the nightly File) reads as the 7-day list it comes from.
+    var week = rows.length === 0 || rows.every(function (r) { return str(r.window_label) === "7d"; });
     return week
       ? { since: "over 7 days", span: "in 7 days", head: ["Start of week", "End of week"] }
       : { since: "from the day before", span: "in a day", head: ["Day before", "Next day"] };

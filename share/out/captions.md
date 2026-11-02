@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-01
+# Captions, board data of 2026-11-02
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Oct 31, 2026.
+- ✅ Prices are from Nov 1, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W44.png
 
-What's moving on TCGplayer, as of Oct 31, 2026. Ten moves of 5% or more made the list in the last 7 days. Space Center - 91/107 (10th Anniversary) (Miscellaneous Cards & Products · 091/107): $93.50, +46.5%, unconfirmed. Bulbasaur (Pokemon Day 2026) (Miscellaneous Cards & Products · 001/132 · Holofoil): $42.16, +45.9%, unconfirmed. Metagross - 4/95 (Cracked Ice Holo) (Deck Exclusives · 004/095 · Holofoil): $43.19, +30.1%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $124.38, −29.2%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $126.56, −28.5%, unconfirmed. Marowak (EX FireRed & LeafGreen · 7/112 · Holofoil): $47.84, +27.2%, unconfirmed. Lugia EX (XY - Ancient Origins · 68/98 · Holofoil): $27.44, +25.3%, unconfirmed. Articuno EX (Team Plasma) (132 Full Art) (Plasma Storm · 132/135 · Holofoil): $563.31, +23.9%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Oct 31, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 1, 2026. Ten moves of 5% or more made the list in the last 7 days. Space Center - 91/107 (10th Anniversary) (Miscellaneous Cards & Products · 091/107): $93.50, +46.5%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $115.60, −39.8%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $112.75, −38.3%, unconfirmed. Mewtwo - 51/108 (Cracked Ice Holo) (Deck Exclusives · 051/108 · Holofoil): $41.44, +37.0%, unconfirmed. Charizard - 1/99 (Cracked Ice Holo) (Miscellaneous Cards & Products · 001/099 · Holofoil): $139.22, +34.7%, unconfirmed. Gengar - 60/162 (XY BREAKthrough) (Deck Exclusives · 060/162): $30.69, +25.3%, unconfirmed. Lugia EX (XY - Ancient Origins · 68/98 · Holofoil): $28.59, +24.0%, unconfirmed. Mega Meganium ex - 272/217 (ME: Ascended Heroes · 272/217 · Holofoil): $48.96, −21.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 1, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

@@ -268,6 +268,11 @@ def is_market(f) -> bool:
     return str((f or {}).get("kind") or "").strip().lower() == "market"
 
 
+def is_auto(f) -> bool:
+    """A File Mission Control wrote from the nightly feed, between the hand-written ones (file.json "selection")."""
+    return str((f or {}).get("selection") or "").strip() == "AUTO_SELECTED"
+
+
 def market_rows(f: dict) -> list:
     return [r for r in f.get("rows") or [] if isinstance(r, dict) and str(r.get("name") or "").strip()
             and isinstance(r.get("change_pct"), (int, float))]
@@ -603,6 +608,10 @@ class Kit:
             if kind not in kinds:
                 continue
             found = sorted(self.out.glob(pattern))
+            # The File's newest cover is the one for the File that is up (the nightly one has no date in its name).
+            current = getattr(self, "current_cover", None)
+            if kind == "file" and current and (self.out / current).exists():
+                found = [p for p in found if p.name != current] + [self.out / current]
             dest = site / f"latest-{kind}.png"
             if found:
                 shutil.copyfile(found[-1], dest)
@@ -762,7 +771,10 @@ class Kit:
                     f", {pct(r['change_pct'], 1)}" + (" in 7 days" if week else "") +
                     (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
 
-        self.page("file-market-cover.html", f"file-{day}-cover", {
+        # Mission Control's nightly File (file.json "selection": "AUTO_SELECTED") renders at one stable name, so the
+        # repo doesn't gain a cover a day; a hand-written File keeps its dated name, and stays in share/out as the archive.
+        self.current_cover = f"file-{'nightly' if is_auto(f) else day}-cover.png"
+        self.page("file-market-cover.html", self.current_cover[:-4], {
             "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
             "rows": bars, "more": more, "flags": flags_ctx, "slot": slot, "stance": stance, "frame_class": "market",
         }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(title)} " +

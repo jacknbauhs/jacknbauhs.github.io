@@ -1,7 +1,7 @@
 {
-  "as_of": "2026-11-01",
+  "as_of": "2026-11-02",
   "daily": {
-    "date": "2026-11-01",
+    "date": "2026-11-02",
     "movers": [
       {
         "name": "Space Center - 91/107 (10th Anniversary)",
@@ -9,81 +9,81 @@
         "change_pct": 46.5,
         "label": "UNCONFIRMED",
         "price": 93.5,
-        "observed": "2026-10-31"
-      },
-      {
-        "name": "Bulbasaur (Pokemon Day 2026)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 45.9,
-        "label": "UNCONFIRMED",
-        "price": 42.16,
-        "observed": "2026-10-31"
-      },
-      {
-        "name": "Metagross - 4/95 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 30.1,
-        "label": "UNCONFIRMED",
-        "price": 43.19,
-        "observed": "2026-10-31"
+        "observed": "2026-11-01"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -29.2,
+        "change_pct": -39.8,
         "label": "UNCONFIRMED",
-        "price": 124.38,
-        "observed": "2026-10-31"
+        "price": 115.6,
+        "observed": "2026-11-01"
       },
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -28.5,
+        "change_pct": -38.3,
         "label": "UNCONFIRMED",
-        "price": 126.56,
-        "observed": "2026-10-31"
+        "price": 112.75,
+        "observed": "2026-11-01"
+      },
+      {
+        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 37.0,
+        "label": "UNCONFIRMED",
+        "price": 41.44,
+        "observed": "2026-11-01"
+      },
+      {
+        "name": "Charizard - 1/99 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 34.7,
+        "label": "UNCONFIRMED",
+        "price": 139.22,
+        "observed": "2026-11-01"
       }
     ],
     "one_day_movers": [
       {
         "name": "Victini - 102 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -26.5,
+        "change_pct": -13.2,
         "label": "UNCONFIRMED",
-        "price": 26.87,
-        "observed": "2026-10-31"
+        "price": 23.32,
+        "observed": "2026-11-01"
       },
       {
-        "name": "Dialga G LV.X",
-        "set": "Platinum",
-        "change_pct": 12.5,
+        "name": "Venusaur - 28/100 (Regional Championships)",
+        "set": "League & Championship Cards",
+        "change_pct": 11.7,
         "label": "UNCONFIRMED",
-        "price": 274.67,
-        "observed": "2026-10-31"
+        "price": 179.08,
+        "observed": "2026-11-01"
       },
       {
-        "name": "Mew ex - 152/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": 11.3,
+        "name": "Zeraora - 103 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -9.0,
         "label": "UNCONFIRMED",
-        "price": 73.22,
-        "observed": "2026-10-31"
+        "price": 21.05,
+        "observed": "2026-11-01"
       },
       {
-        "name": "Entei - 4/132 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": -7.9,
+        "name": "Skiploom",
+        "set": "Aquapolis",
+        "change_pct": 6.4,
         "label": "UNCONFIRMED",
-        "price": 35.04,
-        "observed": "2026-10-31"
+        "price": 28.71,
+        "observed": "2026-11-01"
       },
       {
-        "name": "Haunter (6)",
-        "set": "Fossil",
-        "change_pct": -6.8,
+        "name": "Pikachu",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -5.3,
         "label": "UNCONFIRMED",
-        "price": 169.08,
-        "observed": "2026-10-31"
+        "price": 21.44,
+        "observed": "2026-11-01"
       }
     ],
     "calls_due": [
@@ -109,7 +109,7 @@
     }
   },
   "weekly": {
-    "week_of": "2026-10-19",
+    "week_of": "2026-10-26",
     "flags_headline": {
       "value": null,
       "label": "no sales checked last week"

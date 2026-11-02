@@ -1,149 +1,126 @@
 {
  "kind": "market",
- "date": "2026-10-08",
- "slot": "Thu market",
+ "date": "2026-11-03",
+ "slot": "Tue story",
  "stance": null,
- "as_of": "2026-10-05",
- "pulled": "2026-10-06",
- "title": "30th Celebration, three weeks in",
- "headline": "Our prices can see the 30th Celebration from day 12, not its launch.",
- "dek": "TCGplayer's market price for the four 30th Celebration cards on the board's first 7-day list fell between 39.1% and 48.1% from Sep 28 to Oct 5. All four are unconfirmed: no sale checked on any of them. What the list doesn't show: the set's launch week, the set as a whole, or the original cards its Classic Collection reprints.",
- "why_now": "The board's 7-day list filled in for the first time on Oct 6, with prices from Sep 28 to Oct 5: days 12 to 19 after the Sep 16 launch. Our prices start Sep 28, so launch week isn't in them.",
- "risk": "Any of these moves may be real: unconfirmed means no sale was checked, not that anything is wrong. The list holds at most ten of the biggest moves that pass its rule, so it can't speak for the set. This is not a read on whether these prices are high or low.",
- "what_to_watch": "On the Oct 8 list (prices Sep 30 to Oct 7), TCGplayer's market price for Mew ex fell 41.3% to $84.80 and for Jirachi ex 39.4% to $46.96, both unconfirmed and still on the list two days later. The Lugia reprint and Gengar ex aren't on it. Off the list wouldn't mean steady: a card drops off by moving less than the list's smallest move (38.9% on Oct 8), more than 60% with no checked sale, without its lowest listing moving the same way, or below $20.",
+ "as_of": "2026-11-01",
+ "pulled": "2026-11-02",
+ "title": "30th Celebration, seven weeks in",
+ "headline": "Seven weeks in, the 30th Celebration's Pikachu promos led the list down.",
+ "dek": "Over 25 mornings, Oct 9 to Nov 2, 13 cards from the 30th Celebration made the board's 7-day list 35 times, 33 of them down. Pikachu ex 107 made it 11 mornings, the most of any card in that span; the price the list showed for it went from $249.25 on Oct 13 to $115.60 on Nov 1. Pikachu ex 109 made it 7 mornings, from $232.65 to $112.75. The Classic Collection Lugia came back on Nov 2 at $156.21, down 20.4% in a week. None of the 250 rows the 7-day list published in those 25 mornings had a checked sale behind it.",
+ "why_now": "This is the first hand-written File since Oct 8, when the board's first 7-day list showed four 30th Celebration cards falling on days 12 to 19 after the Sep 16 launch. The list has run every morning since, and from this week the board writes its own File on the days nobody does. Seven weeks in is long enough to ask what the list actually saw.",
+ "risk": "A 7-day list shows a card only on the mornings it moved enough: Pikachu ex 107 was off it from Oct 22 to Oct 29, which means its week-over-week move was under 5% or failed the list's rule, not that the price held. The prices here are TCGplayer's market price on the mornings the card was listed, not a daily series, and the list's start-of-week prices are worked back from the rounded change. Unconfirmed means no sale was checked, not that anything is wrong. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether the two Pikachu promos leave the list for the right reason, a week without a move, and whether Victini 102 keeps going: it has been on the since-yesterday list three mornings running, down 38.2%, 26.5% and 13.2%, to $23.32. The Oct 8 File's other cards: Jirachi ex and Gengar ex never came back to the 7-day list, and Mew ex 152 made it once more (Oct 9, down 38.5%) and the since-yesterday list six times, last up 11.3% on Nov 1. The label is what this File is missing: Mission Control is starting to store checked eBay sales for a short list of tracked cards, and the morning one of these cards has one, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's first 7-day list (prices Sep 28 to Oct 5, 2026, published Oct 6) and the Oct 8 list (prices Sep 30 to Oct 7, 2026, published Oct 8)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's 7-day lists published Oct 9 to Nov 2, 2026 (prices Oct 8 to Nov 1) and the Nov 2 list (prices Oct 25 to Nov 1)",
  "hero": {
-  "title": "30th Celebration cards on the board's first 7-day list, none with a checked sale",
-  "value": "4 of 10",
-  "note": "days 12 to 19 after the Sep 16 launch (Sep 28 to Oct 5)"
+  "title": "30th Celebration cards on the board's 7-day list, Oct 9 to Nov 2",
+  "value": "35 of 250",
+  "note": "rows on the 7-day list that were 30th Celebration cards; 33 of the 35 down"
  },
  "stats": [
   {
-   "value": "Sep 28",
-   "label": "where our TCGplayer prices start, 12 days after the Sep 16 launch: launch week isn't in them"
+   "value": "11 of 25",
+   "label": "mornings Pikachu ex 107 made the 7-day list, the most of any card in that span, down every time"
+  },
+  {
+   "value": "0 of 250",
+   "label": "rows on the 7-day list since Oct 9 with a checked sale behind the move"
   }
  ],
  "rows": [
   {
-   "id": 716232,
-   "name": "Jirachi ex - 155/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price",
+   "id": 713257,
+   "name": "Pikachu ex - 107 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
+   "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 97,
+    "price": 192,
     "approx": true,
-    "date": "2026-09-28"
+    "date": "2026-10-25"
    },
    "last": {
-    "price": 50.32,
-    "date": "2026-10-05"
+    "price": 115.6,
+    "date": "2026-11-01"
    },
-   "change_pct": -48.1,
+   "change_pct": -39.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/716232"
+   "note": "7 days, no checked sale · on the list 11 of 25 mornings, $249.25 on Oct 13",
+   "link": "https://www.tcgplayer.com/product/713257"
+  },
+  {
+   "id": 713256,
+   "name": "Pikachu ex - 109 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 183,
+    "approx": true,
+    "date": "2026-10-25"
+   },
+   "last": {
+    "price": 112.75,
+    "date": "2026-11-01"
+   },
+   "change_pct": -38.3,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · on the list 7 of 25 mornings, $232.65 on Oct 13",
+   "link": "https://www.tcgplayer.com/product/713256"
   },
   {
    "id": 714386,
    "name": "Lugia",
    "set": "ME: 30th Celebration Classic Collection 149/147",
-   "tier": "Raw · TCGplayer market price",
+   "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 389,
+    "price": 196,
     "approx": true,
-    "date": "2026-09-28"
+    "date": "2026-10-25"
    },
    "last": {
-    "price": 211.23,
-    "date": "2026-10-05"
+    "price": 156.21,
+    "date": "2026-11-01"
    },
-   "change_pct": -45.7,
+   "change_pct": -20.4,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
+   "note": "7 days, no checked sale · back on the list Nov 2, first time since Oct 6's list ($211.23 then)",
    "link": "https://www.tcgplayer.com/product/714386"
-  },
-  {
-   "id": 717605,
-   "name": "Mew ex - 152/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price",
-   "window_label": "7d",
-   "prev": {
-    "price": 154,
-    "approx": true,
-    "date": "2026-09-28"
-   },
-   "last": {
-    "price": 92.28,
-    "date": "2026-10-05"
-   },
-   "change_pct": -40.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/717605"
-  },
-  {
-   "id": 717610,
-   "name": "Gengar ex - 154/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price",
-   "window_label": "7d",
-   "prev": {
-    "price": 119,
-    "approx": true,
-    "date": "2026-09-28"
-   },
-   "last": {
-    "price": 72.18,
-    "date": "2026-10-05"
-   },
-   "change_pct": -39.1,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/717610"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Moves: the board's first 7-day list, published Oct 6, prices as of Sep 28 and Oct 5, 2026, and the Oct 8 list, prices as of Sep 30 and Oct 7, 2026. Launch: Sep 16, 2026, the date on the board's calls and its Crystal Lugia card file. Sep 28 prices: worked back from the listed price and its rounded change, then rounded to the dollar, so within 60 cents; the list doesn't publish them. The list: up to 10 cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less and the lowest listing moved the same way. A card not on it may have moved less, more, or without its lowest listing moving the same way. Original printings: the raw 2003 Crystal Lugia wasn't on any list through Oct 7. That doesn't mean its price held steady: the board doesn't publish it. Our only look at the original Lugia is the Sep 28 File on Crystal Lugia PSA 8 (eBay sales through Sep 27): a different grade, venue and window, so it isn't set against the Classic Collection Lugia. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The three moves: the board's Nov 2 list, prices Oct 25 to Nov 1, 2026, the change between 3-day medians at each end; the start-of-week prices are worked back from the listed price and its rounded change, then rounded to the dollar, so within a dollar. The 25-morning counts: the board's own published 7-day lists, Oct 9 to Nov 2 (git history of data/movers.json), 10 rows a morning, 250 in all; a card counts once per morning it was listed. The listed price on a morning is TCGplayer's market price as of the day before. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Launch: Sep 16, 2026. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 4,
-   "of": 4,
-   "label": "moves from the 30th Celebration on the board's first 7-day list with no checked sale"
+   "value": 3,
+   "of": 3,
+   "label": "30th Celebration moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any move on the board's first 7-day list, these four included. With no checked sales, a move shows only if it's 60% or less over 7 days and TCGplayer's lowest listing moved the same way, by an amount we don't publish (it can be a cent).",
-  "stat": "No sale checked behind any of the four, or any other move on the list. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 250 moves its 7-day list published in 25 mornings, these three included. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the three, or behind any 7-day move since Oct 9. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Jirachi ex - 155/128",
-    "date": "2026-10-05",
-    "price": 50.32,
+    "card": "Pikachu ex - 107 (30th Celebration)",
+    "date": "2026-11-01",
+    "price": 115.6,
     "label": "UNCONFIRMED",
-    "why": "−48.1% in 7 days; no checked sale"
+    "why": "−39.8% in 7 days; no checked sale; on the list 11 of 25 mornings"
+   },
+   {
+    "card": "Pikachu ex - 109 (30th Celebration)",
+    "date": "2026-11-01",
+    "price": 112.75,
+    "label": "UNCONFIRMED",
+    "why": "−38.3% in 7 days; no checked sale; on the list 7 of 25 mornings"
    },
    {
     "card": "Lugia 149/147 · Classic Collection",
-    "date": "2026-10-05",
-    "price": 211.23,
+    "date": "2026-11-01",
+    "price": 156.21,
     "label": "UNCONFIRMED",
-    "why": "−45.7% in 7 days; no checked sale"
-   },
-   {
-    "card": "Mew ex - 152/128",
-    "date": "2026-10-05",
-    "price": 92.28,
-    "label": "UNCONFIRMED",
-    "why": "−40.2% in 7 days; no checked sale"
-   },
-   {
-    "card": "Gengar ex - 154/128",
-    "date": "2026-10-05",
-    "price": 72.18,
-    "label": "UNCONFIRMED",
-    "why": "−39.1% in 7 days; no checked sale"
+    "why": "−20.4% in 7 days; no checked sale; back on the list after four weeks off it"
    }
   ]
  }

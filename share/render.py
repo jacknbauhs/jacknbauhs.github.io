@@ -649,6 +649,8 @@ class Kit:
         as_of = f.get("as_of") or f.get("pulled")
         # The day it is The File for, when Jack dates it (YYYY-MM-DD; anything else falls back to as_of).
         day = f["date"] if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(f.get("date") or "")) else as_of
+        # The cover of the File that is up, so place_latest copies it to latest-file.png whatever sorts last.
+        self.current_cover = f"file-{day}-cover.png"
         kicker = f"The File · {fmt_date(day)}"
         tag = f"130point · pulled {fmt_date(f.get('pulled') or as_of)}"
         # The optional story fields (share/README.md): none of them is needed, and an unknown stance or slot isn't shown.
@@ -773,7 +775,8 @@ class Kit:
 
         # Mission Control's nightly File (file.json "selection": "AUTO_SELECTED") renders at one stable name, so the
         # repo doesn't gain a cover a day; a hand-written File keeps its dated name, and stays in share/out as the archive.
-        self.current_cover = f"file-{'nightly' if is_auto(f) else day}-cover.png"
+        if is_auto(f):
+            self.current_cover = "file-nightly-cover.png"
         self.page("file-market-cover.html", self.current_cover[:-4], {
             "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
             "rows": bars, "more": more, "flags": flags_ctx, "slot": slot, "stance": stance, "frame_class": "market",
@@ -891,7 +894,8 @@ class Kit:
         if len(items) > len(shown):
             legend.append(f"The first {len(shown)} are here; all {len(items)} are on the board.")
         label = str(head.get("label") or "").strip()
-        self.page("flags-market-cover.html", f"flags-{as_of}-cover", {
+        # The nightly File's as_of advances every morning; one stable name keeps the repo from gaining a cover a day.
+        self.page("flags-market-cover.html", f"flags-{'nightly' if is_auto(f) else as_of}-cover", {
             "kicker": f"{MARKET_FLAGS_TITLE} · {fmt_date(as_of)}", "tag": f"TCGplayer · {span}" if span else "TCGplayer", "tag_class": "flag",
             "eyebrow": f.get("title", "The File"), "frame_class": "market-flags",
             "value": head["value"], "of": head.get("of"), "headline": label,

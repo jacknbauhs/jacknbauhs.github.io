@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-03",
   "daily": {
-    "date": "2026-11-02",
+    "date": "2026-11-03",
     "movers": [
       {
-        "name": "Space Center - 91/107 (10th Anniversary)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 46.5,
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -42.0,
         "label": "UNCONFIRMED",
-        "price": 93.5,
-        "observed": "2026-11-01"
+        "price": 89.0,
+        "observed": "2026-11-02"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -39.8,
+        "change_pct": -40.2,
         "label": "UNCONFIRMED",
-        "price": 115.6,
-        "observed": "2026-11-01"
-      },
-      {
-        "name": "Pikachu ex - 109 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -38.3,
-        "label": "UNCONFIRMED",
-        "price": 112.75,
-        "observed": "2026-11-01"
+        "price": 87.76,
+        "observed": "2026-11-02"
       },
       {
         "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
         "change_pct": 37.0,
         "label": "UNCONFIRMED",
-        "price": 41.44,
-        "observed": "2026-11-01"
+        "price": 36.1,
+        "observed": "2026-11-02"
       },
       {
-        "name": "Charizard - 1/99 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 34.7,
+        "name": "Lugia EX",
+        "set": "XY - Ancient Origins",
+        "change_pct": 29.2,
         "label": "UNCONFIRMED",
-        "price": 139.22,
-        "observed": "2026-11-01"
+        "price": 28.59,
+        "observed": "2026-11-02"
+      },
+      {
+        "name": "Gengar - 60/162 (XY BREAKthrough)",
+        "set": "Deck Exclusives",
+        "change_pct": 25.3,
+        "label": "UNCONFIRMED",
+        "price": 31.29,
+        "observed": "2026-11-02"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Victini - 102 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -13.2,
+        "name": "Pikachu - 28/73 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 38.1,
         "label": "UNCONFIRMED",
-        "price": 23.32,
-        "observed": "2026-11-01"
+        "price": 39.25,
+        "observed": "2026-11-02"
       },
       {
-        "name": "Venusaur - 28/100 (Regional Championships)",
-        "set": "League & Championship Cards",
-        "change_pct": 11.7,
+        "name": "Lugia VSTAR - 139/195",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 12.0,
         "label": "UNCONFIRMED",
-        "price": 179.08,
-        "observed": "2026-11-01"
+        "price": 26.49,
+        "observed": "2026-11-02"
       },
       {
-        "name": "Zeraora - 103 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -9.0,
+        "name": "N's Zoroark ex - 185/159",
+        "set": "SV09: Journey Together",
+        "change_pct": -9.3,
         "label": "UNCONFIRMED",
-        "price": 21.05,
-        "observed": "2026-11-01"
+        "price": 32.34,
+        "observed": "2026-11-02"
       },
       {
-        "name": "Skiploom",
-        "set": "Aquapolis",
-        "change_pct": 6.4,
+        "name": "Mew ex - 152/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -7.8,
         "label": "UNCONFIRMED",
-        "price": 28.71,
-        "observed": "2026-11-01"
+        "price": 65.11,
+        "observed": "2026-11-02"
       },
       {
-        "name": "Pikachu",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -5.3,
+        "name": "Mew - XY110",
+        "set": "XY Promos",
+        "change_pct": 5.3,
         "label": "UNCONFIRMED",
-        "price": 21.44,
-        "observed": "2026-11-01"
+        "price": 206.4,
+        "observed": "2026-11-02"
       }
     ],
     "calls_due": [
@@ -104,15 +104,15 @@
       }
     ],
     "flags_headline": {
-      "value": null,
-      "label": "no sales checked last week"
+      "value": 0.0,
+      "label": "of sold dollar volume flagged, week of Oct 26"
     }
   },
   "weekly": {
     "week_of": "2026-10-26",
     "flags_headline": {
-      "value": null,
-      "label": "no sales checked last week"
+      "value": 0.0,
+      "label": "of sold dollar volume flagged, week of Oct 26"
     },
     "flagged_cards": 0,
     "rip_ev": []

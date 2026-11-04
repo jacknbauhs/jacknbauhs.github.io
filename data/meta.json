@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-03T14:15:00+00:00",
+  "generated_at": "2026-11-04T14:15:00+00:00",
   "sources": [
     {
       "id": "tcgcsv",
       "name": "TCGplayer market prices via tcgcsv.com",
-      "as_of": "2026-11-02"
+      "as_of": "2026-11-03"
     },
     {
       "id": "sales",

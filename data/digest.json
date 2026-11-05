@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "daily": {
-    "date": "2026-11-04",
+    "date": "2026-11-05",
     "movers": [
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -49.7,
+        "change_pct": -55.4,
         "label": "UNCONFIRMED",
-        "price": 77.83,
-        "observed": "2026-11-03"
+        "price": 74.19,
+        "observed": "2026-11-04"
+      },
+      {
+        "name": "Charizard - 25/185 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 42.2,
+        "label": "UNCONFIRMED",
+        "price": 31.05,
+        "observed": "2026-11-04"
       },
       {
         "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
         "set": "Deck Exclusives",
-        "change_pct": 39.1,
+        "change_pct": 28.9,
         "label": "UNCONFIRMED",
-        "price": 37.1,
-        "observed": "2026-11-03"
+        "price": 39.18,
+        "observed": "2026-11-04"
+      },
+      {
+        "name": "Charizard - 1/99 (Cracked Ice Holo)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 26.5,
+        "label": "UNCONFIRMED",
+        "price": 141.83,
+        "observed": "2026-11-04"
       },
       {
         "name": "Charizard VSTAR - 018/172",
         "set": "Prize Pack Series Cards",
         "change_pct": 25.2,
         "label": "UNCONFIRMED",
-        "price": 499.76,
-        "observed": "2026-11-03"
-      },
-      {
-        "name": "Charizard - 1/99 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 24.2,
-        "label": "UNCONFIRMED",
-        "price": 141.83,
-        "observed": "2026-11-03"
-      },
-      {
-        "name": "Mew ex - 152/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -21.7,
-        "label": "UNCONFIRMED",
-        "price": 64.93,
-        "observed": "2026-11-03"
+        "price": 550.0,
+        "observed": "2026-11-04"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Pikachu - 28/73 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": -18.0,
+        "name": "Pikachu - 6/12",
+        "set": "McDonald's Promos 2016",
+        "change_pct": 10.3,
         "label": "UNCONFIRMED",
-        "price": 32.19,
-        "observed": "2026-11-03"
+        "price": 51.15,
+        "observed": "2026-11-04"
       },
       {
-        "name": "Jirachi ex - 155/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -9.9,
-        "label": "UNCONFIRMED",
-        "price": 33.59,
-        "observed": "2026-11-03"
-      },
-      {
-        "name": "Pikachu ex - 149/128",
+        "name": "Pikachu ex - 150/128",
         "set": "ME: 30th Celebration",
         "change_pct": -8.4,
         "label": "UNCONFIRMED",
-        "price": 36.12,
-        "observed": "2026-11-03"
+        "price": 46.46,
+        "observed": "2026-11-04"
       },
       {
-        "name": "Mewtwo ex - 157/128",
+        "name": "Mew ex - 158/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -8.2,
+        "change_pct": -6.4,
         "label": "UNCONFIRMED",
-        "price": 27.76,
-        "observed": "2026-11-03"
+        "price": 40.86,
+        "observed": "2026-11-04"
       },
       {
-        "name": "Gyarados - 33/147 (Cosmos Holo)",
-        "set": "Blister Exclusives",
-        "change_pct": -7.9,
+        "name": "Charizard - 25/185 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 6.2,
         "label": "UNCONFIRMED",
-        "price": 92.34,
-        "observed": "2026-11-03"
+        "price": 31.05,
+        "observed": "2026-11-04"
+      },
+      {
+        "name": "Solgaleo Prism Star",
+        "set": "SM - Ultra Prism",
+        "change_pct": 6.1,
+        "label": "UNCONFIRMED",
+        "price": 22.41,
+        "observed": "2026-11-04"
       }
     ],
     "calls_due": [

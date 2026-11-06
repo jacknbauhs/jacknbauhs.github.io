@@ -1,31 +1,23 @@
 {
-  "as_of": "2026-11-05",
+  "as_of": "2026-11-06",
   "daily": {
-    "date": "2026-11-05",
+    "date": "2026-11-06",
     "movers": [
+      {
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -54.4,
+        "label": "UNCONFIRMED",
+        "price": 66.23,
+        "observed": "2026-11-05"
+      },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -55.4,
+        "change_pct": -54.0,
         "label": "UNCONFIRMED",
-        "price": 74.19,
-        "observed": "2026-11-04"
-      },
-      {
-        "name": "Charizard - 25/185 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 42.2,
-        "label": "UNCONFIRMED",
-        "price": 31.05,
-        "observed": "2026-11-04"
-      },
-      {
-        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 28.9,
-        "label": "UNCONFIRMED",
-        "price": 39.18,
-        "observed": "2026-11-04"
+        "price": 68.4,
+        "observed": "2026-11-05"
       },
       {
         "name": "Charizard - 1/99 (Cracked Ice Holo)",
@@ -33,57 +25,65 @@
         "change_pct": 26.5,
         "label": "UNCONFIRMED",
         "price": 141.83,
-        "observed": "2026-11-04"
+        "observed": "2026-11-05"
       },
       {
-        "name": "Charizard VSTAR - 018/172",
-        "set": "Prize Pack Series Cards",
-        "change_pct": 25.2,
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -24.2,
         "label": "UNCONFIRMED",
-        "price": 550.0,
-        "observed": "2026-11-04"
+        "price": 125.66,
+        "observed": "2026-11-05"
+      },
+      {
+        "name": "Lugia",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -24.0,
+        "label": "UNCONFIRMED",
+        "price": 138.75,
+        "observed": "2026-11-05"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Pikachu - 6/12",
-        "set": "McDonald's Promos 2016",
-        "change_pct": 10.3,
+        "name": "Eevee - 114/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -15.7,
         "label": "UNCONFIRMED",
-        "price": 51.15,
-        "observed": "2026-11-04"
+        "price": 37.39,
+        "observed": "2026-11-05"
+      },
+      {
+        "name": "Gengar ex - 154/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -10.1,
+        "label": "UNCONFIRMED",
+        "price": 54.94,
+        "observed": "2026-11-05"
       },
       {
         "name": "Pikachu ex - 150/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -8.4,
+        "change_pct": -10.0,
         "label": "UNCONFIRMED",
-        "price": 46.46,
-        "observed": "2026-11-04"
+        "price": 41.8,
+        "observed": "2026-11-05"
       },
       {
-        "name": "Mew ex - 158/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -6.4,
+        "name": "Mega Charizard X ex - 023",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -9.8,
         "label": "UNCONFIRMED",
-        "price": 40.86,
-        "observed": "2026-11-04"
+        "price": 20.96,
+        "observed": "2026-11-05"
       },
       {
-        "name": "Charizard - 25/185 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 6.2,
+        "name": "Eevee",
+        "set": "WoTC Promo",
+        "change_pct": -8.8,
         "label": "UNCONFIRMED",
-        "price": 31.05,
-        "observed": "2026-11-04"
-      },
-      {
-        "name": "Solgaleo Prism Star",
-        "set": "SM - Ultra Prism",
-        "change_pct": 6.1,
-        "label": "UNCONFIRMED",
-        "price": 22.41,
-        "observed": "2026-11-04"
+        "price": 54.01,
+        "observed": "2026-11-05"
       }
     ],
     "calls_due": [

@@ -1,35 +1,55 @@
 {
  "kind": "market",
- "date": "2026-11-05",
+ "date": "2026-11-06",
  "slot": null,
  "stance": null,
- "as_of": "2026-11-04",
- "pulled": "2026-11-05",
+ "as_of": "2026-11-05",
+ "pulled": "2026-11-06",
  "title": "The week on TCGplayer",
- "headline": "The 5 biggest moves on the board's 7-day list, prices Oct 28 to Nov 4.",
- "dek": "TCGplayer's market price for Pikachu ex - 107 (30th Celebration) fell 55.4% to $74.19 and Charizard - 25/185 (Cracked Ice Holo) rose 42.2% to $31.05 between Oct 28 and Nov 4. None of the 5 has a checked sale behind the move: unconfirmed means Mission Control checked no sale in the window, not that anything is wrong.",
+ "headline": "The 5 biggest moves on the board's 7-day list, prices Oct 29 to Nov 5.",
+ "dek": "TCGplayer's market price for Pikachu ex - 109 (30th Celebration) fell 54.4% to $66.23 and Charizard - 1/99 (Cracked Ice Holo) rose 26.5% to $141.83 between Oct 29 and Nov 5. None of the 5 has a checked sale behind the move: unconfirmed means Mission Control checked no sale in the window, not that anything is wrong.",
  "why_now": "Mission Control writes this File every morning from the nightly TCGplayer pull, so the board has a fresh File on the mornings no hand-written one is up (Tue, Thu and Sat are its days).",
  "risk": "A market price is TCGplayer's average of recent completed sales of the same card, condition and printing, so one sale can move a thin card. The list's rule keeps out the moves nothing backs, not every thin one. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether these moves hold on tomorrow's pull. A card drops off the list by moving less than 5% in a week, more than 60% with no checked sale, without its lowest listing moving the same way, or below $20. The next hand-written File day is today.",
+ "what_to_watch": "Whether these moves hold on tomorrow's pull. A card drops off the list by moving less than 5% in a week, more than 60% with no checked sale, without its lowest listing moving the same way, or below $20. The next hand-written File day is Saturday, Nov 7.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, the board's 7-day list (prices Oct 28 to Nov 4, 2026, published Nov 5)",
+ "source": "TCGplayer market prices via tcgcsv.com, the board's 7-day list (prices Oct 29 to Nov 5, 2026, published Nov 6)",
  "hero": {
-  "title": "The biggest moves on the board's 7-day list, prices Oct 28 to Nov 4",
-  "value": "−55.4%",
-  "note": "in 7 days · Pikachu ex - 107 (30th Celebration)"
+  "title": "The biggest moves on the board's 7-day list, prices Oct 29 to Nov 5",
+  "value": "−54.4%",
+  "note": "in 7 days · Pikachu ex - 109 (30th Celebration)"
  },
  "stats": [
   {
-   "value": "4 up · 1 down",
+   "value": "1 up · 4 down",
    "label": "of the 5 moves on this File, the biggest of the 10 on the board's 7-day list"
   },
   {
-   "value": "Nov 4",
+   "value": "Nov 5",
    "label": "the newest TCGplayer prices; this File is rewritten every morning after the nightly pull"
   }
  ],
  "rows": [
+  {
+   "id": 713256,
+   "name": "Pikachu ex - 109 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 156.26,
+    "approx": false,
+    "date": "2026-10-29"
+   },
+   "last": {
+    "price": 66.23,
+    "date": "2026-11-05"
+   },
+   "change_pct": -54.4,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no sales checked in this window",
+   "link": "https://www.tcgplayer.com/product/713256"
+  },
   {
    "id": 713257,
    "name": "Pikachu ex - 107 (30th Celebration)",
@@ -37,58 +57,18 @@
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 174.4,
+    "price": 161.17,
     "approx": false,
-    "date": "2026-10-28"
+    "date": "2026-10-29"
    },
    "last": {
-    "price": 74.19,
-    "date": "2026-11-04"
+    "price": 68.4,
+    "date": "2026-11-05"
    },
-   "change_pct": -55.4,
+   "change_pct": -54.0,
    "label": "UNCONFIRMED",
    "note": "7 days, no sales checked in this window",
    "link": "https://www.tcgplayer.com/product/713257"
-  },
-  {
-   "id": 227648,
-   "name": "Charizard - 25/185 (Cracked Ice Holo)",
-   "set": "Deck Exclusives",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 20.57,
-    "approx": false,
-    "date": "2026-10-28"
-   },
-   "last": {
-    "price": 31.05,
-    "date": "2026-11-04"
-   },
-   "change_pct": 42.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/227648"
-  },
-  {
-   "id": 131305,
-   "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
-   "set": "Deck Exclusives",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 28.79,
-    "approx": false,
-    "date": "2026-10-28"
-   },
-   "last": {
-    "price": 39.18,
-    "date": "2026-11-04"
-   },
-   "change_pct": 28.9,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/131305"
   },
   {
    "id": 153234,
@@ -99,7 +79,7 @@
    "prev": {
     "price": 112.12,
     "approx": false,
-    "date": "2026-10-28"
+    "date": "2026-10-29"
    },
    "last": {
     "price": 141.83,
@@ -111,27 +91,47 @@
    "link": "https://www.tcgplayer.com/product/153234"
   },
   {
-   "id": 489291,
-   "name": "Charizard VSTAR - 018/172",
-   "set": "Prize Pack Series Cards",
+   "id": 713258,
+   "name": "Espeon ex - 108 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 399.29,
+    "price": 171.42,
     "approx": false,
-    "date": "2026-10-28"
+    "date": "2026-10-29"
    },
    "last": {
-    "price": 550.0,
-    "date": "2026-11-04"
+    "price": 125.66,
+    "date": "2026-11-05"
    },
-   "change_pct": 25.2,
+   "change_pct": -24.2,
    "label": "UNCONFIRMED",
    "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/489291"
+   "link": "https://www.tcgplayer.com/product/713258"
+  },
+  {
+   "id": 714386,
+   "name": "Lugia",
+   "set": "ME: 30th Celebration Classic Collection",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 193.02,
+    "approx": false,
+    "date": "2026-10-29"
+   },
+   "last": {
+    "price": 138.75,
+    "date": "2026-11-05"
+   },
+   "change_pct": -24.0,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no sales checked in this window",
+   "link": "https://www.tcgplayer.com/product/714386"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Change: the median of the market price over the 3 days ending Oct 28 against the same over the 3 days ending Nov 4; the start-of-week price is that first median, the end-of-week price the latest reading. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Written by Mission Control from the Nov 5, 2026 pull; a hand-written File takes its place when one goes up (Tue, Thu and Sat are its days). Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Change: the median of the market price over the 3 days ending Oct 29 against the same over the 3 days ending Nov 5; the start-of-week price is that first median, the end-of-week price the latest reading. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Written by Mission Control from the Nov 6, 2026 pull; a hand-written File takes its place when one goes up (Tue, Thu and Sat are its days). Not advice.",
  "flags": {
   "headline": {
    "value": 5,
@@ -142,25 +142,18 @@
   "stat": "No sale checked behind 5 of the 5. Not a read on whether these prices are high or low.",
   "items": [
    {
+    "card": "Pikachu ex - 109 (30th Celebration)",
+    "date": "2026-11-05",
+    "price": 66.23,
+    "label": "UNCONFIRMED",
+    "why": "−54.4% in 7 days; no sales checked in this window"
+   },
+   {
     "card": "Pikachu ex - 107 (30th Celebration)",
-    "date": "2026-11-04",
-    "price": 74.19,
+    "date": "2026-11-05",
+    "price": 68.4,
     "label": "UNCONFIRMED",
-    "why": "−55.4% in 7 days; no sales checked in this window"
-   },
-   {
-    "card": "Charizard - 25/185 (Cracked Ice Holo)",
-    "date": "2026-11-04",
-    "price": 31.05,
-    "label": "UNCONFIRMED",
-    "why": "+42.2% in 7 days; no sales checked in this window"
-   },
-   {
-    "card": "Mewtwo - 51/108 (Cracked Ice Holo)",
-    "date": "2026-11-04",
-    "price": 39.18,
-    "label": "UNCONFIRMED",
-    "why": "+28.9% in 7 days; no sales checked in this window"
+    "why": "−54.0% in 7 days; no sales checked in this window"
    },
    {
     "card": "Charizard - 1/99 (Cracked Ice Holo)",
@@ -170,11 +163,18 @@
     "why": "+26.5% in 7 days; no sales checked in this window"
    },
    {
-    "card": "Charizard VSTAR - 018/172",
-    "date": "2026-11-04",
-    "price": 550.0,
+    "card": "Espeon ex - 108 (30th Celebration)",
+    "date": "2026-11-05",
+    "price": 125.66,
     "label": "UNCONFIRMED",
-    "why": "+25.2% in 7 days; no sales checked in this window"
+    "why": "−24.2% in 7 days; no sales checked in this window"
+   },
+   {
+    "card": "Lugia",
+    "date": "2026-11-05",
+    "price": 138.75,
+    "label": "UNCONFIRMED",
+    "why": "−24.0% in 7 days; no sales checked in this window"
    }
   ]
  },

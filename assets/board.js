@@ -1,6 +1,7 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
-   Kept by hand: file.json (The File, Tue / Thu / Sat) and cards/*.json, calls.json, drops.json.
+   Kept by hand: file.json (The File, Tue / Thu / Sat; between those, Mission Control writes it from the nightly feed,
+   marked "selection": "AUTO_SELECTED") and cards/*.json, calls.json, drops.json.
    The File comes in two kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind")
    and a market File ("kind": "market": TCGplayer price moves, the day before against the next day, no card files).
    Written nightly by Mission Control (board_publish): meta.json, movers.json, flags.json, rip_ev.json,
@@ -41,6 +42,10 @@
   // The File's stance: a closed set, same as share/render.py. Any other value is not shown. A stance is a read, not advice.
   var STANCES = { "STRONG WATCH": "chip-accent", WATCH: "chip-info", NEUTRAL: "chip-neutral", CAUTION: "chip-warn", PASS: "chip-down" };
   var SLOTS = ["Tue story", "Thu market", "Sat build"];
+  // A File Mission Control wrote from the nightly feed (file.json "selection"), between the hand-written ones. It is
+  // labeled as such where a hand-written File shows its slot, and it doesn't count as the day's File.
+  var AUTO = "AUTO_SELECTED", AUTO_LABEL = "Mission Control, nightly";
+  function isAuto(file) { return str(file && file.selection) === AUTO; }
   var FILE_DAYS = [2, 4, 6]; // The File runs Tue, Thu and Sat, Central time (0 is Sunday)
   var WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
   // What Mission Control's since-yesterday list (movers.json one_day) and 7-day list (movers.json items) cover. Keep in step
@@ -162,7 +167,7 @@
     for (var i = 0; i < 8; i++) {
       var day = new Date(t0 + i * 86400000), iso = day.toISOString().slice(0, 10);
       if (FILE_DAYS.indexOf(day.getUTCDay()) === -1) continue;
-      if (i === 0) { if (file && file.date === iso) continue; return "today"; }
+      if (i === 0) { if (file && file.date === iso && !isAuto(file)) continue; return "today"; }
       return WEEKDAYS[day.getUTCDay()] + ", " + fmtDate(iso);
     }
     return "";
@@ -291,7 +296,8 @@
   // A market File's window, said the way its rows are: every row a 7-day move (window_label "7d", as movers.json has it)
   // reads over 7 days; anything else reads from the day before, as every market File did before the 7-day list.
   function marketWords(rows) {
-    var week = rows.length > 0 && rows.every(function (r) { return str(r.window_label) === "7d"; });
+    // No rows (a quiet week on the nightly File) reads as the 7-day list it comes from.
+    var week = rows.length === 0 || rows.every(function (r) { return str(r.window_label) === "7d"; });
     return week
       ? { since: "over 7 days", span: "in 7 days", head: ["Start of week", "End of week"] }
       : { since: "from the day before", span: "in a day", head: ["Day before", "Next day"] };
@@ -589,7 +595,7 @@
     if (!file) return;
     // The File's date and slot head the hero card, its stance beside them; the story fields sit above its table.
     var day = isDate(file.date) ? file.date : isDate(file.as_of) ? file.as_of : null;
-    var slot = SLOTS.indexOf(str(file.slot)) !== -1 ? str(file.slot) : "";
+    var slot = SLOTS.indexOf(str(file.slot)) !== -1 ? str(file.slot) : isAuto(file) ? AUTO_LABEL : "";
     $("#hero-kicker").textContent = ["The File", day ? fmtDate(day) : "", slot].filter(Boolean).join(" · ");
     var hs = $("#hero-stance"), sc = stanceChip(file.stance);
     hs.innerHTML = "";
@@ -702,6 +708,7 @@
     var box = $("#hero-chart");
     box.innerHTML = "";
     if (rows.length) { var chart = moveChart(rows, fitChart(box, 0).width); box.appendChild(chart); safe(function () { fitNames(chart); }); }
+    else box.appendChild(el("p", { class: "muted", style: "font-size:14px;margin:24px 0", text: "No move passed the list's rule this week. The rule is under the table below." }));
     var lg = $("#hero-legend");
     lg.innerHTML = "";
     [["up", "Up " + words.since], ["down", "Down " + words.since]].forEach(function (k) {
@@ -721,7 +728,9 @@
     var head = $("#file-head"), words = marketWords(rows); // a 7-day File: the start of the week against its end
     head.innerHTML = "";
     head.appendChild(el("tr", {}, ["Card", words.head[0], words.head[1], "Change", "Label"].map(function (h) { return el("th", { scope: "col", text: h }); })));
-    $("#file-sub").textContent = "Tue · Thu · Sat · TCGplayer market prices";
+    $("#file-sub").textContent = isAuto(file)
+      ? "Nightly from Mission Control between the hand-written Files (Tue · Thu · Sat) · TCGplayer market prices"
+      : "Tue · Thu · Sat · TCGplayer market prices";
     // Nothing in a market File need have a checked sale behind it, so the lede says what the labels mean instead.
     $("#moving-lede").textContent = "The File, then the whole market from TCGplayer, each move labeled by the sales Mission Control checked: Unconfirmed when there were none.";
     // Its flags are moves no checked sale backs yet, not sold records thrown out; the nightly feed below still is.

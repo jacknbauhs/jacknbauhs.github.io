@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-07",
   "daily": {
-    "date": "2026-11-06",
+    "date": "2026-11-07",
     "movers": [
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -54.4,
+        "change_pct": -56.2,
         "label": "UNCONFIRMED",
-        "price": 66.23,
-        "observed": "2026-11-05"
+        "price": 35.28,
+        "observed": "2026-11-06"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -54.0,
+        "change_pct": -56.2,
         "label": "UNCONFIRMED",
-        "price": 68.4,
-        "observed": "2026-11-05"
+        "price": 35.3,
+        "observed": "2026-11-06"
       },
       {
-        "name": "Charizard - 1/99 (Cracked Ice Holo)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 26.5,
+        "name": "Umbreon ex - 110 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -28.3,
         "label": "UNCONFIRMED",
-        "price": 141.83,
-        "observed": "2026-11-05"
+        "price": 79.13,
+        "observed": "2026-11-06"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -24.2,
+        "change_pct": -26.7,
         "label": "UNCONFIRMED",
-        "price": 125.66,
-        "observed": "2026-11-05"
-      },
-      {
-        "name": "Lugia",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -24.0,
-        "label": "UNCONFIRMED",
-        "price": 138.75,
-        "observed": "2026-11-05"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Eevee - 114/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -15.7,
-        "label": "UNCONFIRMED",
-        "price": 37.39,
-        "observed": "2026-11-05"
-      },
-      {
-        "name": "Gengar ex - 154/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -10.1,
-        "label": "UNCONFIRMED",
-        "price": 54.94,
-        "observed": "2026-11-05"
+        "price": 58.92,
+        "observed": "2026-11-06"
       },
       {
         "name": "Pikachu ex - 150/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -10.0,
+        "change_pct": -26.4,
         "label": "UNCONFIRMED",
-        "price": 41.8,
-        "observed": "2026-11-05"
+        "price": 41.42,
+        "observed": "2026-11-06"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Mega Rayquaza ex - 138/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -17.6,
+        "label": "UNCONFIRMED",
+        "price": 327.81,
+        "observed": "2026-11-06"
       },
       {
-        "name": "Mega Charizard X ex - 023",
+        "name": "Mew - 105 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -9.8,
+        "change_pct": -7.6,
         "label": "UNCONFIRMED",
-        "price": 20.96,
-        "observed": "2026-11-05"
+        "price": 21.25,
+        "observed": "2026-11-06"
       },
       {
-        "name": "Eevee",
-        "set": "WoTC Promo",
-        "change_pct": -8.8,
+        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 7.5,
         "label": "UNCONFIRMED",
-        "price": 54.01,
-        "observed": "2026-11-05"
+        "price": 42.05,
+        "observed": "2026-11-06"
+      },
+      {
+        "name": "M Rayquaza EX (Shiny Full Art)",
+        "set": "XY - Ancient Origins",
+        "change_pct": -7.1,
+        "label": "UNCONFIRMED",
+        "price": 1117.0,
+        "observed": "2026-11-06"
+      },
+      {
+        "name": "Mew ex - 158/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -5.8,
+        "label": "UNCONFIRMED",
+        "price": 36.99,
+        "observed": "2026-11-06"
       }
     ],
     "calls_due": [

@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-07",
+  "as_of": "2026-11-08",
   "daily": {
-    "date": "2026-11-07",
+    "date": "2026-11-08",
     "movers": [
-      {
-        "name": "Pikachu ex - 109 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -56.2,
-        "label": "UNCONFIRMED",
-        "price": 35.28,
-        "observed": "2026-11-06"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -56.2,
-        "label": "UNCONFIRMED",
-        "price": 35.3,
-        "observed": "2026-11-06"
-      },
       {
         "name": "Umbreon ex - 110 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -28.3,
+        "change_pct": -59.8,
         "label": "UNCONFIRMED",
-        "price": 79.13,
-        "observed": "2026-11-06"
+        "price": 79.99,
+        "observed": "2026-11-07"
       },
       {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -26.7,
+        "name": "Eevee - 114/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -45.2,
         "label": "UNCONFIRMED",
-        "price": 58.92,
-        "observed": "2026-11-06"
+        "price": 25.87,
+        "observed": "2026-11-07"
+      },
+      {
+        "name": "Victini - 102 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -41.0,
+        "label": "UNCONFIRMED",
+        "price": 21.57,
+        "observed": "2026-11-07"
       },
       {
         "name": "Pikachu ex - 150/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -26.4,
+        "change_pct": -25.1,
         "label": "UNCONFIRMED",
-        "price": 41.42,
-        "observed": "2026-11-06"
+        "price": 40.74,
+        "observed": "2026-11-07"
+      },
+      {
+        "name": "Kecleon - 117/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -23.6,
+        "label": "UNCONFIRMED",
+        "price": 23.42,
+        "observed": "2026-11-07"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Mega Rayquaza ex - 138/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -17.6,
-        "label": "UNCONFIRMED",
-        "price": 327.81,
-        "observed": "2026-11-06"
-      },
-      {
-        "name": "Mew - 105 (30th Celebration)",
+        "name": "Ditto - 106 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -7.6,
+        "change_pct": -29.3,
         "label": "UNCONFIRMED",
-        "price": 21.25,
-        "observed": "2026-11-06"
+        "price": 27.57,
+        "observed": "2026-11-07"
       },
       {
-        "name": "Mewtwo - 51/108 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 7.5,
+        "name": "Zinnia's Trust - 140/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -15.9,
         "label": "UNCONFIRMED",
-        "price": 42.05,
-        "observed": "2026-11-06"
+        "price": 32.3,
+        "observed": "2026-11-07"
       },
       {
-        "name": "M Rayquaza EX (Shiny Full Art)",
-        "set": "XY - Ancient Origins",
-        "change_pct": -7.1,
+        "name": "Charizard",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -15.7,
         "label": "UNCONFIRMED",
-        "price": 1117.0,
-        "observed": "2026-11-06"
+        "price": 116.78,
+        "observed": "2026-11-07"
       },
       {
-        "name": "Mew ex - 158/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -5.8,
+        "name": "Shining Ho-Oh - SM70",
+        "set": "SM Promos",
+        "change_pct": 13.3,
         "label": "UNCONFIRMED",
-        "price": 36.99,
-        "observed": "2026-11-06"
+        "price": 35.78,
+        "observed": "2026-11-07"
+      },
+      {
+        "name": "Gengar (Prime)",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": -11.5,
+        "label": "UNCONFIRMED",
+        "price": 44.63,
+        "observed": "2026-11-07"
       }
     ],
     "calls_due": [

@@ -1,23 +1,23 @@
 {
  "kind": "market",
- "date": "2026-11-07",
+ "date": "2026-11-08",
  "slot": null,
  "stance": null,
- "as_of": "2026-11-06",
- "pulled": "2026-11-07",
+ "as_of": "2026-11-07",
+ "pulled": "2026-11-08",
  "title": "The week on TCGplayer",
- "headline": "The 5 biggest moves on the board's 7-day list, prices Oct 30 to Nov 6.",
- "dek": "TCGplayer's market price for Pikachu ex - 109 (30th Celebration) fell 56.2% to $35.28 between Oct 30 and Nov 6. None of the 5 has a checked sale behind the move: unconfirmed means Mission Control checked no sale in the window, not that anything is wrong.",
+ "headline": "The 5 biggest moves on the board's 7-day list, prices Oct 31 to Nov 7.",
+ "dek": "TCGplayer's market price for Umbreon ex - 110 (30th Celebration) fell 59.8% to $79.99 between Oct 31 and Nov 7. None of the 5 has a checked sale behind the move: unconfirmed means Mission Control checked no sale in the window, not that anything is wrong.",
  "why_now": "Mission Control writes this File every morning from the nightly TCGplayer pull, so the board has a fresh File on the mornings no hand-written one is up (Tue, Thu and Sat are its days).",
  "risk": "A market price is TCGplayer's average of recent completed sales of the same card, condition and printing, so one sale can move a thin card. The list's rule keeps out the moves nothing backs, not every thin one. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether these moves hold on tomorrow's pull. A card drops off the list by moving less than 5% in a week, more than 60% with no checked sale, without its lowest listing moving the same way, or below $20. The next hand-written File day is today.",
+ "what_to_watch": "Whether these moves hold on tomorrow's pull. A card drops off the list by moving less than 5% in a week, more than 60% with no checked sale, without its lowest listing moving the same way, or below $20. The next hand-written File day is Tuesday, Nov 10.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, the board's 7-day list (prices Oct 30 to Nov 6, 2026, published Nov 7)",
+ "source": "TCGplayer market prices via tcgcsv.com, the board's 7-day list (prices Oct 31 to Nov 7, 2026, published Nov 8)",
  "hero": {
-  "title": "The biggest moves on the board's 7-day list, prices Oct 30 to Nov 6",
-  "value": "−56.2%",
-  "note": "in 7 days · Pikachu ex - 109 (30th Celebration)"
+  "title": "The biggest moves on the board's 7-day list, prices Oct 31 to Nov 7",
+  "value": "−59.8%",
+  "note": "in 7 days · Umbreon ex - 110 (30th Celebration)"
  },
  "stats": [
   {
@@ -25,51 +25,11 @@
    "label": "of the 5 moves on this File, the biggest of the 10 on the board's 7-day list"
   },
   {
-   "value": "Nov 6",
+   "value": "Nov 7",
    "label": "the newest TCGplayer prices; this File is rewritten every morning after the nightly pull"
   }
  ],
  "rows": [
-  {
-   "id": 713256,
-   "name": "Pikachu ex - 109 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 151.18,
-    "approx": false,
-    "date": "2026-10-30"
-   },
-   "last": {
-    "price": 35.28,
-    "date": "2026-11-06"
-   },
-   "change_pct": -56.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/713256"
-  },
-  {
-   "id": 713257,
-   "name": "Pikachu ex - 107 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 156.08,
-    "approx": false,
-    "date": "2026-10-30"
-   },
-   "last": {
-    "price": 35.3,
-    "date": "2026-11-06"
-   },
-   "change_pct": -56.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/713257"
-  },
   {
    "id": 713259,
    "name": "Umbreon ex - 110 (30th Celebration)",
@@ -79,36 +39,56 @@
    "prev": {
     "price": 199.05,
     "approx": false,
-    "date": "2026-10-30"
+    "date": "2026-10-31"
    },
    "last": {
-    "price": 79.13,
-    "date": "2026-11-06"
+    "price": 79.99,
+    "date": "2026-11-07"
    },
-   "change_pct": -28.3,
+   "change_pct": -59.8,
    "label": "UNCONFIRMED",
    "note": "7 days, no sales checked in this window",
    "link": "https://www.tcgplayer.com/product/713259"
   },
   {
-   "id": 713258,
-   "name": "Espeon ex - 108 (30th Celebration)",
+   "id": 726565,
+   "name": "Eevee - 114/103",
+   "set": "ME06: Delta Reign",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 47.25,
+    "approx": false,
+    "date": "2026-10-31"
+   },
+   "last": {
+    "price": 25.87,
+    "date": "2026-11-07"
+   },
+   "change_pct": -45.2,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no sales checked in this window",
+   "link": "https://www.tcgplayer.com/product/726565"
+  },
+  {
+   "id": 713286,
+   "name": "Victini - 102 (30th Celebration)",
    "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 171.42,
+    "price": 36.58,
     "approx": false,
-    "date": "2026-10-30"
+    "date": "2026-10-31"
    },
    "last": {
-    "price": 58.92,
-    "date": "2026-11-06"
+    "price": 21.57,
+    "date": "2026-11-07"
    },
-   "change_pct": -26.7,
+   "change_pct": -41.0,
    "label": "UNCONFIRMED",
    "note": "7 days, no sales checked in this window",
-   "link": "https://www.tcgplayer.com/product/713258"
+   "link": "https://www.tcgplayer.com/product/713286"
   },
   {
    "id": 712954,
@@ -117,21 +97,41 @@
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 56.82,
+    "price": 55.33,
     "approx": false,
-    "date": "2026-10-30"
+    "date": "2026-10-31"
    },
    "last": {
-    "price": 41.42,
-    "date": "2026-11-06"
+    "price": 40.74,
+    "date": "2026-11-07"
    },
-   "change_pct": -26.4,
+   "change_pct": -25.1,
    "label": "UNCONFIRMED",
    "note": "7 days, no sales checked in this window",
    "link": "https://www.tcgplayer.com/product/712954"
+  },
+  {
+   "id": 726567,
+   "name": "Kecleon - 117/103",
+   "set": "ME06: Delta Reign",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 30.65,
+    "approx": false,
+    "date": "2026-10-31"
+   },
+   "last": {
+    "price": 23.42,
+    "date": "2026-11-07"
+   },
+   "change_pct": -23.6,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no sales checked in this window",
+   "link": "https://www.tcgplayer.com/product/726567"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Change: the median of the market price over the 3 days ending Oct 30 against the same over the 3 days ending Nov 6; the start-of-week price is that first median, the end-of-week price the latest reading. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Written by Mission Control from the Nov 7, 2026 pull; a hand-written File takes its place when one goes up (Tue, Thu and Sat are its days). Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). Change: the median of the market price over the 3 days ending Oct 31 against the same over the 3 days ending Nov 7; the start-of-week price is that first median, the end-of-week price the latest reading. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Written by Mission Control from the Nov 8, 2026 pull; a hand-written File takes its place when one goes up (Tue, Thu and Sat are its days). Not advice.",
  "flags": {
   "headline": {
    "value": 5,
@@ -142,39 +142,39 @@
   "stat": "No sale checked behind 5 of the 5. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Pikachu ex - 109 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 35.28,
-    "label": "UNCONFIRMED",
-    "why": "−56.2% in 7 days; no sales checked in this window"
-   },
-   {
-    "card": "Pikachu ex - 107 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 35.3,
-    "label": "UNCONFIRMED",
-    "why": "−56.2% in 7 days; no sales checked in this window"
-   },
-   {
     "card": "Umbreon ex - 110 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 79.13,
+    "date": "2026-11-07",
+    "price": 79.99,
     "label": "UNCONFIRMED",
-    "why": "−28.3% in 7 days; no sales checked in this window"
+    "why": "−59.8% in 7 days; no sales checked in this window"
    },
    {
-    "card": "Espeon ex - 108 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 58.92,
+    "card": "Eevee - 114/103",
+    "date": "2026-11-07",
+    "price": 25.87,
     "label": "UNCONFIRMED",
-    "why": "−26.7% in 7 days; no sales checked in this window"
+    "why": "−45.2% in 7 days; no sales checked in this window"
+   },
+   {
+    "card": "Victini - 102 (30th Celebration)",
+    "date": "2026-11-07",
+    "price": 21.57,
+    "label": "UNCONFIRMED",
+    "why": "−41.0% in 7 days; no sales checked in this window"
    },
    {
     "card": "Pikachu ex - 150/128",
-    "date": "2026-11-06",
-    "price": 41.42,
+    "date": "2026-11-07",
+    "price": 40.74,
     "label": "UNCONFIRMED",
-    "why": "−26.4% in 7 days; no sales checked in this window"
+    "why": "−25.1% in 7 days; no sales checked in this window"
+   },
+   {
+    "card": "Kecleon - 117/103",
+    "date": "2026-11-07",
+    "price": 23.42,
+    "label": "UNCONFIRMED",
+    "why": "−23.6% in 7 days; no sales checked in this window"
    }
   ]
  },

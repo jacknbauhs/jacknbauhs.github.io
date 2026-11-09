@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "daily": {
-    "date": "2026-11-08",
+    "date": "2026-11-09",
     "movers": [
       {
         "name": "Umbreon ex - 110 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
         "change_pct": -59.8,
         "label": "UNCONFIRMED",
-        "price": 79.99,
-        "observed": "2026-11-07"
+        "price": 82.09,
+        "observed": "2026-11-08"
       },
       {
         "name": "Eevee - 114/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -45.2,
+        "change_pct": -44.4,
         "label": "UNCONFIRMED",
-        "price": 25.87,
-        "observed": "2026-11-07"
+        "price": 28.06,
+        "observed": "2026-11-08"
       },
       {
-        "name": "Victini - 102 (30th Celebration)",
+        "name": "Ditto - 106 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -41.0,
+        "change_pct": -29.7,
         "label": "UNCONFIRMED",
-        "price": 21.57,
-        "observed": "2026-11-07"
-      },
-      {
-        "name": "Pikachu ex - 150/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -25.1,
-        "label": "UNCONFIRMED",
-        "price": 40.74,
-        "observed": "2026-11-07"
+        "price": 25.11,
+        "observed": "2026-11-08"
       },
       {
         "name": "Kecleon - 117/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -23.6,
+        "change_pct": -26.9,
         "label": "UNCONFIRMED",
-        "price": 23.42,
-        "observed": "2026-11-07"
+        "price": 24.41,
+        "observed": "2026-11-08"
+      },
+      {
+        "name": "Pikachu ex - 150/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -26.2,
+        "label": "UNCONFIRMED",
+        "price": 39.44,
+        "observed": "2026-11-08"
       }
     ],
     "one_day_movers": [
       {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 27.6,
+        "label": "UNCONFIRMED",
+        "price": 82.52,
+        "observed": "2026-11-08"
+      },
+      {
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 26.4,
+        "label": "UNCONFIRMED",
+        "price": 47.78,
+        "observed": "2026-11-08"
+      },
+      {
         "name": "Ditto - 106 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -29.3,
+        "change_pct": -8.9,
         "label": "UNCONFIRMED",
-        "price": 27.57,
-        "observed": "2026-11-07"
+        "price": 25.11,
+        "observed": "2026-11-08"
       },
       {
-        "name": "Zinnia's Trust - 140/103",
+        "name": "Eevee - 114/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -15.9,
+        "change_pct": 8.5,
         "label": "UNCONFIRMED",
-        "price": 32.3,
-        "observed": "2026-11-07"
+        "price": 28.06,
+        "observed": "2026-11-08"
       },
       {
-        "name": "Charizard",
+        "name": "Pikachu & Zekrom GX",
         "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -15.7,
+        "change_pct": -7.4,
         "label": "UNCONFIRMED",
-        "price": 116.78,
-        "observed": "2026-11-07"
-      },
-      {
-        "name": "Shining Ho-Oh - SM70",
-        "set": "SM Promos",
-        "change_pct": 13.3,
-        "label": "UNCONFIRMED",
-        "price": 35.78,
-        "observed": "2026-11-07"
-      },
-      {
-        "name": "Gengar (Prime)",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -11.5,
-        "label": "UNCONFIRMED",
-        "price": 44.63,
-        "observed": "2026-11-07"
+        "price": 21.48,
+        "observed": "2026-11-08"
       }
     ],
     "calls_due": [
@@ -105,16 +105,16 @@
     ],
     "flags_headline": {
       "value": 0.0,
-      "label": "of sold dollar volume flagged, week of Oct 26"
+      "label": "of sold dollar volume flagged, week of Nov 2"
     }
   },
   "weekly": {
-    "week_of": "2026-10-26",
+    "week_of": "2026-11-02",
     "flags_headline": {
       "value": 0.0,
-      "label": "of sold dollar volume flagged, week of Oct 26"
+      "label": "of sold dollar volume flagged, week of Nov 2"
     },
-    "flagged_cards": 0,
+    "flagged_cards": 1,
     "rip_ev": []
   }
 }

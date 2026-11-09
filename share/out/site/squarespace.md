@@ -2,7 +2,7 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: The 5 biggest moves on the board's 7-day list, prices Oct 31 to Nov 7. −59.8%: The biggest moves on the board's 7-day list, prices Oct 31 to Nov 7, in 7 days · Umbreon ex - 110 (30th Celebration). No sale checked behind 5 of the 5. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: The 5 biggest moves on the board's 7-day list, prices Nov 1 to Nov 8. −59.8%: The biggest moves on the board's 7-day list, prices Nov 1 to Nov 8, in 7 days · Umbreon ex - 110 (30th Celebration). No sale checked behind 5 of the 5. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
 [![What we couldn't confirm: 5 of 5 moves on this File with no checked sale, or with checked sales that were flagged, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 

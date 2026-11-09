@@ -268,6 +268,11 @@ def is_market(f) -> bool:
     return str((f or {}).get("kind") or "").strip().lower() == "market"
 
 
+def is_auto(f) -> bool:
+    """A File Mission Control wrote from the nightly feed, between the hand-written ones (file.json "selection")."""
+    return str((f or {}).get("selection") or "").strip() == "AUTO_SELECTED"
+
+
 def market_rows(f: dict) -> list:
     return [r for r in f.get("rows") or [] if isinstance(r, dict) and str(r.get("name") or "").strip()
             and isinstance(r.get("change_pct"), (int, float))]
@@ -299,7 +304,7 @@ def market_span(rows, year: bool = False) -> str:
     """The days a market File's moves cover: its rows' last dates ("Oct 2 to Oct 4"), and for 7-day moves the week's start
     too ("Sep 28 to Oct 5"), since every row of a 7-day File compares against the same day a week back."""
     dates = [(r.get("last") or {}).get("date") for r in rows]
-    if market_window(rows) == "7d":
+    if not rows or market_window(rows) == "7d":
         dates += [(r.get("prev") or {}).get("date") for r in rows]
     return date_span(dates, year=year)
 
@@ -492,6 +497,13 @@ class Kit:
                         + (f"{row['note']}." if row.get("note") else "")},
                  alt=f"The File: {row['name']} {row['tier']}, {pct(row.get('change_pct'))} on the clean median "
                      f"({row.get('window_label', '')}). {row.get('sales')} sold records, {row.get('flagged')} kept out.")
+        elif is_market(f) and as_of:
+            # A market File with no rows (a quiet week on the nightly File): say so, not the placeholder.
+            hl = str(f.get("headline") or f.get("title") or "").strip()
+            tile("tile-file", "The File", f"TCGplayer · {fmt_date(as_of)}", "",
+                 {"eyebrow": hl, "big": "0", "big_size": "", "l1": "No move passed the board's 7-day rule this week.",
+                  "l2": sentence(f.get("dek")) or ""},
+                 alt=f"The File on the Astronaut Time board: {sentence(hl)} No move passed the board's 7-day rule this week.")
         else:
             tile("tile-file", "The File", "Mission Control", "",
                  {"eyebrow": "Every sale checked before it counts", "big": "—", "big_size": "md",
@@ -603,6 +615,10 @@ class Kit:
             if kind not in kinds:
                 continue
             found = sorted(self.out.glob(pattern))
+            # The File's newest cover is the one for the File that is up (the nightly one has no date in its name).
+            current = getattr(self, "current_cover", None)
+            if kind == "file" and current and (self.out / current).exists():
+                found = [p for p in found if p.name != current] + [self.out / current]
             dest = site / f"latest-{kind}.png"
             if found:
                 shutil.copyfile(found[-1], dest)
@@ -640,6 +656,8 @@ class Kit:
         as_of = f.get("as_of") or f.get("pulled")
         # The day it is The File for, when Jack dates it (YYYY-MM-DD; anything else falls back to as_of).
         day = f["date"] if re.fullmatch(r"\d{4}-\d{2}-\d{2}", str(f.get("date") or "")) else as_of
+        # The cover of the File that is up, so place_latest copies it to latest-file.png whatever sorts last.
+        self.current_cover = f"file-{day}-cover.png"
         kicker = f"The File · {fmt_date(day)}"
         tag = f"130point · pulled {fmt_date(f.get('pulled') or as_of)}"
         # The optional story fields (share/README.md): none of them is needed, and an unknown stance or slot isn't shown.
@@ -762,7 +780,12 @@ class Kit:
                     f", {pct(r['change_pct'], 1)}" + (" in 7 days" if week else "") +
                     (f", {label_info(r['label'])[0].lower()}." if r.get("label") else "."))
 
-        self.page("file-market-cover.html", f"file-{day}-cover", {
+        # Mission Control's nightly File (file.json "selection": "AUTO_SELECTED") renders at one stable name, so the
+        # repo doesn't gain a cover a day; a hand-written File keeps its dated name (git history is the archive: main()
+        # removes covers that are no longer in the set).
+        if is_auto(f):
+            self.current_cover = "file-nightly-cover.png"
+        self.page("file-market-cover.html", self.current_cover[:-4], {
             "kicker": kicker, "tag": f"TCGplayer · {span}" if span else "TCGplayer", "file_title": title, "lede": dek,
             "rows": bars, "more": more, "flags": flags_ctx, "slot": slot, "stance": stance, "frame_class": "market",
         }, caption=(f"The File, {fmt_date(day)}{f' ({slot})' if slot else ''}: {sentence(title)} " +
@@ -879,7 +902,8 @@ class Kit:
         if len(items) > len(shown):
             legend.append(f"The first {len(shown)} are here; all {len(items)} are on the board.")
         label = str(head.get("label") or "").strip()
-        self.page("flags-market-cover.html", f"flags-{as_of}-cover", {
+        # The nightly File's as_of advances every morning; one stable name keeps the repo from gaining a cover a day.
+        self.page("flags-market-cover.html", f"flags-{'nightly' if is_auto(f) else as_of}-cover", {
             "kicker": f"{MARKET_FLAGS_TITLE} · {fmt_date(as_of)}", "tag": f"TCGplayer · {span}" if span else "TCGplayer", "tag_class": "flag",
             "eyebrow": f.get("title", "The File"), "frame_class": "market-flags",
             "value": head["value"], "of": head.get("of"), "headline": label,

@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-10",
   "daily": {
-    "date": "2026-11-09",
+    "date": "2026-11-10",
     "movers": [
       {
-        "name": "Umbreon ex - 110 (30th Celebration)",
+        "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
         "change_pct": -59.8,
         "label": "UNCONFIRMED",
-        "price": 82.09,
-        "observed": "2026-11-08"
+        "price": 46.49,
+        "observed": "2026-11-09"
+      },
+      {
+        "name": "Umbreon ex - 110 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -54.4,
+        "label": "UNCONFIRMED",
+        "price": 90.67,
+        "observed": "2026-11-09"
+      },
+      {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -46.8,
+        "label": "UNCONFIRMED",
+        "price": 77.35,
+        "observed": "2026-11-09"
       },
       {
         "name": "Eevee - 114/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -44.4,
+        "change_pct": -39.7,
         "label": "UNCONFIRMED",
-        "price": 28.06,
-        "observed": "2026-11-08"
+        "price": 29.32,
+        "observed": "2026-11-09"
       },
       {
-        "name": "Ditto - 106 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -29.7,
+        "name": "Raichu",
+        "set": "EX FireRed & LeafGreen",
+        "change_pct": 27.1,
         "label": "UNCONFIRMED",
-        "price": 25.11,
-        "observed": "2026-11-08"
-      },
-      {
-        "name": "Kecleon - 117/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -26.9,
-        "label": "UNCONFIRMED",
-        "price": 24.41,
-        "observed": "2026-11-08"
-      },
-      {
-        "name": "Pikachu ex - 150/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -26.2,
-        "label": "UNCONFIRMED",
-        "price": 39.44,
-        "observed": "2026-11-08"
+        "price": 52.5,
+        "observed": "2026-11-09"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 27.6,
-        "label": "UNCONFIRMED",
-        "price": 82.52,
-        "observed": "2026-11-08"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 26.4,
-        "label": "UNCONFIRMED",
-        "price": 47.78,
-        "observed": "2026-11-08"
-      },
-      {
-        "name": "Ditto - 106 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -8.9,
-        "label": "UNCONFIRMED",
-        "price": 25.11,
-        "observed": "2026-11-08"
-      },
-      {
-        "name": "Eevee - 114/103",
+        "name": "Raikou ex",
         "set": "ME06: Delta Reign",
-        "change_pct": 8.5,
+        "change_pct": 16.7,
         "label": "UNCONFIRMED",
-        "price": 28.06,
-        "observed": "2026-11-08"
+        "price": 88.86,
+        "observed": "2026-11-09"
       },
       {
-        "name": "Pikachu & Zekrom GX",
-        "set": "ME: 30th Celebration Classic Collection",
-        "change_pct": -7.4,
+        "name": "Umbreon ex - 110 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 10.5,
         "label": "UNCONFIRMED",
-        "price": 21.48,
-        "observed": "2026-11-08"
+        "price": 90.67,
+        "observed": "2026-11-09"
+      },
+      {
+        "name": "Kecleon - 117/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": 9.6,
+        "label": "UNCONFIRMED",
+        "price": 26.75,
+        "observed": "2026-11-09"
+      },
+      {
+        "name": "Pikachu ex - 150/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": -9.4,
+        "label": "UNCONFIRMED",
+        "price": 35.72,
+        "observed": "2026-11-09"
+      },
+      {
+        "name": "Sylveon - 72/111 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 9.2,
+        "label": "UNCONFIRMED",
+        "price": 57.27,
+        "observed": "2026-11-09"
       }
     ],
     "calls_due": [

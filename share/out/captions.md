@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-09
+# Captions, board data of 2026-11-10
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 8, 2026.
+- ✅ Prices are from Nov 9, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -20,7 +20,7 @@ Alt: The File on the Astronaut Time board: Eight weeks in, the 30th Celebration 
 
 Alt: What we couldn't confirm: 5 of 5 30th Celebration moves on this File with no checked sale, all 5 listed one per line with the day, the card, the change and the TCGplayer market price after it.
 
-## flag-2026-11-07-feed-01-charizard-sir-151-psa-9-thin-spike.png
+## flag-2026-11-08-feed-01-charizard-sir-151-psa-9-thin-spike.png
 
 Charizard SIR (151) · PSA 9 (Pokemon Card 151): the chart says +27%. Above recent sales, thin volume. Label: thin spike. Up on a handful of sales, with no volume behind it. board.jacknbauhs.com
 
@@ -50,8 +50,8 @@ Three calls on the record. #001: The 30th Celebration Booster Bundle's premium c
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
 
-## moving-2026-W45.png
+## moving-2026-W46.png
 
-What's moving on TCGplayer, as of Nov 8, 2026. Ten moves of 5% or more made the list in the last 7 days. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $82.09, −59.8%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $28.06, −44.4%, unconfirmed. Ditto - 106 (30th Celebration) (ME: Mega Evolution Promo · 106 · Holofoil): $25.11, −29.7%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $24.41, −26.9%, unconfirmed. Pikachu ex - 150/128 (ME: 30th Celebration · 150/128 · Holofoil): $39.44, −26.2%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128 · Holofoil): $28.51, −24.8%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $33.42, −24.3%, unconfirmed. Mewtwo ex - 157/128 (ME: 30th Celebration · 157/128 · Holofoil): $26.13, −23.4%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 8, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 9, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $46.49, −59.8%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $90.67, −54.4%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $77.35, −46.8%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $29.32, −39.7%, unconfirmed. Raichu (EX FireRed & LeafGreen · 12/112 · Holofoil): $52.50, +27.1%, unconfirmed. Pikachu ex - 150/128 (ME: 30th Celebration · 150/128 · Holofoil): $35.72, −27.0%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $33.63, −26.7%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128 · Holofoil): $28.91, −24.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 9, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

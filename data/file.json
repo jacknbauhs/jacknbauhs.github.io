@@ -1,72 +1,180 @@
 {
  "kind": "market",
- "date": "2026-11-14",
- "slot": "Sat build",
+ "date": "2026-11-17",
+ "slot": "Tue story",
  "stance": null,
- "as_of": "2026-11-06",
- "pulled": "2026-11-07",
- "title": "Why the list is slow on purpose",
- "headline": "Why the list says −56% when the price says $35.",
- "dek": "The board's 7-day change compares the median of three readings at each end of the week, not one reading against one. On Nov 7, Pikachu ex 107's last three readings were $74.19 (Nov 4), $68.40 (Nov 5) and $35.30 (Nov 6). Their median, $68.40, against $156.08 a week earlier is −56.2%, while the latest reading was already $35.30. We chose that rule on Oct 13 so one day's spike can't pass for a weekly move. This week's halving shows its cost: the list is slow on purpose.",
- "why_now": "Tuesday's and Thursday's Files ran into the same thing: a list that says down after a price has turned. The nightly File that now writes the hero shows it on every row, so this is the Saturday to say how the number is built and what that choice costs.",
- "risk": "A smoothed change isn't wrong, it is late: after a real turn it keeps reading the old direction for about a week. A raw one-reading change is current but gets fooled by one thin sale, like the one-sale jump that first sent us to medians (Snorlax Lv.X, +41.7%, Oct 2026). We picked slow over fooled; that is a judgment. The table's start price (a median) sits beside the latest reading (a single reading), so a row can look like it doesn't add up. Showing the end median beside it is on our list, not built. No sale was checked behind this move. This is not a read on whether the price is high or low.",
- "what_to_watch": "Whether we show the end-of-week median beside the latest price so a row adds up (not built yet). Whether Pikachu ex 107 leaves the 7-day list around Nov 13 and Nov 14, as the rule says it should once the week it compares against stops containing pre-Nov 6 readings. And the Files: Thursday's stands through Saturday, this one through Tuesday, and the nightly File returns Wednesday.",
+ "as_of": "2026-11-09",
+ "pulled": "2026-11-10",
+ "title": "750 moves, none confirmed",
+ "headline": "750 moves, none with a checked sale. Here is what that costs.",
+ "dek": "Since Sep 28 the board has published 750 mover rows over 44 mornings, 360 on the 7-day list and 390 on the since-yesterday list. Every one is labeled Unconfirmed: no sale was checked behind it. Checked sales did start appearing on the board on Nov 3, but for a short list of tracked cards, and none of them is a card the lists show moving. We show these moves anyway, because a price reading is information, and we say what it isn't.",
+ "why_now": "Every File so far has put \"unconfirmed\" on every row. The board's sales source now has a date (sales as of Nov 8) and its flags file has a flagged sale, so this is the week to say plainly what the label means, what showing these moves costs, and what would change it.",
+ "risk": "Showing a move with no sale behind it can read as a claim. The rules limit that: a move over 60% in a week, or over 40% in a day, is left out unless a checked sale speaks to it. That is also why a real one-reading halving never shows on the since-yesterday list, as Thursday's File found. \"Unconfirmed\" is a statement about our checking, not about the card. This is not a read on whether any of these prices is high or low.",
+ "what_to_watch": "The first mover row that reads anything but Unconfirmed: it would mean a checked sale landed on a card the list shows, and its label would say what kind. The flags file: its one flagged sale this week is a thin spike on a Charizard SIR (151) PSA 9, a claimed +27.1% \"above recent sales, thin volume\". And whether the tracked list grows to cover the cards the lists show.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, the board's lists of Nov 5 to Nov 7, 2026 (readings Nov 4 to Nov 6) and Mission Control's board settings (3-day medians, set Oct 13, 2026)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Sep 28 to Nov 10, 2026 (44 mornings); the board's meta.json and flags.json as of Nov 8, 2026",
  "hero": {
-  "title": "One card, three readings: the list's −56.2% on Nov 7",
-  "value": "−56.2%",
-  "note": "Pikachu ex 107: median of $74.19, $68.40, $35.30 against $156.08"
+  "title": "Mover rows published since Sep 28, by label",
+  "value": "750 of 750",
+  "note": "Unconfirmed: 360 on the 7-day list, 390 on the since-yesterday list"
  },
  "stats": [
   {
-   "value": "3 readings",
-   "label": "each end of the week's change is the median of three days of readings (the rule since Oct 13)"
+   "value": "Nov 3",
+   "label": "the morning the board's sales source first carried a date (sales as of Oct 31; now Nov 8)"
   },
   {
-   "value": "$68.40 vs $35.30",
-   "label": "the median the list used, and the latest reading, for the same card on the same day"
+   "value": "1",
+   "label": "sale flagged this week: a thin spike on Charizard SIR (151) PSA 9, claimed +27.1%"
   }
  ],
  "rows": [
   {
-   "id": 713257,
-   "name": "Pikachu ex - 107 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
+   "id": 88507,
+   "name": "Raichu",
+   "set": "EX FireRed & LeafGreen",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 156.08,
-    "approx": false,
-    "date": "2026-10-30"
+    "price": 41,
+    "approx": true,
+    "date": "2026-11-02"
    },
    "last": {
-    "price": 35.3,
-    "date": "2026-11-06"
+    "price": 52.5,
+    "date": "2026-11-08"
    },
-   "change_pct": -56.2,
+   "change_pct": 27.1,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · the change is the median of Nov 4 to Nov 6 ($68.40) against $156.08, not $35.30 against $156.08",
-   "link": "https://www.tcgplayer.com/product/713257"
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/88507"
+  },
+  {
+   "id": 712954,
+   "name": "Pikachu ex - 150/128",
+   "set": "ME: 30th Celebration",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 49,
+    "approx": true,
+    "date": "2026-11-02"
+   },
+   "last": {
+    "price": 35.72,
+    "date": "2026-11-09"
+   },
+   "change_pct": -27.0,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/712954"
+  },
+  {
+   "id": 696688,
+   "name": "Mew ex - 158/128",
+   "set": "ME: 30th Celebration",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 46,
+    "approx": true,
+    "date": "2026-11-02"
+   },
+   "last": {
+    "price": 33.63,
+    "date": "2026-11-09"
+   },
+   "change_pct": -26.7,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/696688"
+  },
+  {
+   "id": 716232,
+   "name": "Jirachi ex - 155/128",
+   "set": "ME: 30th Celebration",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 38,
+    "approx": true,
+    "date": "2026-11-02"
+   },
+   "last": {
+    "price": 28.91,
+    "date": "2026-11-09"
+   },
+   "change_pct": -24.2,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/716232"
+  },
+  {
+   "id": 726567,
+   "name": "Kecleon - 117/103",
+   "set": "ME06: Delta Reign",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 35,
+    "approx": true,
+    "date": "2026-11-02"
+   },
+   "last": {
+    "price": 26.75,
+    "date": "2026-11-09"
+   },
+   "change_pct": -23.9,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale",
+   "link": "https://www.tcgplayer.com/product/726567"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The worked example: Pikachu ex 107's readings on the board's lists, $156.08 as the median of the three days ending Oct 30, $74.19, $68.40 and $35.30 on Nov 4, Nov 5 and Nov 6; $68.40 / $156.08 − 1 = −56.2%. The rule: Mission Control's WEEK_SMOOTH_DAYS = 3 (config/board.py), set Oct 13, 2026, so a price that spikes for a day can't make a weekly move and a day-old reading at the far end can't fake one. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Sep 28 to Nov 10, 2026, 44 mornings (git history of data/movers.json): 360 rows in the 7-day list and 390 in the since-yesterday list, every one labeled UNCONFIRMED (the since-yesterday list began Oct 3). The table: five of the Nov 10 list's ten moves (prices Nov 2 to Nov 9; the change between 3-day medians at each end; start-of-week prices worked back from the listed price and its rounded change, so within a dollar). The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 1,
-   "of": 1,
-   "label": "move on this File with no checked sale"
+   "value": 5,
+   "of": 5,
+   "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind the one move on this File. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind it. Not a read on whether this price is high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 5 moves on this File, or behind any of the 750 mover rows the board has published since Sep 28. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the five, or any of the 750. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Pikachu ex - 107 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 35.3,
+    "card": "Raichu",
+    "date": "2026-11-08",
+    "price": 52.5,
     "label": "UNCONFIRMED",
-    "why": "−56.2% in 7 days (median against median); no checked sale"
+    "why": "+27.1% in 7 days; no checked sale"
+   },
+   {
+    "card": "Pikachu ex - 150/128",
+    "date": "2026-11-09",
+    "price": 35.72,
+    "label": "UNCONFIRMED",
+    "why": "−27.0% in 7 days; no checked sale"
+   },
+   {
+    "card": "Mew ex - 158/128",
+    "date": "2026-11-09",
+    "price": 33.63,
+    "label": "UNCONFIRMED",
+    "why": "−26.7% in 7 days; no checked sale"
+   },
+   {
+    "card": "Jirachi ex - 155/128",
+    "date": "2026-11-09",
+    "price": 28.91,
+    "label": "UNCONFIRMED",
+    "why": "−24.2% in 7 days; no checked sale"
+   },
+   {
+    "card": "Kecleon - 117/103",
+    "date": "2026-11-09",
+    "price": 26.75,
+    "label": "UNCONFIRMED",
+    "why": "−23.9% in 7 days; no checked sale"
    }
   ]
  }

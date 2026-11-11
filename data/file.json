@@ -1,32 +1,32 @@
 {
  "kind": "market",
- "date": "2026-11-12",
- "slot": "Thu market",
+ "date": "2026-11-14",
+ "slot": "Sat build",
  "stance": null,
- "as_of": "2026-11-09",
- "pulled": "2026-11-10",
- "title": "The day five cards halved",
- "headline": "Five cards halved in one reading on Nov 6. The list still shows it.",
- "dek": "On Nov 6, TCGplayer's market price for five cards fell 45% to 53% from the reading before: four 30th Celebration promos (Pikachu ex 107 and 109, Umbreon ex 110, Espeon ex 108) and one Delta Reign card (Eevee 114/103). By their Nov 9 readings all five are up from those Nov 6 lows, by 10% to 42%, while the 7-day list still reads four of them down 40% to 60%. Neither reading is wrong: they answer different questions. No sale was checked behind any of it.",
- "why_now": "Tuesday's File called Pikachu ex 107's move \"a bounce, or a day.\" Two readings later all five are up from Nov 6, and the 7-day list keeps reading them down. That gap is worth explaining while it is open, because a list that compares this week with last week will say \"down\" for days after a price has turned.",
- "risk": "Five cards in two sets losing about half their market price on the same reading is a pattern in TCGplayer's price, not a fact we can explain from price data: the cause isn't visible here and no sale was checked behind any of it. The rebound is also thin: Pikachu ex 107 slipped from $47.78 to $46.49 on its latest reading, and Umbreon ex 110 and Espeon ex 108 have no reading on some days. The prices are TCGplayer's market price on the dates shown, not a daily series. The board's since-yesterday list never showed the Nov 6 drop: with no checked sale, a one-day move over 40% is left out by rule. The 7-day list showed it from Nov 7. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether the cards leave the 7-day list around Nov 13 and Nov 14. By the list's rule the week it compares against has to stop containing the pre-Nov 6 readings first, so a card leaving then is the list catching up, not a new move. Whether any of the five goes back to its Nov 6 low ($35 for the Pikachu promos, $79 for Umbreon ex 110, $59 for Espeon ex 108, $21 for Eevee). And the label: Mission Control is starting to store checked eBay sales for a short list of tracked cards; the morning one of these cards has one, its row stops reading Unconfirmed.",
+ "as_of": "2026-11-06",
+ "pulled": "2026-11-07",
+ "title": "Why the list is slow on purpose",
+ "headline": "Why the list says −56% when the price says $35.",
+ "dek": "The board's 7-day change compares the median of three readings at each end of the week, not one reading against one. On Nov 7, Pikachu ex 107's last three readings were $74.19 (Nov 4), $68.40 (Nov 5) and $35.30 (Nov 6). Their median, $68.40, against $156.08 a week earlier is −56.2%, while the latest reading was already $35.30. We chose that rule on Oct 13 so one day's spike can't pass for a weekly move. This week's halving shows its cost: the list is slow on purpose.",
+ "why_now": "Tuesday's and Thursday's Files ran into the same thing: a list that says down after a price has turned. The nightly File that now writes the hero shows it on every row, so this is the Saturday to say how the number is built and what that choice costs.",
+ "risk": "A smoothed change isn't wrong, it is late: after a real turn it keeps reading the old direction for about a week. A raw one-reading change is current but gets fooled by one thin sale, like the one-sale jump that first sent us to medians (Snorlax Lv.X, +41.7%, Oct 2026). We picked slow over fooled; that is a judgment. The table's start price (a median) sits beside the latest reading (a single reading), so a row can look like it doesn't add up. Showing the end median beside it is on our list, not built. No sale was checked behind this move. This is not a read on whether the price is high or low.",
+ "what_to_watch": "Whether we show the end-of-week median beside the latest price so a row adds up (not built yet). Whether Pikachu ex 107 leaves the 7-day list around Nov 13 and Nov 14, as the rule says it should once the week it compares against stops containing pre-Nov 6 readings. And the Files: Thursday's stands through Saturday, this one through Tuesday, and the nightly File returns Wednesday.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists of Nov 3 to Nov 10, 2026 (prices Nov 2 to Nov 9); the Nov 10 list for the table",
+ "source": "TCGplayer market prices via tcgcsv.com, the board's lists of Nov 5 to Nov 7, 2026 (readings Nov 4 to Nov 6) and Mission Control's board settings (3-day medians, set Oct 13, 2026)",
  "hero": {
-  "title": "The 7-day list still shows Nov 6's drop",
-  "value": "−53%",
-  "note": "Espeon ex 108, Nov 5 to Nov 6, one reading; five cards fell 45% to 53%"
+  "title": "One card, three readings: the list's −56.2% on Nov 7",
+  "value": "−56.2%",
+  "note": "Pikachu ex 107: median of $74.19, $68.40, $35.30 against $156.08"
  },
  "stats": [
   {
-   "value": "+10% to +42%",
-   "label": "how far the five have risen from their Nov 6 lows, by their Nov 9 readings"
+   "value": "3 readings",
+   "label": "each end of the week's change is the median of three days of readings (the rule since Oct 13)"
   },
   {
-   "value": "−40% to −60%",
-   "label": "what the board's 7-day list still reads for four of them, because it compares this week with last"
+   "value": "$68.40 vs $35.30",
+   "label": "the median the list used, and the latest reading, for the same card on the same day"
   }
  ],
  "rows": [
@@ -37,117 +37,36 @@
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 116,
-    "approx": true,
-    "date": "2026-11-02"
+    "price": 156.08,
+    "approx": false,
+    "date": "2026-10-30"
    },
    "last": {
-    "price": 46.49,
-    "date": "2026-11-09"
+    "price": 35.3,
+    "date": "2026-11-06"
    },
-   "change_pct": -59.8,
+   "change_pct": -56.2,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $68.40 to $35.30 on Nov 6, then up 31.7% to $46.49",
+   "note": "7 days, no checked sale · the change is the median of Nov 4 to Nov 6 ($68.40) against $156.08, not $35.30 against $156.08",
    "link": "https://www.tcgplayer.com/product/713257"
-  },
-  {
-   "id": 713259,
-   "name": "Umbreon ex - 110 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 199,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 90.67,
-    "date": "2026-11-09"
-   },
-   "change_pct": -54.4,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $142.75 to $79.13 on Nov 6, then up 14.6% to $90.67",
-   "link": "https://www.tcgplayer.com/product/713259"
-  },
-  {
-   "id": 713258,
-   "name": "Espeon ex - 108 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 145,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 77.35,
-    "date": "2026-11-09"
-   },
-   "change_pct": -46.8,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $125.66 to $58.92 on Nov 6, then up 31.3% to $77.35",
-   "link": "https://www.tcgplayer.com/product/713258"
-  },
-  {
-   "id": 726565,
-   "name": "Eevee - 114/103",
-   "set": "ME06: Delta Reign",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 49,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 29.32,
-    "date": "2026-11-09"
-   },
-   "change_pct": -39.7,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $37.39 to $20.60 on Nov 6, then up 42.3% to $29.32",
-   "link": "https://www.tcgplayer.com/product/726565"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The drop: each card's market price on the board's list one reading before Nov 6 against its Nov 6 reading (Pikachu ex 107 $68.40 to $35.30, Pikachu ex 109 $66.23 to $35.28, Umbreon ex 110 $142.75 to $79.13, Espeon ex 108 $125.66 to $58.92, Eevee 114/103 $37.39 to $20.60). The rise: each card's Nov 9 reading against its Nov 6 reading ($46.49, $38.67, $90.67, $77.35, $29.32). The table: the four of the five on the board's Nov 10 list (Pikachu ex 109 has left it), prices Nov 2 to Nov 9, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, then rounded to the dollar, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The worked example: Pikachu ex 107's readings on the board's lists, $156.08 as the median of the three days ending Oct 30, $74.19, $68.40 and $35.30 on Nov 4, Nov 5 and Nov 6; $68.40 / $156.08 − 1 = −56.2%. The rule: Mission Control's WEEK_SMOOTH_DAYS = 3 (config/board.py), set Oct 13, 2026, so a price that spikes for a day can't make a weekly move and a day-old reading at the far end can't fake one. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 4,
-   "of": 4,
-   "label": "moves on this File with no checked sale"
+   "value": 1,
+   "of": 1,
+   "label": "move on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind the Nov 6 drop in any of the five cards. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the four, or behind the Nov 6 drop in any of the five. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind the one move on this File. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind it. Not a read on whether this price is high or low.",
   "items": [
    {
     "card": "Pikachu ex - 107 (30th Celebration)",
-    "date": "2026-11-09",
-    "price": 46.49,
+    "date": "2026-11-06",
+    "price": 35.3,
     "label": "UNCONFIRMED",
-    "why": "−59.8% in 7 days; no checked sale; $68.40 to $35.30 on Nov 6, then up 31.7% to $46.49"
-   },
-   {
-    "card": "Umbreon ex - 110 (30th Celebration)",
-    "date": "2026-11-09",
-    "price": 90.67,
-    "label": "UNCONFIRMED",
-    "why": "−54.4% in 7 days; no checked sale; $142.75 to $79.13 on Nov 6, then up 14.6% to $90.67"
-   },
-   {
-    "card": "Espeon ex - 108 (30th Celebration)",
-    "date": "2026-11-09",
-    "price": 77.35,
-    "label": "UNCONFIRMED",
-    "why": "−46.8% in 7 days; no checked sale; $125.66 to $58.92 on Nov 6, then up 31.3% to $77.35"
-   },
-   {
-    "card": "Eevee - 114/103",
-    "date": "2026-11-09",
-    "price": 29.32,
-    "label": "UNCONFIRMED",
-    "why": "−39.7% in 7 days; no checked sale; $37.39 to $20.60 on Nov 6, then up 42.3% to $29.32"
+    "why": "−56.2% in 7 days (median against median); no checked sale"
    }
   ]
  }

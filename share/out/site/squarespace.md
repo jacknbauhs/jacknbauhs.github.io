@@ -2,9 +2,9 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: Five cards halved in one reading on Nov 6. The list still shows it. −53%: The 7-day list still shows Nov 6's drop, Espeon ex 108, Nov 5 to Nov 6, one reading; five cards fell 45% to 53%. No sale checked behind any of the four, or behind the Nov 6 drop in any of the five. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: Why the list says −56% when the price says $35. −56.2%: One card, three readings: the list's −56.2% on Nov 7, Pikachu ex 107: median of $74.19, $68.40, $35.30 against $156.08. No sale checked behind it. Not a read on whether this price is high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
-[![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
+[![What we couldn't confirm: 1 of 1 move on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 
 [![3 calls on the record, dated the day they went public. Check me Oct 30. Misses stay up.](https://board.jacknbauhs.com/share/out/site/tile-calls.png)](https://board.jacknbauhs.com)
 

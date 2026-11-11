@@ -1,35 +1,55 @@
 {
  "kind": "market",
- "date": "2026-11-10",
- "slot": "Tue story",
+ "date": "2026-11-12",
+ "slot": "Thu market",
  "stance": null,
- "as_of": "2026-11-08",
- "pulled": "2026-11-09",
- "title": "30th Celebration, eight weeks in",
- "headline": "Eight weeks in, the 30th Celebration is most of what the list shows.",
- "dek": "Since the last File (Nov 3), 36 of the 70 rows on the board's 7-day list were 30th Celebration cards, and one led the list seven mornings running. Pikachu ex 107 went from $249.25 on the Oct 13 list to $35.30 on Nov 6's, down 86%; Pikachu ex 109 from $232.65 to $35.28. Then, since yesterday, Pikachu ex 107 read +26.4% and Espeon ex 108 +27.6%: a bounce, or a day. Every move here is unconfirmed.",
- "why_now": "The Oct 8 File said our prices could see the 30th Celebration from day 12, not its launch, and that four of its cards were falling with no checked sale behind them. Eight weeks after the Sep 16 launch the set is 7 of the 10 rows on the list two mornings in a row (Nov 8 and Nov 9), and the first upward moves since Oct 13 showed up on the since-yesterday list this morning. That is the moment to write the whole arc down before it turns.",
- "risk": "A 7-day list shows a card only on the mornings it moved enough; between Nov 7 and Nov 9 the two Pikachu promos left it, which means their week-over-week move fell under 5% or failed the rule, not that they recovered. The prices here are TCGplayer's market price on the mornings a card was listed, not a daily series; the start-of-week prices in the table are worked back from the rounded change. A since-yesterday move of +26% on a $35 card is one day on a thin card. Unconfirmed means no sale was checked, not that anything is wrong. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether the bounce holds: if Pikachu ex 107 and Espeon ex 108 are on Tuesday's and Wednesday's since-yesterday lists going up, it was a turn; if they are gone, it was a day. Whether Umbreon ex 110 follows the Pikachus down toward its $35 or stops near $80. The Classic Collection: Lugia went from $211.23 on the Oct 5 list to $132.76 on Nov 7's, and Charizard made the list this morning at $121.26, down 21.6% in a week. And the label: Mission Control is starting to store checked eBay sales for a short list of tracked cards; the morning one of these cards has one, its row stops reading Unconfirmed.",
+ "as_of": "2026-11-09",
+ "pulled": "2026-11-10",
+ "title": "The day five cards halved",
+ "headline": "Five cards halved in one reading on Nov 6. The list still shows it.",
+ "dek": "On Nov 6, TCGplayer's market price for five cards fell 45% to 53% from the reading before: four 30th Celebration promos (Pikachu ex 107 and 109, Umbreon ex 110, Espeon ex 108) and one Delta Reign card (Eevee 114/103). By their Nov 9 readings all five are up from those Nov 6 lows, by 10% to 42%, while the 7-day list still reads four of them down 40% to 60%. Neither reading is wrong: they answer different questions. No sale was checked behind any of it.",
+ "why_now": "Tuesday's File called Pikachu ex 107's move \"a bounce, or a day.\" Two readings later all five are up from Nov 6, and the 7-day list keeps reading them down. That gap is worth explaining while it is open, because a list that compares this week with last week will say \"down\" for days after a price has turned.",
+ "risk": "Five cards in two sets losing about half their market price on the same reading is a pattern in TCGplayer's price, not a fact we can explain from price data: the cause isn't visible here and no sale was checked behind any of it. The rebound is also thin: Pikachu ex 107 slipped from $47.78 to $46.49 on its latest reading, and Umbreon ex 110 and Espeon ex 108 have no reading on some days. The prices are TCGplayer's market price on the dates shown, not a daily series. The board's since-yesterday list never showed the Nov 6 drop: with no checked sale, a one-day move over 40% is left out by rule. The 7-day list showed it from Nov 7. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether the cards leave the 7-day list around Nov 13 and Nov 14. By the list's rule the week it compares against has to stop containing the pre-Nov 6 readings first, so a card leaving then is the list catching up, not a new move. Whether any of the five goes back to its Nov 6 low ($35 for the Pikachu promos, $79 for Umbreon ex 110, $59 for Espeon ex 108, $21 for Eevee). And the label: Mission Control is starting to store checked eBay sales for a short list of tracked cards; the morning one of these cards has one, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's 7-day lists published Oct 9 to Nov 9, 2026 (prices Oct 8 to Nov 8), its since-yesterday list of Nov 9, and the Nov 9 list (prices Nov 1 to Nov 8)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists of Nov 3 to Nov 10, 2026 (prices Nov 2 to Nov 9); the Nov 10 list for the table",
  "hero": {
-  "title": "30th Celebration cards on the board's 7-day list since the last File (Nov 3 to Nov 9)",
-  "value": "36 of 70",
-  "note": "rows on the 7-day list that were 30th Celebration cards; 7 of 10 on each of the last two mornings"
+  "title": "The 7-day list still shows Nov 6's drop",
+  "value": "−53%",
+  "note": "Espeon ex 108, Nov 5 to Nov 6, one reading; five cards fell 45% to 53%"
  },
  "stats": [
   {
-   "value": "−86%",
-   "label": "Pikachu ex 107, from $249.25 on the Oct 13 list to $35.30 on Nov 6's; the card the list showed most, 16 mornings"
+   "value": "+10% to +42%",
+   "label": "how far the five have risen from their Nov 6 lows, by their Nov 9 readings"
   },
   {
-   "value": "7 in a row",
-   "label": "mornings a 30th Celebration card led the 7-day list, Nov 3 to Nov 9 (the two Pikachu ex promos, then Umbreon ex)"
+   "value": "−40% to −60%",
+   "label": "what the board's 7-day list still reads for four of them, because it compares this week with last"
   }
  ],
  "rows": [
+  {
+   "id": 713257,
+   "name": "Pikachu ex - 107 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 116,
+    "approx": true,
+    "date": "2026-11-02"
+   },
+   "last": {
+    "price": 46.49,
+    "date": "2026-11-09"
+   },
+   "change_pct": -59.8,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · $68.40 to $35.30 on Nov 6, then up 31.7% to $46.49",
+   "link": "https://www.tcgplayer.com/product/713257"
+  },
   {
    "id": 713259,
    "name": "Umbreon ex - 110 (30th Celebration)",
@@ -37,144 +57,97 @@
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 204,
+    "price": 199,
     "approx": true,
-    "date": "2026-11-01"
+    "date": "2026-11-02"
    },
    "last": {
-    "price": 82.09,
-    "date": "2026-11-08"
+    "price": 90.67,
+    "date": "2026-11-09"
    },
-   "change_pct": -59.8,
+   "change_pct": -54.4,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · led the list Nov 8 and Nov 9; first listed Nov 5 at $142.75",
+   "note": "7 days, no checked sale · $142.75 to $79.13 on Nov 6, then up 14.6% to $90.67",
    "link": "https://www.tcgplayer.com/product/713259"
   },
   {
-   "id": 713287,
-   "name": "Ditto - 106 (30th Celebration)",
+   "id": 713258,
+   "name": "Espeon ex - 108 (30th Celebration)",
    "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 36,
+    "price": 145,
     "approx": true,
-    "date": "2026-11-01"
+    "date": "2026-11-02"
    },
    "last": {
-    "price": 25.11,
-    "date": "2026-11-08"
+    "price": 77.35,
+    "date": "2026-11-09"
    },
-   "change_pct": -29.7,
+   "change_pct": -46.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/713287"
+   "note": "7 days, no checked sale · $125.66 to $58.92 on Nov 6, then up 31.3% to $77.35",
+   "link": "https://www.tcgplayer.com/product/713258"
   },
   {
-   "id": 712954,
-   "name": "Pikachu ex - 150/128",
-   "set": "ME: 30th Celebration",
+   "id": 726565,
+   "name": "Eevee - 114/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 53,
+    "price": 49,
     "approx": true,
-    "date": "2026-11-01"
+    "date": "2026-11-02"
    },
    "last": {
-    "price": 39.44,
-    "date": "2026-11-08"
+    "price": 29.32,
+    "date": "2026-11-09"
    },
-   "change_pct": -26.2,
+   "change_pct": -39.7,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · on the list since Nov 7",
-   "link": "https://www.tcgplayer.com/product/712954"
-  },
-  {
-   "id": 716232,
-   "name": "Jirachi ex - 155/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 38,
-    "approx": true,
-    "date": "2026-11-01"
-   },
-   "last": {
-    "price": 28.51,
-    "date": "2026-11-08"
-   },
-   "change_pct": -24.8,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · one of the Oct 8 File's four; $50.32 on the Oct 5 list",
-   "link": "https://www.tcgplayer.com/product/716232"
-  },
-  {
-   "id": 714372,
-   "name": "Charizard",
-   "set": "ME: 30th Celebration Classic Collection",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 155,
-    "approx": true,
-    "date": "2026-11-01"
-   },
-   "last": {
-    "price": 121.26,
-    "date": "2026-11-08"
-   },
-   "change_pct": -21.6,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · Classic Collection reprint",
-   "link": "https://www.tcgplayer.com/product/714372"
+   "note": "7 days, no checked sale · $37.39 to $20.60 on Nov 6, then up 42.3% to $29.32",
+   "link": "https://www.tcgplayer.com/product/726565"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The table: the 30th Celebration cards on the board's Nov 9 list (five of the seven; Mew ex 158/128 and Mewtwo ex 157/128, both down about 24%, are on the board's list below), prices Nov 1 to Nov 8, 2026, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, then rounded to the dollar, so within a dollar. The counts: the board's own published 7-day lists, Oct 9 to Nov 9 (git history of data/movers.json), 10 rows a morning, 320 in all, 71 of them 30th Celebration cards; since Nov 3, 36 of 70. The listed price on a morning is TCGplayer's market price as of the day before. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). A card not on it may have moved less, more, or in a way the rule leaves out. Since-yesterday moves: the board's one-day list, 3% or more, 40% or less without a checked sale. Launch: Sep 16, 2026. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The drop: each card's market price on the board's list one reading before Nov 6 against its Nov 6 reading (Pikachu ex 107 $68.40 to $35.30, Pikachu ex 109 $66.23 to $35.28, Umbreon ex 110 $142.75 to $79.13, Espeon ex 108 $125.66 to $58.92, Eevee 114/103 $37.39 to $20.60). The rise: each card's Nov 9 reading against its Nov 6 reading ($46.49, $38.67, $90.67, $77.35, $29.32). The table: the four of the five on the board's Nov 10 list (Pikachu ex 109 has left it), prices Nov 2 to Nov 9, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, then rounded to the dollar, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 5,
-   "of": 5,
-   "label": "30th Celebration moves on this File with no checked sale"
+   "value": 4,
+   "of": 4,
+   "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 5 moves on this File, or behind any 7-day move it has published since Oct 9. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the 5. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind the Nov 6 drop in any of the five cards. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the four, or behind the Nov 6 drop in any of the five. Not a read on whether these prices are high or low.",
   "items": [
    {
+    "card": "Pikachu ex - 107 (30th Celebration)",
+    "date": "2026-11-09",
+    "price": 46.49,
+    "label": "UNCONFIRMED",
+    "why": "−59.8% in 7 days; no checked sale; $68.40 to $35.30 on Nov 6, then up 31.7% to $46.49"
+   },
+   {
     "card": "Umbreon ex - 110 (30th Celebration)",
-    "date": "2026-11-08",
-    "price": 82.09,
+    "date": "2026-11-09",
+    "price": 90.67,
     "label": "UNCONFIRMED",
-    "why": "−59.8% in 7 days; no checked sale"
+    "why": "−54.4% in 7 days; no checked sale; $142.75 to $79.13 on Nov 6, then up 14.6% to $90.67"
    },
    {
-    "card": "Ditto - 106 (30th Celebration)",
-    "date": "2026-11-08",
-    "price": 25.11,
+    "card": "Espeon ex - 108 (30th Celebration)",
+    "date": "2026-11-09",
+    "price": 77.35,
     "label": "UNCONFIRMED",
-    "why": "−29.7% in 7 days; no checked sale"
+    "why": "−46.8% in 7 days; no checked sale; $125.66 to $58.92 on Nov 6, then up 31.3% to $77.35"
    },
    {
-    "card": "Pikachu ex - 150/128",
-    "date": "2026-11-08",
-    "price": 39.44,
+    "card": "Eevee - 114/103",
+    "date": "2026-11-09",
+    "price": 29.32,
     "label": "UNCONFIRMED",
-    "why": "−26.2% in 7 days; no checked sale"
-   },
-   {
-    "card": "Jirachi ex - 155/128",
-    "date": "2026-11-08",
-    "price": 28.51,
-    "label": "UNCONFIRMED",
-    "why": "−24.8% in 7 days; no checked sale"
-   },
-   {
-    "card": "Charizard · Classic Collection",
-    "date": "2026-11-08",
-    "price": 121.26,
-    "label": "UNCONFIRMED",
-    "why": "−21.6% in 7 days; no checked sale"
+    "why": "−39.7% in 7 days; no checked sale; $37.39 to $20.60 on Nov 6, then up 42.3% to $29.32"
    }
   ]
  }

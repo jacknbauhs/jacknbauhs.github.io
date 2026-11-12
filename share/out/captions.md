@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-10
+# Captions, board data of 2026-11-12
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 9, 2026.
+- ✅ Prices are from Nov 11, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -19,12 +19,6 @@ Alt: The File on the Astronaut Time board: 750 moves, none with a checked sale. 
 5 of 5 moves on this File with no checked sale. Mission Control hasn't checked a sale behind any of the 5 moves on this File, or behind any of the 750 mover rows the board has published since Sep 28. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Raichu, Nov 8: $52.50, +27.1% in 7 days; no checked sale. Pikachu ex - 150/128, Nov 9: $35.72, −27.0% in 7 days; no checked sale. Mew ex - 158/128, Nov 9: $33.63, −26.7% in 7 days; no checked sale. Jirachi ex - 155/128, Nov 9: $28.91, −24.2% in 7 days; no checked sale. Kecleon - 117/103, Nov 9: $26.75, −23.9% in 7 days; no checked sale. Every one is on the board with its label. Prices are TCGplayer's market price after the move. Source: TCGplayer market prices via tcgcsv.com, from the board's published lists, Sep 28 to Nov 10, 2026 (44 mornings); the board's meta.json and flags.json as of Nov 8, 2026. board.jacknbauhs.com
 
 Alt: What we couldn't confirm: 5 of 5 moves on this File with no checked sale, all 5 listed one per line with the day, the card, the change and the TCGplayer market price after it.
-
-## flag-2026-11-08-feed-01-charizard-sir-151-psa-9-thin-spike.png
-
-Charizard SIR (151) · PSA 9 (Pokemon Card 151): the chart says +27%. Above recent sales, thin volume. Label: thin spike. Up on a handful of sales, with no volume behind it. board.jacknbauhs.com
-
-Alt: Flagged move: Charizard SIR (151) · PSA 9, a claimed +27%, labeled thin spike. Above recent sales, thin volume.
 
 ## call-001-2026-09-28.png
 
@@ -52,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W46.png
 
-What's moving on TCGplayer, as of Nov 9, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $46.49, −59.8%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $90.67, −54.4%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $77.35, −46.8%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $29.32, −39.7%, unconfirmed. Raichu (EX FireRed & LeafGreen · 12/112 · Holofoil): $52.50, +27.1%, unconfirmed. Pikachu ex - 150/128 (ME: 30th Celebration · 150/128 · Holofoil): $35.72, −27.0%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $33.63, −26.7%, unconfirmed. Jirachi ex - 155/128 (ME: 30th Celebration · 155/128 · Holofoil): $28.91, −24.2%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 9, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 11, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $35.08, −46.9%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $37.30, −46.9%, unconfirmed. Mega Golurk ex - 137/103 (ME06: Delta Reign · 137/103 · Holofoil): $27.29, −44.4%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $65.93, −43.8%, unconfirmed. Groudon - 111/103 (ME06: Delta Reign · 111/103 · Holofoil): $20.29, −42.1%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $85.63, −41.9%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $27.78, −34.2%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $30.24, −29.7%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 11, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

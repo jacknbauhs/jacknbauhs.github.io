@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-11",
+  "as_of": "2026-11-12",
   "daily": {
-    "date": "2026-11-11",
+    "date": "2026-11-12",
     "movers": [
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -56.6,
+        "change_pct": -46.9,
         "label": "UNCONFIRMED",
-        "price": 40.17,
-        "observed": "2026-11-10"
-      },
-      {
-        "name": "Umbreon ex - 110 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -49.2,
-        "label": "UNCONFIRMED",
-        "price": 89.75,
-        "observed": "2026-11-10"
+        "price": 35.08,
+        "observed": "2026-11-11"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -47.0,
+        "change_pct": -46.9,
         "label": "UNCONFIRMED",
-        "price": 41.36,
-        "observed": "2026-11-10"
+        "price": 37.3,
+        "observed": "2026-11-11"
+      },
+      {
+        "name": "Mega Golurk ex - 137/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -44.4,
+        "label": "UNCONFIRMED",
+        "price": 27.29,
+        "observed": "2026-11-11"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -46.8,
+        "change_pct": -43.8,
         "label": "UNCONFIRMED",
-        "price": 74.92,
-        "observed": "2026-11-10"
+        "price": 65.93,
+        "observed": "2026-11-11"
       },
       {
         "name": "Groudon - 111/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -46.0,
+        "change_pct": -42.1,
         "label": "UNCONFIRMED",
-        "price": 22.92,
-        "observed": "2026-11-10"
+        "price": 20.29,
+        "observed": "2026-11-11"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Lugia - 78/124 (XY Fates Collide)",
-        "set": "Deck Exclusives",
-        "change_pct": 19.8,
-        "label": "UNCONFIRMED",
-        "price": 86.8,
-        "observed": "2026-11-10"
-      },
-      {
-        "name": "Mew - 105 (30th Celebration)",
+        "name": "Magmortar - 112 [Staff]",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -16.1,
+        "change_pct": -14.5,
         "label": "UNCONFIRMED",
-        "price": 23.5,
-        "observed": "2026-11-10"
+        "price": 32.91,
+        "observed": "2026-11-11"
       },
       {
-        "name": "Kecleon - 117/103",
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -12.7,
+        "label": "UNCONFIRMED",
+        "price": 35.08,
+        "observed": "2026-11-11"
+      },
+      {
+        "name": "Enamorus - 113 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -12.6,
+        "label": "UNCONFIRMED",
+        "price": 33.96,
+        "observed": "2026-11-11"
+      },
+      {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -12.0,
+        "label": "UNCONFIRMED",
+        "price": 65.93,
+        "observed": "2026-11-11"
+      },
+      {
+        "name": "Groudon - 111/103",
         "set": "ME06: Delta Reign",
-        "change_pct": 16.1,
+        "change_pct": -11.5,
         "label": "UNCONFIRMED",
-        "price": 31.06,
-        "observed": "2026-11-10"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -11.0,
-        "label": "UNCONFIRMED",
-        "price": 41.36,
-        "observed": "2026-11-10"
-      },
-      {
-        "name": "Mew ex - 158/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -8.8,
-        "label": "UNCONFIRMED",
-        "price": 30.68,
-        "observed": "2026-11-10"
+        "price": 20.29,
+        "observed": "2026-11-11"
       }
     ],
     "calls_due": [
@@ -114,7 +114,7 @@
       "value": 0.0,
       "label": "of sold dollar volume flagged, week of Nov 2"
     },
-    "flagged_cards": 1,
+    "flagged_cards": 0,
     "rip_ev": []
   }
 }

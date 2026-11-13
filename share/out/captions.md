@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-12
+# Captions, board data of 2026-11-13
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 11, 2026.
+- ✅ Prices are from Nov 12, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W46.png
 
-What's moving on TCGplayer, as of Nov 11, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $35.08, −46.9%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $37.30, −46.9%, unconfirmed. Mega Golurk ex - 137/103 (ME06: Delta Reign · 137/103 · Holofoil): $27.29, −44.4%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $65.93, −43.8%, unconfirmed. Groudon - 111/103 (ME06: Delta Reign · 111/103 · Holofoil): $20.29, −42.1%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $85.63, −41.9%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $27.78, −34.2%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $30.24, −29.7%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 11, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 12, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $29.59, −50.8%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $33.14, −49.7%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $57.79, −49.2%, unconfirmed. Groudon - 111/103 (ME06: Delta Reign · 111/103 · Holofoil): $20.43, −45.7%, unconfirmed. Mega Golurk ex - 137/103 (ME06: Delta Reign · 137/103 · Holofoil): $27.01, −45.4%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $79.34, −43.5%, unconfirmed. Eevee - 114/103 (ME06: Delta Reign · 114/103 · Holofoil): $26.63, −37.3%, unconfirmed. Mew ex - 158/128 (ME: 30th Celebration · 158/128 · Holofoil): $29.28, −26.0%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 12, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

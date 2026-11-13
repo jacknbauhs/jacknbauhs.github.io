@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-13",
   "daily": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "movers": [
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -46.9,
+        "change_pct": -50.8,
         "label": "UNCONFIRMED",
-        "price": 35.08,
-        "observed": "2026-11-11"
+        "price": 29.59,
+        "observed": "2026-11-12"
       },
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -46.9,
+        "change_pct": -49.7,
         "label": "UNCONFIRMED",
-        "price": 37.3,
-        "observed": "2026-11-11"
+        "price": 33.14,
+        "observed": "2026-11-12"
+      },
+      {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -49.2,
+        "label": "UNCONFIRMED",
+        "price": 57.79,
+        "observed": "2026-11-12"
+      },
+      {
+        "name": "Groudon - 111/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -45.7,
+        "label": "UNCONFIRMED",
+        "price": 20.43,
+        "observed": "2026-11-12"
       },
       {
         "name": "Mega Golurk ex - 137/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -44.4,
+        "change_pct": -45.4,
         "label": "UNCONFIRMED",
-        "price": 27.29,
-        "observed": "2026-11-11"
-      },
-      {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -43.8,
-        "label": "UNCONFIRMED",
-        "price": 65.93,
-        "observed": "2026-11-11"
-      },
-      {
-        "name": "Groudon - 111/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -42.1,
-        "label": "UNCONFIRMED",
-        "price": 20.29,
-        "observed": "2026-11-11"
+        "price": 27.01,
+        "observed": "2026-11-12"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Magmortar - 112 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -14.5,
-        "label": "UNCONFIRMED",
-        "price": 32.91,
-        "observed": "2026-11-11"
-      },
-      {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -12.7,
+        "change_pct": -15.6,
         "label": "UNCONFIRMED",
-        "price": 35.08,
-        "observed": "2026-11-11"
-      },
-      {
-        "name": "Enamorus - 113 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -12.6,
-        "label": "UNCONFIRMED",
-        "price": 33.96,
-        "observed": "2026-11-11"
+        "price": 29.59,
+        "observed": "2026-11-12"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -12.0,
+        "change_pct": -12.3,
         "label": "UNCONFIRMED",
-        "price": 65.93,
-        "observed": "2026-11-11"
+        "price": 57.79,
+        "observed": "2026-11-12"
       },
       {
-        "name": "Groudon - 111/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -11.5,
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -11.2,
         "label": "UNCONFIRMED",
-        "price": 20.29,
-        "observed": "2026-11-11"
+        "price": 33.14,
+        "observed": "2026-11-12"
+      },
+      {
+        "name": "Mega Golisopod ex - 135/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": 10.1,
+        "label": "UNCONFIRMED",
+        "price": 24.45,
+        "observed": "2026-11-12"
+      },
+      {
+        "name": "Enamorus - 113 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -10.0,
+        "label": "UNCONFIRMED",
+        "price": 30.57,
+        "observed": "2026-11-12"
       }
     ],
     "calls_due": [

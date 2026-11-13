@@ -1,59 +1,39 @@
 {
  "kind": "market",
- "date": "2026-11-17",
- "slot": "Tue story",
+ "date": "2026-11-19",
+ "slot": "Thu market",
  "stance": null,
  "as_of": "2026-11-09",
  "pulled": "2026-11-10",
- "title": "750 moves, none confirmed",
- "headline": "750 moves, none with a checked sale. Here is what that costs.",
- "dek": "Since Sep 28 the board has published 750 mover rows over 44 mornings, 360 on the 7-day list and 390 on the since-yesterday list. Every one is labeled Unconfirmed: no sale was checked behind it. Checked sales did start appearing on the board on Nov 3, but for a short list of tracked cards, and none of them is a card the lists show moving. We show these moves anyway, because a price reading is information, and we say what it isn't.",
- "why_now": "Every File so far has put \"unconfirmed\" on every row. The board's sales source now has a date (sales as of Nov 8) and its flags file has a flagged sale, so this is the week to say plainly what the label means, what showing these moves costs, and what would change it.",
- "risk": "Showing a move with no sale behind it can read as a claim. The rules limit that: a move over 60% in a week, or over 40% in a day, is left out unless a checked sale speaks to it. That is also why a real one-reading halving never shows on the since-yesterday list, as Thursday's File found. \"Unconfirmed\" is a statement about our checking, not about the card. This is not a read on whether any of these prices is high or low.",
- "what_to_watch": "The first mover row that reads anything but Unconfirmed: it would mean a checked sale landed on a card the list shows, and its label would say what kind. The flags file: its one flagged sale this week is a thin spike on a Charizard SIR (151) PSA 9, a claimed +27.1% \"above recent sales, thin volume\". And whether the tracked list grows to cover the cards the lists show.",
+ "title": "A new set's first week on the board",
+ "headline": "Delta Reign's first week on the board: 15 of 19 rows were down.",
+ "dek": "Delta Reign, the sixth Mega Evolution set, first reached the board's lists on Nov 3 with Eevee 114/103, three days before the board's drops list dates the set (Nov 6). Since Oct 20 its cards have made 19 of the 440 mover rows the board published, all since Nov 3, and 15 of the 19 were down. Eevee 114/103 went from $44.33 on Nov 2 to a $20.60 low on Nov 6 and was back at $29.32 on Nov 9; Kecleon 117/103 from $29.13 to $23.42, then $26.75. The set's lead card, Mega Rayquaza ex 138/103, made a list once: $327.81, down 17.6% in a day on the Nov 7 list. Every one is unconfirmed.",
+ "why_now": "Tuesday's File said none of the board's moves has a checked sale. The lists are also the board's way of watching a new set find its price, and Delta Reign is the newest set it has watched, so its first week is worth writing down while the numbers are few enough to read one by one.",
+ "risk": "A new set's early prices come from few sales, which is why they move this much. The board's rule that a card's price must change on at least 3 of the last 14 days before a list will show it keeps the very thinnest out, so what appears is the part of the set that has begun to trade. Eight cards is not the set: most of Delta Reign never made a list. Early readings of a new set are not a trend. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether Eevee 114/103 and Kecleon 117/103, on the 7-day list at −39.7% and −23.9%, leave it as their week rolls past the early readings. Whether the set's lead card, Mega Rayquaza ex 138/103, makes another list ($327.81 is the only reading the lists have given us). Whether more of the set clears the 3-in-14 bar. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Sep 28 to Nov 10, 2026 (44 mornings); the board's meta.json and flags.json as of Nov 8, 2026",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 20 to Nov 10, 2026 (prices Oct 19 to Nov 9); the board's drops.json (Delta Reign, Nov 6)",
  "hero": {
-  "title": "Mover rows published since Sep 28, by label",
-  "value": "750 of 750",
-  "note": "Unconfirmed: 360 on the 7-day list, 390 on the since-yesterday list"
+  "title": "Delta Reign cards on the board's lists, Oct 20 to Nov 10",
+  "value": "19 of 440",
+  "note": "mover rows from the new set, all since Nov 3; 15 of the 19 down"
  },
  "stats": [
   {
    "value": "Nov 3",
-   "label": "the morning the board's sales source first carried a date (sales as of Oct 31; now Nov 8)"
+   "label": "the first morning a Delta Reign card made a list: Eevee 114/103, three days before the drops list dates the set"
   },
   {
-   "value": "1",
-   "label": "sale flagged this week: a thin spike on Charizard SIR (151) PSA 9, claimed +27.1%"
+   "value": "3 in 14",
+   "label": "days a card's price must change before the lists will show it, so a new set appears late on purpose"
   }
  ],
  "rows": [
   {
-   "id": 88507,
-   "name": "Raichu",
-   "set": "EX FireRed & LeafGreen",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 41,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 52.5,
-    "date": "2026-11-08"
-   },
-   "change_pct": 27.1,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/88507"
-  },
-  {
-   "id": 712954,
-   "name": "Pikachu ex - 150/128",
-   "set": "ME: 30th Celebration",
+   "id": 726565,
+   "name": "Eevee - 114/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
@@ -62,53 +42,13 @@
     "date": "2026-11-02"
    },
    "last": {
-    "price": 35.72,
+    "price": 29.32,
     "date": "2026-11-09"
    },
-   "change_pct": -27.0,
+   "change_pct": -39.7,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/712954"
-  },
-  {
-   "id": 696688,
-   "name": "Mew ex - 158/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 46,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 33.63,
-    "date": "2026-11-09"
-   },
-   "change_pct": -26.7,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/696688"
-  },
-  {
-   "id": 716232,
-   "name": "Jirachi ex - 155/128",
-   "set": "ME: 30th Celebration",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 38,
-    "approx": true,
-    "date": "2026-11-02"
-   },
-   "last": {
-    "price": 28.91,
-    "date": "2026-11-09"
-   },
-   "change_pct": -24.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
-   "link": "https://www.tcgplayer.com/product/716232"
+   "note": "7 days, no checked sale · $44.33 on Nov 2 to a $20.60 low on Nov 6, then $29.32",
+   "link": "https://www.tcgplayer.com/product/726565"
   },
   {
    "id": 726567,
@@ -127,47 +67,26 @@
    },
    "change_pct": -23.9,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale",
+   "note": "7 days, no checked sale · $29.13 on Nov 5 to $23.42 on Nov 7, then $26.75",
    "link": "https://www.tcgplayer.com/product/726567"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Sep 28 to Nov 10, 2026, 44 mornings (git history of data/movers.json): 360 rows in the 7-day list and 390 in the since-yesterday list, every one labeled UNCONFIRMED (the since-yesterday list began Oct 3). The table: five of the Nov 10 list's ten moves (prices Nov 2 to Nov 9; the change between 3-day medians at each end; start-of-week prices worked back from the listed price and its rounded change, so within a dollar). The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Oct 20 to Nov 10, 2026 (git history of data/movers.json): 220 rows in the 7-day list and 220 in the since-yesterday list; Delta Reign (set ME06) made 7 and 12 of them, eight cards in all (Eevee 114/103, Kecleon 117/103, Groudon 111/103, Mega Rayquaza ex 138/103, Zinnia's Trust 140/103, Mega Golurk ex 137/103, Raikou ex, Mega Golisopod ex 135/103), 15 down and 4 up. The table: the two Delta Reign cards on the Nov 10 7-day list, prices Nov 2 to Nov 9, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 5,
-   "of": 5,
+   "value": 2,
+   "of": 2,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 5 moves on this File, or behind any of the 750 mover rows the board has published since Sep 28. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the five, or any of the 750. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind either move on this File, or behind any of the 19 Delta Reign rows. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind either, or behind any of the 19. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Raichu",
-    "date": "2026-11-08",
-    "price": 52.5,
-    "label": "UNCONFIRMED",
-    "why": "+27.1% in 7 days; no checked sale"
-   },
-   {
-    "card": "Pikachu ex - 150/128",
+    "card": "Eevee - 114/103",
     "date": "2026-11-09",
-    "price": 35.72,
+    "price": 29.32,
     "label": "UNCONFIRMED",
-    "why": "−27.0% in 7 days; no checked sale"
-   },
-   {
-    "card": "Mew ex - 158/128",
-    "date": "2026-11-09",
-    "price": 33.63,
-    "label": "UNCONFIRMED",
-    "why": "−26.7% in 7 days; no checked sale"
-   },
-   {
-    "card": "Jirachi ex - 155/128",
-    "date": "2026-11-09",
-    "price": 28.91,
-    "label": "UNCONFIRMED",
-    "why": "−24.2% in 7 days; no checked sale"
+    "why": "−39.7% in 7 days; no checked sale"
    },
    {
     "card": "Kecleon - 117/103",

@@ -1,153 +1,153 @@
 {
  "kind": "market",
- "date": "2026-12-03",
- "slot": "Thu market",
+ "date": "2026-12-05",
+ "slot": "Sat build",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "The list is a conveyor belt",
- "headline": "The list is a conveyor belt: half the stays last one morning.",
- "dek": "The board's 7-day list holds ten cards. Over 33 mornings it showed 126 different cards, in 159 separate stretches of consecutive mornings. The median stretch is one morning: 85 of the 159 lasted a single morning, and 135 lasted three or fewer. On average 5.3 of the ten cards were there the morning before and 4.7 were new. Long stays are rare and almost all one family: 11 stretches lasted five mornings or more, and 10 of the 11 were Mega Evolution cards. Every one is unconfirmed.",
- "why_now": "A slot on the list reads like a verdict, and it isn't one: about half the cards on it this morning weren't there yesterday. The list is slow to turn a move into a ranking, by design, and quick to turn its members over. This is the week to say both.",
- "risk": "Staying on the list is not the same as mattering. A card stays while its week-over-week move stays above 5% and its price keeps changing, so a card that fell by half in one reading stays for as long as the week it is compared with includes the drop: the long stays here are partly the rule's doing. Thirty-three mornings is a short window, and a stretch counts only consecutive mornings, so a card that leaves and returns counts twice (25 of 126 did). No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether the long stays end as the Nov 6 readings roll out of the week the list compares against, and whether the median stay stays at one morning once they do, which would make the turnover the list's normal state. Whether a card outside the Mega Evolution sets makes a stretch of five mornings again (Latios Prism Star's was the only one so far). And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
+ "title": "48 mornings, no gaps",
+ "headline": "48 mornings, no gaps. The prices are a day old.",
+ "dek": "The board has published every morning since Sep 28: 48 commits in 48 days, none missing. 47 landed within a minute of the 08:15 Central schedule (median 7 seconds); the first, the launch, took more than nine hours. The prices were exactly one day old when they went up on every one of the 47 mornings measured: the page says it was updated today, and its prices are yesterday's. The sales behind the flags run older, a median of 3 days. Every move is unconfirmed.",
+ "why_now": "A board that says every number carries its source and its date should say how current it is. After seven weeks of running on its own, the board has a record to read, and the honest summary is steady, on time, and a day behind the market by design.",
+ "risk": "A publish that lands on time proves the job ran, not that every number is right: the checks for that are the language rule, the feed contract and a person reading the Files. A commit every day also means the data changed every day, since a publish with nothing new commits nothing. The first morning is the manual launch, so \"on schedule\" is measured on the 47 mornings after it. The sales figure comes from only 12 mornings, since sales began to be dated on Nov 3. A missed or failed publish would show in our private daily report the same day. No sale was checked behind any of the moves here. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether the next 48 mornings are as steady, and whether the sales age comes down from its 2 to 5 days. Whether the prices stay exactly one day old; a morning with older ones would mean the nightly pull failed. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published 7-day lists, Oct 13 to Nov 14, 2026 (33 mornings, 330 slots)",
+ "source": "The board repository's own commit history, Sep 28 to Nov 14, 2026 (\"Board data\" commits and each morning's meta.json); TCGplayer market prices via tcgcsv.com",
  "hero": {
-  "title": "Long stays on the 7-day list that were Mega Evolution cards",
-  "value": "10 of 11",
-  "note": "stretches of five mornings or more; the exception is Latios Prism Star"
+  "title": "Mornings with a publish, Sep 28 to Nov 14",
+  "value": "48 of 48",
+  "note": "47 within a minute of 08:15 Central; the first, the launch, took 9 hours"
  },
  "stats": [
   {
-   "value": "1 morning",
-   "label": "the median stay on the list: 85 of the 159 stretches lasted a single morning"
+   "value": "1 day",
+   "label": "how old the prices were at publish, on every one of the 47 mornings measured"
   },
   {
-   "value": "5.3 of 10",
-   "label": "cards that were also on the list the morning before, on average; 4.7 were new"
+   "value": "3 days",
+   "label": "the median age of the sales behind the flags (2 to 5), over the 12 mornings they have been dated"
   }
  ],
  "rows": [
   {
-   "id": 713257,
-   "name": "Pikachu ex - 107 (30th Celebration)",
+   "id": 713256,
+   "name": "Pikachu ex - 109 (30th Celebration)",
    "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 81,
+    "price": 61,
     "approx": true,
-    "date": "2026-11-07"
-   },
-   "last": {
-    "price": 35.3,
     "date": "2026-11-06"
    },
-   "change_pct": -56.2,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · 9 mornings in a row on the list, Oct 30 to Nov 7",
-   "link": "https://www.tcgplayer.com/product/713257"
-  },
-  {
-   "id": 713259,
-   "name": "Umbreon ex - 110 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 129,
-    "approx": true,
-    "date": "2026-11-14"
-   },
    "last": {
-    "price": 71.8,
+    "price": 27.15,
     "date": "2026-11-13"
    },
-   "change_pct": -44.4,
+   "change_pct": -55.3,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · 9 mornings in a row on the list, Nov 6 to Nov 14",
-   "link": "https://www.tcgplayer.com/product/713259"
+   "note": "7 days, no checked sale · price last changed Nov 13: the day before the page's date",
+   "link": "https://www.tcgplayer.com/product/713256"
   },
   {
-   "id": 726565,
-   "name": "Eevee - 114/103",
-   "set": "ME06: Delta Reign",
+   "id": 87430,
+   "name": "Mewtwo EX - BW45",
+   "set": "Black and White Promos",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 36,
+    "price": 47,
     "approx": true,
-    "date": "2026-11-14"
+    "date": "2026-11-06"
    },
    "last": {
-    "price": 25.33,
-    "date": "2026-11-13"
+    "price": 30.16,
+    "date": "2026-11-12"
    },
-   "change_pct": -28.8,
+   "change_pct": -35.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · 8 mornings in a row on the list, Nov 7 to Nov 14",
-   "link": "https://www.tcgplayer.com/product/726565"
+   "note": "7 days, no checked sale · price last changed Nov 12",
+   "link": "https://www.tcgplayer.com/product/87430"
   },
   {
-   "id": 714386,
-   "name": "Lugia",
-   "set": "ME: 30th Celebration Classic Collection",
+   "id": 85739,
+   "name": "Giratina (Team Plasma)",
+   "set": "Black and White Promos",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 168,
+    "price": 348,
     "approx": true,
-    "date": "2026-11-08"
+    "date": "2026-11-06"
    },
    "last": {
-    "price": 132.76,
-    "date": "2026-11-07"
+    "price": 451.7,
+    "date": "2026-11-11"
    },
-   "change_pct": -21.2,
+   "change_pct": 29.7,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · 7 mornings in a row on the list, Nov 2 to Nov 8",
-   "link": "https://www.tcgplayer.com/product/714386"
+   "note": "7 days, no checked sale · price last changed Nov 11",
+   "link": "https://www.tcgplayer.com/product/85739"
+  },
+  {
+   "id": 89388,
+   "name": "Snorlax",
+   "set": "EX FireRed & LeafGreen",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 228,
+    "approx": true,
+    "date": "2026-11-06"
+   },
+   "last": {
+    "price": 286.31,
+    "date": "2026-11-11"
+   },
+   "change_pct": 25.7,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · price last changed Nov 11",
+   "link": "https://www.tcgplayer.com/product/89388"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings of 10 slots (git history of data/movers.json; Oct 13 is when the 3-day-median rule began). A stretch is a run of consecutive mornings on which a card was on the list; a card that leaves and returns starts a new one. 330 slots, 126 distinct cards, 159 stretches (mean 2.1 mornings, median 1): lengths 1 (85), 2 (29), 3 (21), 4 (13), 5 (4), 6 (2), 7 (2), 8 (1), 9 (2). 11 stretches lasted five or more mornings, covering 72 of the 330 slots (22%); 10 were cards from sets whose name begins ME (the 11th is Latios Prism Star), and three of the 11 are Pikachu ex 107's (9, 7 and 5 mornings). New cards per morning: mean 4.7 (range 1 to 8); carried over from the morning before: mean 5.3 (range 2 to 9). The table: the four cards with the longest single stretches, each at the last morning of that stretch; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The record: the board repository's commit history (git log), the 48 commits titled \"Board data <date>\" from 2026-09-28 to 2026-11-14, one for each of the 48 calendar days. Time: each commit's author time in Central time against 08:15; 47 landed 2 to 13 seconds after it (median 7); the first, on Sep 28, at 17:26 Central, was the launch. Price age: the day of each commit minus the tcgcsv as-of date in that morning's meta.json: exactly 1 day on all 47 mornings where it was dated (the launch morning had none). Sales age: the same against the sales as-of date, on the 12 mornings it was dated (Nov 3 to Nov 14): median 3 days, range 2 to 5. A row's own price date is the day TCGplayer's price last changed (tcgcsv stores a price only when it changes): on Nov 14's 7-day list, 7 of the 10 rows read Nov 13, one Nov 12 and two Nov 11. The table: four cards from that list, chosen to show those dates; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
    "value": 4,
    "of": 4,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind any of the 330 slots counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the four. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Pikachu ex - 107 (30th Celebration)",
-    "date": "2026-11-06",
-    "price": 35.3,
-    "label": "UNCONFIRMED",
-    "why": "−56.2% in 7 days; no checked sale"
-   },
-   {
-    "card": "Umbreon ex - 110 (30th Celebration)",
+    "card": "Pikachu ex - 109 (30th Celebration)",
     "date": "2026-11-13",
-    "price": 71.8,
+    "price": 27.15,
     "label": "UNCONFIRMED",
-    "why": "−44.4% in 7 days; no checked sale"
+    "why": "−55.3% in 7 days; no checked sale"
    },
    {
-    "card": "Eevee - 114/103",
-    "date": "2026-11-13",
-    "price": 25.33,
+    "card": "Mewtwo EX - BW45",
+    "date": "2026-11-12",
+    "price": 30.16,
     "label": "UNCONFIRMED",
-    "why": "−28.8% in 7 days; no checked sale"
+    "why": "−35.8% in 7 days; no checked sale"
    },
    {
-    "card": "Lugia",
-    "date": "2026-11-07",
-    "price": 132.76,
+    "card": "Giratina (Team Plasma)",
+    "date": "2026-11-11",
+    "price": 451.7,
     "label": "UNCONFIRMED",
-    "why": "−21.2% in 7 days; no checked sale"
+    "why": "+29.7% in 7 days; no checked sale"
+   },
+   {
+    "card": "Snorlax",
+    "date": "2026-11-11",
+    "price": 286.31,
+    "label": "UNCONFIRMED",
+    "why": "+25.7% in 7 days; no checked sale"
    }
   ]
  }

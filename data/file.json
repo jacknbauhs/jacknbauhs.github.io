@@ -1,126 +1,153 @@
 {
  "kind": "market",
- "date": "2026-11-28",
- "slot": "Sat build",
+ "date": "2026-12-01",
+ "slot": "Tue story",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "A vintage card has two prices",
- "headline": "A vintage card has two prices. The board has to pick one.",
- "dek": "TCGplayer prices some vintage cards twice: a 1st Edition printing and an Unlimited one, each with its own price. Of the 660 rows the board's lists have published since Oct 13, 21 name an edition (13 \"1st Edition\", 6 \"1st Edition Holofoil\", 2 \"Unlimited Holofoil\"), and not one card changed printing from one list to the next. That consistency is the point: a card is only ever compared with its own printing, so a move on the board is never one printing's price set against the other's. On Nov 14 we made the choice explicit for the price lookups behind the board as well: Unlimited first for the Wizards of the Coast printings, and 1st Edition only when we ask for it by name.",
- "why_now": "A vintage price with no printing attached is a price for a card nobody can name. Call #003 says \"unlimited, raw\" in its starting price for that reason. This week's build closed the last place that could pick a printing by accident, so it is the Saturday to say what the board does and what it can't yet show.",
- "risk": "What is confirmed is the board's own lists: 21 rows, none switching. What isn't: the pricing change merged on Nov 14 and goes live when Railway deploys it, so until a publish after that shows a vintage row reading \"Unlimited Holofoil\" it is untested in production. A row can change printing once on the day it deploys and is still compared only with its own printing, so it can't show a false move. Twenty-one rows is also a small slice, mostly Neo-era cards plus one Base Set (Shadowless) Dragonair. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
- "what_to_watch": "The first publish after the deploy: whether any vintage row now reads \"Unlimited Holofoil\" where it read \"1st Edition\" or nothing before, and that no row's printing then changes from night to night. Whether a 1st Edition card makes the 7-day list again; the three here were last listed in October. And what we haven't built: showing both printings' prices side by side for one card.",
+ "title": "The biggest move was ranked 116th",
+ "headline": "The biggest dollar move ranked 116th by percent.",
+ "dek": "The board's 7-day list ranks moves by percent. Across the 126 cards that have made it since Oct 13, the largest dollar move is a Mew from the 30th Celebration set that fell about $1,043, from $5,322 to $4,278.49 (−19.6%), on the Oct 26 list: 116th of 126 by percent. And 74% of all the dollars moved came from 36 cards, those whose biggest move ended at $100 or more. We rank by percent because it compares a $25 card with a $500 one fairly; it also means the list can't show where the dollars moved. Every move is unconfirmed.",
+ "why_now": "Every File this fall has ranked moves the way the board does, by percent, so the cheap cards fill the page. This is the week to say what that choice hides, because the card that moved the most dollars in six weeks was never the headline.",
+ "risk": "One row is not a finding. The Mew appears once, on one list, as a 19.6% move on a $5,000 card, and no sale was checked behind it, so it may be one thin sale's reading rather than a market move. Dollars are the wrong unit for most questions: $1,043 on a $5,300 card is a smaller move than $122 on a $200 card, and the board can't tell which matters to you. \"Each card's largest move\" is our choice of how to count a card that appears on many lists. Start-of-week prices are worked back from the listed price and its rounded change. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether a card worth $100 or more makes the 7-day list again with a large dollar move and a modest percent, and whether a sale is checked behind it when it does. And an idea, not built: a second list of the biggest moves in dollars, beside the one in percent, for cards worth $100 or more.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 13 to Nov 14, 2026 (33 mornings, 660 rows); Mission Control's pricing settings as merged Nov 14, 2026",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published 7-day lists, Oct 13 to Nov 14, 2026 (33 mornings, 330 rows, 126 cards)",
  "hero": {
-  "title": "Rows on the board's lists that name an edition, Oct 13 to Nov 14",
-  "value": "21 of 660",
-  "note": "and none of the 660 rows changed printing from one list to the next"
+  "title": "Where the biggest dollar move ranks by percent",
+  "value": "116th",
+  "note": "of 126 cards: Mew - R/RGB, −$1,043 (−19.6%) on the Oct 26 list"
  },
  "stats": [
   {
-   "value": "0",
-   "label": "cards that appeared on the lists under two different printings"
+   "value": "3 of 10",
+   "label": "cards that are in both the top ten by dollars and the top ten by percent"
   },
   {
-   "value": "Nov 14",
-   "label": "when the printing choice was made explicit for the pricing behind the board; live once Railway deploys it"
+   "value": "74%",
+   "label": "of the dollars moved came from 36 of the 126 cards, those whose biggest move ended at $100 or more"
   }
  ],
  "rows": [
   {
-   "id": 86059,
-   "name": "Heracross",
-   "set": "Neo Genesis",
-   "tier": "Raw · TCGplayer market price · 1st Edition Holofoil",
+   "id": 717607,
+   "name": "Mew - R/RGB",
+   "set": "ME: 30th Celebration",
+   "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 215,
+    "price": 5321.5,
     "approx": true,
-    "date": "2026-10-20"
+    "date": "2026-10-26"
    },
    "last": {
-    "price": 281.06,
-    "date": "2026-10-17"
-   },
-   "change_pct": 30.6,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · the row names its printing: 1st Edition Holofoil",
-   "link": "https://www.tcgplayer.com/product/86059"
-  },
-  {
-   "id": 86741,
-   "name": "Light Jolteon",
-   "set": "Neo Destiny",
-   "tier": "Raw · TCGplayer market price · 1st Edition",
-   "window_label": "7d",
-   "prev": {
-    "price": 220,
-    "approx": true,
+    "price": 4278.49,
     "date": "2026-10-25"
    },
-   "last": {
-    "price": 274.98,
-    "date": "2026-10-23"
-   },
-   "change_pct": 25.0,
+   "change_pct": -19.6,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · the row names its printing: 1st Edition",
-   "link": "https://www.tcgplayer.com/product/86741"
+   "note": "7 days, no checked sale · −$1,043: largest dollar move: ranked 116th of 126 by percent",
+   "link": "https://www.tcgplayer.com/product/717607"
   },
   {
-   "id": 107013,
-   "name": "Dragonair",
-   "set": "Base Set (Shadowless)",
-   "tier": "Raw · TCGplayer market price · 1st Edition",
+   "id": 84195,
+   "name": "Charizard (Delta Species)",
+   "set": "EX Crystal Guardians",
+   "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 186,
+    "price": 939.7,
     "approx": true,
-    "date": "2026-10-18"
-   },
-   "last": {
-    "price": 108.89,
     "date": "2026-10-17"
    },
-   "change_pct": -41.4,
+   "last": {
+    "price": 564.76,
+    "date": "2026-10-15"
+   },
+   "change_pct": -39.9,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · the row names its printing: 1st Edition",
-   "link": "https://www.tcgplayer.com/product/107013"
+   "note": "7 days, no checked sale · −$375: second largest dollar move: ranked 30th by percent",
+   "link": "https://www.tcgplayer.com/product/84195"
+  },
+  {
+   "id": 489291,
+   "name": "Charizard VSTAR - 018/172",
+   "set": "Prize Pack Series Cards",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 439.3,
+    "approx": true,
+    "date": "2026-11-05"
+   },
+   "last": {
+    "price": 550.0,
+    "date": "2026-11-04"
+   },
+   "change_pct": 25.2,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · +$111: the biggest dollar rise: ranked 81st by percent",
+   "link": "https://www.tcgplayer.com/product/489291"
+  },
+  {
+   "id": 86913,
+   "name": "Lugia EX (Team Plasma)",
+   "set": "Plasma Storm",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 94.71,
+    "approx": true,
+    "date": "2026-10-16"
+   },
+   "last": {
+    "price": 151.44,
+    "date": "2026-10-14"
+   },
+   "change_pct": 59.9,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · +$57: the biggest percent rise: ranked 24th by dollars",
+   "link": "https://www.tcgplayer.com/product/86913"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json): 330 rows in the 7-day list and 330 in the since-yesterday list, 660 in all. Each row carries a variant field naming the printing: 608 \"Holofoil\", 31 blank, 13 \"1st Edition\", 6 \"1st Edition Holofoil\", 2 \"Unlimited Holofoil\". No card id appears with more than one variant. The table: three cards that name an edition, each at its last 7-day list appearance (Heracross, Neo Genesis; Light Jolteon, Neo Destiny; Dragonair, Base Set Shadowless); start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json), 330 rows, 126 distinct cards. For each card, its largest 7-day move in dollars (listed price minus the start-of-week price worked back from the listed price and its rounded change) and its largest in percent, each over every list it appeared on. Cards were ranked on each unit separately: the Mew ranks 1st by dollars and 116th by percent. Top ten by dollars and top ten by percent share 3 cards (Pikachu ex 107, Umbreon ex 110 and Pikachu DP16). Summing each card's largest dollar move gives $5,032; 73.7% of it ($3,710) comes from the 36 cards whose largest-dollar move ended at $100 or more. The table: four cards at the row named in each note; start-of-week prices are worked back, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week, ranked by percent; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 3,
-   "of": 3,
+   "value": 4,
+   "of": 4,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 21 edition rows counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the three, or any of the 21. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind any of the 330 rows counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Heracross",
-    "date": "2026-10-17",
-    "price": 281.06,
+    "card": "Mew - R/RGB",
+    "date": "2026-10-25",
+    "price": 4278.49,
     "label": "UNCONFIRMED",
-    "why": "+30.6% in 7 days; no checked sale"
+    "why": "−19.6% in 7 days; no checked sale"
    },
    {
-    "card": "Light Jolteon",
-    "date": "2026-10-23",
-    "price": 274.98,
+    "card": "Charizard (Delta Species)",
+    "date": "2026-10-15",
+    "price": 564.76,
     "label": "UNCONFIRMED",
-    "why": "+25.0% in 7 days; no checked sale"
+    "why": "−39.9% in 7 days; no checked sale"
    },
    {
-    "card": "Dragonair",
-    "date": "2026-10-17",
-    "price": 108.89,
+    "card": "Charizard VSTAR - 018/172",
+    "date": "2026-11-04",
+    "price": 550.0,
     "label": "UNCONFIRMED",
-    "why": "−41.4% in 7 days; no checked sale"
+    "why": "+25.2% in 7 days; no checked sale"
+   },
+   {
+    "card": "Lugia EX (Team Plasma)",
+    "date": "2026-10-14",
+    "price": 151.44,
+    "label": "UNCONFIRMED",
+    "why": "+59.9% in 7 days; no checked sale"
    }
   ]
  }

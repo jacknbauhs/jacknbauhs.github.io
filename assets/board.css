@@ -343,3 +343,15 @@ table.data.rip th { white-space: nowrap; }
   .market-hero .big-stat { text-align: left; }
   .market-hero .big-stat .muted { margin-left: 0; }
 }
+
+/* calls.html: one card per call, with its dated record */
+.call-list { display: grid; gap: 16px; }
+.call-card { padding: 20px 22px; }
+.call-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.call-thesis { margin: 10px 0 8px; font-size: 18px; line-height: 1.45; font-weight: 600; }
+.call-record { list-style: none; margin: 14px 0 6px; padding: 0 0 0 14px; border-left: 1px solid var(--line, rgba(236,234,246,0.12)); display: grid; gap: 8px; }
+.call-record li { display: grid; grid-template-columns: 110px 1fr; gap: 12px; font-size: 14px; line-height: 1.5; }
+.call-record li .num { color: var(--muted); font-size: 13px; }
+.call-record li.verdict span:last-child { font-weight: 600; }
+.call-record li.pending span:last-child { color: var(--muted); }
+@media (max-width: 520px) { .call-record li { grid-template-columns: 1fr; gap: 2px; } }

@@ -1,5 +1,6 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
+   Pages: index.html (the board), card.html (a card file), calls.html (every call with its dated record).
    Kept by hand: file.json (The File, Tue / Thu / Sat; between those, Mission Control writes it from the nightly feed,
    marked "selection": "AUTO_SELECTED") and cards/*.json, calls.json, drops.json.
    The File comes in two kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind")
@@ -955,6 +956,7 @@
     cWrap.appendChild(el("div", { class: "card table-card" }, [el("table", { class: "data calls" }, [
       el("thead", {}, [el("tr", {}, [el("th", { scope: "col", text: "Call" }), el("th", { scope: "col", text: "Dated" }), el("th", { scope: "col", text: "Check" }), el("th", { scope: "col", text: "Status" })])]), tb
     ]), el("div", { class: "table-foot", text: calls.note || "" })]));
+    cWrap.appendChild(el("a", { class: "today-more", href: "calls.html", text: "Every call, with its full record →" }));
   }
 
   function renderDrops(drops) {
@@ -1049,6 +1051,75 @@
     });
   }
 
+  /* ---------- calls page ---------- */
+  // calls.html: every call on the record with its full dated record. `updates`
+  // (every dated update, oldest first) is Mission Control's since 2026-11-15;
+  // a file without it shows `latest` as the one update.
+  function callState(c) {
+    if (c.status !== "open") return { text: String(c.status).toUpperCase(), chip: { hit: "chip-ok", miss: "chip-flag" }[c.status] || "chip-neutral" };
+    if (!c.check_date) return { text: "OPEN", chip: "chip-accent" };
+    var days = daysFromToday(c.check_date);
+    if (days < 0) return { text: "CHECK OVERDUE", chip: "chip-warn", overdue: true };
+    return { text: days === 0 ? "CHECK TODAY" : "OPEN · " + days + (days === 1 ? " DAY" : " DAYS"), chip: "chip-accent" };
+  }
+  function callUpdates(c) {
+    if (Array.isArray(c.updates)) return c.updates.filter(function (u) { return u && u.text; });
+    return c.latest ? [{ dated: null, text: c.latest }] : [];
+  }
+  function renderCallsPage() {
+    Promise.all([load("data/meta.json"), getJSON("data/calls.json")]).then(function (r) {
+      var meta = r[0], calls = r[1];
+      $("#status").textContent = updatedLabel(meta) || $("#status").textContent;
+      var on = (calls && Array.isArray(calls.items) ? calls.items : []).filter(function (c) { return c && c.on_record; })
+        .sort(function (a, b) { return a.dated < b.dated ? 1 : a.dated > b.dated ? -1 : (a.id < b.id ? 1 : -1); });
+      var count = function (f) { return on.filter(f).length; };
+      var hits = count(function (c) { return c.status === "hit"; }), misses = count(function (c) { return c.status === "miss"; });
+      var overdue = count(function (c) { return callState(c).overdue; });
+      var open = count(function (c) { return c.status === "open"; });
+      var k = $("#calls-kpis");
+      [{ l: "On the record", v: String(on.length) },
+       { l: "Hits", v: String(hits), p: hits + misses ? "Of " + (hits + misses) + " checked" : "None checked yet" },
+       { l: "Misses", v: String(misses), p: "They stay up" },
+       { l: "Open", v: String(open), p: overdue ? overdue + " past the check date, being checked" : "" }
+      ].forEach(function (q) {
+        k.appendChild(el("div", { class: "card kpi" }, [el("span", { class: "label", text: q.l }),
+          el("span", { class: "num", text: q.v }), q.p ? el("p", { text: q.p }) : null]));
+      });
+      var list = $("#calls-list");
+      if (!on.length) {
+        list.appendChild(el("div", { class: "card empty" }, [el("h3", { text: "The first calls go on the record soon." }),
+          el("p", { text: "Each one gets a date, a check date and a verdict. Hits and misses both stay up." })]));
+      }
+      on.forEach(function (c) {
+        var st = callState(c), ups = callUpdates(c);
+        var record = el("ol", { class: "call-record" });
+        record.appendChild(el("li", {}, [el("span", { class: "num", text: fmtDateYear(c.dated) }), el("span", { text: "Made the call." })]));
+        ups.forEach(function (u) {
+          record.appendChild(el("li", {}, [el("span", { class: "num", text: u.dated ? fmtDateYear(u.dated) : "Update" }), el("span", { text: u.text })]));
+        });
+        if (c.status !== "open") {
+          record.appendChild(el("li", { class: "verdict" }, [el("span", { class: "num", text: c.checked ? fmtDateYear(c.checked) : "Checked" }),
+            el("span", { text: c.status === "hit" || c.status === "miss" ? "Verdict: " + c.status + (c.verdict_note ? ". " + sentence(c.verdict_note, true) : ".") : sentence(c.verdict_note || c.status, true) })]));
+        } else if (c.check_date) {
+          record.appendChild(el("li", { class: "pending" }, [el("span", { class: "num", text: fmtDateYear(c.check_date) }),
+            el("span", { text: st.overdue ? "Check date passed. The verdict goes up here once it's checked." : "Check date. The verdict goes up here." })]));
+        }
+        list.appendChild(el("article", { class: "card call-card", id: "call-" + c.id }, [
+          el("div", { class: "call-head" }, [el("span", { class: "name num", text: "#" + c.id }), el("span", { class: "chip " + st.chip, text: st.text })]),
+          el("h3", { class: "call-thesis", text: c.text }),
+          c.start ? el("p", { class: "sub", text: "Start: " + c.start }) : null,
+          c.method ? el("p", { class: "sub", text: "How it's checked: " + c.method }) : null,
+          record,
+          c.link ? el("a", { class: "sub", href: c.link, text: "The original post →" }) : null
+        ]));
+      });
+      $("#calls-note").textContent = (calls && calls.note) || "";
+    }).catch(function (e) {
+      var m = $("#load-error"); if (m) { m.hidden = false; }
+      if (window.console) console.error(e);
+    });
+  }
+
   /* ---------- shared ---------- */
   function wireMenu() {
     var b = $("#menu-button"), nav = $("#site-nav");
@@ -1061,6 +1132,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     wireMenu();
-    if (document.body.getAttribute("data-page") === "card") renderCard(); else renderIndex();
+    var page = document.body.getAttribute("data-page");
+    if (page === "card") renderCard(); else if (page === "calls") renderCallsPage(); else renderIndex();
   });
 })();

@@ -2,7 +2,7 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: The list is a conveyor belt: half the stays last one morning. 10 of 11: Long stays on the 7-day list that were Mega Evolution cards, stretches of five mornings or more; the exception is Latios Prism Star. No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: 48 mornings, no gaps. The prices are a day old. 48 of 48: Mornings with a publish, Sep 28 to Nov 14, 47 within a minute of 08:15 Central; the first, the launch, took 9 hours. No sale checked behind any of the four. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
 [![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 

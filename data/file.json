@@ -1,153 +1,153 @@
 {
  "kind": "market",
- "date": "2026-12-01",
- "slot": "Tue story",
+ "date": "2026-12-03",
+ "slot": "Thu market",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "The biggest move was ranked 116th",
- "headline": "The biggest dollar move ranked 116th by percent.",
- "dek": "The board's 7-day list ranks moves by percent. Across the 126 cards that have made it since Oct 13, the largest dollar move is a Mew from the 30th Celebration set that fell about $1,043, from $5,322 to $4,278.49 (−19.6%), on the Oct 26 list: 116th of 126 by percent. And 74% of all the dollars moved came from 36 cards, those whose biggest move ended at $100 or more. We rank by percent because it compares a $25 card with a $500 one fairly; it also means the list can't show where the dollars moved. Every move is unconfirmed.",
- "why_now": "Every File this fall has ranked moves the way the board does, by percent, so the cheap cards fill the page. This is the week to say what that choice hides, because the card that moved the most dollars in six weeks was never the headline.",
- "risk": "One row is not a finding. The Mew appears once, on one list, as a 19.6% move on a $5,000 card, and no sale was checked behind it, so it may be one thin sale's reading rather than a market move. Dollars are the wrong unit for most questions: $1,043 on a $5,300 card is a smaller move than $122 on a $200 card, and the board can't tell which matters to you. \"Each card's largest move\" is our choice of how to count a card that appears on many lists. Start-of-week prices are worked back from the listed price and its rounded change. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether a card worth $100 or more makes the 7-day list again with a large dollar move and a modest percent, and whether a sale is checked behind it when it does. And an idea, not built: a second list of the biggest moves in dollars, beside the one in percent, for cards worth $100 or more.",
+ "title": "The list is a conveyor belt",
+ "headline": "The list is a conveyor belt: half the stays last one morning.",
+ "dek": "The board's 7-day list holds ten cards. Over 33 mornings it showed 126 different cards, in 159 separate stretches of consecutive mornings. The median stretch is one morning: 85 of the 159 lasted a single morning, and 135 lasted three or fewer. On average 5.3 of the ten cards were there the morning before and 4.7 were new. Long stays are rare and almost all one family: 11 stretches lasted five mornings or more, and 10 of the 11 were Mega Evolution cards. Every one is unconfirmed.",
+ "why_now": "A slot on the list reads like a verdict, and it isn't one: about half the cards on it this morning weren't there yesterday. The list is slow to turn a move into a ranking, by design, and quick to turn its members over. This is the week to say both.",
+ "risk": "Staying on the list is not the same as mattering. A card stays while its week-over-week move stays above 5% and its price keeps changing, so a card that fell by half in one reading stays for as long as the week it is compared with includes the drop: the long stays here are partly the rule's doing. Thirty-three mornings is a short window, and a stretch counts only consecutive mornings, so a card that leaves and returns counts twice (25 of 126 did). No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether the long stays end as the Nov 6 readings roll out of the week the list compares against, and whether the median stay stays at one morning once they do, which would make the turnover the list's normal state. Whether a card outside the Mega Evolution sets makes a stretch of five mornings again (Latios Prism Star's was the only one so far). And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published 7-day lists, Oct 13 to Nov 14, 2026 (33 mornings, 330 rows, 126 cards)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published 7-day lists, Oct 13 to Nov 14, 2026 (33 mornings, 330 slots)",
  "hero": {
-  "title": "Where the biggest dollar move ranks by percent",
-  "value": "116th",
-  "note": "of 126 cards: Mew - R/RGB, −$1,043 (−19.6%) on the Oct 26 list"
+  "title": "Long stays on the 7-day list that were Mega Evolution cards",
+  "value": "10 of 11",
+  "note": "stretches of five mornings or more; the exception is Latios Prism Star"
  },
  "stats": [
   {
-   "value": "3 of 10",
-   "label": "cards that are in both the top ten by dollars and the top ten by percent"
+   "value": "1 morning",
+   "label": "the median stay on the list: 85 of the 159 stretches lasted a single morning"
   },
   {
-   "value": "74%",
-   "label": "of the dollars moved came from 36 of the 126 cards, those whose biggest move ended at $100 or more"
+   "value": "5.3 of 10",
+   "label": "cards that were also on the list the morning before, on average; 4.7 were new"
   }
  ],
  "rows": [
   {
-   "id": 717607,
-   "name": "Mew - R/RGB",
-   "set": "ME: 30th Celebration",
+   "id": 713257,
+   "name": "Pikachu ex - 107 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 5321.5,
+    "price": 81,
     "approx": true,
-    "date": "2026-10-26"
+    "date": "2026-11-07"
    },
    "last": {
-    "price": 4278.49,
-    "date": "2026-10-25"
+    "price": 35.3,
+    "date": "2026-11-06"
    },
-   "change_pct": -19.6,
+   "change_pct": -56.2,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · −$1,043: largest dollar move: ranked 116th of 126 by percent",
-   "link": "https://www.tcgplayer.com/product/717607"
+   "note": "7 days, no checked sale · 9 mornings in a row on the list, Oct 30 to Nov 7",
+   "link": "https://www.tcgplayer.com/product/713257"
   },
   {
-   "id": 84195,
-   "name": "Charizard (Delta Species)",
-   "set": "EX Crystal Guardians",
+   "id": 713259,
+   "name": "Umbreon ex - 110 (30th Celebration)",
+   "set": "ME: Mega Evolution Promo",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 939.7,
+    "price": 129,
     "approx": true,
-    "date": "2026-10-17"
+    "date": "2026-11-14"
    },
    "last": {
-    "price": 564.76,
-    "date": "2026-10-15"
+    "price": 71.8,
+    "date": "2026-11-13"
    },
-   "change_pct": -39.9,
+   "change_pct": -44.4,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · −$375: second largest dollar move: ranked 30th by percent",
-   "link": "https://www.tcgplayer.com/product/84195"
+   "note": "7 days, no checked sale · 9 mornings in a row on the list, Nov 6 to Nov 14",
+   "link": "https://www.tcgplayer.com/product/713259"
   },
   {
-   "id": 489291,
-   "name": "Charizard VSTAR - 018/172",
-   "set": "Prize Pack Series Cards",
+   "id": 726565,
+   "name": "Eevee - 114/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 439.3,
+    "price": 36,
     "approx": true,
-    "date": "2026-11-05"
+    "date": "2026-11-14"
    },
    "last": {
-    "price": 550.0,
-    "date": "2026-11-04"
+    "price": 25.33,
+    "date": "2026-11-13"
    },
-   "change_pct": 25.2,
+   "change_pct": -28.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · +$111: the biggest dollar rise: ranked 81st by percent",
-   "link": "https://www.tcgplayer.com/product/489291"
+   "note": "7 days, no checked sale · 8 mornings in a row on the list, Nov 7 to Nov 14",
+   "link": "https://www.tcgplayer.com/product/726565"
   },
   {
-   "id": 86913,
-   "name": "Lugia EX (Team Plasma)",
-   "set": "Plasma Storm",
+   "id": 714386,
+   "name": "Lugia",
+   "set": "ME: 30th Celebration Classic Collection",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 94.71,
+    "price": 168,
     "approx": true,
-    "date": "2026-10-16"
+    "date": "2026-11-08"
    },
    "last": {
-    "price": 151.44,
-    "date": "2026-10-14"
+    "price": 132.76,
+    "date": "2026-11-07"
    },
-   "change_pct": 59.9,
+   "change_pct": -21.2,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · +$57: the biggest percent rise: ranked 24th by dollars",
-   "link": "https://www.tcgplayer.com/product/86913"
+   "note": "7 days, no checked sale · 7 mornings in a row on the list, Nov 2 to Nov 8",
+   "link": "https://www.tcgplayer.com/product/714386"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json), 330 rows, 126 distinct cards. For each card, its largest 7-day move in dollars (listed price minus the start-of-week price worked back from the listed price and its rounded change) and its largest in percent, each over every list it appeared on. Cards were ranked on each unit separately: the Mew ranks 1st by dollars and 116th by percent. Top ten by dollars and top ten by percent share 3 cards (Pikachu ex 107, Umbreon ex 110 and Pikachu DP16). Summing each card's largest dollar move gives $5,032; 73.7% of it ($3,710) comes from the 36 cards whose largest-dollar move ended at $100 or more. The table: four cards at the row named in each note; start-of-week prices are worked back, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week, ranked by percent; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings of 10 slots (git history of data/movers.json; Oct 13 is when the 3-day-median rule began). A stretch is a run of consecutive mornings on which a card was on the list; a card that leaves and returns starts a new one. 330 slots, 126 distinct cards, 159 stretches (mean 2.1 mornings, median 1): lengths 1 (85), 2 (29), 3 (21), 4 (13), 5 (4), 6 (2), 7 (2), 8 (1), 9 (2). 11 stretches lasted five or more mornings, covering 72 of the 330 slots (22%); 10 were cards from sets whose name begins ME (the 11th is Latios Prism Star), and three of the 11 are Pikachu ex 107's (9, 7 and 5 mornings). New cards per morning: mean 4.7 (range 1 to 8); carried over from the morning before: mean 5.3 (range 2 to 9). The table: the four cards with the longest single stretches, each at the last morning of that stretch; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
    "value": 4,
    "of": 4,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind any of the 330 rows counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind any of the 330 slots counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
   "stat": "No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Mew - R/RGB",
-    "date": "2026-10-25",
-    "price": 4278.49,
+    "card": "Pikachu ex - 107 (30th Celebration)",
+    "date": "2026-11-06",
+    "price": 35.3,
     "label": "UNCONFIRMED",
-    "why": "−19.6% in 7 days; no checked sale"
+    "why": "−56.2% in 7 days; no checked sale"
    },
    {
-    "card": "Charizard (Delta Species)",
-    "date": "2026-10-15",
-    "price": 564.76,
+    "card": "Umbreon ex - 110 (30th Celebration)",
+    "date": "2026-11-13",
+    "price": 71.8,
     "label": "UNCONFIRMED",
-    "why": "−39.9% in 7 days; no checked sale"
+    "why": "−44.4% in 7 days; no checked sale"
    },
    {
-    "card": "Charizard VSTAR - 018/172",
-    "date": "2026-11-04",
-    "price": 550.0,
+    "card": "Eevee - 114/103",
+    "date": "2026-11-13",
+    "price": 25.33,
     "label": "UNCONFIRMED",
-    "why": "+25.2% in 7 days; no checked sale"
+    "why": "−28.8% in 7 days; no checked sale"
    },
    {
-    "card": "Lugia EX (Team Plasma)",
-    "date": "2026-10-14",
-    "price": 151.44,
+    "card": "Lugia",
+    "date": "2026-11-07",
+    "price": 132.76,
     "label": "UNCONFIRMED",
-    "why": "+59.9% in 7 days; no checked sale"
+    "why": "−21.2% in 7 days; no checked sale"
    }
   ]
  }

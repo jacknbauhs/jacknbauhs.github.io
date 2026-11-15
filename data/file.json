@@ -1,153 +1,126 @@
 {
  "kind": "market",
- "date": "2026-11-21",
- "slot": "Sat build",
+ "date": "2026-11-19",
+ "slot": "Thu market",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "The low that wasn't",
- "headline": "The Nov 6 low wasn't the low.",
- "dek": "On Nov 6, four 30th Celebration promos halved in one reading. Each then rose, by 14% to 40%, to a peak between Nov 8 and Nov 10, and has fallen on every reading since. By Nov 13 Pikachu ex 107 was at $24.49, 31% below its Nov 6 reading; Espeon ex 108 at $43.59, 26% below; Pikachu ex 109 at $27.15, 23% below; Umbreon ex 110 at $71.80, 9% below. A floor called on Nov 9 would have been wrong by Nov 13. No sale was checked behind any of it.",
- "why_now": "Between Nov 8 and Nov 10 these four were up from Nov 6, and it would have been easy to say the bottom was in. The board doesn't call bottoms, and this is the week that shows why: its language rule bans promises about where a price is going, and the readings since show what such a call would have cost.",
- "risk": "Four cards from one promo set over one week is not a market. The fall could be one story or four; price data can't say which. Eevee 114/103 from Delta Reign did not follow the same path: $25.33 on Nov 13, 23% above its Nov 6 low of $20.60 and 14% below its Nov 9 peak. The readings are TCGplayer's market price on the dates shown, not a daily series; Pikachu ex 109 has no reading on Nov 7 or Nov 8. No sale was checked behind any of this. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether any of the four stops falling: the readings to see it with are on the board's lists each morning, and on Nov 14's since-yesterday list all four fell, by 8% to 26% in a day. Whether the 7-day list keeps showing them as their week rolls past the Nov 6 readings. And an idea, not built: a short row of the last seven readings beside each move, so the table shows the path as well as the change.",
+ "title": "A new set's first two weeks on the board",
+ "headline": "Delta Reign's first two weeks on the board: 32 of 40 rows were down.",
+ "dek": "Delta Reign, the sixth Mega Evolution set, first reached the board's lists on Nov 3 with Eevee 114/103, three days before the board's drops list dates the set (Nov 6). Its cards have made 40 of the 520 mover rows the board published since Oct 20, and 32 of the 40 were down. Eevee 114/103 fell from $44.33 to a $20.60 low on Nov 6, rose to $29.32 on Nov 9, and was back at $25.33 on Nov 13. Groudon 111/103 went from $39.17 to $20.43. The set's lead card, Mega Rayquaza ex 138/103, read $327.81 on Nov 6 and $290.39 on Nov 12, and a second Mega Rayquaza ex (141/103) is now on the list at $231.22. Every one is unconfirmed.",
+ "why_now": "Tuesday's File said none of the board's moves has a checked sale. The lists are also the board's way of watching a new set find its price, and Delta Reign is the newest set it has watched. Two weeks in, the early rebound is gone and the set's cards are still showing up on the list, so its first stretch is worth writing down while the numbers are few enough to read one by one.",
+ "risk": "A new set's early prices come from few sales, which is why they move this much. The board's rule that a card's price must change on at least 3 of the last 14 days before a list will show it keeps the very thinnest out, so what appears is the part of the set that has begun to trade. Ten cards is not the set: most of Delta Reign never made a list. Early readings are not a trend: Eevee 114/103's rebound to $29.32 had faded within four readings, and the set also has risers (Raikou ex +8.8% to $100.90 on Nov 14's since-yesterday list). No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether Mega Golurk ex 137/103, on the 7-day list at about −46% for three mornings, leaves it. Whether the two Mega Rayquaza ex cards (138/103 at $290.39, 141/103 at $231.22) keep falling. Whether the set's risers (Raikou ex, and Mega Golisopod ex +10.1% to $24.45) stay up past two readings. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists of Nov 5 to Nov 14, 2026 (readings Nov 5 to Nov 13)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 20 to Nov 14, 2026 (readings Oct 19 to Nov 13); the board's drops.json (Delta Reign, Nov 6)",
  "hero": {
-  "title": "Pikachu ex 107: its Nov 13 reading against its Nov 6 reading",
-  "value": "−31%",
-  "note": "$24.49 against $35.30; the other three are 9% to 26% below theirs"
+  "title": "Delta Reign cards on the board's lists, Oct 20 to Nov 14",
+  "value": "40 of 520",
+  "note": "mover rows from the new set, all since Nov 3; 32 of the 40 down"
  },
  "stats": [
   {
-   "value": "4 of 4",
-   "label": "cards whose Nov 13 reading is below their Nov 6 reading, after rising 14% to 40% to their peaks"
+   "value": "Nov 3",
+   "label": "the first morning a Delta Reign card made a list: Eevee 114/103, three days before the drops list dates the set"
   },
   {
-   "value": "Nov 8 to 10",
-   "label": "when the four peaked; each has fallen on every reading since"
+   "value": "3 in 14",
+   "label": "days a card's price must change before the lists will show it, so a new set appears late on purpose"
   }
  ],
  "rows": [
   {
-   "id": 713256,
-   "name": "Pikachu ex - 109 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
+   "id": 728060,
+   "name": "Mega Golurk ex - 137/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 61,
+    "price": 47,
     "approx": true,
     "date": "2026-11-06"
    },
    "last": {
-    "price": 27.15,
+    "price": 25.4,
     "date": "2026-11-13"
    },
-   "change_pct": -55.3,
+   "change_pct": -46.0,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $35.28 Nov 6, $40.17 peak Nov 10, $27.15 Nov 13",
-   "link": "https://www.tcgplayer.com/product/713256"
+   "note": "7 days, no checked sale · $28.79 on Nov 7 to $25.40 on Nov 13; on the list three mornings running",
+   "link": "https://www.tcgplayer.com/product/728060"
   },
   {
-   "id": 713258,
-   "name": "Espeon ex - 108 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
+   "id": 726565,
+   "name": "Eevee - 114/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 95,
+    "price": 36,
     "approx": true,
     "date": "2026-11-06"
    },
    "last": {
-    "price": 43.59,
+    "price": 25.33,
     "date": "2026-11-13"
    },
-   "change_pct": -54.0,
+   "change_pct": -28.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $58.92 Nov 6, $82.52 peak Nov 8, $43.59 Nov 13",
-   "link": "https://www.tcgplayer.com/product/713258"
+   "note": "7 days, no checked sale · $44.33 Nov 2, $20.60 low Nov 6, $29.32 Nov 9, $25.33 Nov 13",
+   "link": "https://www.tcgplayer.com/product/726565"
   },
   {
-   "id": 713257,
-   "name": "Pikachu ex - 107 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
+   "id": 728062,
+   "name": "Mega Rayquaza ex - 141/103",
+   "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 50,
+    "price": 321,
     "approx": true,
     "date": "2026-11-06"
    },
    "last": {
-    "price": 24.49,
+    "price": 231.22,
     "date": "2026-11-13"
    },
-   "change_pct": -51.5,
+   "change_pct": -28.0,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $35.30 Nov 6, $47.78 peak Nov 8, $24.49 Nov 13",
-   "link": "https://www.tcgplayer.com/product/713257"
-  },
-  {
-   "id": 713259,
-   "name": "Umbreon ex - 110 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 129,
-    "approx": true,
-    "date": "2026-11-06"
-   },
-   "last": {
-    "price": 71.8,
-    "date": "2026-11-13"
-   },
-   "change_pct": -44.4,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $79.13 Nov 6, $90.67 peak Nov 9, $71.80 Nov 13",
-   "link": "https://www.tcgplayer.com/product/713259"
+   "note": "7 days, no checked sale · a second Mega Rayquaza ex: first list Nov 14",
+   "link": "https://www.tcgplayer.com/product/728062"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The readings, from the board's own published lists (git history of data/movers.json): Pikachu ex 107: $35.30 (Nov 6), $37.79, $47.78 (Nov 8), $46.49, $41.36, $37.30, $33.14, $24.49 (Nov 13). Pikachu ex 109: $35.28 (Nov 6), $38.67 (Nov 9), $40.17 (Nov 10), $35.08, $29.59, $27.15 (Nov 13). Espeon ex 108: $58.92 (Nov 6), $82.52 (Nov 8), $77.35, $74.92, $65.93, $57.79, $43.59 (Nov 13). Umbreon ex 110: $79.13 (Nov 6), $79.99, $82.09, $90.67 (Nov 9), $89.75, $85.63, $79.34, $71.80 (Nov 13). The table: the four cards on the board's Nov 14 7-day list, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Oct 20 to Nov 14, 2026, 26 mornings (git history of data/movers.json): 260 rows in the 7-day list and 260 in the since-yesterday list; Delta Reign (set ME06) made 19 and 21 of them, ten cards in all (Eevee 114/103, Groudon 111/103, Kecleon 117/103, Mega Rayquaza ex 138/103, Zinnia's Trust 140/103, Mega Golurk ex 137/103, Raikou ex, Mega Golisopod ex 135/103, Aarune 139/103, Mega Rayquaza ex 141/103), 32 down and 8 up. The table: the three Delta Reign cards on the Nov 14 7-day list, readings through Nov 13, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 4,
-   "of": 4,
+   "value": 3,
+   "of": 3,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the four. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 40 Delta Reign rows. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the three, or behind any of the 40. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Pikachu ex - 109 (30th Celebration)",
+    "card": "Mega Golurk ex - 137/103",
     "date": "2026-11-13",
-    "price": 27.15,
+    "price": 25.4,
     "label": "UNCONFIRMED",
-    "why": "−55.3% in 7 days; no checked sale"
+    "why": "−46.0% in 7 days; no checked sale"
    },
    {
-    "card": "Espeon ex - 108 (30th Celebration)",
+    "card": "Eevee - 114/103",
     "date": "2026-11-13",
-    "price": 43.59,
+    "price": 25.33,
     "label": "UNCONFIRMED",
-    "why": "−54.0% in 7 days; no checked sale"
+    "why": "−28.8% in 7 days; no checked sale"
    },
    {
-    "card": "Pikachu ex - 107 (30th Celebration)",
+    "card": "Mega Rayquaza ex - 141/103",
     "date": "2026-11-13",
-    "price": 24.49,
+    "price": 231.22,
     "label": "UNCONFIRMED",
-    "why": "−51.5% in 7 days; no checked sale"
-   },
-   {
-    "card": "Umbreon ex - 110 (30th Celebration)",
-    "date": "2026-11-13",
-    "price": 71.8,
-    "label": "UNCONFIRMED",
-    "why": "−44.4% in 7 days; no checked sale"
+    "why": "−28.0% in 7 days; no checked sale"
    }
   ]
  }

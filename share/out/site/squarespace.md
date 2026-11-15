@@ -2,9 +2,9 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: The Nov 6 low wasn't the low. −31%: Pikachu ex 107: its Nov 13 reading against its Nov 6 reading, $24.49 against $35.30; the other three are 9% to 26% below theirs. No sale checked behind any of the four. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: Delta Reign's first two weeks on the board: 32 of 40 rows were down. 40 of 520: Delta Reign cards on the board's lists, Oct 20 to Nov 14, mover rows from the new set, all since Nov 3; 32 of the 40 down. No sale checked behind any of the three, or behind any of the 40. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
-[![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
+[![What we couldn't confirm: 3 of 3 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 
 [![3 calls on the record, dated the day they went public. Check me Oct 30. Misses stay up.](https://board.jacknbauhs.com/share/out/site/tile-calls.png)](https://board.jacknbauhs.com)
 

@@ -2,9 +2,9 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: 750 moves, none with a checked sale. Here is what that costs. 750 of 750: Mover rows published since Sep 28, by label, Unconfirmed: 360 on the 7-day list, 390 on the since-yesterday list. No sale checked behind any of the five, or any of the 750. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: The Nov 6 low wasn't the low. −31%: Pikachu ex 107: its Nov 13 reading against its Nov 6 reading, $24.49 against $35.30; the other three are 9% to 26% below theirs. No sale checked behind any of the four. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
-[![What we couldn't confirm: 5 of 5 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
+[![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 
 [![3 calls on the record, dated the day they went public. Check me Oct 30. Misses stay up.](https://board.jacknbauhs.com/share/out/site/tile-calls.png)](https://board.jacknbauhs.com)
 

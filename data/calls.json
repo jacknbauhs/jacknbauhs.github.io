@@ -11,6 +11,12 @@
       "start": "Sep 28: $944.53, TCGplayer market price for Base Set Charizard 4/102 (unlimited, raw).",
       "method": "Hit if the TCGplayer market price is $850.08 or lower on Oct 30.",
       "latest": "The 30th Celebration reprint hit shelves Sep 16.",
+      "updates": [
+        {
+          "dated": "2026-09-28",
+          "text": "The 30th Celebration reprint hit shelves Sep 16."
+        }
+      ],
       "verdict_note": null,
       "checked": null,
       "link": null
@@ -25,6 +31,12 @@
       "start": "Sep 28: $33,000, the median of four September sales on 130point ($28,750 to $37,500).",
       "method": "Hit if October's median sale on 130point is $33,000 or higher. Needs at least two October sales.",
       "latest": "The 30th Celebration reprint hit shelves Sep 16.",
+      "updates": [
+        {
+          "dated": "2026-09-28",
+          "text": "The 30th Celebration reprint hit shelves Sep 16."
+        }
+      ],
       "verdict_note": null,
       "checked": null,
       "link": null
@@ -39,6 +51,12 @@
       "start": "Sep 28 on TCGplayer: Booster Bundle $109.06 (presale), 4.4x its $24.99 retail. Elite Trainer Box $160.14, 3.2x its $49.99 retail.",
       "method": "Hit if the bundle's multiple over retail is cut at least in half by Oct 30 and falls further than the ETB's.",
       "latest": "The Booster Bundle ships Oct 2.",
+      "updates": [
+        {
+          "dated": "2026-09-28",
+          "text": "The Booster Bundle ships Oct 2."
+        }
+      ],
       "verdict_note": null,
       "checked": null,
       "link": null

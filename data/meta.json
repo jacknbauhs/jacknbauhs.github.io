@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-14T14:15:00+00:00",
+  "generated_at": "2026-11-15T14:15:00+00:00",
   "sources": [
     {
       "id": "tcgcsv",
       "name": "TCGplayer market prices via tcgcsv.com",
-      "as_of": "2026-11-13"
+      "as_of": "2026-11-14"
     },
     {
       "id": "sales",
@@ -16,5 +16,24 @@
       "name": "Published pull-rate studies, cited on each row",
       "as_of": "2026-09-27"
     }
-  ]
+  ],
+  "method": {
+    "min_public_sales": 3,
+    "min_price": 20.0,
+    "week_days": 7,
+    "week_min_pct": 5.0,
+    "week_smooth_days": 3,
+    "week_max_unconfirmed_pct": 60.0,
+    "week_max_stale_days": 2,
+    "day_min_pct": 3.0,
+    "day_max_unconfirmed_pct": 40.0,
+    "low_confirm_share": 0.25,
+    "activity_days": 14,
+    "min_market_updates": 3,
+    "junk_share": 0.5,
+    "flags_days": 7,
+    "min_comparables": 5,
+    "rip_ev_net_factor": 0.85,
+    "rip_ev_boxes": 10000
+  }
 }

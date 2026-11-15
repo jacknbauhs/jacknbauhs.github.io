@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-15",
   "daily": {
-    "date": "2026-11-14",
+    "date": "2026-11-15",
     "movers": [
       {
-        "name": "Pikachu ex - 109 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -55.3,
+        "name": "Raichu",
+        "set": "EX FireRed & LeafGreen",
+        "change_pct": 44.3,
         "label": "UNCONFIRMED",
-        "price": 27.15,
-        "observed": "2026-11-13"
-      },
-      {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -54.0,
-        "label": "UNCONFIRMED",
-        "price": 43.59,
-        "observed": "2026-11-13"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -51.5,
-        "label": "UNCONFIRMED",
-        "price": 24.49,
-        "observed": "2026-11-13"
-      },
-      {
-        "name": "Mega Golurk ex - 137/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -46.0,
-        "label": "UNCONFIRMED",
-        "price": 25.4,
-        "observed": "2026-11-13"
-      },
-      {
-        "name": "Umbreon ex - 110 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -44.4,
-        "label": "UNCONFIRMED",
-        "price": 71.8,
-        "observed": "2026-11-13"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -26.1,
-        "label": "UNCONFIRMED",
-        "price": 24.49,
-        "observed": "2026-11-13"
-      },
-      {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -24.6,
-        "label": "UNCONFIRMED",
-        "price": 43.59,
-        "observed": "2026-11-13"
+        "price": 65.0,
+        "observed": "2026-11-14"
       },
       {
         "name": "Infernape",
         "set": "Stormfront",
-        "change_pct": 22.5,
+        "change_pct": 43.7,
         "label": "UNCONFIRMED",
         "price": 81.29,
-        "observed": "2026-11-13"
+        "observed": "2026-11-14"
+      },
+      {
+        "name": "Enamorus - 113 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -35.8,
+        "label": "UNCONFIRMED",
+        "price": 28.06,
+        "observed": "2026-11-14"
+      },
+      {
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -35.2,
+        "label": "UNCONFIRMED",
+        "price": 24.06,
+        "observed": "2026-11-14"
+      },
+      {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -32.6,
+        "label": "UNCONFIRMED",
+        "price": 40.69,
+        "observed": "2026-11-14"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Raikou ex",
+        "set": "ME06: Delta Reign",
+        "change_pct": 21.4,
+        "label": "UNCONFIRMED",
+        "price": 122.52,
+        "observed": "2026-11-14"
+      },
+      {
+        "name": "Bulbasaur (Pokemon Day 2026)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": -11.3,
+        "label": "UNCONFIRMED",
+        "price": 37.19,
+        "observed": "2026-11-14"
       },
       {
         "name": "Umbreon ex - 110 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -9.5,
+        "change_pct": -10.3,
         "label": "UNCONFIRMED",
-        "price": 71.8,
-        "observed": "2026-11-13"
+        "price": 64.44,
+        "observed": "2026-11-14"
       },
       {
-        "name": "Raikou ex",
-        "set": "ME06: Delta Reign",
-        "change_pct": 8.8,
+        "name": "Pikachu ex - 150/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": 7.5,
         "label": "UNCONFIRMED",
-        "price": 100.9,
-        "observed": "2026-11-13"
+        "price": 37.72,
+        "observed": "2026-11-14"
+      },
+      {
+        "name": "Giratina - XY184",
+        "set": "XY Promos",
+        "change_pct": 7.2,
+        "label": "UNCONFIRMED",
+        "price": 33.41,
+        "observed": "2026-11-14"
       }
     ],
     "calls_due": [

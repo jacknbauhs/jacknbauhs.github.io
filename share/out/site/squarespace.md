@@ -2,9 +2,9 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: The new sets fall and the old cards rise. We can't say why. 121 of 128: Mega Evolution rows on the 7-day list that were down, Oct 13 to Nov 14, 172 of the 202 rows from every older set were up. No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: Two families explain a quarter of the older cards that rose. 47 of 172: Older-set 7-day risers from two printing families, Oct 13 to Nov 14, 30 Cracked Ice Holo rows, 17 Prize Pack Series rows; 18 of the 85 older cards that rose. No sale checked behind any of the three, or any of the 47. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
-[![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
+[![What we couldn't confirm: 3 of 3 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 
 [![3 calls on the record, dated the day they went public. Check me Oct 30. Misses stay up.](https://board.jacknbauhs.com/share/out/site/tile-calls.png)](https://board.jacknbauhs.com)
 

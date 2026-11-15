@@ -1,153 +1,126 @@
 {
  "kind": "market",
- "date": "2026-11-24",
- "slot": "Tue story",
+ "date": "2026-11-26",
+ "slot": "Thu market",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "The new sets fall, the old cards rise",
- "headline": "The new sets fall and the old cards rise. We can't say why.",
- "dek": "Since Oct 13 the board's 7-day list has published 330 rows. 128 came from the Mega Evolution sets, and 121 of them were down. The other 202 came from every older set, and 172 were up. Since Nov 3 it is starker: 88 Mega Evolution rows, all down; 32 older-set rows, 27 up. The risers aren't one card: 85 different older cards have made the list on the way up, from Lugia EX (Team Plasma) to Giratina at $451.70 and Snorlax at $286.31. Every one is unconfirmed.",
- "why_now": "Thursday's and Saturday's Files were about cards from one set falling. Zoom out and the pattern runs across sets: it is the cleanest thing the 7-day list has shown in six weeks, and also the easiest to over-read, so it is the week to say how much of it we can and can't stand behind.",
- "risk": "The list is not the market. It shows cards worth $20 or more that moved 5% or more and trade often, so which cards qualify depends partly on which sets are new. A newer set may be showing its early prices settling, and an older card needs only a few sales to move; the price data shows the movement, not which of these is happening, and not why. 85 different older cards is a spread, but each rise is one week on a thin market, and 7 Mega Evolution rows did go up. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether a Mega Evolution card makes the 7-day list on the way up for more than a day or two: since Oct 13, 7 of its 128 rows have. Whether the older cards' rises hold, such as Giratina (Team Plasma) at $451.70 and Snorlax at $286.31, both last read on Nov 11. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
+ "title": "Two families of older cards",
+ "headline": "Two families explain a quarter of the older cards that rose.",
+ "dek": "Since Oct 13, 47 of the 172 rows where an older-set card rose on the board's 7-day list came from two printing families: 30 from cards named Cracked Ice Holo (12 cards, from the Deck Exclusives and Miscellaneous sets) and 17 from the Prize Pack Series set (6 cards). They are 18 of the 85 different older cards that rose, so they repeat: the same few cards keep coming back. The Cracked Ice Holo run peaked on Oct 27 to Nov 2 with 16 rows in the week, and the last Cracked Ice Holo rise on the 7-day list was Nov 6; the Prize Pack run had 10 rows in the week of Nov 3, and its last rise was Nov 8. Every one is unconfirmed.",
+ "why_now": "Tuesday's File said the new sets fall and the old cards rise, and could not say why. A quarter of those rises are two families of printings, which is a smaller thing to look at than \"old cards\", and both runs have faded, so this is the week to look before they are gone from the lists.",
+ "risk": "A card leaving the 7-day list does not mean its price fell: it may have moved under 5%, stopped changing, or stopped trading often enough to qualify, and we only see a card's price while it is listed. The last readings here are from the week they were last listed. Eighteen cards is a small group, and the rises are 19.5% to 50.6% in a week on thin markets, each from one reading. What the two families have in common isn't visible in price data. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether any Cracked Ice Holo or Prize Pack Series card makes the 7-day list again (the latest was Sylveon - 72/111 and Alolan Vulpix V, on the since-yesterday list on Nov 10 and Nov 12). Whether the next family shows up the same way: a handful of cards from one printing run repeating for two weeks. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published 7-day lists, Oct 13 to Nov 14, 2026 (33 mornings; readings Oct 12 to Nov 13)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 13 to Nov 14, 2026 (33 mornings)",
  "hero": {
-  "title": "Mega Evolution rows on the 7-day list that were down, Oct 13 to Nov 14",
-  "value": "121 of 128",
-  "note": "172 of the 202 rows from every older set were up"
+  "title": "Older-set 7-day risers from two printing families, Oct 13 to Nov 14",
+  "value": "47 of 172",
+  "note": "30 Cracked Ice Holo rows, 17 Prize Pack Series rows; 18 of the 85 older cards that rose"
  },
  "stats": [
   {
-   "value": "88 of 88",
-   "label": "Mega Evolution rows on the 7-day list since Nov 3 that were down"
+   "value": "16 in a week",
+   "label": "Cracked Ice Holo rows on the 7-day list, Oct 27 to Nov 2: the peak"
   },
   {
-   "value": "85",
-   "label": "different older cards that have made the 7-day list on the way up since Oct 13"
+   "value": "27%",
+   "label": "of the older-set 7-day rises are these two families, though they are 21% of the cards that rose"
   }
  ],
  "rows": [
   {
-   "id": 85739,
-   "name": "Giratina (Team Plasma)",
-   "set": "Black and White Promos",
+   "id": 489291,
+   "name": "Charizard VSTAR - 018/172",
+   "set": "Prize Pack Series Cards",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 348,
+    "price": 450,
     "approx": true,
-    "date": "2026-11-06"
+    "date": "2026-11-04"
    },
    "last": {
-    "price": 451.7,
-    "date": "2026-11-11"
+    "price": 550.0,
+    "date": "2026-11-04"
    },
-   "change_pct": 29.7,
+   "change_pct": 22.3,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · Black and White Promos; last changed Nov 11",
-   "link": "https://www.tcgplayer.com/product/85739"
+   "note": "7 days, no checked sale · Prize Pack Series; last on the 7-day list Nov 7",
+   "link": "https://www.tcgplayer.com/product/489291"
   },
   {
-   "id": 89388,
-   "name": "Snorlax",
-   "set": "EX FireRed & LeafGreen",
+   "id": 153234,
+   "name": "Charizard - 1/99 (Cracked Ice Holo)",
+   "set": "Miscellaneous Cards & Products",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 228,
+    "price": 112,
     "approx": true,
-    "date": "2026-11-06"
+    "date": "2026-11-03"
    },
    "last": {
-    "price": 286.31,
-    "date": "2026-11-11"
+    "price": 141.83,
+    "date": "2026-11-03"
    },
-   "change_pct": 25.7,
+   "change_pct": 26.5,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · EX FireRed & LeafGreen; last changed Nov 11",
-   "link": "https://www.tcgplayer.com/product/89388"
+   "note": "7 days, no checked sale · Cracked Ice Holo; last on the 7-day list Nov 6",
+   "link": "https://www.tcgplayer.com/product/153234"
   },
   {
-   "id": 87430,
-   "name": "Mewtwo EX - BW45",
-   "set": "Black and White Promos",
+   "id": 227095,
+   "name": "Metagross - 4/95 (Cracked Ice Holo)",
+   "set": "Deck Exclusives",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 47,
+    "price": 33,
     "approx": true,
-    "date": "2026-11-06"
+    "date": "2026-10-29"
    },
    "last": {
-    "price": 30.16,
-    "date": "2026-11-12"
+    "price": 43.19,
+    "date": "2026-10-29"
    },
-   "change_pct": -35.8,
+   "change_pct": 30.1,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · an older card that fell: 30 older-set rows have been down since Oct 13",
-   "link": "https://www.tcgplayer.com/product/87430"
-  },
-  {
-   "id": 713256,
-   "name": "Pikachu ex - 109 (30th Celebration)",
-   "set": "ME: Mega Evolution Promo",
-   "tier": "Raw · TCGplayer market price · Holofoil",
-   "window_label": "7d",
-   "prev": {
-    "price": 61,
-    "approx": true,
-    "date": "2026-11-06"
-   },
-   "last": {
-    "price": 27.15,
-    "date": "2026-11-13"
-   },
-   "change_pct": -55.3,
-   "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · a Mega Evolution card, down",
-   "link": "https://www.tcgplayer.com/product/713256"
+   "note": "7 days, no checked sale · Cracked Ice Holo; last on the 7-day list Nov 1",
+   "link": "https://www.tcgplayer.com/product/227095"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json), 10 rows a morning, 330 in all (Oct 13 is when the 3-day-median rule began). \"Mega Evolution\" here means a set whose name begins ME (ME: Mega Evolution Promo, ME: 30th Celebration, ME06: Delta Reign, and so on): 128 rows, 121 down, 7 up. \"Older\" means every other set: 202 rows, 172 up, 30 down. Since Nov 3: 120 rows, 88 Mega Evolution (88 down) and 32 older (27 up). 85 different older cards had at least one rising row. A card counts once per morning it was listed. The table: four cards from the Nov 14 list (readings through Nov 13); start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json). \"Older\" means a set whose name does not begin ME; a rise is a 7-day row with a positive change. 172 such rows in all. \"Cracked Ice Holo\": cards whose published name contains it: 30 rows, 12 cards (Umbreon 10/90, Pikachu 35/108, Dragonite 151/236, Entei 4/132, Metagross 4/95, Typhlosion 32/123, Gyarados 4/123, Minccino BW13, Charizard 25/185, Mewtwo 51/108, Blastoise 25/181, Charizard 1/99), all up. \"Prize Pack Series\": cards from the Prize Pack Series Cards set: 17 rows, 6 cards (Boltund VMAX 104/264, Pumpkaboo 076/203, Suicune V 031/203, Lugia VSTAR 139/195, Charizard VSTAR 018/172, Blaziken V 020/198), all up. 30 + 17 = 47 of 172 is 27%; 18 of 85 different older cards is 21%. A card counts once per morning it was listed. The table: three of the 18 cards at their last 7-day list appearance (readings Oct 29, Nov 3 and Nov 4); start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 4,
-   "of": 4,
+   "value": 3,
+   "of": 3,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 4 moves on this File, or behind any of the 330 rows counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 47 rises counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the three, or any of the 47. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Giratina (Team Plasma)",
-    "date": "2026-11-11",
-    "price": 451.7,
+    "card": "Charizard VSTAR - 018/172",
+    "date": "2026-11-04",
+    "price": 550.0,
     "label": "UNCONFIRMED",
-    "why": "+29.7% in 7 days; no checked sale"
+    "why": "+22.3% in 7 days; no checked sale"
    },
    {
-    "card": "Snorlax",
-    "date": "2026-11-11",
-    "price": 286.31,
+    "card": "Charizard - 1/99 (Cracked Ice Holo)",
+    "date": "2026-11-03",
+    "price": 141.83,
     "label": "UNCONFIRMED",
-    "why": "+25.7% in 7 days; no checked sale"
+    "why": "+26.5% in 7 days; no checked sale"
    },
    {
-    "card": "Mewtwo EX - BW45",
-    "date": "2026-11-12",
-    "price": 30.16,
+    "card": "Metagross - 4/95 (Cracked Ice Holo)",
+    "date": "2026-10-29",
+    "price": 43.19,
     "label": "UNCONFIRMED",
-    "why": "−35.8% in 7 days; no checked sale"
-   },
-   {
-    "card": "Pikachu ex - 109 (30th Celebration)",
-    "date": "2026-11-13",
-    "price": 27.15,
-    "label": "UNCONFIRMED",
-    "why": "−55.3% in 7 days; no checked sale"
+    "why": "+30.1% in 7 days; no checked sale"
    }
   ]
  }

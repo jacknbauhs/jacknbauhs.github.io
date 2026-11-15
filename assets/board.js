@@ -1141,8 +1141,8 @@
         "The week's change compares the median price over the last " + n(m.week_smooth_days) + " days with the same " + n(m.week_smooth_days) + " days a week earlier, so a one-day spike can't make a weekly move. The price shown is the latest.",
         "A card is listed only when it is worth $" + n(m.min_price) + " or more at both ends and moved at least " + pc(m.week_min_pct) + " in the week (" + pc(m.day_min_pct) + " in a day)."
       ] },
-      { id: "unconfirmed", h: "Moves no sale has confirmed", where: "Market movers marked Unconfirmed", p: [
-        "TCGplayer's market price can jump on a single sale. A move with no checked sale behind it goes up only when all of these hold: it is within " + pc(m.week_max_unconfirmed_pct) + " for the week (" + pc(m.day_max_unconfirmed_pct) + " for a day); TCGplayer's lowest listing moved the same way by at least " + share(m.low_confirm_share) + " as much; the market price changed on at least " + n(m.min_market_updates) + " of the last " + n(m.activity_days) + " days; and, for the week, it changed in the last " + n(m.week_max_stale_days) + " days.",
+      { id: "unconfirmed", h: "Moves the sales haven't confirmed", where: "Market movers, Unconfirmed or on one or two sales", p: [
+        "TCGplayer's market price can jump on a single sale. A move with fewer than " + n(m.min_public_sales) + " checked sales behind it goes up only when all of these hold: it is within " + pc(m.week_max_unconfirmed_pct) + " for the week (" + pc(m.day_max_unconfirmed_pct) + " for a day); TCGplayer's lowest listing moved the same way by at least " + share(m.low_confirm_share) + " as much; the market price changed on at least " + n(m.min_market_updates) + " of the last " + n(m.activity_days) + " days; and, for the week, it changed in the last " + n(m.week_max_stale_days) + " days.",
         "Anything else is left off the list rather than shown with a warning."
       ] },
       { id: "clean", h: "The clean change", where: "Market movers, the clean column", p: [

@@ -1,126 +1,126 @@
 {
  "kind": "market",
- "date": "2026-11-26",
- "slot": "Thu market",
+ "date": "2026-11-28",
+ "slot": "Sat build",
  "stance": null,
  "as_of": "2026-11-13",
  "pulled": "2026-11-14",
- "title": "Two families of older cards",
- "headline": "Two families explain a quarter of the older cards that rose.",
- "dek": "Since Oct 13, 47 of the 172 rows where an older-set card rose on the board's 7-day list came from two printing families: 30 from cards named Cracked Ice Holo (12 cards, from the Deck Exclusives and Miscellaneous sets) and 17 from the Prize Pack Series set (6 cards). They are 18 of the 85 different older cards that rose, so they repeat: the same few cards keep coming back. The Cracked Ice Holo run peaked on Oct 27 to Nov 2 with 16 rows in the week, and the last Cracked Ice Holo rise on the 7-day list was Nov 6; the Prize Pack run had 10 rows in the week of Nov 3, and its last rise was Nov 8. Every one is unconfirmed.",
- "why_now": "Tuesday's File said the new sets fall and the old cards rise, and could not say why. A quarter of those rises are two families of printings, which is a smaller thing to look at than \"old cards\", and both runs have faded, so this is the week to look before they are gone from the lists.",
- "risk": "A card leaving the 7-day list does not mean its price fell: it may have moved under 5%, stopped changing, or stopped trading often enough to qualify, and we only see a card's price while it is listed. The last readings here are from the week they were last listed. Eighteen cards is a small group, and the rises are 19.5% to 50.6% in a week on thin markets, each from one reading. What the two families have in common isn't visible in price data. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether any Cracked Ice Holo or Prize Pack Series card makes the 7-day list again (the latest was Sylveon - 72/111 and Alolan Vulpix V, on the since-yesterday list on Nov 10 and Nov 12). Whether the next family shows up the same way: a handful of cards from one printing run repeating for two weeks. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
+ "title": "A vintage card has two prices",
+ "headline": "A vintage card has two prices. The board has to pick one.",
+ "dek": "TCGplayer prices some vintage cards twice: a 1st Edition printing and an Unlimited one, each with its own price. Of the 660 rows the board's lists have published since Oct 13, 21 name an edition (13 \"1st Edition\", 6 \"1st Edition Holofoil\", 2 \"Unlimited Holofoil\"), and not one card changed printing from one list to the next. That consistency is the point: a card is only ever compared with its own printing, so a move on the board is never one printing's price set against the other's. On Nov 14 we made the choice explicit for the price lookups behind the board as well: Unlimited first for the Wizards of the Coast printings, and 1st Edition only when we ask for it by name.",
+ "why_now": "A vintage price with no printing attached is a price for a card nobody can name. Call #003 says \"unlimited, raw\" in its starting price for that reason. This week's build closed the last place that could pick a printing by accident, so it is the Saturday to say what the board does and what it can't yet show.",
+ "risk": "What is confirmed is the board's own lists: 21 rows, none switching. What isn't: the pricing change merged on Nov 14 and goes live when Railway deploys it, so until a publish after that shows a vintage row reading \"Unlimited Holofoil\" it is untested in production. A row can change printing once on the day it deploys and is still compared only with its own printing, so it can't show a false move. Twenty-one rows is also a small slice, mostly Neo-era cards plus one Base Set (Shadowless) Dragonair. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "The first publish after the deploy: whether any vintage row now reads \"Unlimited Holofoil\" where it read \"1st Edition\" or nothing before, and that no row's printing then changes from night to night. Whether a 1st Edition card makes the 7-day list again; the three here were last listed in October. And what we haven't built: showing both printings' prices side by side for one card.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 13 to Nov 14, 2026 (33 mornings)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 13 to Nov 14, 2026 (33 mornings, 660 rows); Mission Control's pricing settings as merged Nov 14, 2026",
  "hero": {
-  "title": "Older-set 7-day risers from two printing families, Oct 13 to Nov 14",
-  "value": "47 of 172",
-  "note": "30 Cracked Ice Holo rows, 17 Prize Pack Series rows; 18 of the 85 older cards that rose"
+  "title": "Rows on the board's lists that name an edition, Oct 13 to Nov 14",
+  "value": "21 of 660",
+  "note": "and none of the 660 rows changed printing from one list to the next"
  },
  "stats": [
   {
-   "value": "16 in a week",
-   "label": "Cracked Ice Holo rows on the 7-day list, Oct 27 to Nov 2: the peak"
+   "value": "0",
+   "label": "cards that appeared on the lists under two different printings"
   },
   {
-   "value": "27%",
-   "label": "of the older-set 7-day rises are these two families, though they are 21% of the cards that rose"
+   "value": "Nov 14",
+   "label": "when the printing choice was made explicit for the pricing behind the board; live once Railway deploys it"
   }
  ],
  "rows": [
   {
-   "id": 489291,
-   "name": "Charizard VSTAR - 018/172",
-   "set": "Prize Pack Series Cards",
-   "tier": "Raw · TCGplayer market price · Holofoil",
+   "id": 86059,
+   "name": "Heracross",
+   "set": "Neo Genesis",
+   "tier": "Raw · TCGplayer market price · 1st Edition Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 450,
+    "price": 215,
     "approx": true,
-    "date": "2026-11-04"
+    "date": "2026-10-20"
    },
    "last": {
-    "price": 550.0,
-    "date": "2026-11-04"
+    "price": 281.06,
+    "date": "2026-10-17"
    },
-   "change_pct": 22.3,
+   "change_pct": 30.6,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · Prize Pack Series; last on the 7-day list Nov 7",
-   "link": "https://www.tcgplayer.com/product/489291"
+   "note": "7 days, no checked sale · the row names its printing: 1st Edition Holofoil",
+   "link": "https://www.tcgplayer.com/product/86059"
   },
   {
-   "id": 153234,
-   "name": "Charizard - 1/99 (Cracked Ice Holo)",
-   "set": "Miscellaneous Cards & Products",
-   "tier": "Raw · TCGplayer market price · Holofoil",
+   "id": 86741,
+   "name": "Light Jolteon",
+   "set": "Neo Destiny",
+   "tier": "Raw · TCGplayer market price · 1st Edition",
    "window_label": "7d",
    "prev": {
-    "price": 112,
+    "price": 220,
     "approx": true,
-    "date": "2026-11-03"
+    "date": "2026-10-25"
    },
    "last": {
-    "price": 141.83,
-    "date": "2026-11-03"
+    "price": 274.98,
+    "date": "2026-10-23"
    },
-   "change_pct": 26.5,
+   "change_pct": 25.0,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · Cracked Ice Holo; last on the 7-day list Nov 6",
-   "link": "https://www.tcgplayer.com/product/153234"
+   "note": "7 days, no checked sale · the row names its printing: 1st Edition",
+   "link": "https://www.tcgplayer.com/product/86741"
   },
   {
-   "id": 227095,
-   "name": "Metagross - 4/95 (Cracked Ice Holo)",
-   "set": "Deck Exclusives",
-   "tier": "Raw · TCGplayer market price · Holofoil",
+   "id": 107013,
+   "name": "Dragonair",
+   "set": "Base Set (Shadowless)",
+   "tier": "Raw · TCGplayer market price · 1st Edition",
    "window_label": "7d",
    "prev": {
-    "price": 33,
+    "price": 186,
     "approx": true,
-    "date": "2026-10-29"
+    "date": "2026-10-18"
    },
    "last": {
-    "price": 43.19,
-    "date": "2026-10-29"
+    "price": 108.89,
+    "date": "2026-10-17"
    },
-   "change_pct": 30.1,
+   "change_pct": -41.4,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · Cracked Ice Holo; last on the 7-day list Nov 1",
-   "link": "https://www.tcgplayer.com/product/227095"
+   "note": "7 days, no checked sale · the row names its printing: 1st Edition",
+   "link": "https://www.tcgplayer.com/product/107013"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published 7-day lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json). \"Older\" means a set whose name does not begin ME; a rise is a 7-day row with a positive change. 172 such rows in all. \"Cracked Ice Holo\": cards whose published name contains it: 30 rows, 12 cards (Umbreon 10/90, Pikachu 35/108, Dragonite 151/236, Entei 4/132, Metagross 4/95, Typhlosion 32/123, Gyarados 4/123, Minccino BW13, Charizard 25/185, Mewtwo 51/108, Blastoise 25/181, Charizard 1/99), all up. \"Prize Pack Series\": cards from the Prize Pack Series Cards set: 17 rows, 6 cards (Boltund VMAX 104/264, Pumpkaboo 076/203, Suicune V 031/203, Lugia VSTAR 139/195, Charizard VSTAR 018/172, Blaziken V 020/198), all up. 30 + 17 = 47 of 172 is 27%; 18 of 85 different older cards is 21%. A card counts once per morning it was listed. The table: three of the 18 cards at their last 7-day list appearance (readings Oct 29, Nov 3 and Nov 4); start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published lists, Oct 13 to Nov 14, 2026, 33 mornings (git history of data/movers.json): 330 rows in the 7-day list and 330 in the since-yesterday list, 660 in all. Each row carries a variant field naming the printing: 608 \"Holofoil\", 31 blank, 13 \"1st Edition\", 6 \"1st Edition Holofoil\", 2 \"Unlimited Holofoil\". No card id appears with more than one variant. The table: three cards that name an edition, each at its last 7-day list appearance (Heracross, Neo Genesis; Light Jolteon, Neo Destiny; Dragonair, Base Set Shadowless); start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
    "value": 3,
    "of": 3,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 47 rises counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind any of the three, or any of the 47. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 21 edition rows counted. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the three, or any of the 21. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Charizard VSTAR - 018/172",
-    "date": "2026-11-04",
-    "price": 550.0,
+    "card": "Heracross",
+    "date": "2026-10-17",
+    "price": 281.06,
     "label": "UNCONFIRMED",
-    "why": "+22.3% in 7 days; no checked sale"
+    "why": "+30.6% in 7 days; no checked sale"
    },
    {
-    "card": "Charizard - 1/99 (Cracked Ice Holo)",
-    "date": "2026-11-03",
-    "price": 141.83,
+    "card": "Light Jolteon",
+    "date": "2026-10-23",
+    "price": 274.98,
     "label": "UNCONFIRMED",
-    "why": "+26.5% in 7 days; no checked sale"
+    "why": "+25.0% in 7 days; no checked sale"
    },
    {
-    "card": "Metagross - 4/95 (Cracked Ice Holo)",
-    "date": "2026-10-29",
-    "price": 43.19,
+    "card": "Dragonair",
+    "date": "2026-10-17",
+    "price": 108.89,
     "label": "UNCONFIRMED",
-    "why": "+30.1% in 7 days; no checked sale"
+    "why": "−41.4% in 7 days; no checked sale"
    }
   ]
  }

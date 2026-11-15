@@ -3,21 +3,21 @@
  "date": "2026-11-19",
  "slot": "Thu market",
  "stance": null,
- "as_of": "2026-11-09",
- "pulled": "2026-11-10",
- "title": "A new set's first week on the board",
- "headline": "Delta Reign's first week on the board: 15 of 19 rows were down.",
- "dek": "Delta Reign, the sixth Mega Evolution set, first reached the board's lists on Nov 3 with Eevee 114/103, three days before the board's drops list dates the set (Nov 6). Since Oct 20 its cards have made 19 of the 440 mover rows the board published, all since Nov 3, and 15 of the 19 were down. Eevee 114/103 went from $44.33 on Nov 2 to a $20.60 low on Nov 6 and was back at $29.32 on Nov 9; Kecleon 117/103 from $29.13 to $23.42, then $26.75. The set's lead card, Mega Rayquaza ex 138/103, made a list once: $327.81, down 17.6% in a day on the Nov 7 list. Every one is unconfirmed.",
- "why_now": "Tuesday's File said none of the board's moves has a checked sale. The lists are also the board's way of watching a new set find its price, and Delta Reign is the newest set it has watched, so its first week is worth writing down while the numbers are few enough to read one by one.",
- "risk": "A new set's early prices come from few sales, which is why they move this much. The board's rule that a card's price must change on at least 3 of the last 14 days before a list will show it keeps the very thinnest out, so what appears is the part of the set that has begun to trade. Eight cards is not the set: most of Delta Reign never made a list. Early readings of a new set are not a trend. No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
- "what_to_watch": "Whether Eevee 114/103 and Kecleon 117/103, on the 7-day list at −39.7% and −23.9%, leave it as their week rolls past the early readings. Whether the set's lead card, Mega Rayquaza ex 138/103, makes another list ($327.81 is the only reading the lists have given us). Whether more of the set clears the 3-in-14 bar. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
+ "as_of": "2026-11-13",
+ "pulled": "2026-11-14",
+ "title": "A new set's first two weeks on the board",
+ "headline": "Delta Reign's first two weeks on the board: 32 of 40 rows were down.",
+ "dek": "Delta Reign, the sixth Mega Evolution set, first reached the board's lists on Nov 3 with Eevee 114/103, three days before the board's drops list dates the set (Nov 6). Its cards have made 40 of the 520 mover rows the board published since Oct 20, and 32 of the 40 were down. Eevee 114/103 fell from $44.33 to a $20.60 low on Nov 6, rose to $29.32 on Nov 9, and was back at $25.33 on Nov 13. Groudon 111/103 went from $39.17 to $20.43. The set's lead card, Mega Rayquaza ex 138/103, read $327.81 on Nov 6 and $290.39 on Nov 12, and a second Mega Rayquaza ex (141/103) is now on the list at $231.22. Every one is unconfirmed.",
+ "why_now": "Tuesday's File said none of the board's moves has a checked sale. The lists are also the board's way of watching a new set find its price, and Delta Reign is the newest set it has watched. Two weeks in, the early rebound is gone and the set's cards are still showing up on the list, so its first stretch is worth writing down while the numbers are few enough to read one by one.",
+ "risk": "A new set's early prices come from few sales, which is why they move this much. The board's rule that a card's price must change on at least 3 of the last 14 days before a list will show it keeps the very thinnest out, so what appears is the part of the set that has begun to trade. Ten cards is not the set: most of Delta Reign never made a list. Early readings are not a trend: Eevee 114/103's rebound to $29.32 had faded within four readings, and the set also has risers (Raikou ex +8.8% to $100.90 on Nov 14's since-yesterday list). No sale was checked behind any of it. This is not a read on whether these prices are high or low.",
+ "what_to_watch": "Whether Mega Golurk ex 137/103, on the 7-day list at about −46% for three mornings, leaves it. Whether the two Mega Rayquaza ex cards (138/103 at $290.39, 141/103 at $231.22) keep falling. Whether the set's risers (Raikou ex, and Mega Golisopod ex +10.1% to $24.45) stay up past two readings. And the label: the morning one of these cards has a checked sale, its row stops reading Unconfirmed.",
  "featured": null,
  "cards": [],
- "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 20 to Nov 10, 2026 (prices Oct 19 to Nov 9); the board's drops.json (Delta Reign, Nov 6)",
+ "source": "TCGplayer market prices via tcgcsv.com, from the board's published lists, Oct 20 to Nov 14, 2026 (readings Oct 19 to Nov 13); the board's drops.json (Delta Reign, Nov 6)",
  "hero": {
-  "title": "Delta Reign cards on the board's lists, Oct 20 to Nov 10",
-  "value": "19 of 440",
-  "note": "mover rows from the new set, all since Nov 3; 15 of the 19 down"
+  "title": "Delta Reign cards on the board's lists, Oct 20 to Nov 14",
+  "value": "40 of 520",
+  "note": "mover rows from the new set, all since Nov 3; 32 of the 40 down"
  },
  "stats": [
   {
@@ -31,69 +31,96 @@
  ],
  "rows": [
   {
+   "id": 728060,
+   "name": "Mega Golurk ex - 137/103",
+   "set": "ME06: Delta Reign",
+   "tier": "Raw · TCGplayer market price · Holofoil",
+   "window_label": "7d",
+   "prev": {
+    "price": 47,
+    "approx": true,
+    "date": "2026-11-06"
+   },
+   "last": {
+    "price": 25.4,
+    "date": "2026-11-13"
+   },
+   "change_pct": -46.0,
+   "label": "UNCONFIRMED",
+   "note": "7 days, no checked sale · $28.79 on Nov 7 to $25.40 on Nov 13; on the list three mornings running",
+   "link": "https://www.tcgplayer.com/product/728060"
+  },
+  {
    "id": 726565,
    "name": "Eevee - 114/103",
    "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 49,
+    "price": 36,
     "approx": true,
-    "date": "2026-11-02"
+    "date": "2026-11-06"
    },
    "last": {
-    "price": 29.32,
-    "date": "2026-11-09"
+    "price": 25.33,
+    "date": "2026-11-13"
    },
-   "change_pct": -39.7,
+   "change_pct": -28.8,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $44.33 on Nov 2 to a $20.60 low on Nov 6, then $29.32",
+   "note": "7 days, no checked sale · $44.33 Nov 2, $20.60 low Nov 6, $29.32 Nov 9, $25.33 Nov 13",
    "link": "https://www.tcgplayer.com/product/726565"
   },
   {
-   "id": 726567,
-   "name": "Kecleon - 117/103",
+   "id": 728062,
+   "name": "Mega Rayquaza ex - 141/103",
    "set": "ME06: Delta Reign",
    "tier": "Raw · TCGplayer market price · Holofoil",
    "window_label": "7d",
    "prev": {
-    "price": 35,
+    "price": 321,
     "approx": true,
-    "date": "2026-11-02"
+    "date": "2026-11-06"
    },
    "last": {
-    "price": 26.75,
-    "date": "2026-11-09"
+    "price": 231.22,
+    "date": "2026-11-13"
    },
-   "change_pct": -23.9,
+   "change_pct": -28.0,
    "label": "UNCONFIRMED",
-   "note": "7 days, no checked sale · $29.13 on Nov 5 to $23.42 on Nov 7, then $26.75",
-   "link": "https://www.tcgplayer.com/product/726567"
+   "note": "7 days, no checked sale · a second Mega Rayquaza ex: first list Nov 14",
+   "link": "https://www.tcgplayer.com/product/728062"
   }
  ],
- "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Oct 20 to Nov 10, 2026 (git history of data/movers.json): 220 rows in the 7-day list and 220 in the since-yesterday list; Delta Reign (set ME06) made 7 and 12 of them, eight cards in all (Eevee 114/103, Kecleon 117/103, Groudon 111/103, Mega Rayquaza ex 138/103, Zinnia's Trust 140/103, Mega Golurk ex 137/103, Raikou ex, Mega Golisopod ex 135/103), 15 down and 4 up. The table: the two Delta Reign cards on the Nov 10 7-day list, prices Nov 2 to Nov 9, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
+ "foot": "Market price: TCGplayer's average of recent completed sales of the same card, condition and printing (help.tcgplayer.com). The counts: the board's own published movers lists, Oct 20 to Nov 14, 2026, 26 mornings (git history of data/movers.json): 260 rows in the 7-day list and 260 in the since-yesterday list; Delta Reign (set ME06) made 19 and 21 of them, ten cards in all (Eevee 114/103, Groudon 111/103, Kecleon 117/103, Mega Rayquaza ex 138/103, Zinnia's Trust 140/103, Mega Golurk ex 137/103, Raikou ex, Mega Golisopod ex 135/103, Aarune 139/103, Mega Rayquaza ex 141/103), 32 down and 8 up. The table: the three Delta Reign cards on the Nov 14 7-day list, readings through Nov 13, the change between 3-day medians at each end; start-of-week prices are worked back from the listed price and its rounded change, so within a dollar. The list: up to 10 Pokémon cards worth $20 or more that moved 5% or more in a week; with no checked sales, a move shows only if it's 60% or less, the lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades (its price changed on 3 or more of the last 14 days). The since-yesterday list: 3% or more, 40% or less without a checked sale. Unconfirmed: no sale checked by Mission Control's Sale Integrity Layer in that window. Not advice.",
  "flags": {
   "headline": {
-   "value": 2,
-   "of": 2,
+   "value": 3,
+   "of": 3,
    "label": "moves on this File with no checked sale"
   },
-  "text": "Mission Control hasn't checked a sale behind either move on this File, or behind any of the 19 Delta Reign rows. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
-  "stat": "No sale checked behind either, or behind any of the 19. Not a read on whether these prices are high or low.",
+  "text": "Mission Control hasn't checked a sale behind any of the 3 moves on this File, or behind any of the 40 Delta Reign rows. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades.",
+  "stat": "No sale checked behind any of the three, or behind any of the 40. Not a read on whether these prices are high or low.",
   "items": [
    {
-    "card": "Eevee - 114/103",
-    "date": "2026-11-09",
-    "price": 29.32,
+    "card": "Mega Golurk ex - 137/103",
+    "date": "2026-11-13",
+    "price": 25.4,
     "label": "UNCONFIRMED",
-    "why": "−39.7% in 7 days; no checked sale"
+    "why": "−46.0% in 7 days; no checked sale"
    },
    {
-    "card": "Kecleon - 117/103",
-    "date": "2026-11-09",
-    "price": 26.75,
+    "card": "Eevee - 114/103",
+    "date": "2026-11-13",
+    "price": 25.33,
     "label": "UNCONFIRMED",
-    "why": "−23.9% in 7 days; no checked sale"
+    "why": "−28.8% in 7 days; no checked sale"
+   },
+   {
+    "card": "Mega Rayquaza ex - 141/103",
+    "date": "2026-11-13",
+    "price": 231.22,
+    "label": "UNCONFIRMED",
+    "why": "−28.0% in 7 days; no checked sale"
    }
   ]
  }

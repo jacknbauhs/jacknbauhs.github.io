@@ -1,6 +1,7 @@
 /* Mission Control board · jacknbauhs.com
    Every section reads a JSON file in /data.
-   Pages: index.html (the board), card.html (a card file), calls.html (every call with its dated record).
+   Pages: index.html (the board), card.html (a card file), calls.html (every call with its dated record),
+   how.html (How we price: every rule, its figures read from meta.json's method).
    Kept by hand: file.json (The File, Tue / Thu / Sat; between those, Mission Control writes it from the nightly feed,
    marked "selection": "AUTO_SELECTED") and cards/*.json, calls.json, drops.json.
    The File comes in two kinds: a card File (a featured card's sales from cards/<id>.json; any file.json without "kind")
@@ -1120,6 +1121,76 @@
     });
   }
 
+  /* ---------- how we price ---------- */
+  // how.html: one section per kind of number. Every figure comes from
+  // meta.json's `method` (Mission Control writes it from its own config), so
+  // the words can't drift from the rules; METHOD_DEFAULTS stands in until it does.
+  var METHOD_DEFAULTS = {
+    min_public_sales: 3, min_price: 20, week_days: 7, week_min_pct: 5, week_smooth_days: 3,
+    week_max_unconfirmed_pct: 60, week_max_stale_days: 2, day_min_pct: 3, day_max_unconfirmed_pct: 40,
+    low_confirm_share: 0.25, activity_days: 14, min_market_updates: 3, junk_share: 0.5, flags_days: 7,
+    min_comparables: 5, rip_ev_net_factor: 0.85, rip_ev_boxes: 10000
+  };
+  function howSections(m) {
+    var n = function (v) { return Number(v).toLocaleString("en-US"); };
+    var pc = function (v) { return n(v) + "%"; };
+    var share = function (v) { return Math.round(v * 100) + "%"; };
+    return [
+      { id: "market", h: "TCGplayer market price", where: "Market movers, Today, the File between hand-written ones", p: [
+        "TCGplayer's market price for the card, from tcgcsv.com's daily copy of TCGplayer's prices. Raw (ungraded) copies only, in the printing the row names; a vintage card priced in both printings stands on Unlimited.",
+        "The week's change compares the median price over the last " + n(m.week_smooth_days) + " days with the same " + n(m.week_smooth_days) + " days a week earlier, so a one-day spike can't make a weekly move. The price shown is the latest.",
+        "A card is listed only when it is worth $" + n(m.min_price) + " or more at both ends and moved at least " + pc(m.week_min_pct) + " in the week (" + pc(m.day_min_pct) + " in a day)."
+      ] },
+      { id: "unconfirmed", h: "Moves no sale has confirmed", where: "Market movers marked Unconfirmed", p: [
+        "TCGplayer's market price can jump on a single sale. A move with no checked sale behind it goes up only when all of these hold: it is within " + pc(m.week_max_unconfirmed_pct) + " for the week (" + pc(m.day_max_unconfirmed_pct) + " for a day); TCGplayer's lowest listing moved the same way by at least " + share(m.low_confirm_share) + " as much; the market price changed on at least " + n(m.min_market_updates) + " of the last " + n(m.activity_days) + " days; and, for the week, it changed in the last " + n(m.week_max_stale_days) + " days.",
+        "Anything else is left off the list rather than shown with a warning."
+      ] },
+      { id: "clean", h: "The clean change", where: "Market movers, the clean column", p: [
+        "The median of the card's checked sales in the " + n(m.week_days) + " days before each end of the week, with every sale weighted by its label: a clean sale counts in full; a relist, a sale tied to an event, or a spike not yet confirmed counts half; a duplicate, a suspect sale or a sale that doesn't belong counts for nothing.",
+        "It needs at least " + n(m.min_public_sales) + " checked sales at each end. With fewer, the column is blank: one or two sales can make any number."
+      ] },
+      { id: "labels", h: "Labels", where: "Market movers, Flags, card pages", p: [
+        "Every sale we check gets a label from the Sale Integrity Layer, or from Jack by hand, which wins. A move reads as a flag when at least " + share(m.junk_share) + " of its card's checked sales in the window are suspect or don't belong; otherwise as an event, a supply shock or a thin spike when a sale carries one, and as Clean when none does. With no checked sale, it reads Unconfirmed.",
+        "A best offer is shown at the accepted price, not the asking price."
+      ] },
+      { id: "flags", h: "Flags", where: "Flags, Today", p: [
+        "A flagged sale is one the checks or Jack marked as not a real market price: a spike with warning signs, a sale that doesn't belong to the card, a relist. Its claimed change compares it with the median of the card's earlier sales at the same grade, and needs " + n(m.min_comparables) + " of them; with fewer there is no baseline and no %.",
+        "The headline is the share of last week's sold dollar volume (Monday to Sunday) that was flagged. It needs at least " + n(m.min_public_sales) + " checked sales that week; with fewer it says so instead of showing a number. The list covers the last " + n(m.flags_days) + " days."
+      ] },
+      { id: "cards", h: "Card pages", where: "The File's featured cards", p: [
+        "Every sale in the card's window is listed with its date, price, format and label. The monthly clean median takes the month's full-weight sales only, so relists, duplicates and sales that don't belong are left out, and a month needs at least " + n(m.min_public_sales) + " of them; a thinner month has no median.",
+        "The change compares two months' clean medians. The last sale is one sale, and is shown as one."
+      ] },
+      { id: "rip-ev", h: "Rip EV", where: "Rip EV", p: [
+        "What opening a product is worth on average: each rarity tier's pull rate, from a published pull-rate study cited on its row, times the average TCGplayer market price of the tier's cards, added up per pack, plus a small bulk value. Net figures take " + share(1 - m.rip_ev_net_factor) + " off for selling fees and shipping.",
+        "The floor, median and ceiling come from " + n(m.rip_ev_boxes) + " simulated boxes. A product with no published rates gets no row."
+      ] },
+      { id: "calls", h: "Calls", where: "Calls", p: [
+        "A call is dated the day it goes public, with the price it starts from and the rule that decides it, and checked by hand on its check date. Hits and misses both stay up; a call past its check date reads overdue until it is checked."
+      ] },
+      { id: "never", h: "What we never do", where: "Everywhere", p: [
+        "Show a number we can't back: no data is a blank, never a zero or a guess. Quote a licensed price source in public. Tell anyone to buy. Every number shows its source and the date it is from."
+      ] }
+    ];
+  }
+  function renderHow() {
+    load("data/meta.json").then(function (meta) {
+      if (meta) $("#status").textContent = updatedLabel(meta) || $("#status").textContent;
+      var m = {}, given = meta && meta.method && typeof meta.method === "object" ? meta.method : {};
+      Object.keys(METHOD_DEFAULTS).forEach(function (k) { m[k] = isNum(given[k]) ? given[k] : METHOD_DEFAULTS[k]; });
+      if (!meta || !meta.method) { var e = $("#load-error"); if (e) e.hidden = false; }
+      var wrap = $("#how");
+      howSections(m).forEach(function (sec) {
+        wrap.appendChild(el("section", { class: "card how-card", id: sec.id }, [
+          el("div", { class: "kicker", text: sec.where }),
+          el("h2", { class: "how-h", text: sec.h })
+        ].concat(sec.p.map(function (t) { return el("p", { text: t }); }))));
+      });
+      $("#how-note").textContent = "The figures on this page are the ones the nightly feed runs on" + (meta && meta.generated_at ? ", as of " + updatedLabel(meta).replace(/^Updated\s*/, "") : "") + ".";
+    });
+  }
+  function howLink(anchor, text) { return el("a", { class: "today-more", href: "how.html#" + anchor, text: text || "How we price →" }); }
+
   /* ---------- shared ---------- */
   function wireMenu() {
     var b = $("#menu-button"), nav = $("#site-nav");
@@ -1133,6 +1204,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     wireMenu();
     var page = document.body.getAttribute("data-page");
-    if (page === "card") renderCard(); else if (page === "calls") renderCallsPage(); else renderIndex();
+    if (page === "card") renderCard(); else if (page === "calls") renderCallsPage();
+    else if (page === "how") renderHow(); else renderIndex();
   });
 })();

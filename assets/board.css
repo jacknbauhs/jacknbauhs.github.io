@@ -355,3 +355,11 @@ table.data.rip th { white-space: nowrap; }
 .call-record li.verdict span:last-child { font-weight: 600; }
 .call-record li.pending span:last-child { color: var(--muted); }
 @media (max-width: 520px) { .call-record li { grid-template-columns: 1fr; gap: 2px; } }
+
+/* how.html: one card per kind of number */
+.how { display: grid; gap: 16px; margin-top: 32px; }
+.how-card { padding: 20px 22px; }
+.how-h { margin: 6px 0 10px; font-size: 20px; letter-spacing: -0.01em; }
+.how-card p { margin: 0 0 10px; line-height: 1.6; color: var(--text-2); max-width: 72ch; }
+.how-card p:last-child { margin-bottom: 0; }
+.how-link { display: inline-block; margin-top: 8px; font-size: 13px; color: var(--accent-text); }

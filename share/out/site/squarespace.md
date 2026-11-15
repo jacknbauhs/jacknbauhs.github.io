@@ -2,7 +2,7 @@
 
 ## Four tiles (one Markdown block per column, or all four in one block)
 
-[![The File: The biggest dollar move ranked 116th by percent. 116th: Where the biggest dollar move ranks by percent, of 126 cards: Mew - R/RGB, −$1,043 (−19.6%) on the Oct 26 list. No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
+[![The File: The list is a conveyor belt: half the stays last one morning. 10 of 11: Long stays on the 7-day list that were Mega Evolution cards, stretches of five mornings or more; the exception is Latios Prism Star. No sale checked behind any of the four, or any of the 330. Not a read on whether these prices are high or low.](https://board.jacknbauhs.com/share/out/site/tile-file.png)](https://board.jacknbauhs.com)
 
 [![What we couldn't confirm: 4 of 4 moves on this File with no checked sale, each labeled with the reason.](https://board.jacknbauhs.com/share/out/site/tile-flags.png)](https://board.jacknbauhs.com)
 

@@ -1,82 +1,117 @@
 {
-  "as_of": "2026-11-15",
+  "as_of": "2026-11-16",
   "items": [
     {
-      "title": "Pokemon TCG: The Best Delta Reign Cards - Siliconera",
-      "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5GTnBFWURPbndSenNWaWFEeHBWb1Q3OWpUVDJvT3ZxeDBIVG5pdV9ncDJZT3p0Wk1kMF91R2JXTk5Fb1Ita0FnMzRJUFRIX0FZLWFFcERLQVFVcHREZGVJak83bjFsSEFnVmhxOXBocXVOZzZ6?oc=5",
-      "source": "news",
-      "feed": "Delta Reign",
-      "published": "2026-11-08"
-    },
-    {
-      "title": "Pokémon Officially Unveils Ditto Redesign For Series' 30th Anniversary - ScreenRant",
-      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5PVXBpaFFSYmlvYURhWEt1TEZnb3JoLXo5MUJmUGJ0NTNrcFlHWTdxcGlfaVhsWFhNMGNScU5qSkZpMmNRS2pfVm5EZHZkcTB3TXgyR2ZONGNNeTA1MmtFT29FdnFNMDl2VFpSUER0TVo?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-08"
-    },
-    {
-      "title": "Pokemon TCG Fans Can Get Free Delta Reign Packs, But There’s A Catch - OpenCritic",
-      "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOQTlkcVYwSG9DbHNFaXBXWmxsLWdmdl9SX3hlTUxQaEEtczhtWGdiZFZTMV9BdXlXMmhWZHZraXRvbExGdmFiX2VFSXhkREI2akc1SFp5MlF5TWtSUmVQT0YxYWhmWFRuUjBuQlNRLXJhVVN0TV96U1JSeW02bUsxNEVkTXdlYTJGOTRsbHNOUVJ1YVdzVFdvYmlKN05fdEdILWhn?oc=5",
-      "source": "news",
-      "feed": "Delta Reign",
-      "published": "2026-11-08"
-    },
-    {
-      "title": "Pokémon TCG 30th Celebration Elite Trainer Box Available for $59.99 on Amazon - SSBCrack",
-      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNanhwN0VQa28wVmI2VTBVOWJ5RDlPNUNQOC1FLW41YTVxRURKZ05YTnphREJlSEdtVDdHM184WEJiZ3FtLVJ6T01FdWk0ZUFFaHZLMHBXelhQZ3BFX01iVXBSRFpLQzJxZWJJdVR2c29mVVlaY1RiSTVPRVFmSFpTTXR6dkFiVlE3dnk5bFhrb1FFLV95TmtyeEFUQzllc2MyYm1nYUd3?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-08"
-    },
-    {
-      "title": "Pokémon TCG: 30th Celebration Elite Trainer Box - Howl.Link",
-      "url": "https://news.google.com/rss/articles/CBMiO0FVX3lxTE1CZ1FpTlFER2hyLUlXSXktYXUtRjE5MEhIYWFjRGZtOHZwbU1xMkRSTjdLS0FXVjJobTNN?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-07"
-    },
-    {
-      "title": "Pokémon's Official Gengar Redesign Is The Perfect 30th Anniversary Celebration - ScreenRant",
-      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5sRTQwLXg4ZG9Ha0I1MGJGVXRNVXRWVzFBLTFYRHdIZ1l2TWYyX2dZNUdHaC1Wa0pKRko2QlI2eFlLZ3FscWVBUHM2N0RvSkJyV2RMV0RCTlFxdW5FbkRmM2FqWGZHYjRGVnVxdVdsOUFPbDYxSVIxZ2dDT3FLWHM?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-07"
-    },
-    {
-      "title": "Pokémon TCG 30th Celebration: complete set guide, card list and products - Kanto Post",
-      "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFB4OHhhdU4zTWdFa2ZGTEpBNU9MSVQ4emdjdnFGTEFFS0ZhRzNqVV9DcGlCaV9LSHVGeFhNYlFtajRHVU9oRkFIajlocDVrT0N4T0xFT1gtT0JOeEVlak1WbDhGZXJUWUVnc2kzbXQxN19sU3c?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-07"
-    },
-    {
-      "title": "Thieves Rammed a Pickup Into a Tacoma Card Shop and Took $50,000 in Pokémon and Magic Cards - TalkEsport",
-      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQcVQwYmVkZDdHV1NJMFpwVTFZOHZra3M5X3NMWFFUMTd1dDR3T1RTNV9tOHE0VDE4aTFCSlFzdEZXZVE3aTgtLS1qQ29iMXhPOHMxTWhPcXp0LWcxSjltdWtGb3VUdHhZb1B0ZURsMmRFTDRRdzR4WG9OV0hzdWZXS1REcTBlUTRBRWFvN2wtYnpZdkVUZ2c?oc=5",
-      "source": "news",
-      "feed": "30th Celebration",
-      "published": "2026-11-07"
-    },
-    {
-      "title": "Why Rarity is King",
-      "url": "https://www.youtube.com/shorts/D9ljOyNRAb8",
-      "source": "youtube",
-      "feed": "TwiceBaked Jake",
-      "published": "2026-11-01"
-    },
-    {
-      "title": "DECIMATED Rivals",
-      "url": "https://www.youtube.com/watch?v=oyfrY_F7cNk",
+      "title": "The Pokemon Card Market is COLLAPSING...But NOT EVERY CARD",
+      "url": "https://www.youtube.com/watch?v=ytTc9XEPeQk",
       "source": "youtube",
       "feed": "Danny Phantump",
-      "published": "2026-11-01"
+      "published": "2026-11-15"
     },
     {
-      "title": "*New* 30th Celebration Drops & More Pokemon Products Hitting Stores This Week",
-      "url": "https://www.youtube.com/watch?v=lJY40udzL0c",
+      "title": "The best early Black Friday trading card deals: Save on Pokémon, Magic: The Gathering, and Yu-Gi-Oh! - Mashable",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBWQldyMUswbTBmNll2NFNkQnNhRlRNUktmTlBraHM1Z1BSS2I3UkJLTDcxRDJQNjItUVZ5MEdOWUNZaE1taWVDZUN1OV9uUTVBTUpJM1h1MFBDYXJLLUxLOV9Rc0h6Z2taWXM4Q00wdGtBeVhsczF2WXU4ZzhHdw?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-15"
+    },
+    {
+      "title": "Delta Reign ETB & 30th Celebration UPC Back on Amazon Ahead of Black Friday - Joseph Writer Anderson",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOVk1tQnU3WnphcGR6azY5YVNYTjBrYWkxVVE1NzV6SXc2c2NLS2YzZ3ZtbEhTT2N2MjJpNWY0ZzhHRE8zYV9RUWpfNHpob3FnTkRlNUVVdC1Fc3lremRkTWRPRGFqVVl2V2xDN1d5N2swUlFHU0UtZEVMeGtNQUUtcUlaMzBPdi1WY2hKUnNicmc4UnNHSjUxamlyWEVmWTlGY2c?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-15"
+    },
+    {
+      "title": "10 Most Valuable Pokémon Cards From 2026, Ranked by Price - Comic Book Resources",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1rbzlJeHpiV2RJdS10SXIySWUteE5oQkRST3YxTTBtQ1N0ZWx2TWFoRy1zbnBoeTdSZ21lLXBUVWxoOVplWVdPR25vYVpKNkVjS2wzcDlYeVFVR3JwUm5mRmV6NEVRYzJDQUxmZENNU29kR0pybHhkeQ?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-14"
+    },
+    {
+      "title": "Costco's new Pokémon 30th Anniversary bundle is unbelievable - Polygon.com",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTjg5NF9Qa09KSzJtbEVyVVVRWlRxbVV3RHVKRWthNTlzRzZNdEMzZGsyNzlzMEZiZTg5Mi1kNm0xcjN6V3NLajlnOHNDTU40aDFyQ05sYTFCX3BMbGp6X1hvS0J3a2RMSnZiS0RpM3pSVnNiWFVaYnhnU05IS0xfRFp1ekVIOEFEX3VDcGo4NG53c3RuZTUtYlU5T2s5RzRwY2hxSQ?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "Delta Reign is CRASHING…Pokemon is HEALING",
+      "url": "https://www.youtube.com/watch?v=Cskk_FdUZAM",
+      "source": "youtube",
+      "feed": "Danny Phantump",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "Is GameStop’s New Promo Power Pack Worth It?",
+      "url": "https://www.youtube.com/shorts/DVmG5_j-a1M",
       "source": "youtube",
       "feed": "TwiceBaked Jake",
-      "published": "2026-11-01"
+      "published": "2026-11-13"
+    },
+    {
+      "title": "Pokémon TCG Mega Evolution—Delta Reign Expansion Launches with Mega Rayquaza ex - THE MAGIC RAIN",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQeF82bVAxYWRJdi1NZ3hsU2hwbHJrRjAzd1RLYVpBcFhSLWJyOEhYcE5CN2tLTm9YTV95b2tLRmtuT0tBeFJMdFRvb0VtTEJXY3JoVWI2aDA0VkVBRENNSzVWQjI2blhHT2NNNUEtS1kwMzFwS0J6bmUwNHFqdE94MVVpYm9nUmNNd3FmTjZzX3UyWDdvYjJGQjQtdHVieXk0TUVlVG1sMVFsblJOa1lUMXhqYw?oc=5",
+      "source": "news",
+      "feed": "Delta Reign",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "Walmart's Black Friday deals: Pokémon 30th Anniversary and more TCG surprises - Polygon.com",
+      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQMXJTRGVzSzNPbXh4dkcwdEJvMl9MUFdpa1BTeHYzOGpndUlKRnpyeHQ2UWRTWmlubGJ4VFVXbTRTVDBhRlB5WHZ6aURGS296WUlDXzJWMFhIWmdzYjRaYWozSUFLOFhtZ1NwUXVvdkNfdHd2ak1vRDFZV2JZTnNaVVpZYmVmbDFIdzd1eVpyWVdYMW8zZGRZZnpxOA?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "Pokémon fans ‘battle’ as brawls erupt in Harrods and Westfield for new cards release - London Now",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxQaGFYQm5zeTlKSmVRMTFrbTd5M2VlSWxSdDRvLTFVRlo3V0JLczZBNFBIRnNBd0c0VV93QkZCVGVNU2lTLWFxT1NnRm9xYlNSblZqbGdyR0lvLUMzaHAzcGxOdzdXWkR0QW40N3RtLUhDUGItSzBETHQ0WVFkalJZdUVoSzVzamZkdXZBeDdlLXlFRzlw?oc=5",
+      "source": "news",
+      "feed": "30th Celebration",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "We Ranked Every Pokemon TCG Set Of 2026 From Worst To Best - TheGamer",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1mRnZpbW5xdTN6S2RMcDJ1NE42RDA3Ui1mdHVzelpmUGk3ZTFiaVNkMmNyODZjbVdEY19zbzJzQ1JzUVNsTVIwRUZvbU14TnFjYmhDU0Z4eXZoZDIxNDJ1cVMwQmc?oc=5",
+      "source": "news",
+      "feed": "Delta Reign",
+      "published": "2026-11-13"
+    },
+    {
+      "title": "BEWARE of The 30th Anniversary UPC TRAP!",
+      "url": "https://www.youtube.com/watch?v=ZbueZIxwfA0",
+      "source": "youtube",
+      "feed": "Danny Phantump",
+      "published": "2026-11-11"
+    },
+    {
+      "title": "Why 30th Celebration Products Aren't Dropping Even As Singles Crash",
+      "url": "https://www.youtube.com/watch?v=HNWk64xlkh0",
+      "source": "youtube",
+      "feed": "TwiceBaked Jake",
+      "published": "2026-11-10"
+    },
+    {
+      "title": "Are Cosmic Eclipse Secret Rares Slept On?",
+      "url": "https://www.youtube.com/shorts/YNKS2byNGKI",
+      "source": "youtube",
+      "feed": "TwiceBaked Jake",
+      "published": "2026-11-10"
+    },
+    {
+      "title": "The SLOW DECLINE of 25th Anniversary Pokemon Cards",
+      "url": "https://www.youtube.com/watch?v=GuwAavLOrEE",
+      "source": "youtube",
+      "feed": "Danny Phantump",
+      "published": "2026-11-09"
+    },
+    {
+      "title": "Update: Selling Pokémon Cards to Pay Off my Mortgage",
+      "url": "https://www.youtube.com/shorts/jOMYg7oqthM",
+      "source": "youtube",
+      "feed": "TwiceBaked Jake",
+      "published": "2026-11-09"
     }
   ]
 }

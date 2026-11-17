@@ -1,8 +1,16 @@
 {
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-16",
   "headline": {
     "value": 0.0,
     "label": "of sold dollar volume flagged, week of Nov 9"
   },
-  "items": []
+  "items": [
+    {
+      "name": "Charizard SIR (151) · PSA 10",
+      "set": "Pokemon Card 151",
+      "claimed_change_pct": 33.5,
+      "label": "THIN_SPIKE",
+      "why": "far above recent sales, thin volume"
+    }
+  ]
 }

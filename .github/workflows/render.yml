@@ -7,6 +7,8 @@ on:
       - "data/**"
       - "share/templates/**"
       - "share/render.py"
+      - "pages/**"
+      - "card.html"
       - ".github/workflows/render.yml"
   workflow_dispatch:
 
@@ -39,11 +41,13 @@ jobs:
           code=$?
           set -e
           if [ "$code" -ne 0 ] && [ "$code" -ne 2 ]; then exit "$code"; fi
+      - name: Build the card pages
+        run: python pages/build.py
       - name: Commit what changed
         run: |
           git config user.name "board-render"
           git config user.email "board-render@users.noreply.github.com"
-          git add share/out assets/og.png index.html card.html 404.html
+          git add share/out assets/og.png index.html card.html 404.html calls.html how.html pokemon sitemap.xml
           if git diff --cached --quiet; then
             echo "Nothing changed."
             exit 0

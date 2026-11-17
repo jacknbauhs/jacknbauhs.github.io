@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-16
+# Captions, board data of 2026-11-17
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 15, 2026.
+- ✅ Prices are from Nov 16, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -19,6 +19,12 @@ Alt: The File on the Astronaut Time board: 48 mornings, no gaps. The prices are 
 4 of 4 moves on this File with no checked sale. Mission Control hasn't checked a sale behind any of the 4 moves on this File. With no checked sales, a move shows only if it's 60% or less over 7 days, TCGplayer's lowest listing moved the same way by at least a quarter as much, the price changed in the last 2 days, and the card trades. Pikachu ex - 109 (30th Celebration), Nov 13: $27.15, −55.3% in 7 days; no checked sale. Mewtwo EX - BW45, Nov 12: $30.16, −35.8% in 7 days; no checked sale. Giratina (Team Plasma), Nov 11: $451.70, +29.7% in 7 days; no checked sale. Snorlax, Nov 11: $286.31, +25.7% in 7 days; no checked sale. Every one is on the board with its label. Prices are TCGplayer's market price after the move. Source: The board repository's own commit history, Sep 28 to Nov 14, 2026 ("Board data" commits and each morning's meta.json); TCGplayer market prices via tcgcsv.com. board.jacknbauhs.com
 
 Alt: What we couldn't confirm: 4 of 4 moves on this File with no checked sale, all 4 listed one per line with the day, the card, the change and the TCGplayer market price after it.
+
+## flag-2026-11-16-feed-01-charizard-sir-151-psa-10-thin-spike.png
+
+Charizard SIR (151) · PSA 10 (Pokemon Card 151): the chart says +34%. Far above recent sales, thin volume. Label: thin spike. Up on a handful of sales, with no volume behind it. board.jacknbauhs.com
+
+Alt: Flagged move: Charizard SIR (151) · PSA 10, a claimed +34%, labeled thin spike. Far above recent sales, thin volume.
 
 ## call-001-2026-09-28.png
 
@@ -44,8 +50,8 @@ Three calls on the record. #001: The 30th Celebration Booster Bundle's premium c
 
 Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle's premium collapses once it ships Oct 2. The ETB holds its premium better. Number 002: Base Set Charizard PSA 10 holds its price. The graded population is closed, so the reprint can't enter it. Number 003: Raw Base Set Charizard is down 10% or more by Oct 30. The reprint lands on the raw copies.
 
-## moving-2026-W46.png
+## moving-2026-W47.png
 
-What's moving on TCGplayer, as of Nov 15, 2026. Ten moves of 5% or more made the list in the last 7 days. Raikou ex (ME06: Delta Reign · 136/103 · Holofoil): $131.75, +53.6%, unconfirmed. Raichu (EX FireRed & LeafGreen · 12/112 · Holofoil): $65, +44.3%, unconfirmed. Infernape (Stormfront · 3/100 · Holofoil): $81.29, +43.7%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $33.58, +43.4%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $39.50, −37.1%, unconfirmed. Enamorus - 113 [Staff] (ME: Mega Evolution Promo · 113 · Holofoil): $27.80, −36.6%, unconfirmed. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $23.29, −36.3%, unconfirmed. Magmortar - 112 [Staff] (ME: Mega Evolution Promo · 112 · Holofoil): $28.74, −29.8%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 15, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 16, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $21.96, −49.9%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $38.61, −48.9%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $32.68, +37.6%, unconfirmed. Enamorus - 113 [Staff] (ME: Mega Evolution Promo · 113 · Holofoil): $26.75, −37.2%, unconfirmed. Magmortar - 112 [Staff] (ME: Mega Evolution Promo · 112 · Holofoil): $28.44, −30.3%, unconfirmed. Lugia GX (SM - Lost Thunder · 159/214 · Holofoil): $53.76, +27.6%, unconfirmed. Masquerain - 111 [Staff] (ME: Mega Evolution Promo · 111 · Holofoil): $24.50, −26.5%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $24.86, −26.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 16, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

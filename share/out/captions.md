@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-17
+# Captions, board data of 2026-11-18
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 16, 2026.
+- ✅ Prices are from Nov 17, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -52,6 +52,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W47.png
 
-What's moving on TCGplayer, as of Nov 16, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $21.96, −49.9%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $38.61, −48.9%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $32.68, +37.6%, unconfirmed. Enamorus - 113 [Staff] (ME: Mega Evolution Promo · 113 · Holofoil): $26.75, −37.2%, unconfirmed. Magmortar - 112 [Staff] (ME: Mega Evolution Promo · 112 · Holofoil): $28.44, −30.3%, unconfirmed. Lugia GX (SM - Lost Thunder · 159/214 · Holofoil): $53.76, +27.6%, unconfirmed. Masquerain - 111 [Staff] (ME: Mega Evolution Promo · 111 · Holofoil): $24.50, −26.5%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $24.86, −26.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 16, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 17, 2026. Ten moves of 5% or more made the list in the last 7 days. Pikachu ex - 107 (30th Celebration) (ME: Mega Evolution Promo · 107 · Holofoil): $22.08, −52.5%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $37.72, −50.1%, unconfirmed. Raikou ex (ME06: Delta Reign · 136/103 · Holofoil): $116.01, +43.8%, unconfirmed. Enamorus - 113 [Staff] (ME: Mega Evolution Promo · 113 · Holofoil): $25.96, −39.5%, unconfirmed. Pikachu ex - 109 (30th Celebration) (ME: Mega Evolution Promo · 109 · Holofoil): $25.36, −34.4%, unconfirmed. Magmortar - 112 [Staff] (ME: Mega Evolution Promo · 112 · Holofoil): $27.77, −29.7%, unconfirmed. Umbreon ex - 110 (30th Celebration) (ME: Mega Evolution Promo · 110 · Holofoil): $66.12, −27.4%, unconfirmed. Mewtwo - 51/108 (Cracked Ice Holo) (Deck Exclusives · 051/108 · Holofoil): $53.22, +26.6%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 17, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

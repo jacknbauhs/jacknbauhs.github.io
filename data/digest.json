@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-17",
+  "as_of": "2026-11-18",
   "daily": {
-    "date": "2026-11-17",
+    "date": "2026-11-18",
     "movers": [
       {
         "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -49.9,
+        "change_pct": -52.5,
         "label": "UNCONFIRMED",
-        "price": 21.96,
-        "observed": "2026-11-16"
+        "price": 22.08,
+        "observed": "2026-11-17"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -48.9,
+        "change_pct": -50.1,
         "label": "UNCONFIRMED",
-        "price": 38.61,
-        "observed": "2026-11-16"
+        "price": 37.72,
+        "observed": "2026-11-17"
       },
       {
-        "name": "Kecleon - 117/103",
+        "name": "Raikou ex",
         "set": "ME06: Delta Reign",
-        "change_pct": 37.6,
+        "change_pct": 43.8,
         "label": "UNCONFIRMED",
-        "price": 32.68,
-        "observed": "2026-11-16"
+        "price": 116.01,
+        "observed": "2026-11-17"
       },
       {
         "name": "Enamorus - 113 [Staff]",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -37.2,
+        "change_pct": -39.5,
         "label": "UNCONFIRMED",
-        "price": 26.75,
-        "observed": "2026-11-16"
-      },
-      {
-        "name": "Magmortar - 112 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -30.3,
-        "label": "UNCONFIRMED",
-        "price": 28.44,
-        "observed": "2026-11-16"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Team Rocket's Zapdos",
-        "set": "Deck Exclusives",
-        "change_pct": -22.2,
-        "label": "UNCONFIRMED",
-        "price": 23.33,
-        "observed": "2026-11-16"
-      },
-      {
-        "name": "Team Rocket's Wobbuffet",
-        "set": "Deck Exclusives",
-        "change_pct": -16.6,
-        "label": "UNCONFIRMED",
-        "price": 25.0,
-        "observed": "2026-11-16"
+        "price": 25.96,
+        "observed": "2026-11-17"
       },
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -10.4,
+        "change_pct": -34.4,
         "label": "UNCONFIRMED",
-        "price": 24.86,
-        "observed": "2026-11-16"
+        "price": 25.36,
+        "observed": "2026-11-17"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Groudon - 113/236 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 9.9,
+        "label": "UNCONFIRMED",
+        "price": 23.15,
+        "observed": "2026-11-17"
       },
       {
-        "name": "Pikachu ex - 107 (30th Celebration)",
+        "name": "Doublade - 067 [Staff]",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -5.7,
+        "change_pct": 9.8,
         "label": "UNCONFIRMED",
-        "price": 21.96,
-        "observed": "2026-11-16"
+        "price": 27.22,
+        "observed": "2026-11-17"
       },
       {
-        "name": "Squirtle - 039",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 5.4,
+        "name": "Raikou ex",
+        "set": "ME06: Delta Reign",
+        "change_pct": -9.2,
         "label": "UNCONFIRMED",
-        "price": 21.52,
-        "observed": "2026-11-16"
+        "price": 116.01,
+        "observed": "2026-11-17"
+      },
+      {
+        "name": "Kecleon - 117/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -8.2,
+        "label": "UNCONFIRMED",
+        "price": 30.0,
+        "observed": "2026-11-17"
+      },
+      {
+        "name": "Masquerain - 111 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -6.7,
+        "label": "UNCONFIRMED",
+        "price": 22.87,
+        "observed": "2026-11-17"
       }
     ],
     "calls_due": [

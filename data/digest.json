@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "daily": {
-    "date": "2026-11-18",
+    "date": "2026-11-19",
     "movers": [
       {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -52.5,
+        "name": "Groudon (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 58.5,
         "label": "UNCONFIRMED",
-        "price": 22.08,
-        "observed": "2026-11-17"
+        "price": 45.08,
+        "observed": "2026-11-18"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -50.1,
+        "change_pct": -49.7,
         "label": "UNCONFIRMED",
-        "price": 37.72,
-        "observed": "2026-11-17"
+        "price": 33.5,
+        "observed": "2026-11-18"
       },
       {
-        "name": "Raikou ex",
-        "set": "ME06: Delta Reign",
-        "change_pct": 43.8,
-        "label": "UNCONFIRMED",
-        "price": 116.01,
-        "observed": "2026-11-17"
-      },
-      {
-        "name": "Enamorus - 113 [Staff]",
+        "name": "Pikachu ex - 107 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -39.5,
+        "change_pct": -46.9,
         "label": "UNCONFIRMED",
-        "price": 25.96,
-        "observed": "2026-11-17"
+        "price": 21.66,
+        "observed": "2026-11-18"
       },
       {
         "name": "Pikachu ex - 109 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -34.4,
+        "change_pct": -35.7,
         "label": "UNCONFIRMED",
-        "price": 25.36,
-        "observed": "2026-11-17"
+        "price": 23.53,
+        "observed": "2026-11-18"
+      },
+      {
+        "name": "Enamorus - 113 [Staff]",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -33.2,
+        "label": "UNCONFIRMED",
+        "price": 21.61,
+        "observed": "2026-11-18"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Groudon - 113/236 (Cracked Ice Holo)",
+        "name": "Lillie's Clefairy ex - 280/217",
+        "set": "ME: Ascended Heroes",
+        "change_pct": -23.6,
+        "label": "UNCONFIRMED",
+        "price": 62.22,
+        "observed": "2026-11-18"
+      },
+      {
+        "name": "Mega Darkrai ex - 120/084",
+        "set": "ME05: Pitch Black",
+        "change_pct": -14.5,
+        "label": "UNCONFIRMED",
+        "price": 98.0,
+        "observed": "2026-11-18"
+      },
+      {
+        "name": "Jessie & James (Full Art)",
+        "set": "Hidden Fates",
+        "change_pct": -13.7,
+        "label": "UNCONFIRMED",
+        "price": 59.63,
+        "observed": "2026-11-18"
+      },
+      {
+        "name": "Leafeon - 11/116 (BW Plasma Freeze)",
         "set": "Deck Exclusives",
-        "change_pct": 9.9,
+        "change_pct": 13.0,
         "label": "UNCONFIRMED",
-        "price": 23.15,
-        "observed": "2026-11-17"
+        "price": 22.88,
+        "observed": "2026-11-18"
       },
       {
-        "name": "Doublade - 067 [Staff]",
+        "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": 9.8,
+        "change_pct": -11.2,
         "label": "UNCONFIRMED",
-        "price": 27.22,
-        "observed": "2026-11-17"
-      },
-      {
-        "name": "Raikou ex",
-        "set": "ME06: Delta Reign",
-        "change_pct": -9.2,
-        "label": "UNCONFIRMED",
-        "price": 116.01,
-        "observed": "2026-11-17"
-      },
-      {
-        "name": "Kecleon - 117/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -8.2,
-        "label": "UNCONFIRMED",
-        "price": 30.0,
-        "observed": "2026-11-17"
-      },
-      {
-        "name": "Masquerain - 111 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -6.7,
-        "label": "UNCONFIRMED",
-        "price": 22.87,
-        "observed": "2026-11-17"
+        "price": 33.5,
+        "observed": "2026-11-18"
       }
     ],
     "calls_due": [

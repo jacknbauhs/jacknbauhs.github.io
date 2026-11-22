@@ -1,31 +1,15 @@
 {
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-22",
   "daily": {
-    "date": "2026-11-21",
+    "date": "2026-11-22",
     "movers": [
-      {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -43.3,
-        "label": "UNCONFIRMED",
-        "price": 32.78,
-        "observed": "2026-11-20"
-      },
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -36.9,
-        "label": "UNCONFIRMED",
-        "price": 20.76,
-        "observed": "2026-11-20"
-      },
       {
         "name": "Lillie's Clefairy ex - 280/217",
         "set": "ME: Ascended Heroes",
-        "change_pct": -31.8,
+        "change_pct": -31.3,
         "label": "UNCONFIRMED",
-        "price": 60.33,
-        "observed": "2026-11-20"
+        "price": 60.89,
+        "observed": "2026-11-21"
       },
       {
         "name": "Zapdos",
@@ -33,57 +17,73 @@
         "change_pct": 30.7,
         "label": "UNCONFIRMED",
         "price": 79.75,
-        "observed": "2026-11-20"
+        "observed": "2026-11-21"
       },
       {
-        "name": "Kyogre - 117 (Pokemon Center Exclusive)",
+        "name": "Magmortar - 112 [Staff]",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -30.6,
+        "change_pct": -28.7,
         "label": "UNCONFIRMED",
-        "price": 49.32,
-        "observed": "2026-11-20"
+        "price": 20.52,
+        "observed": "2026-11-21"
+      },
+      {
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -25.1,
+        "label": "UNCONFIRMED",
+        "price": 31.58,
+        "observed": "2026-11-21"
+      },
+      {
+        "name": "Kecleon - 117/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -23.5,
+        "label": "UNCONFIRMED",
+        "price": 23.68,
+        "observed": "2026-11-21"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Xatu - 059 (Prerelease) [Staff]",
-        "set": "SV: Scarlet & Violet Promo Cards",
-        "change_pct": 7.2,
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 5.6,
         "label": "UNCONFIRMED",
-        "price": 24.1,
-        "observed": "2026-11-20"
+        "price": 21.92,
+        "observed": "2026-11-21"
       },
       {
-        "name": "Lucario - 14/95 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 6.0,
+        "name": "Giovanni's Persian",
+        "set": "Gym Challenge",
+        "change_pct": -4.9,
         "label": "UNCONFIRMED",
-        "price": 38.15,
-        "observed": "2026-11-20"
+        "price": 49.5,
+        "observed": "2026-11-21"
       },
       {
-        "name": "Light Jolteon",
-        "set": "Neo Destiny",
-        "change_pct": -4.4,
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": -3.7,
         "label": "UNCONFIRMED",
-        "price": 82.62,
-        "observed": "2026-11-20"
+        "price": 31.58,
+        "observed": "2026-11-21"
       },
       {
-        "name": "Muk & Alolan Muk GX",
-        "set": "SM - Unbroken Bonds",
-        "change_pct": -4.2,
+        "name": "Tyranitar (Prerelease)",
+        "set": "XY Promos",
+        "change_pct": 3.4,
         "label": "UNCONFIRMED",
-        "price": 22.36,
-        "observed": "2026-11-20"
+        "price": 66.41,
+        "observed": "2026-11-21"
       },
       {
-        "name": "Umbreon & Darkrai GX - SM241",
-        "set": "SM Promos",
-        "change_pct": 3.2,
+        "name": "M Charizard EX (Full Art)",
+        "set": "XY - Evolutions",
+        "change_pct": -3.4,
         "label": "UNCONFIRMED",
-        "price": 204.54,
-        "observed": "2026-11-20"
+        "price": 114.7,
+        "observed": "2026-11-21"
       }
     ],
     "calls_due": [
@@ -114,7 +114,7 @@
       "value": 0.0,
       "label": "of sold dollar volume flagged, week of Nov 9"
     },
-    "flagged_cards": 1,
+    "flagged_cards": 0,
     "rip_ev": []
   }
 }

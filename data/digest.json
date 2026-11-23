@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-23",
   "daily": {
-    "date": "2026-11-22",
+    "date": "2026-11-23",
     "movers": [
       {
         "name": "Lillie's Clefairy ex - 280/217",
         "set": "ME: Ascended Heroes",
-        "change_pct": -31.3,
+        "change_pct": -30.6,
         "label": "UNCONFIRMED",
-        "price": 60.89,
-        "observed": "2026-11-21"
-      },
-      {
-        "name": "Zapdos",
-        "set": "Majestic Dawn",
-        "change_pct": 30.7,
-        "label": "UNCONFIRMED",
-        "price": 79.75,
-        "observed": "2026-11-21"
-      },
-      {
-        "name": "Magmortar - 112 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -28.7,
-        "label": "UNCONFIRMED",
-        "price": 20.52,
-        "observed": "2026-11-21"
-      },
-      {
-        "name": "Espeon ex - 108 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -25.1,
-        "label": "UNCONFIRMED",
-        "price": 31.58,
-        "observed": "2026-11-21"
+        "price": 64.23,
+        "observed": "2026-11-22"
       },
       {
         "name": "Kecleon - 117/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -23.5,
+        "change_pct": -29.5,
         "label": "UNCONFIRMED",
-        "price": 23.68,
-        "observed": "2026-11-21"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Pikachu ex - 107 (30th Celebration)",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": 5.6,
-        "label": "UNCONFIRMED",
-        "price": 21.92,
-        "observed": "2026-11-21"
+        "price": 22.82,
+        "observed": "2026-11-22"
       },
       {
-        "name": "Giovanni's Persian",
-        "set": "Gym Challenge",
-        "change_pct": -4.9,
+        "name": "Giratina (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 27.0,
         "label": "UNCONFIRMED",
-        "price": 49.5,
-        "observed": "2026-11-21"
+        "price": 47.99,
+        "observed": "2026-11-22"
+      },
+      {
+        "name": "Zarude (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 24.0,
+        "label": "UNCONFIRMED",
+        "price": 63.13,
+        "observed": "2026-11-22"
       },
       {
         "name": "Espeon ex - 108 (30th Celebration)",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": -3.7,
+        "change_pct": -22.4,
         "label": "UNCONFIRMED",
-        "price": 31.58,
-        "observed": "2026-11-21"
+        "price": 31.47,
+        "observed": "2026-11-22"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Zarude (What's Your Favorite Stamp)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 10.0,
+        "label": "UNCONFIRMED",
+        "price": 63.13,
+        "observed": "2026-11-22"
       },
       {
-        "name": "Tyranitar (Prerelease)",
-        "set": "XY Promos",
-        "change_pct": 3.4,
+        "name": "Mega Darkrai ex - 120/084",
+        "set": "ME05: Pitch Black",
+        "change_pct": 7.5,
         "label": "UNCONFIRMED",
-        "price": 66.41,
-        "observed": "2026-11-21"
+        "price": 105.66,
+        "observed": "2026-11-22"
       },
       {
-        "name": "M Charizard EX (Full Art)",
-        "set": "XY - Evolutions",
-        "change_pct": -3.4,
+        "name": "Team Rocket's Wobbuffet",
+        "set": "Deck Exclusives",
+        "change_pct": -6.7,
         "label": "UNCONFIRMED",
-        "price": 114.7,
-        "observed": "2026-11-21"
+        "price": 23.33,
+        "observed": "2026-11-22"
+      },
+      {
+        "name": "Eevee - 114/103",
+        "set": "ME06: Delta Reign",
+        "change_pct": -6.0,
+        "label": "UNCONFIRMED",
+        "price": 21.15,
+        "observed": "2026-11-22"
+      },
+      {
+        "name": "Lillie's Clefairy ex - 280/217",
+        "set": "ME: Ascended Heroes",
+        "change_pct": 5.5,
+        "label": "UNCONFIRMED",
+        "price": 64.23,
+        "observed": "2026-11-22"
       }
     ],
     "calls_due": [
@@ -105,14 +105,14 @@
     ],
     "flags_headline": {
       "value": 0.0,
-      "label": "of sold dollar volume flagged, week of Nov 9"
+      "label": "of sold dollar volume flagged, week of Nov 16"
     }
   },
   "weekly": {
-    "week_of": "2026-11-09",
+    "week_of": "2026-11-16",
     "flags_headline": {
       "value": 0.0,
-      "label": "of sold dollar volume flagged, week of Nov 9"
+      "label": "of sold dollar volume flagged, week of Nov 16"
     },
     "flagged_cards": 0,
     "rip_ev": []

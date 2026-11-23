@@ -1,12 +1,12 @@
-# Captions, board data of 2026-11-22
+# Captions, board data of 2026-11-23
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 21, 2026.
+- ✅ Prices are from Nov 22, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
-- ⚠️ All 6 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
+- ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
 ## file-2026-12-05-cover.png
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W47.png
 
-What's moving on TCGplayer, as of Nov 21, 2026. Ten moves of 5% or more made the list in the last 7 days. Lillie's Clefairy ex - 280/217 (ME: Ascended Heroes · 280/217 · Holofoil): $60.89, −31.3%, unconfirmed. Zapdos (Majestic Dawn · 14/100 · Holofoil): $79.75, +30.7%, unconfirmed. Magmortar - 112 [Staff] (ME: Mega Evolution Promo · 112 · Holofoil): $20.52, −28.7%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $31.58, −25.1%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $23.68, −23.5%, unconfirmed. Zarude (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 056/084 · Holofoil): $57.41, +21.3%, unconfirmed. Torterra (Diamond and Pearl · 17/130 · Holofoil): $23.99, +18.5%, unconfirmed. Jessie & James (Full Art) (Hidden Fates · 68/68 · Holofoil): $56.44, −17.6%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 21, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 22, 2026. Ten moves of 5% or more made the list in the last 7 days. Lillie's Clefairy ex - 280/217 (ME: Ascended Heroes · 280/217 · Holofoil): $64.23, −30.6%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $22.82, −29.5%, unconfirmed. Giratina (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 045/103 · Holofoil): $47.99, +27.0%, unconfirmed. Zarude (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 056/084 · Holofoil): $63.13, +24.0%, unconfirmed. Espeon ex - 108 (30th Celebration) (ME: Mega Evolution Promo · 108 · Holofoil): $31.47, −22.4%, unconfirmed. Team Rocket's Zapdos (Deck Exclusives · 070/182): $22.50, −22.2%, unconfirmed. Kyogre - 117 (Pokemon Center Exclusive) (ME: Mega Evolution Promo · 117 · Holofoil): $51.14, −21.4%, unconfirmed. Jessie & James (Full Art) (Hidden Fates · 68/68 · Holofoil): $54.96, −19.4%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 22, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

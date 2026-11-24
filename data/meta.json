@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-11-23T14:15:00+00:00",
+  "generated_at": "2026-11-24T14:15:00+00:00",
   "sources": [
     {
       "id": "tcgcsv",
       "name": "TCGplayer market prices via tcgcsv.com",
-      "as_of": "2026-11-22"
+      "as_of": "2026-11-23"
     },
     {
       "id": "sales",
       "name": "eBay sold listings and logged sales, checked by the Sale Integrity Layer",
-      "as_of": "2026-11-21"
+      "as_of": "2026-11-22"
     },
     {
       "id": "pull_rates",

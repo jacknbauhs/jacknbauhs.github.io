@@ -1,12 +1,12 @@
-# Captions, board data of 2026-11-25
+# Captions, board data of 2026-11-26
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 24, 2026.
+- ✅ Prices are from Nov 25, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
-- ⚠️ All 9 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
+- ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
 ## file-2026-12-05-cover.png
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W48.png
 
-What's moving on TCGplayer, as of Nov 24, 2026. Ten moves of 5% or more made the list in the last 7 days. Zarude (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 056/084 · Holofoil): $71.01, +49.9%, unconfirmed. Pikachu EX - XY174 (XY Promos · XY174 · Holofoil): $88.68, +38.7%, unconfirmed. Xatu - 059 (Prerelease) [Staff] (SV: Scarlet & Violet Promo Cards · 059 · Holofoil): $30.26, +36.2%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $22.42, −31.4%, unconfirmed. Lillie's Clefairy ex - 280/217 (ME: Ascended Heroes · 280/217 · Holofoil): $66.44, −24.7%, unconfirmed. Jessie & James (Full Art) (Hidden Fates · 68/68 · Holofoil): $52.81, −22.6%, unconfirmed. Raikou ex (ME06: Delta Reign · 136/103 · Holofoil): $97.80, −20.9%, unconfirmed. Eternatus V - 116/189 (Prize Pack Series Cards · 116/189 · Holofoil): $53.80, +18.4%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 24, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 25, 2026. Ten moves of 5% or more made the list in the last 7 days. Xatu - 059 (Prerelease) [Staff] (SV: Scarlet & Violet Promo Cards · 059 · Holofoil): $31.48, +34.5%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $21.83, −25.6%, unconfirmed. Eternatus V - 116/189 (Prize Pack Series Cards · 116/189 · Holofoil): $53.80, +23.4%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $42.92, +22.0%, unconfirmed. Bulbasaur (Pokemon Day 2026) (Miscellaneous Cards & Products · 001/132 · Holofoil): $40.76, +15.7%, unconfirmed. Raikou ex (ME06: Delta Reign · 136/103 · Holofoil): $97.15, −15.7%, unconfirmed. Typhlosion - 32/123 (Cracked Ice Holo) (Deck Exclusives · 032/123 · Holofoil): $32.93, +15.6%, unconfirmed. Kyogre (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 026/103 · Holofoil): $20, −15.3%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 25, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

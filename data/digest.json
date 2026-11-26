@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-25",
+  "as_of": "2026-11-26",
   "daily": {
-    "date": "2026-11-25",
+    "date": "2026-11-26",
     "movers": [
-      {
-        "name": "Zarude (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": 49.9,
-        "label": "UNCONFIRMED",
-        "price": 71.01,
-        "observed": "2026-11-24"
-      },
-      {
-        "name": "Pikachu EX - XY174",
-        "set": "XY Promos",
-        "change_pct": 38.7,
-        "label": "UNCONFIRMED",
-        "price": 88.68,
-        "observed": "2026-11-24"
-      },
       {
         "name": "Xatu - 059 (Prerelease) [Staff]",
         "set": "SV: Scarlet & Violet Promo Cards",
-        "change_pct": 36.2,
+        "change_pct": 34.5,
         "label": "UNCONFIRMED",
-        "price": 30.26,
-        "observed": "2026-11-24"
+        "price": 31.48,
+        "observed": "2026-11-25"
       },
       {
         "name": "Kecleon - 117/103",
         "set": "ME06: Delta Reign",
-        "change_pct": -31.4,
+        "change_pct": -25.6,
         "label": "UNCONFIRMED",
-        "price": 22.42,
-        "observed": "2026-11-24"
+        "price": 21.83,
+        "observed": "2026-11-25"
       },
       {
-        "name": "Lillie's Clefairy ex - 280/217",
-        "set": "ME: Ascended Heroes",
-        "change_pct": -24.7,
+        "name": "Eternatus V - 116/189",
+        "set": "Prize Pack Series Cards",
+        "change_pct": 23.4,
         "label": "UNCONFIRMED",
-        "price": 66.44,
-        "observed": "2026-11-24"
+        "price": 53.8,
+        "observed": "2026-11-25"
+      },
+      {
+        "name": "Kyogre - XY51",
+        "set": "XY Promos",
+        "change_pct": 22.0,
+        "label": "UNCONFIRMED",
+        "price": 42.92,
+        "observed": "2026-11-25"
+      },
+      {
+        "name": "Bulbasaur (Pokemon Day 2026)",
+        "set": "Miscellaneous Cards & Products",
+        "change_pct": 15.7,
+        "label": "UNCONFIRMED",
+        "price": 40.76,
+        "observed": "2026-11-25"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Kyogre - XY51",
-        "set": "XY Promos",
-        "change_pct": 9.8,
+        "name": "Giratina (9)",
+        "set": "Platinum",
+        "change_pct": 25.3,
         "label": "UNCONFIRMED",
-        "price": 42.92,
-        "observed": "2026-11-24"
+        "price": 64.95,
+        "observed": "2026-11-25"
+      },
+      {
+        "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
+        "set": "Black and White Promos",
+        "change_pct": 15.7,
+        "label": "UNCONFIRMED",
+        "price": 49.76,
+        "observed": "2026-11-25"
+      },
+      {
+        "name": "Pikachu ex - 107 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 10.4,
+        "label": "UNCONFIRMED",
+        "price": 23.35,
+        "observed": "2026-11-25"
       },
       {
         "name": "Mewtwo ex - 157/128",
         "set": "ME: 30th Celebration",
-        "change_pct": -7.2,
+        "change_pct": -8.3,
         "label": "UNCONFIRMED",
-        "price": 22.25,
-        "observed": "2026-11-24"
+        "price": 20.41,
+        "observed": "2026-11-25"
       },
       {
-        "name": "Kyogre (What's Your Favorite Stamp)",
-        "set": "Miscellaneous Cards & Products",
-        "change_pct": -5.5,
+        "name": "Feraligatr - 20/123 (Cracked Ice Holo)",
+        "set": "Deck Exclusives",
+        "change_pct": 5.4,
         "label": "UNCONFIRMED",
-        "price": 20.48,
-        "observed": "2026-11-24"
-      },
-      {
-        "name": "N's Resolve (Full Art)",
-        "set": "SM - Cosmic Eclipse",
-        "change_pct": -4.8,
-        "label": "UNCONFIRMED",
-        "price": 123.75,
-        "observed": "2026-11-24"
-      },
-      {
-        "name": "Ninetales - 199/197",
-        "set": "SV03: Obsidian Flames",
-        "change_pct": -4.5,
-        "label": "UNCONFIRMED",
-        "price": 31.5,
-        "observed": "2026-11-24"
+        "price": 27.58,
+        "observed": "2026-11-25"
       }
     ],
     "calls_due": [

@@ -1,44 +1,6 @@
 {
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "items": [
-    {
-      "id": 705527,
-      "name": "Zarude (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "056/084",
-      "tier": "Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 71.01,
-        "date": "2026-11-24"
-      },
-      "change_pct": 49.9,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 123454,
-      "name": "Pikachu EX - XY174",
-      "set": "XY Promos",
-      "number": "XY174",
-      "tier": "Promo",
-      "variant": "Holofoil",
-      "last": {
-        "price": 88.68,
-        "date": "2026-11-22"
-      },
-      "change_pct": 38.7,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
     {
       "id": 548554,
       "name": "Xatu - 059 (Prerelease) [Staff]",
@@ -47,16 +9,16 @@
       "tier": "Promo",
       "variant": "Holofoil",
       "last": {
-        "price": 30.26,
-        "date": "2026-11-23"
+        "price": 31.48,
+        "date": "2026-11-25"
       },
-      "change_pct": 36.2,
+      "change_pct": 34.5,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
     {
       "id": 726567,
@@ -66,73 +28,16 @@
       "tier": "Illustration Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 22.42,
-        "date": "2026-11-24"
+        "price": 21.83,
+        "date": "2026-11-25"
       },
-      "change_pct": -31.4,
+      "change_pct": -25.6,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 676092,
-      "name": "Lillie's Clefairy ex - 280/217",
-      "set": "ME: Ascended Heroes",
-      "number": "280/217",
-      "tier": "Special Illustration Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 66.44,
-        "date": "2026-11-24"
-      },
-      "change_pct": -24.7,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 197732,
-      "name": "Jessie & James (Full Art)",
-      "set": "Hidden Fates",
-      "number": "68/68",
-      "tier": "Ultra Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 52.81,
-        "date": "2026-11-24"
-      },
-      "change_pct": -22.6,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 726574,
-      "name": "Raikou ex",
-      "set": "ME06: Delta Reign",
-      "number": "136/103",
-      "tier": "Special Illustration Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 97.8,
-        "date": "2026-11-24"
-      },
-      "change_pct": -20.9,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
     {
       "id": 476057,
@@ -145,54 +50,14 @@
         "price": 53.8,
         "date": "2026-11-24"
       },
-      "change_pct": 18.4,
+      "change_pct": 23.4,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
-    {
-      "id": 678169,
-      "name": "Bulbasaur (Pokemon Day 2026)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "001/132",
-      "tier": "Common",
-      "variant": "Holofoil",
-      "last": {
-        "price": 42.48,
-        "date": "2026-11-24"
-      },
-      "change_pct": 16.0,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 513794,
-      "name": "Lugia VSTAR - 139/195",
-      "set": "Prize Pack Series Cards",
-      "number": "139/195",
-      "tier": "Ultra Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 38.38,
-        "date": "2026-11-23"
-      },
-      "change_pct": 15.1,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    }
-  ],
-  "one_day": [
     {
       "id": 98732,
       "name": "Kyogre - XY51",
@@ -204,32 +69,70 @@
         "price": 42.92,
         "date": "2026-11-24"
       },
-      "change_pct": 9.8,
-      "window_label": "1d",
+      "change_pct": 22.0,
+      "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
     {
-      "id": 696687,
-      "name": "Mewtwo ex - 157/128",
-      "set": "ME: 30th Celebration",
-      "number": "157/128",
-      "tier": "Futuristic Rare",
+      "id": 678169,
+      "name": "Bulbasaur (Pokemon Day 2026)",
+      "set": "Miscellaneous Cards & Products",
+      "number": "001/132",
+      "tier": "Common",
       "variant": "Holofoil",
       "last": {
-        "price": 22.25,
-        "date": "2026-11-24"
+        "price": 40.76,
+        "date": "2026-11-25"
       },
-      "change_pct": -7.2,
-      "window_label": "1d",
+      "change_pct": 15.7,
+      "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 726574,
+      "name": "Raikou ex",
+      "set": "ME06: Delta Reign",
+      "number": "136/103",
+      "tier": "Special Illustration Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 97.15,
+        "date": "2026-11-25"
+      },
+      "change_pct": -15.7,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 153262,
+      "name": "Typhlosion - 32/123 (Cracked Ice Holo)",
+      "set": "Deck Exclusives",
+      "number": "032/123",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 32.93,
+        "date": "2026-11-25"
+      },
+      "change_pct": 15.6,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
     },
     {
       "id": 728528,
@@ -239,92 +142,16 @@
       "tier": "Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 20.48,
-        "date": "2026-11-24"
+        "price": 20.0,
+        "date": "2026-11-25"
       },
-      "change_pct": -5.5,
-      "window_label": "1d",
+      "change_pct": -15.3,
+      "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 201979,
-      "name": "N's Resolve (Full Art)",
-      "set": "SM - Cosmic Eclipse",
-      "number": "232/236",
-      "tier": "Ultra Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 123.75,
-        "date": "2026-11-24"
-      },
-      "change_pct": -4.8,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 509945,
-      "name": "Ninetales - 199/197",
-      "set": "SV03: Obsidian Flames",
-      "number": "199/197",
-      "tier": "Illustration Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 31.5,
-        "date": "2026-11-24"
-      },
-      "change_pct": -4.5,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 656262,
-      "name": "Riolu - 010 (Pokemon Center Exclusive)",
-      "set": "ME: Mega Evolution Promo",
-      "number": "010",
-      "tier": "Promo",
-      "variant": "Holofoil",
-      "last": {
-        "price": 46.11,
-        "date": "2026-11-24"
-      },
-      "change_pct": -4.2,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
-    },
-    {
-      "id": 107026,
-      "name": "Haunter",
-      "set": "Base Set (Shadowless)",
-      "number": "029/102",
-      "tier": "Uncommon",
-      "variant": "Unlimited",
-      "last": {
-        "price": 25.15,
-        "date": "2026-11-24"
-      },
-      "change_pct": -4.1,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
     {
       "id": 509949,
@@ -334,35 +161,227 @@
       "tier": "Illustration Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 22.96,
-        "date": "2026-11-24"
+        "price": 22.99,
+        "date": "2026-11-25"
       },
-      "change_pct": -4.1,
-      "window_label": "1d",
+      "change_pct": -13.0,
+      "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
     },
     {
-      "id": 542898,
-      "name": "Gastly - 177/162",
-      "set": "SV05: Temporal Forces",
-      "number": "177/162",
-      "tier": "Illustration Rare",
+      "id": 178818,
+      "name": "Celebi Prism Star",
+      "set": "SM - Lost Thunder",
+      "number": "19/214",
+      "tier": "Prism Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 74.51,
-        "date": "2026-11-24"
+        "price": 31.25,
+        "date": "2026-11-25"
       },
-      "change_pct": -3.3,
+      "change_pct": -12.7,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    }
+  ],
+  "one_day": [
+    {
+      "id": 85737,
+      "name": "Giratina (9)",
+      "set": "Platinum",
+      "number": "9/127",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 64.95,
+        "date": "2026-11-25"
+      },
+      "change_pct": 25.3,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-24"
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 84492,
+      "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
+      "set": "Black and White Promos",
+      "number": "BW51",
+      "tier": "Promo",
+      "variant": "Holofoil",
+      "last": {
+        "price": 49.76,
+        "date": "2026-11-25"
+      },
+      "change_pct": 15.7,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 713257,
+      "name": "Pikachu ex - 107 (30th Celebration)",
+      "set": "ME: Mega Evolution Promo",
+      "number": "107",
+      "tier": "Promo",
+      "variant": "Holofoil",
+      "last": {
+        "price": 23.35,
+        "date": "2026-11-25"
+      },
+      "change_pct": 10.4,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 696687,
+      "name": "Mewtwo ex - 157/128",
+      "set": "ME: 30th Celebration",
+      "number": "157/128",
+      "tier": "Futuristic Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 20.41,
+        "date": "2026-11-25"
+      },
+      "change_pct": -8.3,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 153258,
+      "name": "Feraligatr - 20/123 (Cracked Ice Holo)",
+      "set": "Deck Exclusives",
+      "number": "020/123",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 27.58,
+        "date": "2026-11-25"
+      },
+      "change_pct": 5.4,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 728590,
+      "name": "Giratina (What's Your Favorite Stamp)",
+      "set": "Miscellaneous Cards & Products",
+      "number": "045/103",
+      "tier": "Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 53.08,
+        "date": "2026-11-25"
+      },
+      "change_pct": 4.9,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 227648,
+      "name": "Charizard - 25/185 (Cracked Ice Holo)",
+      "set": "Deck Exclusives",
+      "number": "025/185",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 37.95,
+        "date": "2026-11-25"
+      },
+      "change_pct": 4.5,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 197732,
+      "name": "Jessie & James (Full Art)",
+      "set": "Hidden Fates",
+      "number": "68/68",
+      "tier": "Ultra Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 50.55,
+        "date": "2026-11-25"
+      },
+      "change_pct": -4.3,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 713256,
+      "name": "Pikachu ex - 109 (30th Celebration)",
+      "set": "ME: Mega Evolution Promo",
+      "number": "109",
+      "tier": "Promo",
+      "variant": "Holofoil",
+      "last": {
+        "price": 22.75,
+        "date": "2026-11-25"
+      },
+      "change_pct": -3.9,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
+    },
+    {
+      "id": 693465,
+      "name": "Cinccino ex - 119/086",
+      "set": "ME04: Chaos Rising",
+      "number": "119/086",
+      "tier": "Special Illustration Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 35.24,
+        "date": "2026-11-25"
+      },
+      "change_pct": -3.4,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-25"
     }
   ]
 }

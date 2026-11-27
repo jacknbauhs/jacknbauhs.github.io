@@ -1,89 +1,89 @@
 {
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "daily": {
-    "date": "2026-11-26",
+    "date": "2026-11-27",
     "movers": [
       {
         "name": "Xatu - 059 (Prerelease) [Staff]",
         "set": "SV: Scarlet & Violet Promo Cards",
-        "change_pct": 34.5,
+        "change_pct": 40.0,
         "label": "UNCONFIRMED",
         "price": 31.48,
-        "observed": "2026-11-25"
+        "observed": "2026-11-26"
       },
       {
-        "name": "Kecleon - 117/103",
-        "set": "ME06: Delta Reign",
-        "change_pct": -25.6,
-        "label": "UNCONFIRMED",
-        "price": 21.83,
-        "observed": "2026-11-25"
-      },
-      {
-        "name": "Eternatus V - 116/189",
-        "set": "Prize Pack Series Cards",
-        "change_pct": 23.4,
-        "label": "UNCONFIRMED",
-        "price": 53.8,
-        "observed": "2026-11-25"
-      },
-      {
-        "name": "Kyogre - XY51",
-        "set": "XY Promos",
-        "change_pct": 22.0,
-        "label": "UNCONFIRMED",
-        "price": 42.92,
-        "observed": "2026-11-25"
-      },
-      {
-        "name": "Bulbasaur (Pokemon Day 2026)",
+        "name": "Giratina (What's Your Favorite Stamp)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 15.7,
+        "change_pct": 38.3,
         "label": "UNCONFIRMED",
-        "price": 40.76,
-        "observed": "2026-11-25"
-      }
-    ],
-    "one_day_movers": [
-      {
-        "name": "Giratina (9)",
-        "set": "Platinum",
-        "change_pct": 25.3,
-        "label": "UNCONFIRMED",
-        "price": 64.95,
-        "observed": "2026-11-25"
+        "price": 54.79,
+        "observed": "2026-11-26"
       },
       {
         "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
         "set": "Black and White Promos",
-        "change_pct": 15.7,
+        "change_pct": 37.3,
         "label": "UNCONFIRMED",
         "price": 49.76,
-        "observed": "2026-11-25"
+        "observed": "2026-11-26"
       },
       {
-        "name": "Pikachu ex - 107 (30th Celebration)",
+        "name": "Giratina (9)",
+        "set": "Platinum",
+        "change_pct": 31.7,
+        "label": "UNCONFIRMED",
+        "price": 64.95,
+        "observed": "2026-11-26"
+      },
+      {
+        "name": "Kommo-o - 114 [Staff]",
         "set": "ME: Mega Evolution Promo",
-        "change_pct": 10.4,
+        "change_pct": -25.3,
         "label": "UNCONFIRMED",
-        "price": 23.35,
-        "observed": "2026-11-25"
+        "price": 28.64,
+        "observed": "2026-11-26"
+      }
+    ],
+    "one_day_movers": [
+      {
+        "name": "Kyogre",
+        "set": "Call of Legends",
+        "change_pct": 7.8,
+        "label": "UNCONFIRMED",
+        "price": 82.01,
+        "observed": "2026-11-26"
       },
       {
-        "name": "Mewtwo ex - 157/128",
-        "set": "ME: 30th Celebration",
-        "change_pct": -8.3,
+        "name": "Cleffa - 202/197",
+        "set": "SV03: Obsidian Flames",
+        "change_pct": 5.1,
         "label": "UNCONFIRMED",
-        "price": 20.41,
-        "observed": "2026-11-25"
+        "price": 24.17,
+        "observed": "2026-11-26"
       },
       {
-        "name": "Feraligatr - 20/123 (Cracked Ice Holo)",
-        "set": "Deck Exclusives",
-        "change_pct": 5.4,
+        "name": "Mew ex - 205/165 (151 Metal Card)",
+        "set": "SV: Scarlet & Violet 151",
+        "change_pct": -5.0,
         "label": "UNCONFIRMED",
-        "price": 27.58,
-        "observed": "2026-11-25"
+        "price": 21.49,
+        "observed": "2026-11-26"
+      },
+      {
+        "name": "Mega Gengar ex - 269/217",
+        "set": "ME: Ascended Heroes",
+        "change_pct": -5.0,
+        "label": "UNCONFIRMED",
+        "price": 27.95,
+        "observed": "2026-11-26"
+      },
+      {
+        "name": "Lillie's Determination - 184/132",
+        "set": "ME01: Mega Evolution",
+        "change_pct": -4.5,
+        "label": "UNCONFIRMED",
+        "price": 38.69,
+        "observed": "2026-11-26"
       }
     ],
     "calls_due": [

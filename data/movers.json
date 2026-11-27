@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-25",
+  "as_of": "2026-11-26",
   "items": [
     {
       "id": 548554,
@@ -12,32 +12,89 @@
         "price": 31.48,
         "date": "2026-11-25"
       },
-      "change_pct": 34.5,
+      "change_pct": 40.0,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 726567,
-      "name": "Kecleon - 117/103",
-      "set": "ME06: Delta Reign",
-      "number": "117/103",
-      "tier": "Illustration Rare",
+      "id": 728590,
+      "name": "Giratina (What's Your Favorite Stamp)",
+      "set": "Miscellaneous Cards & Products",
+      "number": "045/103",
+      "tier": "Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 21.83,
-        "date": "2026-11-25"
+        "price": 54.79,
+        "date": "2026-11-26"
       },
-      "change_pct": -25.6,
+      "change_pct": 38.3,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
+    },
+    {
+      "id": 84492,
+      "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
+      "set": "Black and White Promos",
+      "number": "BW51",
+      "tier": "Promo",
+      "variant": "Holofoil",
+      "last": {
+        "price": 49.76,
+        "date": "2026-11-25"
+      },
+      "change_pct": 37.3,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
+    },
+    {
+      "id": 85737,
+      "name": "Giratina (9)",
+      "set": "Platinum",
+      "number": "9/127",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 64.95,
+        "date": "2026-11-25"
+      },
+      "change_pct": 31.7,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
+    },
+    {
+      "id": 734563,
+      "name": "Kommo-o - 114 [Staff]",
+      "set": "ME: Mega Evolution Promo",
+      "number": "114",
+      "tier": "Promo",
+      "variant": "Holofoil",
+      "last": {
+        "price": 28.64,
+        "date": "2026-11-26"
+      },
+      "change_pct": -25.3,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
     },
     {
       "id": 476057,
@@ -56,7 +113,26 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
+    },
+    {
+      "id": 726567,
+      "name": "Kecleon - 117/103",
+      "set": "ME06: Delta Reign",
+      "number": "117/103",
+      "tier": "Illustration Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 22.56,
+        "date": "2026-11-26"
+      },
+      "change_pct": -22.3,
+      "window_label": "7d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
     },
     {
       "id": 98732,
@@ -75,45 +151,7 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    },
-    {
-      "id": 678169,
-      "name": "Bulbasaur (Pokemon Day 2026)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "001/132",
-      "tier": "Common",
-      "variant": "Holofoil",
-      "last": {
-        "price": 40.76,
-        "date": "2026-11-25"
-      },
-      "change_pct": 15.7,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    },
-    {
-      "id": 726574,
-      "name": "Raikou ex",
-      "set": "ME06: Delta Reign",
-      "number": "136/103",
-      "tier": "Special Illustration Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 97.15,
-        "date": "2026-11-25"
-      },
-      "change_pct": -15.7,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
       "id": 153262,
@@ -126,32 +164,53 @@
         "price": 32.93,
         "date": "2026-11-25"
       },
-      "change_pct": 15.6,
+      "change_pct": 18.8,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 728528,
-      "name": "Kyogre (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "026/103",
-      "tier": "Rare",
+      "id": 704877,
+      "name": "Mega Darkrai ex - 120/084",
+      "set": "ME05: Pitch Black",
+      "number": "120/084",
+      "tier": "Mega Hyper Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 20.0,
-        "date": "2026-11-25"
+        "price": 117.94,
+        "date": "2026-11-26"
       },
-      "change_pct": -15.3,
+      "change_pct": 18.1,
       "window_label": "7d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
+    }
+  ],
+  "one_day": [
+    {
+      "id": 86550,
+      "name": "Kyogre",
+      "set": "Call of Legends",
+      "number": "12/95",
+      "tier": "Holo Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 82.01,
+        "date": "2026-11-26"
+      },
+      "change_pct": 7.8,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
     },
     {
       "id": 509949,
@@ -161,200 +220,122 @@
       "tier": "Illustration Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 22.99,
-        "date": "2026-11-25"
+        "price": 24.17,
+        "date": "2026-11-26"
       },
-      "change_pct": -13.0,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    },
-    {
-      "id": 178818,
-      "name": "Celebi Prism Star",
-      "set": "SM - Lost Thunder",
-      "number": "19/214",
-      "tier": "Prism Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 31.25,
-        "date": "2026-11-25"
-      },
-      "change_pct": -12.7,
-      "window_label": "7d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    }
-  ],
-  "one_day": [
-    {
-      "id": 85737,
-      "name": "Giratina (9)",
-      "set": "Platinum",
-      "number": "9/127",
-      "tier": "Holo Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 64.95,
-        "date": "2026-11-25"
-      },
-      "change_pct": 25.3,
+      "change_pct": 5.1,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 84492,
-      "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
-      "set": "Black and White Promos",
-      "number": "BW51",
-      "tier": "Promo",
-      "variant": "Holofoil",
+      "id": 519481,
+      "name": "Mew ex - 205/165 (151 Metal Card)",
+      "set": "SV: Scarlet & Violet 151",
+      "number": "205/165",
+      "tier": "Double Rare",
+      "variant": "",
       "last": {
-        "price": 49.76,
-        "date": "2026-11-25"
+        "price": 21.49,
+        "date": "2026-11-26"
       },
-      "change_pct": 15.7,
+      "change_pct": -5.0,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 713257,
-      "name": "Pikachu ex - 107 (30th Celebration)",
-      "set": "ME: Mega Evolution Promo",
-      "number": "107",
-      "tier": "Promo",
+      "id": 676081,
+      "name": "Mega Gengar ex - 269/217",
+      "set": "ME: Ascended Heroes",
+      "number": "269/217",
+      "tier": "Mega Attack Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 23.35,
-        "date": "2026-11-25"
+        "price": 27.95,
+        "date": "2026-11-26"
       },
-      "change_pct": 10.4,
+      "change_pct": -5.0,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 696687,
-      "name": "Mewtwo ex - 157/128",
-      "set": "ME: 30th Celebration",
-      "number": "157/128",
-      "tier": "Futuristic Rare",
+      "id": 654523,
+      "name": "Lillie's Determination - 184/132",
+      "set": "ME01: Mega Evolution",
+      "number": "184/132",
+      "tier": "Special Illustration Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 20.41,
-        "date": "2026-11-25"
+        "price": 38.69,
+        "date": "2026-11-26"
       },
-      "change_pct": -8.3,
+      "change_pct": -4.5,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 153258,
-      "name": "Feraligatr - 20/123 (Cracked Ice Holo)",
-      "set": "Deck Exclusives",
-      "number": "020/123",
-      "tier": "Holo Rare",
+      "id": 662185,
+      "name": "Mega Charizard X ex - 130/094",
+      "set": "ME02: Phantasmal Flames",
+      "number": "130/094",
+      "tier": "Mega Hyper Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 27.58,
-        "date": "2026-11-25"
+        "price": 170.79,
+        "date": "2026-11-26"
       },
-      "change_pct": 5.4,
+      "change_pct": -4.5,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 728590,
-      "name": "Giratina (What's Your Favorite Stamp)",
-      "set": "Miscellaneous Cards & Products",
-      "number": "045/103",
-      "tier": "Rare",
+      "id": 87486,
+      "name": "Minun",
+      "set": "EX Trainer Kit 2: Plusle & Minun",
+      "number": "6/12",
+      "tier": "Common",
       "variant": "Holofoil",
       "last": {
-        "price": 53.08,
-        "date": "2026-11-25"
+        "price": 23.78,
+        "date": "2026-11-26"
       },
-      "change_pct": 4.9,
+      "change_pct": 4.0,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 227648,
-      "name": "Charizard - 25/185 (Cracked Ice Holo)",
-      "set": "Deck Exclusives",
-      "number": "025/185",
-      "tier": "Holo Rare",
-      "variant": "Holofoil",
-      "last": {
-        "price": 37.95,
-        "date": "2026-11-25"
-      },
-      "change_pct": 4.5,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    },
-    {
-      "id": 197732,
-      "name": "Jessie & James (Full Art)",
-      "set": "Hidden Fates",
-      "number": "68/68",
+      "id": 477050,
+      "name": "Hisuian Zoroark VSTAR",
+      "set": "SWSH: Crown Zenith: Galarian Gallery",
+      "number": "GG56/GG70",
       "tier": "Ultra Rare",
       "variant": "Holofoil",
       "last": {
-        "price": 50.55,
-        "date": "2026-11-25"
-      },
-      "change_pct": -4.3,
-      "window_label": "1d",
-      "clean_change_pct": null,
-      "label": "UNCONFIRMED",
-      "label_note": "no sales checked in this window",
-      "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
-    },
-    {
-      "id": 713256,
-      "name": "Pikachu ex - 109 (30th Celebration)",
-      "set": "ME: Mega Evolution Promo",
-      "number": "109",
-      "tier": "Promo",
-      "variant": "Holofoil",
-      "last": {
-        "price": 22.75,
-        "date": "2026-11-25"
+        "price": 37.55,
+        "date": "2026-11-26"
       },
       "change_pct": -3.9,
       "window_label": "1d",
@@ -362,26 +343,45 @@
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
     },
     {
-      "id": 693465,
-      "name": "Cinccino ex - 119/086",
-      "set": "ME04: Chaos Rising",
-      "number": "119/086",
-      "tier": "Special Illustration Rare",
+      "id": 713258,
+      "name": "Espeon ex - 108 (30th Celebration)",
+      "set": "ME: Mega Evolution Promo",
+      "number": "108",
+      "tier": "Promo",
       "variant": "Holofoil",
       "last": {
-        "price": 35.24,
-        "date": "2026-11-25"
+        "price": 34.86,
+        "date": "2026-11-26"
       },
-      "change_pct": -3.4,
+      "change_pct": 3.9,
       "window_label": "1d",
       "clean_change_pct": null,
       "label": "UNCONFIRMED",
       "label_note": "no sales checked in this window",
       "source": "TCGplayer market prices via tcgcsv.com",
-      "observed": "2026-11-25"
+      "observed": "2026-11-26"
+    },
+    {
+      "id": 517035,
+      "name": "Psyduck - 175/165",
+      "set": "SV: Scarlet & Violet 151",
+      "number": "175/165",
+      "tier": "Illustration Rare",
+      "variant": "Holofoil",
+      "last": {
+        "price": 49.89,
+        "date": "2026-11-26"
+      },
+      "change_pct": 3.8,
+      "window_label": "1d",
+      "clean_change_pct": null,
+      "label": "UNCONFIRMED",
+      "label_note": "no sales checked in this window",
+      "source": "TCGplayer market prices via tcgcsv.com",
+      "observed": "2026-11-26"
     }
   ]
 }

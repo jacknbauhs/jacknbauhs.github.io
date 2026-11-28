@@ -1,10 +1,10 @@
-# Captions, board data of 2026-11-27
+# Captions, board data of 2026-11-28
 
 One block per image. Caption first, alt text second. Plain facts, the source and the board link; nothing here is a buy.
 
 ## Before you post
 
-- ✅ Prices are from Nov 26, 2026.
+- ✅ Prices are from Nov 27, 2026.
 - ⚠️ All 10 on the 7-day list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 - ⚠️ All 10 on the since-yesterday list are unconfirmed: no checked sale behind any. Keep "unconfirmed" in the post and call them price moves, not sales.
 
@@ -46,6 +46,6 @@ Alt: Three calls on the record. Number 001: The 30th Celebration Booster Bundle'
 
 ## moving-2026-W48.png
 
-What's moving on TCGplayer, as of Nov 26, 2026. Ten moves of 5% or more made the list in the last 7 days. Xatu - 059 (Prerelease) [Staff] (SV: Scarlet & Violet Promo Cards · 059 · Holofoil): $31.48, +40.0%, unconfirmed. Giratina (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 045/103 · Holofoil): $54.79, +38.3%, unconfirmed. Crobat - BW51 (Team Plasma) (Prerelease) (Black and White Promos · BW51 · Holofoil): $49.76, +37.3%, unconfirmed. Giratina (9) (Platinum · 9/127 · Holofoil): $64.95, +31.7%, unconfirmed. Kommo-o - 114 [Staff] (ME: Mega Evolution Promo · 114 · Holofoil): $28.64, −25.3%, unconfirmed. Eternatus V - 116/189 (Prize Pack Series Cards · 116/189 · Holofoil): $53.80, +23.4%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $22.56, −22.3%, unconfirmed. Kyogre - XY51 (XY Promos · XY51 · Holofoil): $42.92, +22.0%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 26, 2026. board.jacknbauhs.com
+What's moving on TCGplayer, as of Nov 27, 2026. Ten moves of 5% or more made the list in the last 7 days. Shinx - 43/99 (Cracked Ice Holo) (Blister Exclusives · 043/099 · Holofoil): $32.33, +45.9%, unconfirmed. Xatu - 059 (Prerelease) [Staff] (SV: Scarlet & Violet Promo Cards · 059 · Holofoil): $31.48, +40.0%, unconfirmed. Giratina (What's Your Favorite Stamp) (Miscellaneous Cards & Products · 045/103 · Holofoil): $58.49, +35.9%, unconfirmed. Giratina (9) (Platinum · 9/127 · Holofoil): $64.95, +31.7%, unconfirmed. Lugia (EX Unseen Forces · 29/115): $34.46, +25.8%, unconfirmed. Kommo-o - 114 [Staff] (ME: Mega Evolution Promo · 114 · Holofoil): $28.79, −24.8%, unconfirmed. Mega Darkrai ex - 120/084 (ME05: Pitch Black · 120/084 · Holofoil): $118.92, +20.3%, unconfirmed. Kecleon - 117/103 (ME06: Delta Reign · 117/103 · Holofoil): $21.94, −19.4%, unconfirmed. Unconfirmed: no checked sales; shown only if ≤60%, actively traded, low listing agreed, priced within 2 days. Source: TCGplayer market prices via tcgcsv.com, as of Nov 27, 2026. board.jacknbauhs.com
 
 Alt: What's moving: the 8 biggest of the 10 TCGplayer moves on the list in the last 7 days, each with its market price, its change and the label for what checked sales show.

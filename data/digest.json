@@ -1,31 +1,31 @@
 {
-  "as_of": "2026-11-27",
+  "as_of": "2026-11-28",
   "daily": {
-    "date": "2026-11-27",
+    "date": "2026-11-28",
     "movers": [
+      {
+        "name": "Shinx - 43/99 (Cracked Ice Holo)",
+        "set": "Blister Exclusives",
+        "change_pct": 45.9,
+        "label": "UNCONFIRMED",
+        "price": 32.33,
+        "observed": "2026-11-27"
+      },
       {
         "name": "Xatu - 059 (Prerelease) [Staff]",
         "set": "SV: Scarlet & Violet Promo Cards",
         "change_pct": 40.0,
         "label": "UNCONFIRMED",
         "price": 31.48,
-        "observed": "2026-11-26"
+        "observed": "2026-11-27"
       },
       {
         "name": "Giratina (What's Your Favorite Stamp)",
         "set": "Miscellaneous Cards & Products",
-        "change_pct": 38.3,
+        "change_pct": 35.9,
         "label": "UNCONFIRMED",
-        "price": 54.79,
-        "observed": "2026-11-26"
-      },
-      {
-        "name": "Crobat - BW51 (Team Plasma) (Prerelease)",
-        "set": "Black and White Promos",
-        "change_pct": 37.3,
-        "label": "UNCONFIRMED",
-        "price": 49.76,
-        "observed": "2026-11-26"
+        "price": 58.49,
+        "observed": "2026-11-27"
       },
       {
         "name": "Giratina (9)",
@@ -33,57 +33,57 @@
         "change_pct": 31.7,
         "label": "UNCONFIRMED",
         "price": 64.95,
-        "observed": "2026-11-26"
+        "observed": "2026-11-27"
       },
       {
-        "name": "Kommo-o - 114 [Staff]",
-        "set": "ME: Mega Evolution Promo",
-        "change_pct": -25.3,
+        "name": "Lugia",
+        "set": "EX Unseen Forces",
+        "change_pct": 25.8,
         "label": "UNCONFIRMED",
-        "price": 28.64,
-        "observed": "2026-11-26"
+        "price": 34.46,
+        "observed": "2026-11-27"
       }
     ],
     "one_day_movers": [
       {
-        "name": "Kyogre",
-        "set": "Call of Legends",
-        "change_pct": 7.8,
+        "name": "Latias & Latios GX (Alternate Full Art)",
+        "set": "SM - Team Up",
+        "change_pct": 21.8,
         "label": "UNCONFIRMED",
-        "price": 82.01,
-        "observed": "2026-11-26"
+        "price": 4699.75,
+        "observed": "2026-11-27"
       },
       {
-        "name": "Cleffa - 202/197",
-        "set": "SV03: Obsidian Flames",
-        "change_pct": 5.1,
+        "name": "Espeon ex - 108 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 20.1,
         "label": "UNCONFIRMED",
-        "price": 24.17,
-        "observed": "2026-11-26"
+        "price": 41.86,
+        "observed": "2026-11-27"
       },
       {
-        "name": "Mew ex - 205/165 (151 Metal Card)",
-        "set": "SV: Scarlet & Violet 151",
-        "change_pct": -5.0,
+        "name": "Charizard",
+        "set": "ME: 30th Celebration Classic Collection",
+        "change_pct": 14.6,
         "label": "UNCONFIRMED",
-        "price": 21.49,
-        "observed": "2026-11-26"
+        "price": 119.99,
+        "observed": "2026-11-27"
       },
       {
-        "name": "Mega Gengar ex - 269/217",
-        "set": "ME: Ascended Heroes",
-        "change_pct": -5.0,
+        "name": "Pikachu ex - 109 (30th Celebration)",
+        "set": "ME: Mega Evolution Promo",
+        "change_pct": 13.4,
         "label": "UNCONFIRMED",
-        "price": 27.95,
-        "observed": "2026-11-26"
+        "price": 26.06,
+        "observed": "2026-11-27"
       },
       {
-        "name": "Lillie's Determination - 184/132",
-        "set": "ME01: Mega Evolution",
-        "change_pct": -4.5,
+        "name": "Mew ex - 152/128",
+        "set": "ME: 30th Celebration",
+        "change_pct": 12.9,
         "label": "UNCONFIRMED",
-        "price": 38.69,
-        "observed": "2026-11-26"
+        "price": 65.99,
+        "observed": "2026-11-27"
       }
     ],
     "calls_due": [
